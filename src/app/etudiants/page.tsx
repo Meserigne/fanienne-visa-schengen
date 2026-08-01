@@ -125,7 +125,7 @@ export default function EtudiantsPage() {
   const t = {
     fr: {
       title: "Pack Student Care : études et mobilité académique.",
-      body: "Depuis Dakar, Fabienne prépare votre visa étudiant Schengen (200 000 FCFA) : accompagnement Campus France, contrôle des ressources et de l'hébergement, préparation à l'entretien.",
+      body: "Depuis Dakar, Tooky Consulting prépare votre visa étudiant Schengen : accompagnement Campus France, contrôle des ressources et de l'hébergement, préparation à l'entretien. Tarif communiqué après évaluation.",
       whyTitle: "Un dossier étudiant solide maximise vos chances.",
       servicesTitle: "Ce que comprend le Pack Student Care.",
       promiseTitle: "Vous décrivez le projet. Nous sécurisons le parcours.",
@@ -138,7 +138,7 @@ export default function EtudiantsPage() {
     },
     en: {
       title: "Student Care Pack: studies and academic mobility.",
-      body: "From Dakar, Fabienne prepares your Schengen student visa (200,000 FCFA): Campus France support, funding and housing checks, interview preparation.",
+      body: "From Dakar, Tooky Consulting prepares your Schengen student visa: Campus France support, funding and housing checks, interview preparation. Pricing shared after assessment.",
       whyTitle: "A solid student file maximises your chances.",
       servicesTitle: "What the Student Care Pack includes.",
       promiseTitle: "You describe the project. We secure the path.",
@@ -176,7 +176,7 @@ export default function EtudiantsPage() {
                 color: "var(--c-cobalt-300)",
               }}
             >
-              Fabienne
+              TOOKY CONSULTING
             </p>
             <h1
               className="mb-6 max-w-[18ch] text-[clamp(2.1rem,4.5vw,3.75rem)] leading-[1.05] font-semibold tracking-tight text-balance"

@@ -99,11 +99,11 @@ const PROMISE = [
   },
   {
     fr: {
-      title: "Pack Classique à 150 000 FCFA",
+      title: "Pack Classique",
       body: "Un accompagnement clé en main pour le court séjour : tourisme ou famille, avec un périmètre de prestation clair dès le départ.",
     },
     en: {
-      title: "Classic Pack at 150,000 FCFA",
+      title: "Classic Pack",
       body: "End-to-end support for short stays: tourism or family, with a clear service scope from day one.",
     },
   },
@@ -125,7 +125,7 @@ export default function TourismePage() {
   const t = {
     fr: {
       title: "Visa tourisme & famille : un dossier conforme, sans stress.",
-      body: "Pack Classique à 150 000 FCFA : depuis Dakar, Fabienne accompagne votre visa Schengen de court séjour pour le tourisme ou les visites familiales — analyse du profil, réservations d'hôtel et de billets, assurance et prise de RDV.",
+      body: "Depuis Dakar, Tooky Consulting accompagne votre visa Schengen de court séjour pour le tourisme ou les visites familiales : analyse du profil, réservations d'hôtel et de billets, assurance et prise de RDV. Tarif communiqué après évaluation.",
       whyTitle: "Un séjour en Europe commence par un dossier solide.",
       servicesTitle: "Le Pack Classique, de l'analyse au rendez-vous.",
       promiseTitle: "Vous décrivez le voyage. Nous vous disons comment avancer.",
@@ -138,7 +138,7 @@ export default function TourismePage() {
     },
     en: {
       title: "Tourism & family visa: a compliant file, without the stress.",
-      body: "Classic Pack at 150,000 FCFA: from Dakar, Fabienne supports your Schengen short-stay visa for tourism or family visits — profile review, hotel and flight bookings, insurance and appointment booking.",
+      body: "From Dakar, Tooky Consulting supports your Schengen short-stay visa for tourism or family visits: profile review, hotel and flight bookings, insurance and appointment booking. Pricing shared after assessment.",
       whyTitle: "A trip to Europe starts with a solid file.",
       servicesTitle: "The Classic Pack, from review to appointment.",
       promiseTitle: "You describe the trip. We tell you how to move forward.",
@@ -176,7 +176,7 @@ export default function TourismePage() {
                 color: "var(--c-cobalt-300)",
               }}
             >
-              Fabienne
+              TOOKY CONSULTING
             </p>
             <h1
               className="mb-6 max-w-[18ch] text-[clamp(2.1rem,4.5vw,3.75rem)] leading-[1.05] font-semibold tracking-tight text-balance"

@@ -99,11 +99,11 @@ const PROMISE = [
   },
   {
     fr: {
-      title: "Pack Urgence Santé à 300 000 FCFA",
+      title: "Pack Urgence Santé",
       body: "Un accompagnement accéléré pour les soins spécialisés et la C.I.A., avec un périmètre de prestation clair dès le premier échange.",
     },
     en: {
-      title: "Health Emergency Pack at 300,000 FCFA",
+      title: "Health Emergency Pack",
       body: "Accelerated support for specialised care and medical evacuation, with a clear service scope from the first exchange.",
     },
   },
@@ -125,7 +125,7 @@ export default function SantePage() {
   const t = {
     fr: {
       title: "Visa médical Schengen : soins en Europe, dossier accéléré.",
-      body: "Pack Urgence Santé à 300 000 FCFA : depuis Dakar, Fabienne accélère votre visa Schengen pour soins spécialisés ou C.I.A. — devis et admission hospitaliers, traitement prioritaire et coordination avec les hôpitaux en Europe.",
+      body: "Depuis Dakar, Tooky Consulting accélère votre visa Schengen pour soins spécialisés ou C.I.A. : devis et admission hospitaliers, traitement prioritaire et coordination avec les hôpitaux en Europe. Tarif communiqué après évaluation.",
       whyTitle: "Quand la santé ne peut pas attendre, le dossier non plus.",
       servicesTitle: "Le Pack Urgence Santé, de l'hôpital au visa.",
       promiseTitle: "Vous décrivez la situation. Nous vous disons comment avancer.",
@@ -138,7 +138,7 @@ export default function SantePage() {
     },
     en: {
       title: "Schengen medical visa: care in Europe, accelerated file.",
-      body: "Health Emergency Pack at 300,000 FCFA: from Dakar, Fabienne accelerates your Schengen visa for specialised care or medical evacuation — hospital quotes and admission, priority handling and coordination with hospitals in Europe.",
+      body: "From Dakar, Tooky Consulting accelerates your Schengen visa for specialised care or medical evacuation: hospital quotes and admission, priority handling and coordination with hospitals in Europe. Pricing shared after assessment.",
       whyTitle: "When health cannot wait, neither can the file.",
       servicesTitle: "The Health Emergency Pack, from hospital to visa.",
       promiseTitle: "You describe the situation. We tell you how to move forward.",
@@ -176,7 +176,7 @@ export default function SantePage() {
                 color: "var(--c-cobalt-300)",
               }}
             >
-              Fabienne
+              TOOKY CONSULTING
             </p>
             <h1
               className="mb-6 max-w-[18ch] text-[clamp(2.1rem,4.5vw,3.75rem)] leading-[1.05] font-semibold tracking-tight text-balance"

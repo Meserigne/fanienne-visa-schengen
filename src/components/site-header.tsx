@@ -54,10 +54,10 @@ export function SiteHeader() {
           style={{ color: solid ? "var(--text-primary)" : "var(--text-on-dark)" }}
         >
           <span
-            className="text-[26px] font-semibold tracking-tight sm:text-[28px]"
+            className="text-[18px] font-semibold tracking-[0.06em] sm:text-[20px]"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Fabienne
+            TOOKY CONSULTING
           </span>
           <span
             className="hidden h-1.5 w-1.5 self-center rounded-full sm:block"

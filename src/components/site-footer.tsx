@@ -20,7 +20,7 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
             className="text-[24px] font-semibold"
             style={{ fontFamily: "var(--font-display)", color: "var(--text-on-dark)" }}
           >
-            Fabienne
+            TOOKY CONSULTING
           </p>
           <div className="flex flex-wrap gap-7 text-sm" style={{ fontFamily: "var(--font-ui)" }}>
             <Link href="/etudiants" style={{ color: "var(--text-on-dark-muted)" }}>
@@ -38,12 +38,12 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
             <Link href="/qui-nous-sommes" style={{ color: "var(--text-on-dark-muted)" }}>
               {lang === "fr" ? "Qui nous sommes" : "About us"}
             </Link>
-            <a href="mailto:contact@fabienne.sn" style={{ color: "var(--text-on-dark-muted)" }}>
-              contact@fabienne.sn
+            <a href="mailto:contact@tookyconsulting.com" style={{ color: "var(--text-on-dark-muted)" }}>
+              contact@tookyconsulting.com
             </a>
           </div>
           <div className="flex flex-wrap items-center gap-4 text-xs" style={{ fontFamily: "var(--font-ui)", color: "var(--c-ink-400)" }}>
-            <span>© 2026 Fabienne · {lang === "fr" ? "Dakar, Sénégal" : "Dakar, Senegal"}</span>
+            <span>© 2026 Tooky Consulting · {lang === "fr" ? "Dakar, Sénégal" : "Dakar, Senegal"}</span>
             <Link href="/politique-de-confidentialite" className="transition-colors hover:text-white">
               {lang === "fr" ? "Politique de confidentialité" : "Privacy policy"}
             </Link>
@@ -67,7 +67,7 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
             className="mb-4 text-[32px] font-semibold tracking-tight"
             style={{ fontFamily: "var(--font-display)", color: "var(--text-on-dark)" }}
           >
-            Fabienne
+            TOOKY CONSULTING
           </p>
           <p className="max-w-[36ch] text-[15px] leading-[1.7]">
             {lang === "fr"
@@ -126,8 +126,8 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
           <a href={waLink} className="transition-colors hover:text-white">
             WhatsApp · {WHATSAPP}
           </a>
-          <a href="mailto:contact@fabienne.sn" className="transition-colors hover:text-white">
-            contact@fabienne.sn
+          <a href="mailto:contact@tookyconsulting.com" className="transition-colors hover:text-white">
+            contact@tookyconsulting.com
           </a>
         </div>
       </div>
@@ -137,8 +137,8 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
       >
         <p className="max-w-[90ch]">
           {lang === "fr"
-            ? "© 2026 Fabienne · Accompagnement visa Schengen. Fabienne est un cabinet de conseil indépendant, sans lien avec les consulats ; la décision de visa appartient aux autorités consulaires."
-            : "© 2026 Fabienne · Schengen visa consultancy. Fabienne is an independent advisory firm with no affiliation to consulates; visa decisions rest with consular authorities."}
+            ? "© 2026 Tooky Consulting · Accompagnement visa Schengen. Tooky Consulting est un cabinet de conseil indépendant, sans lien avec les consulats ; la décision de visa appartient aux autorités consulaires."
+            : "© 2026 Tooky Consulting · Schengen visa consultancy. Tooky Consulting is an independent advisory firm with no affiliation to consulates; visa decisions rest with consular authorities."}
         </p>
         <Link
           href="/politique-de-confidentialite"

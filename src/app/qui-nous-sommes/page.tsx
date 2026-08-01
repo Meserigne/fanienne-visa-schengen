@@ -72,14 +72,14 @@ export default function AboutPage() {
   const t = {
     fr: {
       title: "Qui nous sommes.",
-      body: "Fabienne est un cabinet d'accompagnement visa Schengen basé à Dakar. Notre mission : simplifier, sécuriser et maximiser le taux de réussite des demandes, grâce à un accompagnement clé en main.",
+      body: "Tooky Consulting est un cabinet d'accompagnement visa Schengen basé à Dakar. Notre mission : simplifier, sécuriser et maximiser le taux de réussite des demandes, grâce à un accompagnement clé en main.",
       missionTitle: "Notre mission.",
       missionLead:
         "Simplifier, sécuriser et maximiser vos chances de visa Schengen à travers un accompagnement rigoureux et sur mesure.",
       missionBody:
         "Depuis le centre-ville de Dakar, nous traitons chaque dossier avec une méthode claire : analyse du profil, constitution des pièces, double vérification, prise de RDV et suivi jusqu'à la décision.",
       missionNote:
-        "Fabienne est un cabinet de conseil indépendant. Nous ne délivrons pas de visas : la décision appartient aux autorités consulaires. Notre rôle est de vous mettre dans les meilleures conditions pour réussir.",
+        "Tooky Consulting est un cabinet de conseil indépendant. Nous ne délivrons pas de visas : la décision appartient aux autorités consulaires. Notre rôle est de vous mettre dans les meilleures conditions pour réussir.",
       missionPoints: [
         "Accompagnement clé en main, adapté à votre motif de voyage",
         "Double vérification avant dépôt pour limiter les refus évitables",
@@ -89,19 +89,19 @@ export default function AboutPage() {
       audiencesTitle: "Pour qui nous travaillons.",
       ctaTitle: "Parlez-nous de votre projet.",
       ctaBody:
-        "Évaluation gratuite sous 48 heures. Décrivez votre situation : un conseiller Fabienne vous répond.",
+        "Évaluation gratuite sous 48 heures. Décrivez votre situation : un conseiller Tooky Consulting vous répond.",
       ctaButton: "Tester mon éligibilité",
     },
     en: {
       title: "Who we are.",
-      body: "Fabienne is a Schengen visa consultancy based in Dakar. Our mission: simplify, secure and maximise approval rates through turnkey, tailored support.",
+      body: "Tooky Consulting is a Schengen visa consultancy based in Dakar. Our mission: simplify, secure and maximise approval rates through turnkey, tailored support.",
       missionTitle: "Our mission.",
       missionLead:
         "Simplify, secure and maximise your Schengen visa chances through rigorous, tailored support.",
       missionBody:
         "From central Dakar, we handle every file with a clear method: profile review, document preparation, double verification, appointment booking and follow-up until the decision.",
       missionNote:
-        "Fabienne is an independent advisory firm. We do not issue visas: decisions belong to consular authorities. Our role is to put you in the best position to succeed.",
+        "Tooky Consulting is an independent advisory firm. We do not issue visas: decisions belong to consular authorities. Our role is to put you in the best position to succeed.",
       missionPoints: [
         "Turnkey support matched to your travel purpose",
         "Double verification before submission to reduce avoidable refusals",
@@ -111,7 +111,7 @@ export default function AboutPage() {
       audiencesTitle: "Who we work with.",
       ctaTitle: "Tell us about your project.",
       ctaBody:
-        "Free assessment within 48 hours. Describe your situation: a Fabienne advisor replies.",
+        "Free assessment within 48 hours. Describe your situation: a Tooky Consulting advisor replies.",
       ctaButton: "Check my eligibility",
     },
   }[lang];
@@ -141,7 +141,7 @@ export default function AboutPage() {
                 color: "var(--c-cobalt-300)",
               }}
             >
-              Fabienne
+              TOOKY CONSULTING
             </p>
             <h1
               className="mb-6 max-w-[14ch] text-[clamp(2.1rem,4.5vw,3.75rem)] leading-[1.05] font-semibold tracking-tight text-balance"
@@ -173,8 +173,8 @@ export default function AboutPage() {
                 src={SITE_IMAGES.about}
                 alt={
                   lang === "fr"
-                    ? "Équipe Fabienne - cabinet d'accompagnement visa Schengen à Dakar"
-                    : "Fabienne team - Schengen visa consultancy in Dakar"
+                    ? "Équipe Tooky Consulting - cabinet d'accompagnement visa Schengen à Dakar"
+                    : "Tooky Consulting team - Schengen visa consultancy in Dakar"
                 }
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"

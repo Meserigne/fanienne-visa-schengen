@@ -15,13 +15,13 @@ export function ParallaxHero() {
 
   const t = {
     fr: {
-      brand: "Fabienne",
+      brand: "TOOKY CONSULTING",
       title: "Simplifier et sécuriser votre visa Schengen.",
       body: "Cabinet à Dakar : accompagnement clé en main pour maximiser vos chances. Étudiants, professionnels, familles et soins médicaux.",
       ctaSecondary: "Voir les packs",
     },
     en: {
-      brand: "Fabienne",
+      brand: "TOOKY CONSULTING",
       title: "Simplify and secure your Schengen visa.",
       body: "A Dakar consultancy: turnkey support to maximise your chances. Students, professionals, families and medical travel.",
       ctaSecondary: "See the packs",
@@ -82,7 +82,7 @@ export function ParallaxHero() {
         <div data-parallax-media className="absolute inset-0 will-change-transform">
           <Image
             src={SITE_IMAGES.hero}
-            alt="Accompagnement visa Schengen Fabienne - Europe depuis Dakar"
+            alt="Accompagnement visa Schengen Tooky Consulting - Europe depuis Dakar"
             fill
             priority
             sizes="100vw"

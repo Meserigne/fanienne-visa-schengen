@@ -9,7 +9,7 @@ export function JsonLd() {
     description:
       "Cabinet d'accompagnement visa Schengen à Dakar : étudiants, professionnels, tourisme & famille, soins médicaux.",
     url: SITE_URL,
-    email: "contact@fabienne.sn",
+    email: "contact@tookyconsulting.com",
     areaServed: {
       "@type": "Country",
       name: "Sénégal",

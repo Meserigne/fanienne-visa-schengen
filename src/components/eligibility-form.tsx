@@ -27,7 +27,7 @@ export function EligibilityForm() {
   const t = {
     fr: {
       title: "Testez votre éligibilité au visa Schengen",
-      body: "Répondez en deux minutes. Un conseiller Fabienne analyse votre profil et vous oriente vers le pack adapté sous 48 heures.",
+      body: "Répondez en deux minutes. Un conseiller Tooky Consulting analyse votre profil et vous oriente vers le pack adapté sous 48 heures.",
       points: [
         "Évaluation gratuite et sans engagement",
         "Orientation vers le pack adapté (Classique, Student, Pro, Santé)",
@@ -59,7 +59,7 @@ export function EligibilityForm() {
     },
     en: {
       title: "Check your Schengen visa eligibility",
-      body: "Answer in two minutes. A Fabienne advisor reviews your profile and guides you to the right pack within 48 hours.",
+      body: "Answer in two minutes. A Tooky Consulting advisor reviews your profile and guides you to the right pack within 48 hours.",
       points: [
         "Free, no-obligation assessment",
         "Guidance to the right pack (Classic, Student, Pro, Health)",
@@ -125,7 +125,7 @@ export function EligibilityForm() {
     const next = form.elements.namedItem("_next") as HTMLInputElement | null;
 
     if (subject) {
-      subject.value = `[Fabienne] Nouvelle demande d'éligibilité - ${name}`;
+      subject.value = `[Tooky] Nouvelle demande d'éligibilité - ${name}`;
     }
     if (autoresponse) {
       autoresponse.value = buildClientAutoresponse({
@@ -227,7 +227,7 @@ export function EligibilityForm() {
                 <input
                   type="hidden"
                   name="_subject"
-                  defaultValue="[Fabienne] Nouvelle demande d'éligibilité"
+                  defaultValue="[Tooky] Nouvelle demande d'éligibilité"
                 />
                 <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_captcha" value="false" />
@@ -236,7 +236,7 @@ export function EligibilityForm() {
                 <input
                   type="hidden"
                   name="_autoresponse"
-                  defaultValue="Bonjour, merci pour votre demande. Nous avons bien reçu vos informations et nous vous reviendrons sous peu. Cordialement, L'équipe Fabienne"
+                  defaultValue="Bonjour, merci pour votre demande. Nous avons bien reçu vos informations et nous vous reviendrons sous peu. Cordialement, L'équipe Tooky Consulting"
                 />
                 <input
                   type="text"

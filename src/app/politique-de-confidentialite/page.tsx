@@ -16,15 +16,15 @@ const SECTIONS: Section[] = [
     fr: {
       title: "1. Qui est responsable ?",
       paragraphs: [
-        "Fabienne, cabinet d'accompagnement visa Schengen basé à Dakar (Sénégal), est responsable du traitement des données personnelles collectées via ce site et lors de nos échanges (formulaire, e-mail).",
-        "Contact : contact@fabienne.sn",
+        "Tooky Consulting, cabinet d'accompagnement visa Schengen basé à Dakar (Sénégal), est responsable du traitement des données personnelles collectées via ce site et lors de nos échanges (formulaire, e-mail).",
+        "Contact : contact@tookyconsulting.com",
       ],
     },
     en: {
       title: "1. Who is responsible?",
       paragraphs: [
-        "Fabienne, a Schengen visa consultancy based in Dakar (Senegal), is responsible for personal data collected through this website and in our exchanges (form, email).",
-        "Contact: contact@fabienne.sn",
+        "Tooky Consulting, a Schengen visa consultancy based in Dakar (Senegal), is responsible for personal data collected through this website and in our exchanges (form, email).",
+        "Contact: contact@tookyconsulting.com",
       ],
     },
   },
@@ -49,14 +49,14 @@ const SECTIONS: Section[] = [
       title: "3. Pourquoi traitons-nous vos données ?",
       paragraphs: [
         "Vos données sont utilisées pour : répondre à votre demande d'éligibilité ou de devis, vous recontacter sous 48 heures, préparer et suivre votre accompagnement visa, améliorer la qualité de nos services, et respecter nos obligations légales.",
-        "Nous ne vendons pas vos données à des tiers. Fabienne est un cabinet de conseil indépendant, sans lien avec les consulats ; la décision de visa appartient uniquement aux autorités consulaires.",
+        "Nous ne vendons pas vos données à des tiers. Tooky Consulting est un cabinet de conseil indépendant, sans lien avec les consulats ; la décision de visa appartient uniquement aux autorités consulaires.",
       ],
     },
     en: {
       title: "3. Why do we process your data?",
       paragraphs: [
         "Your data is used to: answer your eligibility or quote request, contact you within 48 hours, prepare and follow your visa support, improve our services, and meet our legal obligations.",
-        "We do not sell your data to third parties. Fabienne is an independent advisory firm with no affiliation to consulates; visa decisions rest solely with consular authorities.",
+        "We do not sell your data to third parties. Tooky Consulting is an independent advisory firm with no affiliation to consulates; visa decisions rest solely with consular authorities.",
       ],
     },
   },
@@ -80,14 +80,14 @@ const SECTIONS: Section[] = [
     fr: {
       title: "5. Qui peut accéder à vos données ?",
       paragraphs: [
-        "L'accès est limité aux personnes de Fabienne habilitées à traiter votre dossier. Des prestataires techniques (hébergement du site, messagerie) peuvent traiter des données uniquement pour faire fonctionner nos outils, dans le cadre de leurs obligations de confidentialité.",
+        "L'accès est limité aux personnes de Tooky Consulting habilitées à traiter votre dossier. Des prestataires techniques (hébergement du site, messagerie) peuvent traiter des données uniquement pour faire fonctionner nos outils, dans le cadre de leurs obligations de confidentialité.",
         "Si votre dossier nécessite un échange avec un partenaire (école, organisme, assureur, etc.), cela se fait uniquement avec votre accord et dans la limite nécessaire à votre projet.",
       ],
     },
     en: {
       title: "5. Who can access your data?",
       paragraphs: [
-        "Access is limited to Fabienne staff authorised to handle your file. Technical providers (website hosting, email) may process data only to operate our tools, under confidentiality obligations.",
+        "Access is limited to Tooky Consulting staff authorised to handle your file. Technical providers (website hosting, email) may process data only to operate our tools, under confidentiality obligations.",
         "If your file requires exchange with a partner (school, organisation, insurer, etc.), this happens only with your consent and only as needed for your project.",
       ],
     },
@@ -111,14 +111,14 @@ const SECTIONS: Section[] = [
       title: "7. Vos droits",
       paragraphs: [
         "Selon le droit applicable, vous pouvez demander l'accès, la rectification, la suppression ou la limitation du traitement de vos données, ainsi que vous opposer à certains traitements.",
-        "Pour exercer vos droits : contact@fabienne.sn. Nous répondons dans un délai raisonnable. Si vous estimez que vos droits ne sont pas respectés, vous pouvez saisir l'autorité compétente en matière de protection des données.",
+        "Pour exercer vos droits : contact@tookyconsulting.com. Nous répondons dans un délai raisonnable. Si vous estimez que vos droits ne sont pas respectés, vous pouvez saisir l'autorité compétente en matière de protection des données.",
       ],
     },
     en: {
       title: "7. Your rights",
       paragraphs: [
         "Under applicable law, you may request access to, correction, deletion or restriction of processing of your data, and object to certain processing.",
-        "To exercise your rights: contact@fabienne.sn. We reply within a reasonable time. If you believe your rights are not respected, you may contact the competent data-protection authority.",
+        "To exercise your rights: contact@tookyconsulting.com. We reply within a reasonable time. If you believe your rights are not respected, you may contact the competent data-protection authority.",
       ],
     },
   },
@@ -159,14 +159,14 @@ export default function PrivacyPage() {
     fr: {
       title: "Politique de confidentialité",
       intro:
-        "Chez Fabienne, vos données personnelles sont traitées avec sérieux. Cette page explique quelles informations nous collectons, pourquoi, et quels sont vos droits.",
+        "Chez Tooky Consulting, vos données personnelles sont traitées avec sérieux. Cette page explique quelles informations nous collectons, pourquoi, et quels sont vos droits.",
       updated: "Dernière mise à jour : 1er août 2026",
       back: "Retour à l'accueil",
     },
     en: {
       title: "Privacy policy",
       intro:
-        "At Fabienne, your personal data is handled carefully. This page explains what information we collect, why, and what your rights are.",
+        "At Tooky Consulting, your personal data is handled carefully. This page explains what information we collect, why, and what your rights are.",
       updated: "Last updated: 1 August 2026",
       back: "Back to home",
     },
@@ -197,7 +197,7 @@ export default function PrivacyPage() {
                 color: "var(--c-cobalt-300)",
               }}
             >
-              Fabienne
+              TOOKY CONSULTING
             </p>
             <h1
               className="mb-5 max-w-[16ch] text-[clamp(2.1rem,4.5vw,3.5rem)] leading-[1.05] font-semibold tracking-tight text-balance"

@@ -197,7 +197,7 @@ export default function Home() {
       needTitle: "Un besoin particulier ?",
       needBody: "Chaque demande est étudiée sans engagement. Nous vous orientons vers le pack le plus adapté.",
       needCta: "Demander un devis",
-      howTitle: "Comment Fabienne maximise vos chances.",
+      howTitle: "Comment Tooky Consulting maximise vos chances.",
       partnersLabel: "Sablux, Mega et THETA nous font confiance",
     },
     en: {
@@ -244,7 +244,7 @@ export default function Home() {
       needTitle: "A specific need?",
       needBody: "Every request is reviewed with no obligation. We guide you to the right pack.",
       needCta: "Request a quote",
-      howTitle: "How Fabienne maximises your chances.",
+      howTitle: "How Tooky Consulting maximises your chances.",
       partnersLabel: "Trusted by Sablux, Mega and THETA",
     },
   }[lang];

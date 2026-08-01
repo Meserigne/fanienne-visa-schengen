@@ -125,7 +125,7 @@ export default function EntreprisesPage() {
   const t = {
     fr: {
       title: "Pack Pro Executive : missions et affaires en Europe.",
-      body: "Depuis Dakar, Fabienne traite en priorité vos visas d'affaires (250 000 FCFA) : foires, missions, partenariats, ordres de mission et invitations d'entreprises européennes.",
+      body: "Depuis Dakar, Tooky Consulting traite en priorité vos visas d'affaires : foires, missions, partenariats, ordres de mission et invitations d'entreprises européennes. Tarif communiqué après évaluation.",
       whyTitle: "Un refus de visa d'affaires coûte plus cher qu'un dossier bien préparé.",
       servicesTitle: "Ce que comprend le Pack Pro Executive.",
       promiseTitle: "Vous décrivez la mission. Nous sécurisons le dossier.",
@@ -133,12 +133,12 @@ export default function EntreprisesPage() {
         "Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa d'affaires, avec traitement prioritaire et double vérification avant dépôt.",
       ctaTitle: "Démarrez votre Pack Pro Executive.",
       ctaBody:
-        "Décrivez votre mission professionnelle : un conseiller Fabienne vous répond sous 48 heures.",
+        "Décrivez votre mission professionnelle : un conseiller Tooky Consulting vous répond sous 48 heures.",
       ctaButton: "Demander un devis gratuit",
     },
     en: {
       title: "Pro Executive Pack: missions and business in Europe.",
-      body: "From Dakar, Fabienne prioritises your business visas (250,000 FCFA): trade fairs, missions, partnerships, mission orders and European company invitations.",
+      body: "From Dakar, Tooky Consulting prioritises your business visas: trade fairs, missions, partnerships, mission orders and European company invitations. Pricing shared after assessment.",
       whyTitle: "A business visa refusal costs more than a well-prepared file.",
       servicesTitle: "What the Pro Executive Pack includes.",
       promiseTitle: "You describe the mission. We secure the file.",
@@ -146,7 +146,7 @@ export default function EntreprisesPage() {
         "After your request, we tell you exactly what is needed for your business visa, with priority handling and double verification before submission.",
       ctaTitle: "Start your Pro Executive Pack.",
       ctaBody:
-        "Describe your professional mission: a Fabienne advisor replies within 48 hours.",
+        "Describe your professional mission: a Tooky Consulting advisor replies within 48 hours.",
       ctaButton: "Request a free quote",
     },
   }[lang];
@@ -176,7 +176,7 @@ export default function EntreprisesPage() {
                 color: "var(--c-cobalt-300)",
               }}
             >
-              Fabienne
+              TOOKY CONSULTING
             </p>
             <h1
               className="mb-6 max-w-[18ch] text-[clamp(2.1rem,4.5vw,3.75rem)] leading-[1.05] font-semibold tracking-tight text-balance"

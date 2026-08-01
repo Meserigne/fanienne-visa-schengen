@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Fabienne - Accompagnement visa Schengen à Dakar",
+        alt: "TOOKY CONSULTING - Accompagnement visa Schengen à Dakar",
       },
     ],
   },

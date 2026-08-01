@@ -7,7 +7,6 @@ import { Reveal } from "@/components/reveal";
 const PACKS = [
   {
     href: "/tourisme",
-    price: "150 000",
     fr: {
       name: "Pack Classique",
       audience: "Court séjour · Tourisme · Famille",
@@ -23,7 +22,6 @@ const PACKS = [
   },
   {
     href: "/etudiants",
-    price: "200 000",
     fr: {
       name: "Pack Student Care",
       audience: "Études · Mobilité académique",
@@ -39,7 +37,6 @@ const PACKS = [
   },
   {
     href: "/entreprises",
-    price: "250 000",
     fr: {
       name: "Pack Pro Executive",
       audience: "Affaires · Business",
@@ -55,7 +52,6 @@ const PACKS = [
   },
   {
     href: "/sante",
-    price: "300 000",
     fr: {
       name: "Pack Urgence Santé",
       audience: "Soins médicaux · C.I.A.",
@@ -77,15 +73,13 @@ export function PacksSection() {
   const t = {
     fr: {
       title: "Nos packs d'accompagnement.",
-      body: "Des prestations claires, adaptées à votre motif de voyage. Chaque dossier est traité sur mesure, avec double vérification avant dépôt.",
-      cta: "Choisir ce pack",
-      unit: "FCFA",
+      body: "Des prestations claires, adaptées à votre motif de voyage. Le tarif vous est communiqué après évaluation de votre dossier, sans engagement.",
+      cta: "En savoir plus",
     },
     en: {
       title: "Our support packs.",
-      body: "Clear packages matched to your travel purpose. Every file is handled with care, with double verification before submission.",
-      cta: "Choose this pack",
-      unit: "FCFA",
+      body: "Clear packages matched to your travel purpose. Pricing is shared after we assess your file, with no obligation.",
+      cta: "Learn more",
     },
   }[lang];
 
@@ -141,20 +135,6 @@ export function PacksSection() {
                   >
                     {copy.name}
                   </h3>
-                  <p className="mb-5 flex items-baseline gap-1.5">
-                    <span
-                      className="text-[2rem] font-semibold tabular-nums"
-                      style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
-                    >
-                      {pack.price}
-                    </span>
-                    <span
-                      className="text-[14px]"
-                      style={{ fontFamily: "var(--font-ui)", color: "var(--text-muted)" }}
-                    >
-                      {t.unit}
-                    </span>
-                  </p>
                   <p
                     className="mb-8 flex-1 text-[15px] leading-[1.65]"
                     style={{ color: "var(--text-secondary)" }}
