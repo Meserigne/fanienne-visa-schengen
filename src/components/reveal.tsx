@@ -1,8 +1,6 @@
 "use client";
 
 import { useEffect, useRef, type ReactNode } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 type RevealProps = {
   children: ReactNode;
@@ -11,7 +9,8 @@ type RevealProps = {
   y?: number;
 };
 
-export function Reveal({ children, className, delay = 0, y = 28 }: RevealProps) {
+/** Lightweight CSS reveal without GSAP pin/opacity traps that hide content. */
+export function Reveal({ children, className, delay = 0, y = 20 }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -19,35 +18,44 @@ export function Reveal({ children, className, delay = 0, y = 28 }: RevealProps) 
     if (!el) return;
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) return;
+    if (reduce) {
+      el.style.opacity = "1";
+      el.style.transform = "none";
+      return;
+    }
 
-    gsap.registerPlugin(ScrollTrigger);
+    el.style.opacity = "0";
+    el.style.transform = `translateY(${y}px)`;
+    el.style.transition = `opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) ${delay}s, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) ${delay}s`;
 
-    const tween = gsap.fromTo(
-      el,
-      { autoAlpha: 0, y },
-      {
-        autoAlpha: 1,
-        y: 0,
-        duration: 0.85,
-        delay,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 88%",
-          once: true,
-        },
-      }
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry?.isIntersecting) return;
+        el.style.opacity = "1";
+        el.style.transform = "translateY(0)";
+        io.disconnect();
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
     );
 
+    io.observe(el);
+
+    // Safety: never leave content invisible
+    const safety = window.setTimeout(() => {
+      el.style.opacity = "1";
+      el.style.transform = "translateY(0)";
+    }, 2500);
+
     return () => {
-      tween.scrollTrigger?.kill();
-      tween.kill();
+      io.disconnect();
+      window.clearTimeout(safety);
+      el.style.opacity = "1";
+      el.style.transform = "none";
     };
   }, [delay, y]);
 
   return (
-    <div ref={ref} className={className} style={{ opacity: 1 }}>
+    <div ref={ref} className={className}>
       {children}
     </div>
   );

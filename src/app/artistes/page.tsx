@@ -13,32 +13,32 @@ const CTA = { fr: "Tester mon éligibilité", en: "Check my eligibility" };
 const WHY = [
   {
     fr: {
-      title: "Opportunités saisies à temps",
-      body: "Un salon manqué ou une négociation reportée, c'est un marché perdu. Nous anticipons les délais consulaires pour que vous soyez présent au bon moment.",
+      title: "Un projet artistique clair",
+      body: "Invitation, contrat, programme de tournée ou résidence : nous structurons votre dossier culturel pour qu'il soit lisible par le consulat.",
     },
     en: {
-      title: "Opportunities seized on time",
-      body: "A missed trade fair or postponed negotiation is a lost market. We anticipate consular timelines so you are there at the right moment.",
+      title: "A clear artistic project",
+      body: "Invitation, contract, tour schedule or residency: we structure your cultural file so consulates can read it clearly.",
     },
   },
   {
     fr: {
-      title: "Crédibilité de l'entreprise",
-      body: "Un dossier d'entreprise structuré (registre, bilans, lettres d'invitation) présente votre PME sous son meilleur jour auprès des consulats.",
+      title: "Preuves de professionnalisme",
+      body: "Portfolio, presse, cachets, lettres d'organismes : nous réunissons les éléments qui montrent que vous êtes attendu en Europe pour créer, pas pour y rester illégalement.",
     },
     en: {
-      title: "Company credibility",
-      body: "A structured company file (registration, financials, invitation letters) presents your SME at its best before consulates.",
+      title: "Proof of professionalism",
+      body: "Portfolio, press, fees, organiser letters: we gather what shows you are expected in Europe to create, not to stay unlawfully.",
     },
   },
   {
     fr: {
-      title: "Historique de voyage propre",
-      body: "Des demandes bien faites construisent un historique favorable, qui facilite chaque visa suivant, jusqu'aux visas de circulation longue durée.",
+      title: "Des délais respectés",
+      body: "Festivals et tournées ne se reportent pas. Nous anticipons les délais consulaires pour que vous soyez sur scène à la bonne date.",
     },
     en: {
-      title: "A clean travel record",
-      body: "Well-made applications build a favourable history that eases every next visa, up to long-term multiple-entry visas.",
+      title: "Deadlines kept",
+      body: "Festivals and tours do not wait. We anticipate consular timelines so you are on stage on the right date.",
     },
   },
 ];
@@ -46,42 +46,42 @@ const WHY = [
 const SERVICES = [
   {
     fr: {
-      title: "Visa d'affaires dirigeant",
-      body: "Dossier complet du gérant ou dirigeant : documents d'entreprise, invitation du partenaire européen, itinéraire et justificatifs financiers.",
+      title: "Festivals & représentations",
+      body: "Visa pour concerts, expositions, festivals et spectacles en Europe, avec invitation de l'organisateur et itinerary du séjour.",
     },
     en: {
-      title: "Executive business visa",
-      body: "A complete file for the owner or executive: company documents, invitation from the European partner, itinerary and financial proof.",
+      title: "Festivals & performances",
+      body: "Visa for concerts, exhibitions, festivals and shows in Europe, with organiser invitation and stay itinerary.",
     },
   },
   {
     fr: {
-      title: "Délégations & équipes",
-      body: "Gestion groupée des demandes pour vos équipes en déplacement : salons, foires, formations et missions techniques.",
+      title: "Résidences artistiques",
+      body: "Dossier pour résidences, workshops et programmes culturels : lettre d'accueil, durée, financement et retour au Sénégal.",
     },
     en: {
-      title: "Delegations & teams",
-      body: "Grouped applications for travelling teams: trade fairs, exhibitions, training and technical missions.",
+      title: "Artist residencies",
+      body: "File for residencies, workshops and cultural programmes: host letter, duration, funding and return to Senegal.",
     },
   },
   {
     fr: {
-      title: "Voyages récurrents",
-      body: "Stratégie pour obtenir des visas à entrées multiples et de circulation, adaptée aux entreprises qui voyagent plusieurs fois par an.",
+      title: "Tournées & délégations",
+      body: "Gestion des demandes pour groupes, troupes et équipes techniques en déplacement sur plusieurs villes européennes.",
     },
     en: {
-      title: "Frequent travel",
-      body: "A strategy to obtain multiple-entry and circulation visas, designed for companies that travel several times a year.",
+      title: "Tours & delegations",
+      body: "Managing applications for groups, companies and technical crews travelling across several European cities.",
     },
   },
   {
     fr: {
-      title: "Logistique du déplacement",
-      body: "Assurance conforme Schengen, réservations d'hôtel et de vol, et accompagnement sur place si nécessaire.",
+      title: "Logistique du séjour",
+      body: "Assurance conforme Schengen, hébergement, billets et suivi jusqu'à la décision pour partir l'esprit libre.",
     },
     en: {
       title: "Trip logistics",
-      body: "Schengen-compliant insurance, hotel and flight bookings, and on-site support when needed.",
+      body: "Schengen-compliant insurance, housing, tickets and follow-up until the decision, so you leave with a clear mind.",
     },
   },
 ];
@@ -90,64 +90,64 @@ const PROMISE = [
   {
     fr: {
       title: "Réponse sous 48 heures",
-      body: "Décrivez votre mission. Un conseiller vous répond avec une lecture claire de votre situation.",
+      body: "Décrivez votre projet culturel. Un conseiller vous répond avec une lecture claire de votre situation.",
     },
     en: {
       title: "Reply within 48 hours",
-      body: "Describe your mission. An advisor replies with a clear reading of your situation.",
+      body: "Describe your cultural project. An advisor replies with a clear reading of your situation.",
     },
   },
   {
     fr: {
-      title: "Devis adapté à votre déplacement",
-      body: "Salon, négociation ou délégation : chaque accompagnement est chiffré selon votre réel besoin.",
+      title: "Dossier calé sur votre art",
+      body: "Musique, arts visuels, danse, cinéma ou littérature : l'accompagnement s'adapte à votre discipline et à vos dates.",
     },
     en: {
-      title: "A quote fitted to your trip",
-      body: "Trade fair, negotiation or delegation: every engagement is priced to your actual need.",
+      title: "A file fitted to your art",
+      body: "Music, visual arts, dance, film or literature: support adapts to your discipline and your dates.",
     },
   },
   {
     fr: {
       title: "Un interlocuteur dédié",
-      body: "Vous avancez avec la même personne, de la première prise de contact jusqu'à la décision consulaire.",
+      body: "Vous avancez avec la même personne, de la première invitation jusqu'à la décision consulaire.",
     },
     en: {
       title: "A dedicated contact",
-      body: "You work with the same person from first contact through to the consular decision.",
+      body: "You work with the same person from the first invitation through to the consular decision.",
     },
   },
 ];
 
-export default function EntreprisesPage() {
+export default function ArtistesPage() {
   const { lang } = useLanguage();
 
   const t = {
     fr: {
-      title: "Visa d'affaires Schengen pour PME et PMI.",
-      body: "Depuis Dakar, Fanienne prépare le visa Schengen affaires de vos dirigeants et équipes : salons, négociations, partenariats. Pour que vos opportunités ne dépendent plus d'un refus de visa.",
-      whyTitle: "Un refus de visa d'affaires coûte plus cher qu'un dossier bien préparé.",
-      servicesTitle: "Du visa dirigeant à la délégation complète.",
-      promiseTitle: "Vous décrivez la mission. Nous vous disons comment avancer.",
+      title: "Visa Schengen pour artistes et projets culturels.",
+      body: "Festivals, résidences, tournées, expositions : depuis Dakar, Fanienne prépare le visa Schengen des artistes sénégalais pour que la scène européenne ne soit plus bloquée par un dossier incomplet.",
+      whyTitle: "Un projet culturel mérite un dossier à la hauteur.",
+      servicesTitle: "De la scène solo à la tournée complète.",
+      promiseTitle: "Vous décrivez le projet. Nous vous disons comment avancer.",
       promiseBody:
-        "Pas de liste de pièces à l'avance. Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa d'affaires, selon la destination et l'objet du voyage.",
-      ctaTitle: "Parlez-nous de votre prochain déplacement d'affaires.",
+        "Pas de liste de pièces à l'avance. Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa artiste, selon la destination et le type de projet.",
+      ctaTitle: "Parlez-nous de votre prochain projet en Europe.",
       ctaBody:
-        "Chaque mission professionnelle est étudiée sur devis. Décrivez votre projet : un conseiller Fanienne vous répond sous 48 heures.",
-      ctaButton: "Demander un devis gratuit",
+        "Chaque dossier artistique est étudié sur devis. Décrivez votre invitation ou votre résidence : un conseiller vous répond sous 48 heures.",
+      ctaButton: "Tester mon éligibilité",
     },
     en: {
-      title: "Schengen business visa for SMEs.",
-      body: "From Dakar, Fanienne prepares Schengen business visas for your executives and teams: trade fairs, negotiations, partnerships. So your opportunities no longer depend on a visa refusal.",
-      whyTitle: "A business visa refusal costs more than a well-prepared file.",
-      servicesTitle: "From an executive visa to a full delegation.",
-      promiseTitle: "You describe the mission. We tell you how to move forward.",
+      title: "Schengen visa for artists and cultural projects.",
+      body: "Festivals, residencies, tours, exhibitions: from Dakar, Fanienne prepares Schengen visas for Senegalese artists so the European stage is no longer blocked by an incomplete file.",
+      whyTitle: "A cultural project deserves a file that matches it.",
+      servicesTitle: "From a solo stage to a full tour.",
+      promiseTitle: "You describe the project. We tell you how to move forward.",
       promiseBody:
-        "No document list upfront. After your request, we tell you exactly what is needed for your business visa, for your destination and travel purpose.",
-      ctaTitle: "Tell us about your next business trip.",
+        "No document list upfront. After your request, we tell you exactly what is needed for your artist visa, for your destination and project type.",
+      ctaTitle: "Tell us about your next project in Europe.",
       ctaBody:
-        "Every professional mission is quoted individually. Describe your project: a Fanienne advisor replies within 48 hours.",
-      ctaButton: "Request a free quote",
+        "Every artistic file is quoted individually. Describe your invitation or residency: an advisor replies within 48 hours.",
+      ctaButton: "Check my eligibility",
     },
   }[lang];
 
@@ -163,7 +163,7 @@ export default function EntreprisesPage() {
           className="pointer-events-none absolute inset-0 opacity-45"
           style={{
             background:
-              "radial-gradient(ellipse 65% 55% at 15% 30%, rgba(36,80,232,0.4), transparent 60%)",
+              "radial-gradient(ellipse 65% 55% at 85% 25%, rgba(36,80,232,0.4), transparent 60%)",
           }}
         />
         <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 items-end gap-12 px-6 pb-16 sm:px-10 lg:grid-cols-12 lg:gap-10 lg:px-14 lg:pb-20">
@@ -205,8 +205,12 @@ export default function EntreprisesPage() {
           <Reveal className="relative lg:col-span-5" delay={0.1}>
             <div className="relative aspect-[5/4] overflow-hidden">
               <Image
-                src={SITE_IMAGES.business}
-                alt="Dirigeant PME accompagné pour un visa d'affaires Schengen"
+                src={SITE_IMAGES.artists}
+                alt={
+                  lang === "fr"
+                    ? "Danse africaine traditionnelle avec masque - visa Schengen artistes"
+                    : "Traditional African masked dance - Schengen artist visa"
+                }
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"
@@ -330,15 +334,15 @@ export default function EntreprisesPage() {
             </p>
           </Reveal>
           <Reveal className="relative lg:col-span-6" delay={0.08}>
-            <div
-              className="relative aspect-[5/4] overflow-hidden lg:aspect-[4/3]"
-              style={{ background: "var(--c-ink-950)" }}
-            >
+            <div className="relative aspect-[5/4] overflow-hidden lg:aspect-[4/3]">
               <Image
-                src={SITE_IMAGES.visaIllustration}
-                alt={lang === "fr" ? "Illustration visa Schengen" : "Schengen visa illustration"}
+                src={SITE_IMAGES.artistsStudio}
+                alt={
+                  lang === "fr"
+                    ? "Atelier d'artiste et préparation de visa culturel Schengen"
+                    : "Artist studio and Schengen cultural visa preparation"
+                }
                 fill
-                unoptimized
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center"
               />

@@ -9,6 +9,8 @@ const NAV = [
   { href: "/", fr: "Accueil", en: "Home" },
   { href: "/etudiants", fr: "Étudiants", en: "Students" },
   { href: "/entreprises", fr: "Entreprises", en: "Businesses" },
+  { href: "/artistes", fr: "Artistes", en: "Artists" },
+  { href: "/qui-nous-sommes", fr: "Qui nous sommes", en: "About us" },
 ];
 
 export function SiteHeader() {
@@ -73,7 +75,7 @@ export function SiteHeader() {
         </Link>
 
         <nav
-          className="hidden items-center gap-8 text-sm md:flex"
+          className="hidden items-center gap-5 text-[14px] lg:gap-7 lg:text-[15px] md:flex"
           style={{
             fontFamily: "var(--font-ui)",
             color: solid ? "var(--text-secondary)" : "var(--text-on-dark-muted)",

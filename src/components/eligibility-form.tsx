@@ -6,9 +6,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Reveal } from "@/components/reveal";
+import { DESTINATIONS } from "@/lib/destinations";
 
 const fieldClass =
-  "h-auto rounded-xl border px-3.5 py-3 text-[15px] focus-visible:ring-2";
+  "h-auto rounded-xl border px-3.5 py-3.5 text-[17px] focus-visible:ring-2";
 
 export function EligibilityForm() {
   const { lang } = useLanguage();
@@ -16,7 +17,7 @@ export function EligibilityForm() {
 
   const t = {
     fr: {
-      title: "Êtes-vous prêt pour le visa Schengen ?",
+      title: "Testez votre éligibilité au visa Schengen",
       body: "Répondez en deux minutes. Un conseiller Fanienne analyse votre profil et vous répond sous 48 heures avec un avis honnête et un devis personnalisé.",
       points: [
         "Évaluation gratuite et sans engagement",
@@ -26,20 +27,11 @@ export function EligibilityForm() {
       profile: "Profil",
       profileOptions: ["Étudiant", "Entreprise (PME / PMI)", "Autre"],
       destination: "Destination",
-      destinationOptions: [
-        "France",
-        "Espagne",
-        "Italie",
-        "Allemagne",
-        "Belgique",
-        "Portugal",
-        "Autre pays Schengen",
-      ],
       name: "Nom complet",
       namePlaceholder: "Votre nom et prénom",
       email: "Email",
       emailPlaceholder: "vous@exemple.com",
-      phone: "Téléphone / WhatsApp",
+      phone: "Téléphone",
       phonePlaceholder: "+221 77 000 00 00",
       project: "Votre projet en quelques mots",
       projectPlaceholder: "Études, salon professionnel, mission d'affaires…",
@@ -50,7 +42,7 @@ export function EligibilityForm() {
         "Merci ! Un conseiller Fanienne vous contacte sous 48 heures avec l'analyse de votre profil.",
     },
     en: {
-      title: "Are you ready for the Schengen visa?",
+      title: "Check your Schengen visa eligibility",
       body: "Answer in two minutes. A Fanienne advisor reviews your profile and replies within 48 hours with an honest assessment and a personalised quote.",
       points: [
         "Free, no-obligation assessment",
@@ -60,20 +52,11 @@ export function EligibilityForm() {
       profile: "Profile",
       profileOptions: ["Student", "Business (SME)", "Other"],
       destination: "Destination",
-      destinationOptions: [
-        "France",
-        "Spain",
-        "Italy",
-        "Germany",
-        "Belgium",
-        "Portugal",
-        "Other Schengen country",
-      ],
       name: "Full name",
       namePlaceholder: "Your full name",
       email: "Email",
       emailPlaceholder: "you@example.com",
-      phone: "Phone / WhatsApp",
+      phone: "Phone",
       phonePlaceholder: "+221 77 000 00 00",
       project: "Your project in a few words",
       projectPlaceholder: "Studies, trade fair, business trip…",
@@ -105,19 +88,19 @@ export function EligibilityForm() {
       <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 items-start gap-14 lg:grid-cols-2 lg:gap-20">
         <Reveal>
           <h2
-            className="mb-5 max-w-[18ch] text-[clamp(1.85rem,3.5vw,3.1rem)] leading-[1.1] font-semibold tracking-tight text-balance"
+            className="mb-5 max-w-[18ch] text-[clamp(2.15rem,4vw,3.4rem)] leading-[1.1] font-semibold tracking-tight text-balance"
             style={{ fontFamily: "var(--font-display)", color: "var(--text-on-dark)" }}
           >
             {t.title}
           </h2>
           <p
-            className="mb-8 max-w-[48ch] text-[17px] leading-[1.7]"
+            className="mb-8 max-w-[48ch] text-[19px] leading-[1.7]"
             style={{ color: "var(--text-on-dark-muted)" }}
           >
             {t.body}
           </p>
           <div
-            className="flex flex-col gap-3.5 text-[15px]"
+            className="flex flex-col gap-3.5 text-[17px]"
             style={{ color: "var(--text-on-dark-muted)" }}
           >
             {t.points.map((point) => (
@@ -146,7 +129,7 @@ export function EligibilityForm() {
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div className="flex flex-col gap-1.5">
                     <Label
-                      className="text-[13px] font-medium"
+                      className="text-[15px] font-medium"
                       style={{
                         fontFamily: "var(--font-ui)",
                         color: "var(--text-secondary)",
@@ -169,7 +152,7 @@ export function EligibilityForm() {
                   </div>
                   <div className="flex flex-col gap-1.5">
                     <Label
-                      className="text-[13px] font-medium"
+                      className="text-[15px] font-medium"
                       style={{
                         fontFamily: "var(--font-ui)",
                         color: "var(--text-secondary)",
@@ -185,8 +168,10 @@ export function EligibilityForm() {
                         background: "var(--c-white)",
                       }}
                     >
-                      {t.destinationOptions.map((opt) => (
-                        <option key={opt}>{opt}</option>
+                      {DESTINATIONS.map((dest) => (
+                        <option key={dest.code} value={dest.code}>
+                          {dest.flag} {lang === "fr" ? dest.fr : dest.en}
+                        </option>
                       ))}
                     </select>
                   </div>
@@ -194,7 +179,7 @@ export function EligibilityForm() {
 
                 <div className="flex flex-col gap-1.5">
                   <Label
-                    className="text-[13px] font-medium"
+                    className="text-[15px] font-medium"
                     style={{ fontFamily: "var(--font-ui)", color: "var(--text-secondary)" }}
                   >
                     {t.name}
@@ -211,7 +196,7 @@ export function EligibilityForm() {
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div className="flex flex-col gap-1.5">
                     <Label
-                      className="text-[13px] font-medium"
+                      className="text-[15px] font-medium"
                       style={{
                         fontFamily: "var(--font-ui)",
                         color: "var(--text-secondary)",
@@ -232,7 +217,7 @@ export function EligibilityForm() {
                   </div>
                   <div className="flex flex-col gap-1.5">
                     <Label
-                      className="text-[13px] font-medium"
+                      className="text-[15px] font-medium"
                       style={{
                         fontFamily: "var(--font-ui)",
                         color: "var(--text-secondary)",
@@ -254,7 +239,7 @@ export function EligibilityForm() {
 
                 <div className="flex flex-col gap-1.5">
                   <Label
-                    className="text-[13px] font-medium"
+                    className="text-[15px] font-medium"
                     style={{ fontFamily: "var(--font-ui)", color: "var(--text-secondary)" }}
                   >
                     {t.project}
@@ -273,7 +258,7 @@ export function EligibilityForm() {
 
                 <button
                   type="submit"
-                  className="cursor-pointer rounded-full py-4 text-[15px] font-semibold transition-transform duration-200 hover:-translate-y-0.5"
+                  className="cursor-pointer rounded-full py-4 text-[17px] font-semibold transition-transform duration-200 hover:-translate-y-0.5"
                   style={{
                     fontFamily: "var(--font-ui)",
                     background: "var(--brand)",

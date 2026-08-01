@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" fill="none" role="img" aria-label="Illustration visa Schengen">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="960" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0c1a2e"/>
+      <stop offset="0.55" stop-color="#15243a"/>
+      <stop offset="1" stop-color="#1a3cc4"/>
+    </linearGradient>
+    <linearGradient id="card" x1="180" y1="120" x2="780" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f2f5f9"/>
+      <stop offset="1" stop-color="#d5dde7"/>
+    </linearGradient>
+    <linearGradient id="band" x1="220" y1="160" x2="740" y2="210" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2450e8"/>
+      <stop offset="1" stop-color="#4a70f5"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="28" stdDeviation="28" flood-color="#07111f" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="720" fill="url(#bg)"/>
+  <circle cx="120" cy="100" r="180" fill="#2450e8" opacity="0.18"/>
+  <circle cx="860" cy="620" r="220" fill="#7a99ff" opacity="0.14"/>
+
+  <!-- Stylized visa sticker -->
+  <g filter="url(#soft)">
+    <rect x="180" y="120" width="600" height="480" rx="18" fill="url(#card)"/>
+    <rect x="180" y="120" width="600" height="64" rx="18" fill="url(#band)"/>
+    <rect x="180" y="168" width="600" height="16" fill="url(#band)"/>
+
+    <text x="210" y="162" fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="700" letter-spacing="4">VISA</text>
+    <text x="640" y="158" fill="#d6e0ff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="600" letter-spacing="2">SCHENGEN</text>
+
+    <!-- Photo placeholder -->
+    <rect x="210" y="220" width="150" height="190" rx="8" fill="#b5c1d0"/>
+    <circle cx="285" cy="285" r="34" fill="#8a9bb0"/>
+    <ellipse cx="285" cy="360" rx="48" ry="32" fill="#8a9bb0"/>
+
+    <!-- Fields -->
+    <text x="390" y="250" fill="#5c718c" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1.5">VALID FROM</text>
+    <text x="390" y="274" fill="#0c1a2e" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">01.09.2026</text>
+
+    <text x="390" y="318" fill="#5c718c" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1.5">UNTIL</text>
+    <text x="390" y="342" fill="#0c1a2e" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">30.11.2026</text>
+
+    <text x="390" y="386" fill="#5c718c" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1.5">TYPE / ENTRIES</text>
+    <text x="390" y="410" fill="#0c1a2e" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">C / MULTI</text>
+
+    <text x="210" y="460" fill="#5c718c" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1.5">DURATION OF STAY</text>
+    <text x="210" y="484" fill="#0c1a2e" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">90 DAYS</text>
+
+    <text x="430" y="460" fill="#5c718c" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1.5">ISSUED FOR</text>
+    <text x="430" y="484" fill="#0c1a2e" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">BUSINESS</text>
+
+    <!-- EU stars ring -->
+    <g transform="translate(700 250)">
+      <circle cx="0" cy="0" r="46" stroke="#2450e8" stroke-width="2" fill="none" opacity="0.55"/>
+      <g fill="#2450e8">
+        <polygon points="0,-34 3,-10 10,-10 4,-2 7,18 0,8 -7,18 -4,-2 -10,-10 -3,-10" transform="rotate(0)"/>
+        <polygon points="0,-34 3,-10 10,-10 4,-2 7,18 0,8 -7,18 -4,-2 -10,-10 -3,-10" transform="rotate(30)"/>
+        <polygon points="0,-34 3,-10 10,-10 4,-2 7,18 0,8 -7,18 -4,-2 -10,-10 -3,-10" transform="rotate(60)"/>
+        <polygon points="0,-34 3,-10 10,-10 4,-2 7,18 0,8 -7,18 -4,-2 -10,-10 -3,-10" transform="rotate(90)"/>
+        <polygon points="0,-34 3,-10 10,-10 4,-2 7,18 0,8 -7,18 -4,-2 -10,-10 -3,-10" transform="rotate(120)"/>
+        <polygon points="0,-34 3,-10 10,-10 4,-2 7,18 0,8 -7,18 -4,-2 -10,-10 -3,-10" transform="rotate(150)"/>
+        <polygon points="0,-34 3,-10 10,-10 4,-2 7,18 0,8 -7,18 -4,-2 -10,-10 -3,-10" transform="rotate(180)"/>
+        <polygon points="0,-34 3,-10 10,-10 4,-2 7,18 0,8 -7,18 -4,-2 -10,-10 -3,-10" transform="rotate(210)"/>
+        <polygon points="0,-34 3,-10 10,-10 4,-2 7,18 0,8 -7,18 -4,-2 -10,-10 -3,-10" transform="rotate(240)"/>
+        <polygon points="0,-34 3,-10 10,-10 4,-2 7,18 0,8 -7,18 -4,-2 -10,-10 -3,-10" transform="rotate(270)"/>
+        <polygon points="0,-34 3,-10 10,-10 4,-2 7,18 0,8 -7,18 -4,-2 -10,-10 -3,-10" transform="rotate(300)"/>
+        <polygon points="0,-34 3,-10 10,-10 4,-2 7,18 0,8 -7,18 -4,-2 -10,-10 -3,-10" transform="rotate(330)"/>
+      </g>
+    </g>
+
+    <!-- MRZ-like lines (decorative) -->
+    <rect x="210" y="520" width="540" height="8" rx="2" fill="#3d526e" opacity="0.35"/>
+    <rect x="210" y="540" width="480" height="8" rx="2" fill="#3d526e" opacity="0.25"/>
+    <rect x="210" y="560" width="510" height="8" rx="2" fill="#3d526e" opacity="0.2"/>
+  </g>
+</svg>

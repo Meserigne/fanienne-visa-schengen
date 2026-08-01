@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Outfit, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/lib/language-context";
+import { SmoothScroll } from "@/components/smooth-scroll";
+import { JsonLd } from "@/components/json-ld";
+import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL, seo } from "@/lib/seo";
 
 const outfit = Outfit({
   variable: "--font-display",
@@ -16,9 +19,57 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Fanienne · Accompagnement visa Schengen",
-  description:
-    "Fanienne accompagne les étudiants et les PME / PMI sénégalaises dans leur demande de visa Schengen.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: seo.home.title,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: seo.home.description,
+  keywords: [...seo.home.keywords],
+  applicationName: SITE_NAME,
+  authors: [{ name: SITE_NAME }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  alternates: {
+    canonical: SITE_URL,
+    languages: {
+      "fr-SN": SITE_URL,
+      fr: SITE_URL,
+    },
+  },
+  openGraph: {
+    title: seo.home.title,
+    description: seo.home.description,
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    locale: "fr_SN",
+    type: "website",
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: "Fanienne - Accompagnement visa Schengen à Dakar",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: seo.home.title,
+    description: seo.home.description,
+    images: [DEFAULT_OG_IMAGE],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  category: "travel",
 };
 
 export default function RootLayout({
@@ -32,7 +83,10 @@ export default function RootLayout({
       className={`h-full antialiased ${outfit.variable} ${dmSans.variable}`}
     >
       <body className="flex min-h-full flex-col" style={{ background: "var(--color-bg)" }}>
-        <LanguageProvider>{children}</LanguageProvider>
+        <JsonLd />
+        <LanguageProvider>
+          <SmoothScroll>{children}</SmoothScroll>
+        </LanguageProvider>
       </body>
     </html>
   );

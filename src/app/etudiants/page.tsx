@@ -6,8 +6,42 @@ import { useLanguage } from "@/lib/language-context";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Reveal } from "@/components/reveal";
+import { SITE_IMAGES } from "@/lib/site-images";
 
 const CTA = { fr: "Tester mon éligibilité", en: "Check my eligibility" };
+
+const WHY = [
+  {
+    fr: {
+      title: "Un projet d'études crédible",
+      body: "Choix d'école, lettre de motivation et parcours cohérent : nous construisons un dossier qui défend clairement votre projet auprès de Campus France et du consulat.",
+    },
+    en: {
+      title: "A credible study project",
+      body: "School choice, motivation letter and a coherent path: we build a file that clearly defends your project before Campus France and the consulate.",
+    },
+  },
+  {
+    fr: {
+      title: "Moins de refus évitables",
+      body: "Pièces incomplètes, entretien mal préparé, ressources mal justifiées : autant d'erreurs que nous anticipons avant le dépôt.",
+    },
+    en: {
+      title: "Fewer avoidable refusals",
+      body: "Incomplete documents, a poorly prepared interview, unclear funding: mistakes we anticipate before submission.",
+    },
+  },
+  {
+    fr: {
+      title: "Une arrivée plus sereine",
+      body: "Visa obtenu, il reste le logement, le compte bancaire et les premières démarches. Nous restons avec vous jusqu'à la rentrée.",
+    },
+    en: {
+      title: "A calmer arrival",
+      body: "Once the visa is granted, housing, a bank account and first admin steps remain. We stay with you through to day one.",
+    },
+  },
+];
 
 const SERVICES = [
   {
@@ -52,50 +86,68 @@ const SERVICES = [
   },
 ];
 
-const CHECKLIST = {
-  fr: [
-    "Attestation d'admission ou de préinscription",
-    "Justificatifs de ressources ou attestation de garant",
-    "Justificatif d'hébergement pour les premiers mois",
-    "Assurance santé et voyage conforme Schengen",
-    "Diplômes, relevés de notes et lettre de motivation",
-    "Passeport valide et photos aux normes",
-  ],
-  en: [
-    "Admission or pre-enrolment letter",
-    "Proof of funds or sponsor attestation",
-    "Accommodation proof for the first months",
-    "Schengen-compliant health & travel insurance",
-    "Diplomas, transcripts and motivation letter",
-    "Valid passport and compliant photos",
-  ],
-};
+const PROMISE = [
+  {
+    fr: {
+      title: "Réponse sous 48 heures",
+      body: "Décrivez votre projet d'études. Un conseiller vous répond avec une lecture claire de votre situation.",
+    },
+    en: {
+      title: "Reply within 48 hours",
+      body: "Describe your study project. An advisor replies with a clear reading of your situation.",
+    },
+  },
+  {
+    fr: {
+      title: "Parcours adapté à votre profil",
+      body: "Licence, master ou formation professionnelle : l'accompagnement est calé sur votre niveau, votre destination et vos délais.",
+    },
+    en: {
+      title: "A path fitted to your profile",
+      body: "Bachelor, master's or vocational training: support is set to your level, destination and timeline.",
+    },
+  },
+  {
+    fr: {
+      title: "Un interlocuteur dédié",
+      body: "Vous avancez avec la même personne, de la candidature jusqu'à votre installation en Europe.",
+    },
+    en: {
+      title: "A dedicated contact",
+      body: "You work with the same person from application through to settling in Europe.",
+    },
+  },
+];
 
 export default function EtudiantsPage() {
   const { lang } = useLanguage();
 
   const t = {
     fr: {
-      title: "Étudier en Europe, de la candidature à la rentrée.",
-      body: "Admission, visa d'études, entretien consulaire, logement : Fanienne vous accompagne pas à pas pour que votre projet d'études ne soit jamais bloqué par un dossier incomplet.",
-      servicesTitle: "Un accompagnement complet du projet d'études.",
-      checklistTitle: "Les pièces que nous préparons avec vous.",
-      checklistBody:
-        "Chaque consulat a ses exigences. Cette liste est indicative : lors de l'évaluation gratuite, nous établissons la liste exacte pour votre destination et votre situation.",
-      ctaTitle: "Commencez votre projet d'études dès aujourd'hui.",
+      title: "Visa étudiant Schengen : de la candidature à la rentrée.",
+      body: "Depuis Dakar, Fanienne accompagne votre visa étudiant Schengen : admission, Campus France, dossier consulaire et logement, pour un projet d'études qui n'est pas bloqué par un dossier incomplet.",
+      whyTitle: "Un dossier visa étudiant solide vaut mieux qu'un rêve reporté.",
+      servicesTitle: "Accompagnement visa étudiant, de A à Z.",
+      promiseTitle: "Vous décrivez le projet. Nous vous disons comment avancer.",
+      promiseBody:
+        "Pas de liste de pièces à l'avance. Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa étudiant, selon la destination et votre situation.",
+      ctaTitle: "Démarrez votre demande de visa étudiant dès aujourd'hui.",
       ctaBody:
-        "Les démarches d'admission et de visa prennent plusieurs mois. Plus tôt vous commencez, plus votre dossier est solide.",
+        "Admission et visa Schengen prennent plusieurs mois. Plus tôt vous commencez à Dakar, plus votre dossier est solide.",
+      ctaButton: "Tester mon éligibilité",
     },
     en: {
-      title: "Study in Europe, from application to day one.",
-      body: "Admission, study visa, consular interview, housing: Fanienne supports you step by step so your study plans are never blocked by an incomplete file.",
-      servicesTitle: "End-to-end support for your study project.",
-      checklistTitle: "The documents we prepare with you.",
-      checklistBody:
-        "Every consulate has its own requirements. This list is indicative: during the free assessment, we draw up the exact list for your destination and situation.",
-      ctaTitle: "Start your study project today.",
+      title: "Schengen student visa: from application to day one.",
+      body: "From Dakar, Fanienne supports your Schengen student visa: admission, Campus France, consular file and housing, so your study plans are never blocked by an incomplete file.",
+      whyTitle: "A solid student visa file beats a postponed dream.",
+      servicesTitle: "End-to-end student visa support.",
+      promiseTitle: "You describe the project. We tell you how to move forward.",
+      promiseBody:
+        "No document list upfront. After your request, we tell you exactly what is needed for your student visa, for your destination and situation.",
+      ctaTitle: "Start your student visa application today.",
       ctaBody:
-        "Admission and visa procedures take several months. The earlier you start, the stronger your file.",
+        "Admission and Schengen visa procedures take several months. The earlier you start in Dakar, the stronger your file.",
+      ctaButton: "Check my eligibility",
     },
   }[lang];
 
@@ -108,13 +160,13 @@ export default function EtudiantsPage() {
         style={{ background: "var(--surface-inverse)" }}
       >
         <div
-          className="pointer-events-none absolute inset-0 opacity-50"
+          className="pointer-events-none absolute inset-0 opacity-45"
           style={{
             background:
-              "radial-gradient(ellipse 70% 60% at 85% 20%, rgba(36,80,232,0.35), transparent 60%)",
+              "radial-gradient(ellipse 65% 55% at 15% 30%, rgba(36,80,232,0.4), transparent 60%)",
           }}
         />
-        <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 items-end gap-12 px-6 pb-16 sm:px-10 lg:grid-cols-12 lg:px-14 lg:pb-20">
+        <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 items-end gap-12 px-6 pb-16 sm:px-10 lg:grid-cols-12 lg:gap-10 lg:px-14 lg:pb-20">
           <Reveal className="lg:col-span-7">
             <p
               className="mb-5 text-[13px] font-semibold uppercase"
@@ -127,13 +179,13 @@ export default function EtudiantsPage() {
               Fanienne
             </p>
             <h1
-              className="mb-6 max-w-[16ch] text-[clamp(2.1rem,4.5vw,3.75rem)] leading-[1.05] font-semibold tracking-tight text-balance"
+              className="mb-6 max-w-[18ch] text-[clamp(2.1rem,4.5vw,3.75rem)] leading-[1.05] font-semibold tracking-tight text-balance"
               style={{ fontFamily: "var(--font-display)", color: "var(--text-on-dark)" }}
             >
               {t.title}
             </h1>
             <p
-              className="mb-8 max-w-[48ch] text-[17px] leading-[1.7]"
+              className="mb-8 max-w-[50ch] text-[19px] leading-[1.7]"
               style={{ color: "var(--text-on-dark-muted)" }}
             >
               {t.body}
@@ -151,10 +203,10 @@ export default function EtudiantsPage() {
             </Link>
           </Reveal>
           <Reveal className="relative lg:col-span-5" delay={0.1}>
-            <div className="relative aspect-[4/5] overflow-hidden">
+            <div className="relative aspect-[5/4] overflow-hidden">
               <Image
-                src="https://picsum.photos/seed/fanienne-etudiants-eu/900/1100"
-                alt=""
+                src={SITE_IMAGES.students}
+                alt="Étudiante accompagnée pour un visa Schengen études depuis le Sénégal"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"
@@ -165,82 +217,153 @@ export default function EtudiantsPage() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-[1400px] px-6 py-20 sm:px-10 lg:px-14 lg:py-28">
+        <Reveal>
+          <h2
+            className="mb-12 max-w-[24ch] text-[clamp(1.85rem,3.5vw,2.75rem)] font-semibold tracking-tight"
+            style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
+          >
+            {t.whyTitle}
+          </h2>
+        </Reveal>
+        <div
+          className="grid grid-cols-1 border-t md:grid-cols-3"
+          style={{ borderColor: "var(--border-strong)" }}
+        >
+          {WHY.map((item, i) => (
+            <Reveal key={item.fr.title} delay={i * 0.06}>
+              <div
+                className="border-b px-0 py-9 last:border-b-0 md:border-b-0 md:border-r md:px-8 md:last:border-r-0"
+                style={{ borderColor: "var(--border-default)" }}
+              >
+                <h3
+                  className="mb-3 text-[22px] font-semibold tracking-tight"
+                  style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
+                >
+                  {item[lang].title}
+                </h3>
+                <p className="text-[17px] leading-[1.7]" style={{ color: "var(--text-secondary)" }}>
+                  {item[lang].body}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
       <section
         className="border-y px-6 py-20 sm:px-10 lg:px-14 lg:py-28"
         style={{ background: "var(--color-bg-sunken)", borderColor: "var(--border-default)" }}
       >
-        <div className="mx-auto max-w-[1400px]">
-          <Reveal>
+        <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-16">
+          <Reveal className="lg:col-span-4 lg:sticky lg:top-28 lg:self-start">
+            <p
+              className="mb-4 text-[13px] font-semibold uppercase"
+              style={{
+                fontFamily: "var(--font-ui)",
+                letterSpacing: "0.14em",
+                color: "var(--c-cobalt-500)",
+              }}
+            >
+              {lang === "fr" ? "Nos services" : "Our services"}
+            </p>
             <h2
-              className="mb-12 max-w-[22ch] text-[clamp(1.85rem,3.5vw,2.75rem)] font-semibold tracking-tight"
+              className="max-w-[16ch] text-[clamp(1.85rem,3.5vw,2.75rem)] font-semibold tracking-tight text-balance"
               style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
             >
               {t.servicesTitle}
             </h2>
           </Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-2">
+
+          <div className="grid grid-cols-1 gap-0 sm:grid-cols-2 lg:col-span-8">
             {SERVICES.map((s, i) => (
               <Reveal key={s.fr.title} delay={i * 0.05}>
-                <div
-                  className={`border-t py-9 ${i % 2 === 0 ? "md:border-r md:pr-10" : "md:pl-10"}`}
+                <article
+                  className={`border-t py-9 sm:py-10 ${
+                    i % 2 === 0 ? "sm:border-r sm:pr-8 lg:pr-10" : "sm:pl-8 lg:pl-10"
+                  }`}
                   style={{ borderColor: "var(--border-default)" }}
                 >
                   <p
-                    className="mb-3 text-[14px] font-semibold tabular-nums"
-                    style={{ fontFamily: "var(--font-display)", color: "var(--c-cobalt-500)" }}
+                    className="mb-5 text-[clamp(2.5rem,4vw,3.25rem)] leading-none font-semibold tabular-nums tracking-tight"
+                    style={{
+                      fontFamily: "var(--font-display)",
+                      color: "var(--c-cobalt-500)",
+                      opacity: 0.85,
+                    }}
                   >
                     {String(i + 1).padStart(2, "0")}
                   </p>
                   <h3
-                    className="mb-3 text-[24px] font-semibold tracking-tight"
+                    className="mb-3 text-[22px] font-semibold tracking-tight sm:text-[24px]"
                     style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
                   >
                     {s[lang].title}
                   </h3>
                   <p
-                    className="max-w-[46ch] text-[15px] leading-[1.7]"
+                    className="max-w-[40ch] text-[17px] leading-[1.7]"
                     style={{ color: "var(--text-secondary)" }}
                   >
                     {s[lang].body}
                   </p>
-                </div>
+                </article>
               </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-[1400px] grid-cols-1 items-start gap-14 px-6 py-20 sm:px-10 lg:grid-cols-2 lg:gap-20 lg:px-14 lg:py-28">
-        <Reveal>
-          <h2
-            className="mb-5 max-w-[16ch] text-[clamp(1.85rem,3.5vw,2.75rem)] leading-[1.12] font-semibold tracking-tight"
-            style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
-          >
-            {t.checklistTitle}
-          </h2>
-          <p className="max-w-[48ch]" style={{ color: "var(--text-secondary)", lineHeight: 1.7 }}>
-            {t.checklistBody}
-          </p>
-        </Reveal>
-        <Reveal delay={0.08}>
-          <div className="flex flex-col border-t" style={{ borderColor: "var(--border-strong)" }}>
-            {CHECKLIST[lang].map((item) => (
+      <section className="mx-auto max-w-[1400px] px-6 py-20 sm:px-10 lg:px-14 lg:py-28">
+        <div className="mb-14 grid grid-cols-1 items-center gap-10 lg:mb-16 lg:grid-cols-12 lg:gap-14">
+          <Reveal className="lg:col-span-6">
+            <h2
+              className="mb-5 max-w-[20ch] text-[clamp(1.85rem,3.5vw,2.75rem)] font-semibold tracking-tight text-balance"
+              style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
+            >
+              {t.promiseTitle}
+            </h2>
+            <p
+              className="max-w-[48ch] text-[18px] leading-[1.7]"
+              style={{ color: "var(--text-secondary)" }}
+            >
+              {t.promiseBody}
+            </p>
+          </Reveal>
+          <Reveal className="relative lg:col-span-6" delay={0.08}>
+            <div className="relative aspect-[5/4] overflow-hidden lg:aspect-[4/3]">
+              <Image
+                src={SITE_IMAGES.europeCity}
+                alt=""
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover object-center"
+              />
+            </div>
+          </Reveal>
+        </div>
+        <div
+          className="grid grid-cols-1 border-t md:grid-cols-3"
+          style={{ borderColor: "var(--border-strong)" }}
+        >
+          {PROMISE.map((item, i) => (
+            <Reveal key={item.fr.title} delay={i * 0.06}>
               <div
-                key={item}
-                className="flex items-baseline gap-4 border-b py-4"
+                className="border-b px-0 py-9 last:border-b-0 md:border-b-0 md:border-r md:px-8 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
                 style={{ borderColor: "var(--border-default)" }}
               >
-                <span
-                  className="text-[13px] font-semibold"
-                  style={{ fontFamily: "var(--font-ui)", color: "var(--c-cobalt-500)" }}
+                <h3
+                  className="mb-3 text-[22px] font-semibold tracking-tight"
+                  style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
                 >
-                  ✓
-                </span>
-                <span style={{ color: "var(--text-primary)" }}>{item}</span>
+                  {item[lang].title}
+                </h3>
+                <p className="text-[17px] leading-[1.7]" style={{ color: "var(--text-secondary)" }}>
+                  {item[lang].body}
+                </p>
               </div>
-            ))}
-          </div>
-        </Reveal>
+            </Reveal>
+          ))}
+        </div>
       </section>
 
       <section
@@ -249,7 +372,7 @@ export default function EtudiantsPage() {
       >
         <Reveal>
           <h2
-            className="mx-auto mb-5 max-w-[20ch] text-[clamp(1.85rem,3.5vw,3rem)] font-semibold tracking-tight text-balance"
+            className="mx-auto mb-5 max-w-[22ch] text-[clamp(1.85rem,3.5vw,3rem)] font-semibold tracking-tight text-balance"
             style={{ fontFamily: "var(--font-display)", color: "var(--text-on-dark)" }}
           >
             {t.ctaTitle}
@@ -269,7 +392,7 @@ export default function EtudiantsPage() {
               color: "var(--text-on-dark)",
             }}
           >
-            {CTA[lang]}
+            {t.ctaButton}
           </Link>
         </Reveal>
       </section>

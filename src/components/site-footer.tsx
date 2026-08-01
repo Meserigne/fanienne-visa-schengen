@@ -23,19 +23,25 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
             Fanienne
           </p>
           <div className="flex flex-wrap gap-7 text-sm" style={{ fontFamily: "var(--font-ui)" }}>
-            <Link href="/" style={{ color: "var(--text-on-dark-muted)" }}>
-              {lang === "fr" ? "Accueil" : "Home"}
-            </Link>
             <Link href="/etudiants" style={{ color: "var(--text-on-dark-muted)" }}>
               {lang === "fr" ? "Étudiants" : "Students"}
+            </Link>
+            <Link href="/artistes" style={{ color: "var(--text-on-dark-muted)" }}>
+              {lang === "fr" ? "Artistes" : "Artists"}
+            </Link>
+            <Link href="/qui-nous-sommes" style={{ color: "var(--text-on-dark-muted)" }}>
+              {lang === "fr" ? "Qui nous sommes" : "About us"}
             </Link>
             <a href="mailto:contact@fanienne.sn" style={{ color: "var(--text-on-dark-muted)" }}>
               contact@fanienne.sn
             </a>
           </div>
-          <p className="text-xs" style={{ fontFamily: "var(--font-ui)", color: "var(--c-ink-400)" }}>
-            © 2026 Fanienne · {lang === "fr" ? "Dakar, Sénégal" : "Dakar, Senegal"}
-          </p>
+          <div className="flex flex-wrap items-center gap-4 text-xs" style={{ fontFamily: "var(--font-ui)", color: "var(--c-ink-400)" }}>
+            <span>© 2026 Fanienne · {lang === "fr" ? "Dakar, Sénégal" : "Dakar, Senegal"}</span>
+            <Link href="/politique-de-confidentialite" className="transition-colors hover:text-white">
+              {lang === "fr" ? "Politique de confidentialité" : "Privacy policy"}
+            </Link>
+          </div>
         </div>
       </footer>
     );
@@ -59,8 +65,8 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
           </p>
           <p className="max-w-[36ch] text-[15px] leading-[1.7]">
             {lang === "fr"
-              ? "Cabinet d'accompagnement visa Schengen basé à Dakar. Étudiants, PME & PMI : voyagez librement, sans crainte du refus."
-              : "Schengen visa consultancy based in Dakar. Students, SMEs: travel freely, without fearing refusal."}
+              ? "Cabinet d'accompagnement visa Schengen basé à Dakar. Étudiants, artistes, PME & PMI : voyagez librement, sans crainte du refus."
+              : "Schengen visa consultancy based in Dakar. Students, artists, SMEs: travel freely, without fearing refusal."}
           </p>
         </div>
         <div className="flex flex-col gap-2.5 text-sm" style={{ fontFamily: "var(--font-ui)" }}>
@@ -75,6 +81,12 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
           </Link>
           <Link href="/entreprises" className="transition-colors hover:text-white">
             {lang === "fr" ? "Entreprises, PME & PMI" : "Businesses, SMEs"}
+          </Link>
+          <Link href="/artistes" className="transition-colors hover:text-white">
+            {lang === "fr" ? "Artistes & culture" : "Artists & culture"}
+          </Link>
+          <Link href="/qui-nous-sommes" className="transition-colors hover:text-white">
+            {lang === "fr" ? "Qui nous sommes" : "About us"}
           </Link>
         </div>
         <div className="flex flex-col gap-2.5 text-sm" style={{ fontFamily: "var(--font-ui)" }}>
@@ -110,14 +122,22 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
           </a>
         </div>
       </div>
-      <p
-        className="mx-auto mt-7 max-w-[1400px] text-xs leading-relaxed"
+      <div
+        className="mx-auto mt-7 flex max-w-[1400px] flex-col gap-3 text-xs leading-relaxed sm:flex-row sm:items-start sm:justify-between"
         style={{ fontFamily: "var(--font-ui)", color: "var(--c-ink-400)" }}
       >
-        {lang === "fr"
-          ? "© 2026 Fanienne · Accompagnement visa Schengen. Fanienne est un cabinet de conseil indépendant, sans lien avec les consulats ; la décision de visa appartient aux autorités consulaires."
-          : "© 2026 Fanienne · Schengen visa consultancy. Fanienne is an independent advisory firm with no affiliation to consulates; visa decisions rest with consular authorities."}
-      </p>
+        <p className="max-w-[90ch]">
+          {lang === "fr"
+            ? "© 2026 Fanienne · Accompagnement visa Schengen. Fanienne est un cabinet de conseil indépendant, sans lien avec les consulats ; la décision de visa appartient aux autorités consulaires."
+            : "© 2026 Fanienne · Schengen visa consultancy. Fanienne is an independent advisory firm with no affiliation to consulates; visa decisions rest with consular authorities."}
+        </p>
+        <Link
+          href="/politique-de-confidentialite"
+          className="shrink-0 transition-colors hover:text-white"
+        >
+          {lang === "fr" ? "Politique de confidentialité" : "Privacy policy"}
+        </Link>
+      </div>
     </footer>
   );
 }

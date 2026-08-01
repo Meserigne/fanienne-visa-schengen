@@ -4,8 +4,8 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Lenis from "lenis";
 import { useLanguage } from "@/lib/language-context";
+import { SITE_IMAGES } from "@/lib/site-images";
 
 const CTA = { fr: "Tester mon éligibilité", en: "Check my eligibility" };
 
@@ -16,15 +16,15 @@ export function ParallaxHero() {
   const t = {
     fr: {
       brand: "Fanienne",
-      title: "Voyagez en Europe l'esprit tranquille.",
-      body: "Accompagnement visa Schengen pour étudiants et PME sénégalaises, de Dakar jusqu'au départ.",
-      ctaSecondary: "Découvrir nos services",
+      title: "Accompagnement visa Schengen depuis Dakar.",
+      body: "Cabinet au Sénégal pour étudiants et PME : dossier visa Schengen solide, de la candidature à la décision consulaire.",
+      ctaSecondary: "Voir le parcours",
     },
     en: {
       brand: "Fanienne",
-      title: "Travel to Europe with peace of mind.",
-      body: "Schengen visa support for Senegalese students and SMEs, from Dakar to departure.",
-      ctaSecondary: "Explore our services",
+      title: "Schengen visa support from Dakar.",
+      body: "A Senegal-based consultancy for students and SMEs: a solid Schengen visa file, from application to the consular decision.",
+      ctaSecondary: "See the journey",
     },
   }[lang];
 
@@ -69,22 +69,7 @@ export function ParallaxHero() {
       }
     }, root);
 
-    let lenis: Lenis | null = null;
-    let raf: ((time: number) => void) | null = null;
-
-    if (!reduce) {
-      lenis = new Lenis({ duration: 1.1 });
-      lenis.on("scroll", ScrollTrigger.update);
-      raf = (time: number) => lenis!.raf(time * 1000);
-      gsap.ticker.add(raf);
-      gsap.ticker.lagSmoothing(0);
-    }
-
-    return () => {
-      ctx.revert();
-      if (raf) gsap.ticker.remove(raf);
-      lenis?.destroy();
-    };
+    return () => ctx.revert();
   }, [lang]);
 
   return (
@@ -96,28 +81,28 @@ export function ParallaxHero() {
       >
         <div data-parallax-media className="absolute inset-0 will-change-transform">
           <Image
-            src="https://picsum.photos/seed/fanienne-atlantic-horizon/1920/1280"
-            alt=""
+            src={SITE_IMAGES.hero}
+            alt="Accompagnement visa Schengen Fanienne - Europe depuis Dakar"
             fill
             priority
             sizes="100vw"
             className="object-cover"
-            style={{ opacity: 0.88 }}
+            style={{ opacity: 0.9 }}
           />
           <div className="absolute inset-0" style={{ background: "var(--hero-veil)" }} />
           <div
-            className="absolute inset-0 opacity-40"
+            className="absolute inset-0 opacity-50"
             style={{
               background:
-                "radial-gradient(ellipse 60% 50% at 80% 20%, rgba(36,80,232,0.35), transparent 60%)",
+                "radial-gradient(ellipse 60% 50% at 80% 20%, rgba(36,80,232,0.4), transparent 60%)",
             }}
           />
         </div>
 
-        <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 pb-16 pt-28 sm:px-10 sm:pb-20 lg:px-14 lg:pb-24">
+        <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 pb-16 pt-24 sm:px-10 sm:pb-20 lg:px-14 lg:pb-24">
           <div
             data-parallax-content
-            className="grid max-w-3xl grid-cols-1 gap-6"
+            className="grid max-w-3xl grid-cols-1 gap-5"
             style={{ color: "var(--text-on-dark)" }}
           >
             <p
@@ -127,13 +112,13 @@ export function ParallaxHero() {
               {t.brand}
             </p>
             <h1
-              className="max-w-[16ch] text-[clamp(1.75rem,3.6vw,3.25rem)] leading-[1.1] font-semibold tracking-tight text-balance"
+              className="max-w-[14ch] text-[clamp(2.1rem,4.2vw,3.75rem)] leading-[1.1] font-semibold tracking-tight text-balance"
               style={{ fontFamily: "var(--font-display)" }}
             >
               {t.title}
             </h1>
             <p
-              className="max-w-[42ch] text-[17px] leading-[1.65] sm:text-[18px]"
+              className="max-w-[42ch] text-[19px] leading-[1.65] sm:text-[21px]"
               style={{ color: "var(--text-on-dark-muted)" }}
             >
               {t.body}
@@ -141,7 +126,7 @@ export function ParallaxHero() {
             <div className="flex flex-wrap items-center gap-4 pt-1">
               <a
                 href="#eligibilite"
-                className="inline-flex items-center rounded-full px-7 py-3.5 text-[15px] font-semibold transition-transform duration-200 hover:-translate-y-0.5"
+                className="inline-flex items-center rounded-full px-8 py-4 text-[17px] font-semibold transition-transform duration-200 hover:-translate-y-0.5"
                 style={{
                   fontFamily: "var(--font-ui)",
                   background: "var(--brand)",
@@ -153,7 +138,7 @@ export function ParallaxHero() {
               </a>
               <a
                 href="#services"
-                className="inline-flex items-center text-[15px] font-medium transition-opacity hover:opacity-80"
+                className="inline-flex items-center text-[17px] font-medium transition-opacity hover:opacity-80"
                 style={{
                   fontFamily: "var(--font-ui)",
                   color: "var(--text-on-dark)",

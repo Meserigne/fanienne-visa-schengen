@@ -185,11 +185,12 @@
     @apply border-border outline-ring/50;
   }
   html {
-    @apply font-sans scroll-smooth;
+    @apply font-sans;
+    scroll-behavior: smooth;
   }
   body {
     @apply bg-background text-foreground;
-    font: 400 1rem/1.7 var(--font-ui);
+    font: 400 1.125rem/1.7 var(--font-ui);
     background-image: var(--page-glow);
     background-attachment: fixed;
   }
@@ -216,9 +217,25 @@
   }
 }
 
+@keyframes dream-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.dream-marquee {
+  animation: dream-marquee 38s linear infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  .dream-marquee {
+    animation: none;
   }
   *,
   *::before,
