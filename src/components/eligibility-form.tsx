@@ -62,7 +62,7 @@ export function EligibilityForm() {
       body: "Answer in two minutes. A Tooky Consulting advisor reviews your profile and guides you to the right plan within 48 hours.",
       points: [
         "Free, no-obligation assessment",
-        "Guidance to the right plan (Classic, Student, Pro, Health)",
+        "Guidance to the right plan (Essential, Student, Pro, Health)",
         "Your information stays fully confidential",
       ],
       profile: "Profile",
