@@ -71,8 +71,8 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
           </p>
           <p className="max-w-[36ch] text-[15px] leading-[1.7]">
             {lang === "fr"
-              ? "Cabinet à Dakar : simplifier, sécuriser et maximiser vos chances de visa Schengen. Accompagnement clé en main pour étudiants, professionnels, familles et soins médicaux."
-              : "A Dakar consultancy: simplify, secure and maximise your Schengen visa chances. Turnkey support for students, professionals, families and medical travel."}
+              ? "Accompagnement visa Schengen à Dakar — dossiers préparés pour convaincre."
+              : "Schengen visa support in Dakar — files built to convince."}
           </p>
         </div>
         <div className="flex flex-col gap-2.5 text-sm" style={{ fontFamily: "var(--font-ui)" }}>

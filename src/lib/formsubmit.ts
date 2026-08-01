@@ -14,8 +14,8 @@ export function buildClientAutoresponse(data: {
     return [
       `Hello ${data.name},`,
       "",
-      "Thank you for your Schengen visa eligibility request on Tooky Consulting.",
-      "We have received your information and will get back to you shortly.",
+      "Thank you. Your request has been received.",
+      "A Tooky advisor will review your profile and get back to you shortly.",
       "",
       "Summary:",
       `- Profile: ${data.profile}`,
@@ -30,8 +30,8 @@ export function buildClientAutoresponse(data: {
   return [
     `Bonjour ${data.name},`,
     "",
-    "Merci pour votre demande d'éligibilité visa Schengen sur Tooky Consulting.",
-    "Nous avons bien reçu vos informations et nous vous reviendrons sous peu.",
+    "Merci. Votre demande est bien reçue.",
+    "Un conseiller Tooky analyse votre profil et vous recontacte sous peu.",
     "",
     "Récapitulatif :",
     `- Profil : ${data.profile}`,

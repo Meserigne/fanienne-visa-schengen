@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLanguage } from "@/lib/language-context";
 import { SITE_IMAGES } from "@/lib/site-images";
 
-const CTA = { fr: "Tester mon éligibilité", en: "Check my eligibility" };
+const CTA = { fr: "Envoyer ma demande", en: "Send my request" };
 
 export function ParallaxHero() {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -16,15 +16,15 @@ export function ParallaxHero() {
   const t = {
     fr: {
       brand: "TOOKY CONSULTING",
-      title: "Simplifier et sécuriser votre visa Schengen.",
-      body: "Cabinet à Dakar : accompagnement clé en main pour maximiser vos chances. Étudiants, professionnels, familles et soins médicaux.",
-      ctaSecondary: "Voir les formules",
+      title: "Votre dossier Schengen, préparé pour convaincre.",
+      body: "Depuis Dakar, Tooky Consulting prépare, vérifie et suit votre demande — études, affaires, famille ou soins.",
+      ctaSecondary: "Découvrir nos formules",
     },
     en: {
       brand: "TOOKY CONSULTING",
-      title: "Simplify and secure your Schengen visa.",
-      body: "A Dakar consultancy: turnkey support to maximise your chances. Students, professionals, families and medical travel.",
-      ctaSecondary: "See the plans",
+      title: "Your Schengen file, built to convince.",
+      body: "From Dakar, Tooky Consulting prepares, reviews and tracks your application — studies, business, family or medical care.",
+      ctaSecondary: "Explore our plans",
     },
   }[lang];
 
@@ -82,7 +82,7 @@ export function ParallaxHero() {
         <div data-parallax-media className="absolute inset-0 will-change-transform">
           <Image
             src={SITE_IMAGES.hero}
-            alt="Accompagnement visa Schengen Tooky Consulting - Europe depuis Dakar"
+            alt="Tooky Consulting — accompagnement visa Schengen depuis Dakar"
             fill
             priority
             sizes="100vw"

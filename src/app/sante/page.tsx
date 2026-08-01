@@ -8,7 +8,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { Reveal } from "@/components/reveal";
 import { SITE_IMAGES } from "@/lib/site-images";
 
-const CTA = { fr: "Tester mon éligibilité", en: "Check my eligibility" };
+const CTA = { fr: "Envoyer ma demande", en: "Send my request" };
 
 const WHY = [
   {
@@ -124,30 +124,30 @@ export default function SantePage() {
 
   const t = {
     fr: {
-      title: "Visa médical Schengen : soins en Europe, dossier accéléré.",
-      body: "Depuis Dakar, Tooky Consulting accélère votre visa Schengen pour soins spécialisés ou C.I.A. : devis et admission hospitaliers, traitement prioritaire et coordination avec les hôpitaux en Europe. Tarif communiqué après évaluation.",
-      whyTitle: "Quand la santé ne peut pas attendre, le dossier non plus.",
-      servicesTitle: "Le Formule Urgence Santé, de l'hôpital au visa.",
-      promiseTitle: "Vous décrivez la situation. Nous vous disons comment avancer.",
+      title: "Quand les soins ne peuvent pas attendre, le dossier non plus.",
+      body: "Depuis Dakar, Tooky Consulting accélère votre visa pour soins spécialisés ou C.I.A. : devis hospitaliers, admission et coordination avec les établissements en Europe.",
+      whyTitle: "La santé impose le rythme. Le dossier doit suivre.",
+      servicesTitle: "La formule Urgence Santé, de l'hôpital au visa.",
+      promiseTitle: "Vous décrivez la situation. Nous structurons le dossier.",
       promiseBody:
-        "Pas de liste de pièces à l'avance. Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa médical, selon l'établissement, la destination et l'urgence.",
-      ctaTitle: "Démarrez votre Formule Urgence Santé dès aujourd'hui.",
+        "Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa médical, selon l'établissement, la destination et l'urgence.",
+      ctaTitle: "Parlez-nous de la situation médicale.",
       ctaBody:
-        "Soins spécialisés et délais serrés : plus tôt le dossier est structuré à Dakar, plus vite le parcours de soins peut démarrer en Europe.",
-      ctaButton: "Tester mon éligibilité",
+        "Délais serrés : plus tôt le dossier est structuré à Dakar, plus vite le parcours de soins peut démarrer. Tarif communiqué après évaluation.",
+      ctaButton: "Envoyer ma demande",
     },
     en: {
-      title: "Schengen medical visa: care in Europe, accelerated file.",
-      body: "From Dakar, Tooky Consulting accelerates your Schengen visa for specialised care or medical evacuation: hospital quotes and admission, priority handling and coordination with hospitals in Europe. Pricing shared after assessment.",
-      whyTitle: "When health cannot wait, neither can the file.",
-      servicesTitle: "The Health Priority Plan, from hospital to visa.",
-      promiseTitle: "You describe the situation. We tell you how to move forward.",
+      title: "When care cannot wait, neither can the file.",
+      body: "From Dakar, Tooky Consulting accelerates your visa for specialised care or medical evacuation: hospital quotes, admission and coordination with facilities in Europe.",
+      whyTitle: "Health sets the pace. The file must keep up.",
+      servicesTitle: "The Health Priority plan, from hospital to visa.",
+      promiseTitle: "You describe the situation. We structure the file.",
       promiseBody:
-        "No document list upfront. After your request, we tell you exactly what is needed for your medical visa, for the facility, destination and urgency.",
-      ctaTitle: "Start your Health Priority Plan today.",
+        "After your request, we tell you exactly what is needed for your medical visa, for the facility, destination and urgency.",
+      ctaTitle: "Tell us about the medical situation.",
       ctaBody:
-        "Specialised care and tight timelines: the earlier the file is structured in Dakar, the sooner care can begin in Europe.",
-      ctaButton: "Check my eligibility",
+        "Tight timelines: the earlier the file is structured in Dakar, the sooner care can begin. Pricing shared after assessment.",
+      ctaButton: "Send my request",
     },
   }[lang];
 

@@ -72,13 +72,13 @@ export function PacksSection() {
 
   const t = {
     fr: {
-      title: "Choisissez votre formule.",
-      body: "Des prestations claires, adaptées à votre motif de voyage. Le tarif vous est communiqué après évaluation de votre dossier, sans engagement.",
+      title: "Quatre formules, un même niveau d'exigence.",
+      body: "Chaque parcours est adapté à votre motif de voyage. Après évaluation, nous vous indiquons la formule et le tarif adaptés — sans engagement.",
       cta: "En savoir plus",
     },
     en: {
-      title: "Choose your plan.",
-      body: "Clear plans matched to your travel purpose. Pricing is shared after we assess your file, with no obligation.",
+      title: "Four plans, one standard of care.",
+      body: "Each path matches your travel purpose. After assessment, we recommend the right plan and fee — with no obligation.",
       cta: "Learn more",
     },
   }[lang];

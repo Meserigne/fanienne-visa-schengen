@@ -8,7 +8,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { Reveal } from "@/components/reveal";
 import { SITE_IMAGES } from "@/lib/site-images";
 
-const CTA = { fr: "Tester mon éligibilité", en: "Check my eligibility" };
+const CTA = { fr: "Envoyer ma demande", en: "Send my request" };
 
 const WHY = [
   {
@@ -100,7 +100,7 @@ const PROMISE = [
   {
     fr: {
       title: "Formule Essentielle",
-      body: "Un accompagnement clé en main pour le court séjour : tourisme ou famille, avec un périmètre de prestation clair dès le départ.",
+      body: "Un parcours clair pour le court séjour : tourisme ou famille, avec un périmètre de prestation défini dès le départ.",
     },
     en: {
       title: "Essential Plan",
@@ -124,30 +124,30 @@ export default function TourismePage() {
 
   const t = {
     fr: {
-      title: "Visa tourisme & famille : un dossier conforme, sans stress.",
-      body: "Depuis Dakar, Tooky Consulting accompagne votre visa Schengen de court séjour pour le tourisme ou les visites familiales : analyse du profil, réservations d'hôtel et de billets, assurance et prise de RDV. Tarif communiqué après évaluation.",
+      title: "Partir en famille ou en vacances, sans dossier approximatif.",
+      body: "Depuis Dakar, Tooky Consulting prépare votre visa de court séjour : analyse du profil, réservations, assurance et prise de RDV.",
       whyTitle: "Un séjour en Europe commence par un dossier solide.",
-      servicesTitle: "Le Formule Essentielle, de l'analyse au rendez-vous.",
-      promiseTitle: "Vous décrivez le voyage. Nous vous disons comment avancer.",
+      servicesTitle: "La formule Essentielle, de l'analyse au rendez-vous.",
+      promiseTitle: "Vous décrivez le voyage. Nous structurons le dossier.",
       promiseBody:
-        "Pas de liste de pièces à l'avance. Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa tourisme ou famille, selon la destination et votre situation.",
-      ctaTitle: "Démarrez votre Formule Essentielle dès aujourd'hui.",
+        "Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa tourisme ou famille, selon la destination et votre situation.",
+      ctaTitle: "Parlez-nous de votre séjour.",
       ctaBody:
-        "Court séjour, tourisme ou visite familiale : plus tôt vous structurez le dossier à Dakar, plus il est cohérent le jour du dépôt.",
-      ctaButton: "Tester mon éligibilité",
+        "Tourisme ou visite familiale : plus tôt le dossier est structuré à Dakar, plus il est cohérent le jour du dépôt. Tarif communiqué après évaluation.",
+      ctaButton: "Envoyer ma demande",
     },
     en: {
-      title: "Tourism & family visa: a compliant file, without the stress.",
-      body: "From Dakar, Tooky Consulting supports your Schengen short-stay visa for tourism or family visits: profile review, hotel and flight bookings, insurance and appointment booking. Pricing shared after assessment.",
+      title: "Tourism & family: a clean file, without the stress.",
+      body: "From Dakar, Tooky Consulting prepares your short-stay visa: profile review, hotel and flight bookings, insurance and appointment booking.",
       whyTitle: "A trip to Europe starts with a solid file.",
-      servicesTitle: "The Essential Plan, from review to appointment.",
-      promiseTitle: "You describe the trip. We tell you how to move forward.",
+      servicesTitle: "The Essential plan, from review to appointment.",
+      promiseTitle: "You describe the trip. We structure the file.",
       promiseBody:
-        "No document list upfront. After your request, we tell you exactly what is needed for your tourism or family visa, for your destination and situation.",
-      ctaTitle: "Start your Essential Plan today.",
+        "After your request, we tell you exactly what is needed for your tourism or family visa, for your destination and situation.",
+      ctaTitle: "Tell us about your trip.",
       ctaBody:
-        "Short stay, tourism or family visit: the earlier you structure the file in Dakar, the more coherent it is on submission day.",
-      ctaButton: "Check my eligibility",
+        "Tourism or family visit: the earlier the file is structured in Dakar, the more coherent it is on submission day. Pricing shared after assessment.",
+      ctaButton: "Send my request",
     },
   }[lang];
 

@@ -55,25 +55,25 @@ export function buildAdminEmail(data: EligibilityPayload) {
 export function buildClientEmail(data: EligibilityPayload) {
   if (data.lang === "en") {
     return {
-      subject: "We received your Tooky Consulting eligibility request",
+      subject: "We received your Tooky request",
       text: [
         `Hello ${data.name},`,
         "",
-        "Thank you for your Schengen visa eligibility request.",
-        "A Tooky Consulting advisor will review your profile and reply within 48 hours.",
+        "Thank you. Your request has been received.",
+        "A Tooky advisor will review your profile and get back to you shortly.",
         "",
         "Summary:",
         `- Profile: ${data.profile}`,
         `- Destination: ${data.destination}`,
         "",
-        "Tooky Consulting - Schengen visa support in Dakar",
+        "Tooky Consulting — Schengen visa support in Dakar",
         "contact@tookyconsulting.com",
       ].join("\n"),
       html: `
         <div style="font-family:Arial,sans-serif;line-height:1.7;color:#0c1a2e">
           <h2 style="color:#2450e8;margin:0 0 12px">Request received</h2>
           <p>Hello ${escapeHtml(data.name)},</p>
-          <p>Thank you for your Schengen visa eligibility request. A Tooky Consulting advisor will review your profile and reply within <strong>48 hours</strong>.</p>
+          <p>Thank you. Your request has been received. A Tooky advisor will review your profile and get back to you shortly.</p>
           <p><strong>Profile:</strong> ${escapeHtml(data.profile)}<br/>
           <strong>Destination:</strong> ${escapeHtml(data.destination)}</p>
           <p style="color:#5c718c;font-size:13px">Tooky Consulting · Dakar<br/>contact@tookyconsulting.com</p>
@@ -83,25 +83,25 @@ export function buildClientEmail(data: EligibilityPayload) {
   }
 
   return {
-    subject: "Nous avons bien reçu votre demande Tooky Consulting",
+    subject: "Nous avons bien reçu votre demande Tooky",
     text: [
       `Bonjour ${data.name},`,
       "",
-      "Merci pour votre demande d'éligibilité visa Schengen.",
-      "Un conseiller Tooky Consulting analyse votre profil et vous répond sous 48 heures.",
+      "Merci. Votre demande est bien reçue.",
+      "Un conseiller Tooky analyse votre profil et vous recontacte sous peu.",
       "",
       "Récapitulatif :",
       `- Profil : ${data.profile}`,
       `- Destination : ${data.destination}`,
       "",
-      "Tooky Consulting - Accompagnement visa Schengen à Dakar",
+      "Tooky Consulting — Accompagnement visa Schengen à Dakar",
       "contact@tookyconsulting.com",
     ].join("\n"),
     html: `
       <div style="font-family:Arial,sans-serif;line-height:1.7;color:#0c1a2e">
         <h2 style="color:#2450e8;margin:0 0 12px">Demande bien reçue</h2>
         <p>Bonjour ${escapeHtml(data.name)},</p>
-        <p>Merci pour votre demande d'éligibilité visa Schengen. Un conseiller Tooky Consulting analyse votre profil et vous répond sous <strong>48 heures</strong>.</p>
+        <p>Merci. Votre demande est bien reçue. Un conseiller Tooky analyse votre profil et vous recontacte sous peu.</p>
         <p><strong>Profil :</strong> ${escapeHtml(data.profile)}<br/>
         <strong>Destination :</strong> ${escapeHtml(data.destination)}</p>
         <p style="color:#5c718c;font-size:13px">Tooky Consulting · Dakar<br/>contact@tookyconsulting.com</p>

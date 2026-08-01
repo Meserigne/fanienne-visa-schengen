@@ -40,24 +40,24 @@ const SERVICES: ServiceItem[] = [
     tone: "photo",
     image: SITE_IMAGES.passportDesk,
     fr: {
-      title: "Analyse & constitution du dossier",
-      body: "Étude de votre profil, liste des pièces, constitution et mise en conformité avant dépôt au consulat.",
+      title: "Analyse du profil",
+      body: "Nous lisons votre situation, listons les pièces utiles et construisons un dossier cohérent.",
     },
     en: {
-      title: "Profile review & file building",
-      body: "We assess your profile, list required documents, then assemble and bring your file into compliance.",
+      title: "Profile review",
+      body: "We read your situation, list the right documents and build a coherent file.",
     },
   },
   {
     tone: "photo",
     image: SITE_IMAGES.documents,
     fr: {
-      title: "Double vérification qualité",
-      body: "Chaque dossier passe par une double lecture (assistant + consultant) pour limiter les refus évitables.",
+      title: "Double contrôle",
+      body: "Assistant + consultant relisent chaque dossier avant dépôt pour limiter les erreurs évitables.",
     },
     en: {
-      title: "Double quality check",
-      body: "Every file gets a dual review (assistant + senior consultant) to reduce avoidable refusals.",
+      title: "Double check",
+      body: "An assistant and a consultant review every file before submission to cut avoidable errors.",
     },
   },
   {
@@ -65,11 +65,11 @@ const SERVICES: ServiceItem[] = [
     image: SITE_IMAGES.interview,
     fr: {
       title: "Préparation à l'entretien",
-      body: "Simulations d'entretien consulaire et conseils pour présenter votre projet avec clarté.",
+      body: "Vous répétez les questions clés pour présenter votre projet avec clarté.",
     },
     en: {
-      title: "Interview coaching",
-      body: "Mock consular interviews and guidance so you present your project clearly.",
+      title: "Interview prep",
+      body: "You rehearse the key questions so you present your project with clarity.",
     },
   },
   {
@@ -77,11 +77,11 @@ const SERVICES: ServiceItem[] = [
     image: SITE_IMAGES.flight,
     fr: {
       title: "Assurance, réservations & RDV",
-      body: "Assurance Schengen, réservations conformes et prise de rendez-vous au centre de visas.",
+      body: "Assurance Schengen, réservations conformes et prise de rendez-vous.",
     },
     en: {
       title: "Insurance, bookings & appointments",
-      body: "Schengen insurance, compliant bookings and visa-centre appointment booking.",
+      body: "Schengen insurance, compliant bookings and appointment booking.",
     },
   },
   {
@@ -89,11 +89,11 @@ const SERVICES: ServiceItem[] = [
     image: SITE_IMAGES.luggage,
     fr: {
       title: "Suivi jusqu'à la décision",
-      body: "Relances, suivi après dépôt et information jusqu'à la réponse consulaire.",
+      body: "Nous restons avec vous après le dépôt, jusqu'à la réponse du consulat.",
     },
     en: {
       title: "Follow-up until the decision",
-      body: "Reminders, post-submission tracking and updates until the consular decision.",
+      body: "We stay with you after submission, until the consulate replies.",
     },
   },
 ];
@@ -102,49 +102,49 @@ const STEPS: StepItem[] = [
   {
     fr: {
       label: "01",
-      title: "Évaluation gratuite",
-      body: "Vous décrivez votre projet ; nous analysons votre profil sous 48 h et vous indiquons la formule adaptée.",
+      title: "Vous nous écrivez",
+      body: "Décrivez votre projet. Nous vous répondons sous 48 heures.",
     },
     en: {
       label: "01",
-      title: "Free assessment",
-      body: "You describe your project; we review your profile within 48 hours and recommend the right plan.",
+      title: "You write to us",
+      body: "Describe your project. We reply within 48 hours.",
     },
   },
   {
     fr: {
       label: "02",
-      title: "Préparation clé en main",
-      body: "Constitution du dossier, réservations, assurance et pièces : tout est préparé pour le dépôt.",
+      title: "Nous construisons le dossier",
+      body: "Pièces, réservations, assurance : tout est préparé pour le dépôt.",
     },
     en: {
       label: "02",
-      title: "Turnkey preparation",
-      body: "File building, bookings, insurance and documents: everything ready for submission.",
+      title: "We build the file",
+      body: "Documents, bookings, insurance: everything prepared for submission.",
     },
   },
   {
     fr: {
       label: "03",
-      title: "Contrôle & dépôt",
-      body: "Double vérification, prise de RDV, préparation à l'entretien puis dépôt accompagné.",
+      title: "Nous contrôlons, puis vous déposez",
+      body: "Double vérification, RDV, entretien préparé, puis dépôt.",
     },
     en: {
       label: "03",
-      title: "Review & submission",
-      body: "Double check, appointment booking, interview prep, then supported submission.",
+      title: "We check, then you submit",
+      body: "Double check, appointment, prepared interview, then submission.",
     },
   },
   {
     fr: {
       label: "04",
-      title: "Décision & suite",
-      body: "Suivi jusqu'à la décision. Pour les études ou les soins, accompagnement aussi après le visa.",
+      title: "Nous suivons jusqu'à la décision",
+      body: "Suivi après dépôt. Pour les études ou les soins, accompagnement aussi après.",
     },
     en: {
       label: "04",
-      title: "Decision & next steps",
-      body: "Follow-up until the decision. For studies or medical travel, support continues after the visa.",
+      title: "We follow until the decision",
+      body: "Post-submission tracking. For studies or medical care, support continues after.",
     },
   },
 ];
@@ -154,7 +154,7 @@ export default function Home() {
 
   const t = {
     fr: {
-      tracksTitle: "Choisissez votre motif de voyage.",
+      tracksTitle: "Pour quel voyage préparez-vous votre visa ?",
       tracks: [
         {
           href: "/etudiants",
@@ -162,8 +162,8 @@ export default function Home() {
           imagePosition: "center 20%",
           number: "01",
           title: "Étudiants",
-          body: "Études, stages, mobilité académique. Campus France, ressources, hébergement et entretien.",
-          cta: "Formule Student Care",
+          body: "Études et mobilité : Campus France, ressources, hébergement, entretien.",
+          cta: "Voir la formule Student Care",
         },
         {
           href: "/entreprises",
@@ -171,8 +171,8 @@ export default function Home() {
           imagePosition: "center 18%",
           number: "02",
           title: "Professionnels",
-          body: "Missions, foires, partenariats. Traitement prioritaire et vérification des invitations.",
-          cta: "Formule Pro Executive",
+          body: "Missions et foires : invitations, ordres de mission, traitement prioritaire.",
+          cta: "Voir la formule Pro Executive",
         },
         {
           href: "/tourisme",
@@ -180,8 +180,8 @@ export default function Home() {
           imagePosition: "center 40%",
           number: "03",
           title: "Tourisme & famille",
-          body: "Court séjour, visites familiales, événements. Réservations conformes et dossier complet.",
-          cta: "Formule Essentielle",
+          body: "Court séjour : dossier conforme, réservations et RDV.",
+          cta: "Voir la formule Essentielle",
         },
         {
           href: "/sante",
@@ -189,19 +189,19 @@ export default function Home() {
           imagePosition: "center 35%",
           number: "04",
           title: "Santé & soins",
-          body: "Soins spécialisés et évacuation. Coordination hospitalière et traitement accéléré.",
-          cta: "Formule Urgence Santé",
+          body: "Soins et urgences médicales : coordination hospitalière, dossier accéléré.",
+          cta: "Voir la formule Urgence Santé",
         },
       ],
-      servicesTitle: "Un accompagnement rigoureux, sur mesure.",
+      servicesTitle: "Ce que nous faisons, concrètement.",
       needTitle: "Un besoin particulier ?",
-      needBody: "Chaque demande est étudiée sans engagement. Nous vous orientons vers la formule la plus adaptée.",
+      needBody: "Chaque demande est étudiée sans engagement. Nous vous orientons vers la formule adaptée.",
       needCta: "Demander un devis",
-      howTitle: "Comment Tooky Consulting maximise vos chances.",
+      howTitle: "Un parcours simple, du premier message à la décision.",
       partnersLabel: "Sablux, Mega et THETA nous font confiance",
     },
     en: {
-      tracksTitle: "Choose your travel purpose.",
+      tracksTitle: "What kind of trip are you preparing for?",
       tracks: [
         {
           href: "/etudiants",
@@ -209,8 +209,8 @@ export default function Home() {
           imagePosition: "center 20%",
           number: "01",
           title: "Students",
-          body: "Studies, internships, academic mobility. Campus France, funding, housing and interview.",
-          cta: "Student Care Plan",
+          body: "Studies and mobility: Campus France, funding, housing, interview.",
+          cta: "See the Student Care plan",
         },
         {
           href: "/entreprises",
@@ -218,8 +218,8 @@ export default function Home() {
           imagePosition: "center 18%",
           number: "02",
           title: "Professionals",
-          body: "Missions, trade fairs, partnerships. Priority handling and invitation checks.",
-          cta: "Pro Executive Plan",
+          body: "Missions and trade fairs: invitations, mission orders, priority handling.",
+          cta: "See the Pro Executive plan",
         },
         {
           href: "/tourisme",
@@ -227,8 +227,8 @@ export default function Home() {
           imagePosition: "center 40%",
           number: "03",
           title: "Tourism & family",
-          body: "Short stays, family visits, events. Compliant bookings and a complete file.",
-          cta: "Essential Plan",
+          body: "Short stay: a compliant file, bookings and appointment.",
+          cta: "See the Essential plan",
         },
         {
           href: "/sante",
@@ -236,15 +236,15 @@ export default function Home() {
           imagePosition: "center 35%",
           number: "04",
           title: "Health & care",
-          body: "Specialised care and medical evacuation. Hospital coordination and accelerated handling.",
-          cta: "Health Priority Plan",
+          body: "Medical care and emergencies: hospital coordination, accelerated file.",
+          cta: "See the Health Priority plan",
         },
       ],
-      servicesTitle: "Rigorous, tailored support.",
+      servicesTitle: "What we do, concretely.",
       needTitle: "A specific need?",
       needBody: "Every request is reviewed with no obligation. We guide you to the right plan.",
       needCta: "Request a quote",
-      howTitle: "How Tooky Consulting maximises your chances.",
+      howTitle: "A simple path, from first message to decision.",
       partnersLabel: "Trusted by Sablux, Mega and THETA",
     },
   }[lang];

@@ -8,7 +8,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { Reveal } from "@/components/reveal";
 import { SITE_IMAGES } from "@/lib/site-images";
 
-const CTA = { fr: "Tester mon éligibilité", en: "Check my eligibility" };
+const CTA = { fr: "Envoyer ma demande", en: "Send my request" };
 
 const WHY = [
   {
@@ -124,30 +124,30 @@ export default function EntreprisesPage() {
 
   const t = {
     fr: {
-      title: "Formule Pro Executive : missions et affaires en Europe.",
-      body: "Depuis Dakar, Tooky Consulting traite en priorité vos visas d'affaires : foires, missions, partenariats, ordres de mission et invitations d'entreprises européennes. Tarif communiqué après évaluation.",
-      whyTitle: "Un refus de visa d'affaires coûte plus cher qu'un dossier bien préparé.",
-      servicesTitle: "Ce que comprend la Formule Pro Executive.",
-      promiseTitle: "Vous décrivez la mission. Nous sécurisons le dossier.",
+      title: "Vos opportunités business ne doivent pas attendre un visa.",
+      body: "Depuis Dakar, Tooky Consulting prépare vos visas d'affaires : foires, missions, partenariats, invitations et ordres de mission — avec un traitement prioritaire.",
+      whyTitle: "Un refus coûte plus cher qu'un dossier bien préparé.",
+      servicesTitle: "Ce que comprend la formule Pro Executive.",
+      promiseTitle: "Vous décrivez la mission. Nous structurons le dossier.",
       promiseBody:
         "Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa d'affaires, avec traitement prioritaire et double vérification avant dépôt.",
-      ctaTitle: "Démarrez votre Formule Pro Executive.",
+      ctaTitle: "Parlez-nous de votre prochain déplacement.",
       ctaBody:
-        "Décrivez votre mission professionnelle : un conseiller Tooky Consulting vous répond sous 48 heures.",
-      ctaButton: "Demander un devis gratuit",
+        "Décrivez votre mission : un conseiller Tooky vous répond sous 48 heures. Le tarif est communiqué après évaluation.",
+      ctaButton: "Demander un devis",
     },
     en: {
-      title: "Pro Executive Plan: missions and business in Europe.",
-      body: "From Dakar, Tooky Consulting prioritises your business visas: trade fairs, missions, partnerships, mission orders and European company invitations. Pricing shared after assessment.",
-      whyTitle: "A business visa refusal costs more than a well-prepared file.",
-      servicesTitle: "What the Pro Executive Plan includes.",
-      promiseTitle: "You describe the mission. We secure the file.",
+      title: "Your business opportunities should not wait on a visa.",
+      body: "From Dakar, Tooky Consulting prepares your business visas: trade fairs, missions, partnerships, invitations and mission orders — with priority handling.",
+      whyTitle: "A refusal costs more than a well-prepared file.",
+      servicesTitle: "What the Pro Executive plan includes.",
+      promiseTitle: "You describe the mission. We structure the file.",
       promiseBody:
         "After your request, we tell you exactly what is needed for your business visa, with priority handling and double verification before submission.",
-      ctaTitle: "Start your Pro Executive Plan.",
+      ctaTitle: "Tell us about your next trip.",
       ctaBody:
-        "Describe your professional mission: a Tooky Consulting advisor replies within 48 hours.",
-      ctaButton: "Request a free quote",
+        "Describe your mission: a Tooky advisor replies within 48 hours. Pricing is shared after assessment.",
+      ctaButton: "Request a quote",
     },
   }[lang];
 

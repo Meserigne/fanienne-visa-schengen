@@ -12,7 +12,7 @@ export const seo = {
   home: {
     title: "Accompagnement visa Schengen à Dakar | Tooky Consulting",
     description:
-      "Tooky Consulting simplifie, sécurise et maximise vos chances de visa Schengen à Dakar. Étudiants, professionnels, familles et soins médicaux : accompagnement clé en main. Devis après évaluation.",
+      "Tooky Consulting prépare, vérifie et suit votre dossier visa Schengen depuis Dakar. Études, affaires, famille ou soins. Évaluation gratuite sous 48 h.",
     keywords: [
       "visa Schengen Sénégal",
       "accompagnement visa Schengen Dakar",
@@ -26,9 +26,9 @@ export const seo = {
     ],
   },
   etudiants: {
-    title: "Formule Student Care · Visa étudiant Schengen | Tooky Consulting",
+    title: "Visa étudiant Schengen · Formule Student Care | Tooky Consulting",
     description:
-      "Accompagnement Campus France, contrôle des ressources et hébergement, préparation à l'entretien. Formule Student Care depuis Dakar. Tarif communiqué après évaluation.",
+      "Étudier en Europe avec un dossier qui tient. Campus France, ressources, hébergement et entretien. Tooky Consulting à Dakar.",
     keywords: [
       "visa étudiant Schengen",
       "visa étudiant France Sénégal",
@@ -39,9 +39,9 @@ export const seo = {
     ],
   },
   entreprises: {
-    title: "Formule Pro Executive · Visa d'affaires Schengen | Tooky Consulting",
+    title: "Visa d'affaires Schengen · Formule Pro Executive | Tooky Consulting",
     description:
-      "Traitement prioritaire des visas d'affaires : missions, foires, invitations d'entreprises. Formule Pro Executive à Dakar. Tarif après évaluation.",
+      "Vos opportunités business ne doivent pas attendre un visa. Missions, foires, invitations. Tooky Consulting à Dakar.",
     keywords: [
       "visa affaires Schengen",
       "visa business Sénégal",
@@ -52,9 +52,9 @@ export const seo = {
     ],
   },
   tourisme: {
-    title: "Formule Essentielle · Visa tourisme & famille | Tooky Consulting",
+    title: "Visa tourisme & famille · Formule Essentielle | Tooky Consulting",
     description:
-      "Court séjour, tourisme et visites familiales : analyse du profil, dossier, réservations, assurance et prise de RDV. Tarif communiqué après évaluation.",
+      "Partir en famille ou en vacances sans dossier approximatif. Court séjour Schengen préparé depuis Dakar.",
     keywords: [
       "visa tourisme Schengen",
       "visa visite familiale Europe",
@@ -65,9 +65,9 @@ export const seo = {
     ],
   },
   sante: {
-    title: "Formule Urgence Santé · Visa médical Schengen | Tooky Consulting",
+    title: "Visa médical Schengen · Formule Urgence Santé | Tooky Consulting",
     description:
-      "Soins spécialisés et évacuation sanitaire : traitement accéléré, devis hospitaliers et coordination avec les hôpitaux en Europe. Tarif après évaluation.",
+      "Quand les soins ne peuvent pas attendre, le dossier non plus. Visa médical accéléré depuis Dakar.",
     keywords: [
       "visa médical Schengen",
       "visa soins Europe Sénégal",
@@ -78,9 +78,9 @@ export const seo = {
     ],
   },
   about: {
-    title: "Qui nous sommes | Tooky Consulting visa Schengen Dakar",
+    title: "Qui nous sommes | Tooky Consulting Dakar",
     description:
-      "Tooky Consulting accompagne les demandes de visa Schengen à Dakar : simplifier, sécuriser et maximiser le taux de réussite grâce à un accompagnement clé en main.",
+      "Tooky Consulting : le cabinet qui structure votre départ. Dossiers Schengen lisibles, complets et crédibles depuis Dakar.",
     keywords: [
       "Tooky Consulting Dakar",
       "cabinet visa Schengen Sénégal",
@@ -92,7 +92,7 @@ export const seo = {
   privacy: {
     title: "Politique de confidentialité | Tooky Consulting",
     description:
-      "Politique de confidentialité de Tooky Consulting : comment nous collectons, utilisons et protégeons vos données personnelles dans le cadre de l'accompagnement visa Schengen.",
+      "Politique de confidentialité de Tooky Consulting : collecte, usage et protection de vos données personnelles.",
     keywords: [
       "politique de confidentialité Tooky Consulting",
       "protection des données Tooky Consulting",

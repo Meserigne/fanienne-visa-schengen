@@ -8,7 +8,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { Reveal } from "@/components/reveal";
 import { SITE_IMAGES } from "@/lib/site-images";
 
-const CTA = { fr: "Tester mon éligibilité", en: "Check my eligibility" };
+const CTA = { fr: "Envoyer ma demande", en: "Send my request" };
 
 const VALUES = [
   {
@@ -71,48 +71,48 @@ export default function AboutPage() {
 
   const t = {
     fr: {
-      title: "Qui nous sommes.",
-      body: "Tooky Consulting est un cabinet d'accompagnement visa Schengen basé à Dakar. Notre mission : simplifier, sécuriser et maximiser le taux de réussite des demandes, grâce à un accompagnement clé en main.",
+      title: "Le cabinet qui structure votre départ.",
+      body: "Tooky Consulting accompagne les demandes de visa Schengen depuis Dakar. Notre rôle : rendre chaque dossier lisible, complet et crédible.",
       missionTitle: "Notre mission.",
       missionLead:
-        "Simplifier, sécuriser et maximiser vos chances de visa Schengen à travers un accompagnement rigoureux et sur mesure.",
+        "Rendre chaque dossier lisible, complet et crédible aux yeux du consulat.",
       missionBody:
-        "Depuis le centre-ville de Dakar, nous traitons chaque dossier avec une méthode claire : analyse du profil, constitution des pièces, double vérification, prise de RDV et suivi jusqu'à la décision.",
+        "Depuis Dakar, nous analysons votre profil, constituons les pièces, contrôlons deux fois, prenons le RDV et suivons jusqu'à la décision.",
       missionNote:
         "Tooky Consulting est un cabinet de conseil indépendant. Nous ne délivrons pas de visas : la décision appartient aux autorités consulaires. Notre rôle est de vous mettre dans les meilleures conditions pour réussir.",
       missionPoints: [
-        "Accompagnement clé en main, adapté à votre motif de voyage",
+        "Une méthode claire, adaptée à votre motif de voyage",
         "Double vérification avant dépôt pour limiter les refus évitables",
-        "Formules claires : Essentielle, Student Care, Pro Executive, Urgence Santé",
+        "Quatre formules : Essentielle, Student Care, Pro Executive, Urgence Santé",
       ],
       valuesTitle: "Ce qui nous guide.",
       audiencesTitle: "Pour qui nous travaillons.",
       ctaTitle: "Parlez-nous de votre projet.",
       ctaBody:
-        "Évaluation gratuite sous 48 heures. Décrivez votre situation : un conseiller Tooky Consulting vous répond.",
-      ctaButton: "Tester mon éligibilité",
+        "Évaluation gratuite sous 48 heures. Décrivez votre situation : un conseiller Tooky vous répond.",
+      ctaButton: "Envoyer ma demande",
     },
     en: {
-      title: "Who we are.",
-      body: "Tooky Consulting is a Schengen visa consultancy based in Dakar. Our mission: simplify, secure and maximise approval rates through turnkey, tailored support.",
+      title: "The firm that structures your departure.",
+      body: "Tooky Consulting supports Schengen visa applications from Dakar. Our role: make every file clear, complete and credible.",
       missionTitle: "Our mission.",
       missionLead:
-        "Simplify, secure and maximise your Schengen visa chances through rigorous, tailored support.",
+        "Make every file clear, complete and credible in the eyes of the consulate.",
       missionBody:
-        "From central Dakar, we handle every file with a clear method: profile review, document preparation, double verification, appointment booking and follow-up until the decision.",
+        "From Dakar, we review your profile, assemble documents, double-check, book the appointment and follow through to the decision.",
       missionNote:
         "Tooky Consulting is an independent advisory firm. We do not issue visas: decisions belong to consular authorities. Our role is to put you in the best position to succeed.",
       missionPoints: [
-        "Turnkey support matched to your travel purpose",
+        "A clear method matched to your travel purpose",
         "Double verification before submission to reduce avoidable refusals",
-        "Clear plans: Classic, Student Care, Pro Executive, Health Emergency",
+        "Four plans: Essential, Student Care, Pro Executive, Health Priority",
       ],
       valuesTitle: "What guides us.",
       audiencesTitle: "Who we work with.",
       ctaTitle: "Tell us about your project.",
       ctaBody:
-        "Free assessment within 48 hours. Describe your situation: a Tooky Consulting advisor replies.",
-      ctaButton: "Check my eligibility",
+        "Free assessment within 48 hours. Describe your situation: a Tooky advisor replies.",
+      ctaButton: "Send my request",
     },
   }[lang];
 

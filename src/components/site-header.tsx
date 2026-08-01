@@ -214,7 +214,7 @@ export function SiteHeader() {
               className="mt-1 inline-flex w-fit rounded-full px-5 py-3 text-sm font-semibold"
               style={{ background: "var(--brand)", color: "var(--text-on-dark)" }}
             >
-              {lang === "fr" ? "Tester mon éligibilité" : "Check my eligibility"}
+              {lang === "fr" ? "Envoyer ma demande" : "Send my request"}
             </Link>
           </nav>
         </div>

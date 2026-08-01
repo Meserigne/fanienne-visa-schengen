@@ -8,7 +8,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { Reveal } from "@/components/reveal";
 import { SITE_IMAGES } from "@/lib/site-images";
 
-const CTA = { fr: "Tester mon éligibilité", en: "Check my eligibility" };
+const CTA = { fr: "Envoyer ma demande", en: "Send my request" };
 
 const WHY = [
   {
@@ -124,30 +124,30 @@ export default function EtudiantsPage() {
 
   const t = {
     fr: {
-      title: "Formule Student Care : études et mobilité académique.",
-      body: "Depuis Dakar, Tooky Consulting prépare votre visa étudiant Schengen : accompagnement Campus France, contrôle des ressources et de l'hébergement, préparation à l'entretien. Tarif communiqué après évaluation.",
-      whyTitle: "Un dossier étudiant solide maximise vos chances.",
-      servicesTitle: "Ce que comprend la Formule Student Care.",
-      promiseTitle: "Vous décrivez le projet. Nous sécurisons le parcours.",
+      title: "Étudier en Europe, avec un dossier qui tient.",
+      body: "Depuis Dakar, Tooky Consulting prépare votre visa étudiant : Campus France, ressources, hébergement et entretien. Vous avancez avec une méthode claire.",
+      whyTitle: "Un dossier étudiant solide change la donne.",
+      servicesTitle: "Ce que comprend la formule Student Care.",
+      promiseTitle: "Vous décrivez le projet. Nous structurons le parcours.",
       promiseBody:
         "Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa étudiant, selon la destination et votre situation, avec double vérification avant dépôt.",
-      ctaTitle: "Démarrez votre Formule Student Care.",
+      ctaTitle: "Parlez-nous de votre projet d'études.",
       ctaBody:
-        "Admission et visa Schengen prennent plusieurs mois. Plus tôt vous commencez à Dakar, plus votre dossier est solide.",
-      ctaButton: "Tester mon éligibilité",
+        "Admission et visa prennent du temps. Plus tôt vous commencez à Dakar, plus le dossier est solide. Le tarif est communiqué après évaluation.",
+      ctaButton: "Envoyer ma demande",
     },
     en: {
-      title: "Student Care Plan: studies and academic mobility.",
-      body: "From Dakar, Tooky Consulting prepares your Schengen student visa: Campus France support, funding and housing checks, interview preparation. Pricing shared after assessment.",
-      whyTitle: "A solid student file maximises your chances.",
-      servicesTitle: "What the Student Care Plan includes.",
-      promiseTitle: "You describe the project. We secure the path.",
+      title: "Study in Europe, with a file that holds up.",
+      body: "From Dakar, Tooky Consulting prepares your student visa: Campus France, funding, housing and interview. You move forward with a clear method.",
+      whyTitle: "A solid student file changes the odds.",
+      servicesTitle: "What the Student Care plan includes.",
+      promiseTitle: "You describe the project. We structure the path.",
       promiseBody:
         "After your request, we tell you exactly what is needed for your student visa, for your destination and situation, with double verification before submission.",
-      ctaTitle: "Start your Student Care Plan.",
+      ctaTitle: "Tell us about your study plans.",
       ctaBody:
-        "Admission and Schengen visa procedures take several months. The earlier you start in Dakar, the stronger your file.",
-      ctaButton: "Check my eligibility",
+        "Admission and visa take time. The earlier you start in Dakar, the stronger the file. Pricing is shared after assessment.",
+      ctaButton: "Send my request",
     },
   }[lang];
 

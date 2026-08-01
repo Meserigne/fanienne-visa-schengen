@@ -26,11 +26,11 @@ export function EligibilityForm() {
 
   const t = {
     fr: {
-      title: "Testez votre éligibilité au visa Schengen",
-      body: "Répondez en deux minutes. Un conseiller Tooky Consulting analyse votre profil et vous oriente vers la formule adaptée sous 48 heures.",
+      title: "Évaluez votre projet en 2 minutes",
+      body: "Décrivez votre situation. Un conseiller Tooky vous répond sous 48 heures avec une lecture honnête et la formule adaptée.",
       points: [
         "Évaluation gratuite et sans engagement",
-        "Orientation vers la formule adaptée (Essentielle, Student, Pro, Santé)",
+        "Réponse sous 48 h avec la formule adaptée",
         "Confidentialité totale de vos informations",
       ],
       profile: "Profil",
@@ -50,19 +50,19 @@ export function EligibilityForm() {
       phonePlaceholder: "+221 77 000 00 00",
       project: "Votre projet en quelques mots",
       projectPlaceholder: "Études, salon professionnel, mission d'affaires…",
-      submit: "Tester mon éligibilité",
+      submit: "Envoyer ma demande",
       sending: "Envoi en cours…",
       fineprint: "Gratuit · Sans engagement · Réponse sous 48 h",
       sentTitle: "Demande bien reçue",
       sentBody:
-        "Merci ! Un e-mail de confirmation vous a été envoyé. Nous vous reviendrons sous peu.",
+        "Merci. Votre demande est bien reçue. Nous vous recontactons sous peu.",
     },
     en: {
-      title: "Check your Schengen visa eligibility",
-      body: "Answer in two minutes. A Tooky Consulting advisor reviews your profile and guides you to the right plan within 48 hours.",
+      title: "Assess your project in 2 minutes",
+      body: "Describe your situation. A Tooky advisor replies within 48 hours with an honest reading and the right plan.",
       points: [
         "Free, no-obligation assessment",
-        "Guidance to the right plan (Essential, Student, Pro, Health)",
+        "Reply within 48 hours with the right plan",
         "Your information stays fully confidential",
       ],
       profile: "Profile",
@@ -82,12 +82,12 @@ export function EligibilityForm() {
       phonePlaceholder: "+221 77 000 00 00",
       project: "Your project in a few words",
       projectPlaceholder: "Studies, trade fair, business trip…",
-      submit: "Check my eligibility",
+      submit: "Send my request",
       sending: "Sending…",
       fineprint: "Free · No obligation · Reply within 48 h",
       sentTitle: "Request received",
       sentBody:
-        "Thank you! A confirmation email has been sent. We will get back to you shortly.",
+        "Thank you. Your request has been received. We will get back to you shortly.",
     },
   }[lang];
 
@@ -236,7 +236,7 @@ export function EligibilityForm() {
                 <input
                   type="hidden"
                   name="_autoresponse"
-                  defaultValue="Bonjour, merci pour votre demande. Nous avons bien reçu vos informations et nous vous reviendrons sous peu. Cordialement, L'équipe Tooky Consulting"
+                  defaultValue="Bonjour, merci. Votre demande est bien reçue. Un conseiller Tooky vous recontacte sous peu. Cordialement, L'équipe Tooky Consulting"
                 />
                 <input
                   type="text"
