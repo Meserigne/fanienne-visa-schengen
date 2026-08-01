@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useLanguage } from "@/lib/language-context";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -13,27 +12,6 @@ import { PacksSection } from "@/components/packs-section";
 import { ServiceStack, type ServiceItem } from "@/components/service-stack";
 import { StepsPan, type StepItem } from "@/components/steps-pan";
 import { SITE_IMAGES } from "@/lib/site-images";
-
-const PARTNERS = [
-  {
-    name: "Sablux Immobilier",
-    src: "/images/partners/sablux.png",
-    width: 220,
-    height: 72,
-  },
-  {
-    name: "Mega",
-    src: "/images/partners/mega.png",
-    width: 160,
-    height: 72,
-  },
-  {
-    name: "THETA Ingénierie",
-    src: "/images/partners/theta.png",
-    width: 220,
-    height: 72,
-  },
-] as const;
 
 const SERVICES: ServiceItem[] = [
   {
@@ -198,7 +176,6 @@ export default function Home() {
       needBody: "Chaque demande est étudiée sans engagement. Nous vous orientons vers la formule adaptée.",
       needCta: "Demander un devis",
       howTitle: "Un parcours simple, du premier message à la décision.",
-      partnersLabel: "Sablux, Mega et THETA nous font confiance",
     },
     en: {
       tracksTitle: "What kind of trip are you preparing for?",
@@ -245,7 +222,6 @@ export default function Home() {
       needBody: "Every request is reviewed with no obligation. We guide you to the right plan.",
       needCta: "Request a quote",
       howTitle: "A simple path, from first message to decision.",
-      partnersLabel: "Trusted by Sablux, Mega and THETA",
     },
   }[lang];
 
@@ -279,37 +255,6 @@ export default function Home() {
       />
 
       <StepsPan steps={STEPS} title={t.howTitle} />
-
-      <section
-        className="border-t px-6 py-16 text-center sm:px-10 lg:px-14"
-        style={{ borderColor: "var(--border-default)", background: "var(--color-bg)" }}
-      >
-        <Reveal>
-          <p
-            className="mb-10 text-[15px] font-medium tracking-wide"
-            style={{ fontFamily: "var(--font-ui)", color: "var(--text-secondary)" }}
-          >
-            {t.partnersLabel}
-          </p>
-          <div className="mx-auto flex max-w-[900px] flex-wrap items-center justify-center gap-5 sm:gap-8">
-            {PARTNERS.map((partner) => (
-              <div
-                key={partner.name}
-                className="flex h-[88px] w-[min(100%,240px)] items-center justify-center overflow-hidden rounded-xl border px-5"
-                style={{ background: "var(--c-white)", borderColor: "var(--border-default)" }}
-              >
-                <Image
-                  src={partner.src}
-                  alt={partner.name}
-                  width={partner.width}
-                  height={partner.height}
-                  className="h-12 w-auto max-w-full object-contain sm:h-14"
-                />
-              </div>
-            ))}
-          </div>
-        </Reveal>
-      </section>
 
       <EligibilityForm />
       <SiteFooter variant="full" />
