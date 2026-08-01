@@ -18,13 +18,13 @@ export function ParallaxHero() {
       brand: "TOOKY CONSULTING",
       title: "Simplifier et sécuriser votre visa Schengen.",
       body: "Cabinet à Dakar : accompagnement clé en main pour maximiser vos chances. Étudiants, professionnels, familles et soins médicaux.",
-      ctaSecondary: "Voir les packs",
+      ctaSecondary: "Voir les formules",
     },
     en: {
       brand: "TOOKY CONSULTING",
       title: "Simplify and secure your Schengen visa.",
       body: "A Dakar consultancy: turnkey support to maximise your chances. Students, professionals, families and medical travel.",
-      ctaSecondary: "See the packs",
+      ctaSecondary: "See the plans",
     },
   }[lang];
 
@@ -137,7 +137,7 @@ export function ParallaxHero() {
                 {CTA[lang]}
               </a>
               <a
-                href="#packs"
+                href="#formules"
                 className="inline-flex items-center text-[17px] font-medium transition-opacity hover:opacity-80"
                 style={{
                   fontFamily: "var(--font-ui)",

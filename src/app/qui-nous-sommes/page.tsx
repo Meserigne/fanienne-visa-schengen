@@ -46,23 +46,23 @@ const VALUES = [
 const AUDIENCES = [
   {
     href: "/etudiants",
-    fr: { title: "Étudiants", body: "Pack Student Care · Campus France, ressources, entretien." },
-    en: { title: "Students", body: "Student Care Pack · Campus France, funding, interview." },
+    fr: { title: "Étudiants", body: "Formule Student Care · Campus France, ressources, entretien." },
+    en: { title: "Students", body: "Student Care Plan · Campus France, funding, interview." },
   },
   {
     href: "/entreprises",
-    fr: { title: "Professionnels", body: "Pack Pro Executive · missions, foires, invitations." },
-    en: { title: "Professionals", body: "Pro Executive Pack · missions, fairs, invitations." },
+    fr: { title: "Professionnels", body: "Formule Pro Executive · missions, foires, invitations." },
+    en: { title: "Professionals", body: "Pro Executive Plan · missions, fairs, invitations." },
   },
   {
     href: "/tourisme",
-    fr: { title: "Tourisme & famille", body: "Pack Classique · court séjour, visites, événements." },
-    en: { title: "Tourism & family", body: "Classic Pack · short stay, visits, events." },
+    fr: { title: "Tourisme & famille", body: "Formule Essentielle · court séjour, visites, événements." },
+    en: { title: "Tourism & family", body: "Essential Plan · short stay, visits, events." },
   },
   {
     href: "/sante",
-    fr: { title: "Santé", body: "Pack Urgence Santé · soins, C.I.A., coordination hospitalière." },
-    en: { title: "Health", body: "Health Emergency Pack · care, evacuation, hospital coordination." },
+    fr: { title: "Santé", body: "Formule Urgence Santé · soins, C.I.A., coordination hospitalière." },
+    en: { title: "Health", body: "Health Priority Plan · care, evacuation, hospital coordination." },
   },
 ];
 
@@ -83,7 +83,7 @@ export default function AboutPage() {
       missionPoints: [
         "Accompagnement clé en main, adapté à votre motif de voyage",
         "Double vérification avant dépôt pour limiter les refus évitables",
-        "Packs clairs : Classique, Student Care, Pro Executive, Urgence Santé",
+        "Formules claires : Essentielle, Student Care, Pro Executive, Urgence Santé",
       ],
       valuesTitle: "Ce qui nous guide.",
       audiencesTitle: "Pour qui nous travaillons.",
@@ -105,7 +105,7 @@ export default function AboutPage() {
       missionPoints: [
         "Turnkey support matched to your travel purpose",
         "Double verification before submission to reduce avoidable refusals",
-        "Clear packs: Classic, Student Care, Pro Executive, Health Emergency",
+        "Clear plans: Classic, Student Care, Pro Executive, Health Emergency",
       ],
       valuesTitle: "What guides us.",
       audiencesTitle: "Who we work with.",

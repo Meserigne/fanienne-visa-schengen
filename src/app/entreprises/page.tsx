@@ -124,27 +124,27 @@ export default function EntreprisesPage() {
 
   const t = {
     fr: {
-      title: "Pack Pro Executive : missions et affaires en Europe.",
+      title: "Formule Pro Executive : missions et affaires en Europe.",
       body: "Depuis Dakar, Tooky Consulting traite en priorité vos visas d'affaires : foires, missions, partenariats, ordres de mission et invitations d'entreprises européennes. Tarif communiqué après évaluation.",
       whyTitle: "Un refus de visa d'affaires coûte plus cher qu'un dossier bien préparé.",
-      servicesTitle: "Ce que comprend le Pack Pro Executive.",
+      servicesTitle: "Ce que comprend la Formule Pro Executive.",
       promiseTitle: "Vous décrivez la mission. Nous sécurisons le dossier.",
       promiseBody:
         "Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa d'affaires, avec traitement prioritaire et double vérification avant dépôt.",
-      ctaTitle: "Démarrez votre Pack Pro Executive.",
+      ctaTitle: "Démarrez votre Formule Pro Executive.",
       ctaBody:
         "Décrivez votre mission professionnelle : un conseiller Tooky Consulting vous répond sous 48 heures.",
       ctaButton: "Demander un devis gratuit",
     },
     en: {
-      title: "Pro Executive Pack: missions and business in Europe.",
+      title: "Pro Executive Plan: missions and business in Europe.",
       body: "From Dakar, Tooky Consulting prioritises your business visas: trade fairs, missions, partnerships, mission orders and European company invitations. Pricing shared after assessment.",
       whyTitle: "A business visa refusal costs more than a well-prepared file.",
-      servicesTitle: "What the Pro Executive Pack includes.",
+      servicesTitle: "What the Pro Executive Plan includes.",
       promiseTitle: "You describe the mission. We secure the file.",
       promiseBody:
         "After your request, we tell you exactly what is needed for your business visa, with priority handling and double verification before submission.",
-      ctaTitle: "Start your Pro Executive Pack.",
+      ctaTitle: "Start your Pro Executive Plan.",
       ctaBody:
         "Describe your professional mission: a Tooky Consulting advisor replies within 48 hours.",
       ctaButton: "Request a free quote",

@@ -89,7 +89,7 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
             {lang === "fr" ? "Professionnels · Pro Executive" : "Business · Pro Executive"}
           </Link>
           <Link href="/tourisme" className="transition-colors hover:text-white">
-            {lang === "fr" ? "Tourisme & famille · Classique" : "Tourism & family · Classic"}
+            {lang === "fr" ? "Tourisme & famille · Essentielle" : "Tourism & family · Essential"}
           </Link>
           <Link href="/sante" className="transition-colors hover:text-white">
             {lang === "fr" ? "Santé · Urgence Santé" : "Health · Emergency"}

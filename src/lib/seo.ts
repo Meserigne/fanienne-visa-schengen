@@ -26,53 +26,53 @@ export const seo = {
     ],
   },
   etudiants: {
-    title: "Pack Student Care · Visa étudiant Schengen | Tooky Consulting",
+    title: "Formule Student Care · Visa étudiant Schengen | Tooky Consulting",
     description:
-      "Accompagnement Campus France, contrôle des ressources et hébergement, préparation à l'entretien. Pack Student Care depuis Dakar. Tarif communiqué après évaluation.",
+      "Accompagnement Campus France, contrôle des ressources et hébergement, préparation à l'entretien. Formule Student Care depuis Dakar. Tarif communiqué après évaluation.",
     keywords: [
       "visa étudiant Schengen",
       "visa étudiant France Sénégal",
       "Campus France Dakar",
       "dossier visa études",
-      "Pack Student Care",
+      "Formule Student Care",
       "accompagnement visa étudiant Dakar",
     ],
   },
   entreprises: {
-    title: "Pack Pro Executive · Visa d'affaires Schengen | Tooky Consulting",
+    title: "Formule Pro Executive · Visa d'affaires Schengen | Tooky Consulting",
     description:
-      "Traitement prioritaire des visas d'affaires : missions, foires, invitations d'entreprises. Pack Pro Executive à Dakar. Tarif après évaluation.",
+      "Traitement prioritaire des visas d'affaires : missions, foires, invitations d'entreprises. Formule Pro Executive à Dakar. Tarif après évaluation.",
     keywords: [
       "visa affaires Schengen",
       "visa business Sénégal",
       "visa dirigeant PME",
-      "Pack Pro Executive",
+      "Formule Pro Executive",
       "visa salon professionnel",
       "accompagnement visa entreprise Dakar",
     ],
   },
   tourisme: {
-    title: "Pack Classique · Visa tourisme & famille | Tooky Consulting",
+    title: "Formule Essentielle · Visa tourisme & famille | Tooky Consulting",
     description:
       "Court séjour, tourisme et visites familiales : analyse du profil, dossier, réservations, assurance et prise de RDV. Tarif communiqué après évaluation.",
     keywords: [
       "visa tourisme Schengen",
       "visa visite familiale Europe",
       "visa court séjour Sénégal",
-      "Pack Classique visa",
+      "Formule Essentielle visa",
       "réservation hôtel visa Schengen",
       "accompagnement visa tourisme Dakar",
     ],
   },
   sante: {
-    title: "Pack Urgence Santé · Visa médical Schengen | Tooky Consulting",
+    title: "Formule Urgence Santé · Visa médical Schengen | Tooky Consulting",
     description:
       "Soins spécialisés et évacuation sanitaire : traitement accéléré, devis hospitaliers et coordination avec les hôpitaux en Europe. Tarif après évaluation.",
     keywords: [
       "visa médical Schengen",
       "visa soins Europe Sénégal",
       "évacuation sanitaire visa",
-      "Pack Urgence Santé",
+      "Formule Urgence Santé",
       "C.I.A médicale Europe",
       "accompagnement visa médical Dakar",
     ],

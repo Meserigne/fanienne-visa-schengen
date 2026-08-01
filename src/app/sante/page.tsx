@@ -99,11 +99,11 @@ const PROMISE = [
   },
   {
     fr: {
-      title: "Pack Urgence Santé",
+      title: "Formule Urgence Santé",
       body: "Un accompagnement accéléré pour les soins spécialisés et la C.I.A., avec un périmètre de prestation clair dès le premier échange.",
     },
     en: {
-      title: "Health Emergency Pack",
+      title: "Health Priority Plan",
       body: "Accelerated support for specialised care and medical evacuation, with a clear service scope from the first exchange.",
     },
   },
@@ -127,11 +127,11 @@ export default function SantePage() {
       title: "Visa médical Schengen : soins en Europe, dossier accéléré.",
       body: "Depuis Dakar, Tooky Consulting accélère votre visa Schengen pour soins spécialisés ou C.I.A. : devis et admission hospitaliers, traitement prioritaire et coordination avec les hôpitaux en Europe. Tarif communiqué après évaluation.",
       whyTitle: "Quand la santé ne peut pas attendre, le dossier non plus.",
-      servicesTitle: "Le Pack Urgence Santé, de l'hôpital au visa.",
+      servicesTitle: "Le Formule Urgence Santé, de l'hôpital au visa.",
       promiseTitle: "Vous décrivez la situation. Nous vous disons comment avancer.",
       promiseBody:
         "Pas de liste de pièces à l'avance. Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa médical, selon l'établissement, la destination et l'urgence.",
-      ctaTitle: "Démarrez votre Pack Urgence Santé dès aujourd'hui.",
+      ctaTitle: "Démarrez votre Formule Urgence Santé dès aujourd'hui.",
       ctaBody:
         "Soins spécialisés et délais serrés : plus tôt le dossier est structuré à Dakar, plus vite le parcours de soins peut démarrer en Europe.",
       ctaButton: "Tester mon éligibilité",
@@ -140,11 +140,11 @@ export default function SantePage() {
       title: "Schengen medical visa: care in Europe, accelerated file.",
       body: "From Dakar, Tooky Consulting accelerates your Schengen visa for specialised care or medical evacuation: hospital quotes and admission, priority handling and coordination with hospitals in Europe. Pricing shared after assessment.",
       whyTitle: "When health cannot wait, neither can the file.",
-      servicesTitle: "The Health Emergency Pack, from hospital to visa.",
+      servicesTitle: "The Health Priority Plan, from hospital to visa.",
       promiseTitle: "You describe the situation. We tell you how to move forward.",
       promiseBody:
         "No document list upfront. After your request, we tell you exactly what is needed for your medical visa, for the facility, destination and urgency.",
-      ctaTitle: "Start your Health Emergency Pack today.",
+      ctaTitle: "Start your Health Priority Plan today.",
       ctaBody:
         "Specialised care and tight timelines: the earlier the file is structured in Dakar, the sooner care can begin in Europe.",
       ctaButton: "Check my eligibility",
@@ -339,8 +339,8 @@ export default function SantePage() {
                 src={SITE_IMAGES.medicalDetail}
                 alt={
                   lang === "fr"
-                    ? "Parcours hospitalier — Pack Urgence Santé visa médical Schengen"
-                    : "Hospital pathway — Health Emergency Pack Schengen medical visa"
+                    ? "Parcours hospitalier — Formule Urgence Santé visa médical Schengen"
+                    : "Hospital pathway — Health Priority Plan Schengen medical visa"
                 }
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

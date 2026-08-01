@@ -8,13 +8,13 @@ const PACKS = [
   {
     href: "/tourisme",
     fr: {
-      name: "Pack Classique",
+      name: "Formule Essentielle",
       audience: "Court séjour · Tourisme · Famille",
       includes:
         "Analyse du profil, préparation du dossier, réservations d'hôtel/billets, assurance, prise de RDV.",
     },
     en: {
-      name: "Classic Pack",
+      name: "Essential Plan",
       audience: "Short stay · Tourism · Family",
       includes:
         "Profile review, file preparation, hotel/flight bookings, insurance, appointment booking.",
@@ -23,13 +23,13 @@ const PACKS = [
   {
     href: "/etudiants",
     fr: {
-      name: "Pack Student Care",
+      name: "Formule Student Care",
       audience: "Études · Mobilité académique",
       includes:
         "Accompagnement Campus France, contrôle des ressources et hébergement, préparation à l'entretien.",
     },
     en: {
-      name: "Student Care Pack",
+      name: "Student Care Plan",
       audience: "Studies · Academic mobility",
       includes:
         "Campus France support, funding and housing checks, interview preparation.",
@@ -38,13 +38,13 @@ const PACKS = [
   {
     href: "/entreprises",
     fr: {
-      name: "Pack Pro Executive",
+      name: "Formule Pro Executive",
       audience: "Affaires · Business",
       includes:
         "Traitement prioritaire, vérification des ordres de mission et invitations d'entreprises européennes.",
     },
     en: {
-      name: "Pro Executive Pack",
+      name: "Pro Executive Plan",
       audience: "Business · Professional travel",
       includes:
         "Priority handling, mission orders and European company invitation checks.",
@@ -53,13 +53,13 @@ const PACKS = [
   {
     href: "/sante",
     fr: {
-      name: "Pack Urgence Santé",
+      name: "Formule Urgence Santé",
       audience: "Soins médicaux · C.I.A.",
       includes:
         "Traitement accéléré, vérification des devis et accords d'admission hospitaliers.",
     },
     en: {
-      name: "Health Emergency Pack",
+      name: "Health Priority Plan",
       audience: "Medical care · Evacuation",
       includes:
         "Accelerated handling, hospital quotes and admission agreement checks.",
@@ -72,20 +72,20 @@ export function PacksSection() {
 
   const t = {
     fr: {
-      title: "Nos packs d'accompagnement.",
+      title: "Choisissez votre formule.",
       body: "Des prestations claires, adaptées à votre motif de voyage. Le tarif vous est communiqué après évaluation de votre dossier, sans engagement.",
       cta: "En savoir plus",
     },
     en: {
-      title: "Our support packs.",
-      body: "Clear packages matched to your travel purpose. Pricing is shared after we assess your file, with no obligation.",
+      title: "Choose your plan.",
+      body: "Clear plans matched to your travel purpose. Pricing is shared after we assess your file, with no obligation.",
       cta: "Learn more",
     },
   }[lang];
 
   return (
     <section
-      id="packs"
+      id="formules"
       className="px-6 py-20 sm:px-10 lg:px-14 lg:py-28"
       style={{ background: "var(--color-bg)" }}
     >

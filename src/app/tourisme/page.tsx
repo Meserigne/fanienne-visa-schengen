@@ -99,11 +99,11 @@ const PROMISE = [
   },
   {
     fr: {
-      title: "Pack Classique",
+      title: "Formule Essentielle",
       body: "Un accompagnement clé en main pour le court séjour : tourisme ou famille, avec un périmètre de prestation clair dès le départ.",
     },
     en: {
-      title: "Classic Pack",
+      title: "Essential Plan",
       body: "End-to-end support for short stays: tourism or family, with a clear service scope from day one.",
     },
   },
@@ -127,11 +127,11 @@ export default function TourismePage() {
       title: "Visa tourisme & famille : un dossier conforme, sans stress.",
       body: "Depuis Dakar, Tooky Consulting accompagne votre visa Schengen de court séjour pour le tourisme ou les visites familiales : analyse du profil, réservations d'hôtel et de billets, assurance et prise de RDV. Tarif communiqué après évaluation.",
       whyTitle: "Un séjour en Europe commence par un dossier solide.",
-      servicesTitle: "Le Pack Classique, de l'analyse au rendez-vous.",
+      servicesTitle: "Le Formule Essentielle, de l'analyse au rendez-vous.",
       promiseTitle: "Vous décrivez le voyage. Nous vous disons comment avancer.",
       promiseBody:
         "Pas de liste de pièces à l'avance. Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa tourisme ou famille, selon la destination et votre situation.",
-      ctaTitle: "Démarrez votre Pack Classique dès aujourd'hui.",
+      ctaTitle: "Démarrez votre Formule Essentielle dès aujourd'hui.",
       ctaBody:
         "Court séjour, tourisme ou visite familiale : plus tôt vous structurez le dossier à Dakar, plus il est cohérent le jour du dépôt.",
       ctaButton: "Tester mon éligibilité",
@@ -140,11 +140,11 @@ export default function TourismePage() {
       title: "Tourism & family visa: a compliant file, without the stress.",
       body: "From Dakar, Tooky Consulting supports your Schengen short-stay visa for tourism or family visits: profile review, hotel and flight bookings, insurance and appointment booking. Pricing shared after assessment.",
       whyTitle: "A trip to Europe starts with a solid file.",
-      servicesTitle: "The Classic Pack, from review to appointment.",
+      servicesTitle: "The Essential Plan, from review to appointment.",
       promiseTitle: "You describe the trip. We tell you how to move forward.",
       promiseBody:
         "No document list upfront. After your request, we tell you exactly what is needed for your tourism or family visa, for your destination and situation.",
-      ctaTitle: "Start your Classic Pack today.",
+      ctaTitle: "Start your Essential Plan today.",
       ctaBody:
         "Short stay, tourism or family visit: the earlier you structure the file in Dakar, the more coherent it is on submission day.",
       ctaButton: "Check my eligibility",
@@ -339,8 +339,8 @@ export default function TourismePage() {
                 src={SITE_IMAGES.tourismDetail}
                 alt={
                   lang === "fr"
-                    ? "Préparation d'un voyage — Pack Classique visa tourisme Schengen"
-                    : "Trip preparation — Classic Pack Schengen tourism visa"
+                    ? "Préparation d'un voyage — Formule Essentielle visa tourisme Schengen"
+                    : "Trip preparation — Essential Plan Schengen tourism visa"
                 }
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

@@ -124,27 +124,27 @@ export default function EtudiantsPage() {
 
   const t = {
     fr: {
-      title: "Pack Student Care : études et mobilité académique.",
+      title: "Formule Student Care : études et mobilité académique.",
       body: "Depuis Dakar, Tooky Consulting prépare votre visa étudiant Schengen : accompagnement Campus France, contrôle des ressources et de l'hébergement, préparation à l'entretien. Tarif communiqué après évaluation.",
       whyTitle: "Un dossier étudiant solide maximise vos chances.",
-      servicesTitle: "Ce que comprend le Pack Student Care.",
+      servicesTitle: "Ce que comprend la Formule Student Care.",
       promiseTitle: "Vous décrivez le projet. Nous sécurisons le parcours.",
       promiseBody:
         "Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa étudiant, selon la destination et votre situation, avec double vérification avant dépôt.",
-      ctaTitle: "Démarrez votre Pack Student Care.",
+      ctaTitle: "Démarrez votre Formule Student Care.",
       ctaBody:
         "Admission et visa Schengen prennent plusieurs mois. Plus tôt vous commencez à Dakar, plus votre dossier est solide.",
       ctaButton: "Tester mon éligibilité",
     },
     en: {
-      title: "Student Care Pack: studies and academic mobility.",
+      title: "Student Care Plan: studies and academic mobility.",
       body: "From Dakar, Tooky Consulting prepares your Schengen student visa: Campus France support, funding and housing checks, interview preparation. Pricing shared after assessment.",
       whyTitle: "A solid student file maximises your chances.",
-      servicesTitle: "What the Student Care Pack includes.",
+      servicesTitle: "What the Student Care Plan includes.",
       promiseTitle: "You describe the project. We secure the path.",
       promiseBody:
         "After your request, we tell you exactly what is needed for your student visa, for your destination and situation, with double verification before submission.",
-      ctaTitle: "Start your Student Care Pack.",
+      ctaTitle: "Start your Student Care Plan.",
       ctaBody:
         "Admission and Schengen visa procedures take several months. The earlier you start in Dakar, the stronger your file.",
       ctaButton: "Check my eligibility",
