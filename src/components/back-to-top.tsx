@@ -25,7 +25,7 @@ export function BackToTop() {
       onClick={scrollTop}
       aria-label={label}
       title={label}
-      className="fixed right-5 bottom-5 z-50 flex h-12 w-12 items-center justify-center rounded-full transition-all duration-300 sm:right-8 sm:bottom-8"
+      className="fixed right-[5.25rem] bottom-5 z-50 flex h-12 w-12 items-center justify-center rounded-full transition-all duration-300 sm:right-[7.5rem] sm:bottom-8"
       style={{
         background: "var(--c-cobalt-500)",
         color: "var(--c-white)",

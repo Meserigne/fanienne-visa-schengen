@@ -33,6 +33,7 @@ const SECTIONS: Section[] = [
       title: "2. Quelles données collectons-nous ?",
       paragraphs: [
         "Selon votre demande, nous pouvons collecter : identité (nom, prénom), coordonnées (e-mail, téléphone), informations sur votre projet (type de visa, destination, profil étudiant, professionnel, tourisme/famille ou santé), et tout élément que vous nous transmettez volontairement pour l'évaluation ou le suivi de votre dossier.",
+        "L'assistant IA du site peut traiter le texte que vous saisissez dans le chat uniquement pour générer une réponse. Ces échanges ne sont pas conservés sur nos serveurs. N'y envoyez pas de pièces sensibles (passeport, relevés, données médicales détaillées).",
         "Nous ne demandons pas de pièces sensibles via le formulaire public. Les documents du dossier sont collectés uniquement lorsque vous engagez un accompagnement, par des canaux sécurisés convenus avec vous.",
       ],
     },
@@ -40,6 +41,7 @@ const SECTIONS: Section[] = [
       title: "2. What data do we collect?",
       paragraphs: [
         "Depending on your request, we may collect: identity (first and last name), contact details (email, phone), information about your project (visa type, destination, student, business or artist profile), and any information you voluntarily share for assessment or file follow-up.",
+        "The site's AI assistant may process the text you type in the chat solely to generate a reply. These exchanges are not stored on our servers. Do not send sensitive documents there (passport, bank statements, detailed medical data).",
         "We do not ask for sensitive documents through the public form. File documents are collected only once you engage our support, through secure channels agreed with you.",
       ],
     },
@@ -80,14 +82,14 @@ const SECTIONS: Section[] = [
     fr: {
       title: "5. Qui peut accéder à vos données ?",
       paragraphs: [
-        "L'accès est limité aux personnes de Tooky Consulting habilitées à traiter votre dossier. Des prestataires techniques (hébergement du site, messagerie) peuvent traiter des données uniquement pour faire fonctionner nos outils, dans le cadre de leurs obligations de confidentialité.",
+        "L'accès est limité aux personnes de Tooky Consulting habilitées à traiter votre dossier. Des prestataires techniques (hébergement du site, messagerie, fournisseur d'intelligence artificielle pour l'assistant chat) peuvent traiter des données uniquement pour faire fonctionner nos outils, dans le cadre de leurs obligations de confidentialité.",
         "Si votre dossier nécessite un échange avec un partenaire (école, organisme, assureur, etc.), cela se fait uniquement avec votre accord et dans la limite nécessaire à votre projet.",
       ],
     },
     en: {
       title: "5. Who can access your data?",
       paragraphs: [
-        "Access is limited to Tooky Consulting staff authorised to handle your file. Technical providers (website hosting, email) may process data only to operate our tools, under confidentiality obligations.",
+        "Access is limited to Tooky Consulting staff authorised to handle your file. Technical providers (website hosting, email, AI provider for the chat assistant) may process data only to operate our tools, under confidentiality obligations.",
         "If your file requires exchange with a partner (school, organisation, insurer, etc.), this happens only with your consent and only as needed for your project.",
       ],
     },

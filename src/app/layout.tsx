@@ -4,6 +4,7 @@ import "./globals.css";
 import { LanguageProvider } from "@/lib/language-context";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { BackToTop } from "@/components/back-to-top";
+import { AiChat } from "@/components/ai-chat";
 import { JsonLd } from "@/components/json-ld";
 import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL, seo } from "@/lib/seo";
 
@@ -88,6 +89,7 @@ export default function RootLayout({
         <LanguageProvider>
           <SmoothScroll>{children}</SmoothScroll>
           <BackToTop />
+          <AiChat />
         </LanguageProvider>
       </body>
     </html>
