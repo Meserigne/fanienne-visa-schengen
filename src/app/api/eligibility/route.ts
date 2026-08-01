@@ -7,6 +7,12 @@ import {
   getResend,
   type EligibilityPayload,
 } from "@/lib/email";
+import {
+  buildAdminSms,
+  buildClientSms,
+  normalizePhone,
+  sendSms,
+} from "@/lib/sms";
 
 export const runtime = "nodejs";
 
@@ -188,6 +194,40 @@ export async function POST(request: Request) {
       // Default: FormSubmit → CONTACT_EMAIL (+ client autoresponse)
       const result = await sendWithFormSubmit(data);
       needsActivation = result.needsActivation;
+    }
+
+    // SMS confirmation alongside email (non-blocking for the request result).
+    const phone = data.phone ? normalizePhone(data.phone) : null;
+    if (phone) {
+      try {
+        await sendSms(
+          phone,
+          buildClientSms({
+            name: data.name,
+            phone,
+            profile: data.profile,
+            destination: data.destination,
+            lang: data.lang,
+          }),
+        );
+        const adminTo = process.env.SMS_ADMIN_TO
+          ? normalizePhone(process.env.SMS_ADMIN_TO)
+          : null;
+        if (adminTo) {
+          await sendSms(
+            adminTo,
+            buildAdminSms({
+              name: data.name,
+              phone,
+              profile: data.profile,
+              destination: data.destination,
+              lang: data.lang,
+            }),
+          );
+        }
+      } catch (smsError) {
+        console.error("Eligibility SMS failure:", smsError);
+      }
     }
 
     return NextResponse.json({

@@ -52,10 +52,10 @@ export function EligibilityForm() {
       projectPlaceholder: "Études, salon professionnel, mission d'affaires…",
       submit: "Envoyer ma demande",
       sending: "Envoi en cours…",
-      fineprint: "Gratuit · Sans engagement · Réponse sous 48 h",
+      fineprint: "Gratuit · Sans engagement · Confirmation e-mail + SMS · Réponse sous 48 h",
       sentTitle: "Demande bien reçue",
       sentBody:
-        "Merci. Votre demande est bien reçue. Nous vous recontactons sous peu.",
+        "Merci. Votre demande est bien reçue. Un e-mail et un SMS de confirmation vous sont envoyés. Nous vous recontactons sous peu.",
     },
     en: {
       title: "Assess your project in 2 minutes",
@@ -84,10 +84,10 @@ export function EligibilityForm() {
       projectPlaceholder: "Studies, trade fair, business trip…",
       submit: "Send my request",
       sending: "Sending…",
-      fineprint: "Free · No obligation · Reply within 48 h",
+      fineprint: "Free · No obligation · Email + SMS confirmation · Reply within 48 h",
       sentTitle: "Request received",
       sentBody:
-        "Thank you. Your request has been received. We will get back to you shortly.",
+        "Thank you. Your request has been received. A confirmation email and SMS are on the way. We will get back to you shortly.",
     },
   }[lang];
 
@@ -116,6 +116,7 @@ export function EligibilityForm() {
     const profile = String(formData.get("Profil") || "").trim();
     const destination = String(formData.get("Destination") || "").trim();
     const email = String(formData.get("email") || "").trim();
+    const phone = String(formData.get("Telephone") || "").trim();
 
     const subject = form.elements.namedItem("_subject") as HTMLInputElement | null;
     const autoresponse = form.elements.namedItem(
@@ -141,6 +142,23 @@ export function EligibilityForm() {
     if (next) {
       // Fallback redirect if the iframe path is blocked.
       next.value = `${window.location.origin}/?sent=1`;
+    }
+
+    // SMS confirmation in parallel with FormSubmit email (fire-and-forget).
+    if (phone) {
+      void fetch("/api/sms-confirm", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          phone,
+          profile,
+          destination,
+          lang,
+        }),
+      }).catch(() => {
+        // Email path remains the primary confirmation channel.
+      });
     }
 
     submittedRef.current = true;
@@ -369,6 +387,8 @@ export function EligibilityForm() {
                       id="phone"
                       name="Telephone"
                       type="tel"
+                      required
+                      autoComplete="tel"
                       placeholder={t.phonePlaceholder}
                       className={fieldClass}
                       style={{
