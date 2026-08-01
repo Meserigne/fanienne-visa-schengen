@@ -9,7 +9,7 @@ export function JsonLd() {
     description:
       "Cabinet d'accompagnement visa Schengen à Dakar pour étudiants et PME / PMI sénégalaises.",
     url: SITE_URL,
-    email: "contact@fanienne.sn",
+    email: "contact@fabienne.sn",
     areaServed: {
       "@type": "Country",
       name: "Sénégal",

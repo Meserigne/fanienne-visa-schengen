@@ -67,14 +67,14 @@ export default function AboutPage() {
   const t = {
     fr: {
       title: "Qui nous sommes.",
-      body: "Fanienne est un cabinet d'accompagnement visa Schengen basé à Dakar. Nous aidons étudiants, artistes et PME sénégalaises à préparer des dossiers solides pour l'Europe.",
+      body: "Fabienne est un cabinet d'accompagnement visa Schengen basé à Dakar. Nous aidons étudiants, artistes et PME sénégalaises à préparer des dossiers solides pour l'Europe.",
       missionTitle: "Notre mission.",
       missionLead:
         "Transformer un projet de voyage, d'études, d'affaires ou de création en dossier consulaire clair, complet et crédible.",
       missionBody:
         "Depuis Dakar, nous accompagnons chaque étape : lecture de votre situation, préparation des pièces, préparation à l'entretien, suivi jusqu'à la décision. Vous avancez avec une méthode concrète, des délais anticipés et un interlocuteur dédié.",
       missionNote:
-        "Fanienne est un cabinet de conseil indépendant. Nous ne délivrons pas de visas : la décision appartient aux autorités consulaires. Notre rôle est de vous mettre dans les meilleures conditions pour réussir.",
+        "Fabienne est un cabinet de conseil indépendant. Nous ne délivrons pas de visas : la décision appartient aux autorités consulaires. Notre rôle est de vous mettre dans les meilleures conditions pour réussir.",
       missionPoints: [
         "Évaluer votre profil et vous dire clairement ce qui est réaliste",
         "Structurer un dossier lisible pour le consulat, sans pièce inutile",
@@ -84,19 +84,19 @@ export default function AboutPage() {
       audiencesTitle: "Pour qui nous travaillons.",
       ctaTitle: "Parlez-nous de votre projet.",
       ctaBody:
-        "Évaluation gratuite sous 48 heures. Décrivez votre situation : un conseiller Fanienne vous répond.",
+        "Évaluation gratuite sous 48 heures. Décrivez votre situation : un conseiller Fabienne vous répond.",
       ctaButton: "Tester mon éligibilité",
     },
     en: {
       title: "Who we are.",
-      body: "Fanienne is a Schengen visa consultancy based in Dakar. We help Senegalese students, artists and SMEs prepare solid files for Europe.",
+      body: "Fabienne is a Schengen visa consultancy based in Dakar. We help Senegalese students, artists and SMEs prepare solid files for Europe.",
       missionTitle: "Our mission.",
       missionLead:
         "Turn a travel, study, business or creative project into a clear, complete and credible consular file.",
       missionBody:
         "From Dakar, we support every step: reading your situation, preparing documents, interview coaching, follow-up until the decision. You move forward with a concrete method, anticipated timelines and a dedicated contact.",
       missionNote:
-        "Fanienne is an independent advisory firm. We do not issue visas: decisions belong to consular authorities. Our role is to put you in the best position to succeed.",
+        "Fabienne is an independent advisory firm. We do not issue visas: decisions belong to consular authorities. Our role is to put you in the best position to succeed.",
       missionPoints: [
         "Assess your profile and tell you clearly what is realistic",
         "Structure a file consulates can read, without unnecessary documents",
@@ -106,7 +106,7 @@ export default function AboutPage() {
       audiencesTitle: "Who we work with.",
       ctaTitle: "Tell us about your project.",
       ctaBody:
-        "Free assessment within 48 hours. Describe your situation: a Fanienne advisor replies.",
+        "Free assessment within 48 hours. Describe your situation: a Fabienne advisor replies.",
       ctaButton: "Check my eligibility",
     },
   }[lang];
@@ -136,7 +136,7 @@ export default function AboutPage() {
                 color: "var(--c-cobalt-300)",
               }}
             >
-              Fanienne
+              Fabienne
             </p>
             <h1
               className="mb-6 max-w-[14ch] text-[clamp(2.1rem,4.5vw,3.75rem)] leading-[1.05] font-semibold tracking-tight text-balance"
@@ -168,8 +168,8 @@ export default function AboutPage() {
                 src={SITE_IMAGES.about}
                 alt={
                   lang === "fr"
-                    ? "Équipe Fanienne - cabinet d'accompagnement visa Schengen à Dakar"
-                    : "Fanienne team - Schengen visa consultancy in Dakar"
+                    ? "Équipe Fabienne - cabinet d'accompagnement visa Schengen à Dakar"
+                    : "Fabienne team - Schengen visa consultancy in Dakar"
                 }
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"

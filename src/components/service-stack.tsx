@@ -155,7 +155,7 @@ export function ServiceStack({
 
         <p className="mt-10 text-[17px]" style={{ color: "var(--text-secondary)" }}>
           {needTitle} {needBody}{" "}
-          <a href="#eligibilite" className="fanienne-link font-semibold">
+          <a href="#eligibilite" className="fabienne-link font-semibold">
             {needCta} →
           </a>
         </p>

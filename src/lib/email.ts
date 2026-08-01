@@ -4,7 +4,7 @@ export const CONTACT_EMAIL =
   process.env.CONTACT_EMAIL || "meserigne@gmail.com";
 
 export const EMAIL_FROM =
-  process.env.EMAIL_FROM || "Fanienne <onboarding@resend.dev>";
+  process.env.EMAIL_FROM || "Fabienne <onboarding@resend.dev>";
 
 export type EligibilityPayload = {
   profile: string;
@@ -23,7 +23,7 @@ export function getResend() {
 }
 
 export function buildAdminEmail(data: EligibilityPayload) {
-  const subject = `[Fanienne] Nouvelle demande d'éligibilité - ${data.name}`;
+  const subject = `[Fabienne] Nouvelle demande d'éligibilité - ${data.name}`;
   const text = [
     "Nouvelle demande d'éligibilité visa Schengen",
     "",
@@ -55,56 +55,56 @@ export function buildAdminEmail(data: EligibilityPayload) {
 export function buildClientEmail(data: EligibilityPayload) {
   if (data.lang === "en") {
     return {
-      subject: "We received your Fanienne eligibility request",
+      subject: "We received your Fabienne eligibility request",
       text: [
         `Hello ${data.name},`,
         "",
         "Thank you for your Schengen visa eligibility request.",
-        "A Fanienne advisor will review your profile and reply within 48 hours.",
+        "A Fabienne advisor will review your profile and reply within 48 hours.",
         "",
         "Summary:",
         `- Profile: ${data.profile}`,
         `- Destination: ${data.destination}`,
         "",
-        "Fanienne - Schengen visa support in Dakar",
-        "contact@fanienne.sn",
+        "Fabienne - Schengen visa support in Dakar",
+        "contact@fabienne.sn",
       ].join("\n"),
       html: `
         <div style="font-family:Arial,sans-serif;line-height:1.7;color:#0c1a2e">
           <h2 style="color:#2450e8;margin:0 0 12px">Request received</h2>
           <p>Hello ${escapeHtml(data.name)},</p>
-          <p>Thank you for your Schengen visa eligibility request. A Fanienne advisor will review your profile and reply within <strong>48 hours</strong>.</p>
+          <p>Thank you for your Schengen visa eligibility request. A Fabienne advisor will review your profile and reply within <strong>48 hours</strong>.</p>
           <p><strong>Profile:</strong> ${escapeHtml(data.profile)}<br/>
           <strong>Destination:</strong> ${escapeHtml(data.destination)}</p>
-          <p style="color:#5c718c;font-size:13px">Fanienne · Dakar<br/>contact@fanienne.sn</p>
+          <p style="color:#5c718c;font-size:13px">Fabienne · Dakar<br/>contact@fabienne.sn</p>
         </div>
       `,
     };
   }
 
   return {
-    subject: "Nous avons bien reçu votre demande Fanienne",
+    subject: "Nous avons bien reçu votre demande Fabienne",
     text: [
       `Bonjour ${data.name},`,
       "",
       "Merci pour votre demande d'éligibilité visa Schengen.",
-      "Un conseiller Fanienne analyse votre profil et vous répond sous 48 heures.",
+      "Un conseiller Fabienne analyse votre profil et vous répond sous 48 heures.",
       "",
       "Récapitulatif :",
       `- Profil : ${data.profile}`,
       `- Destination : ${data.destination}`,
       "",
-      "Fanienne - Accompagnement visa Schengen à Dakar",
-      "contact@fanienne.sn",
+      "Fabienne - Accompagnement visa Schengen à Dakar",
+      "contact@fabienne.sn",
     ].join("\n"),
     html: `
       <div style="font-family:Arial,sans-serif;line-height:1.7;color:#0c1a2e">
         <h2 style="color:#2450e8;margin:0 0 12px">Demande bien reçue</h2>
         <p>Bonjour ${escapeHtml(data.name)},</p>
-        <p>Merci pour votre demande d'éligibilité visa Schengen. Un conseiller Fanienne analyse votre profil et vous répond sous <strong>48 heures</strong>.</p>
+        <p>Merci pour votre demande d'éligibilité visa Schengen. Un conseiller Fabienne analyse votre profil et vous répond sous <strong>48 heures</strong>.</p>
         <p><strong>Profil :</strong> ${escapeHtml(data.profile)}<br/>
         <strong>Destination :</strong> ${escapeHtml(data.destination)}</p>
-        <p style="color:#5c718c;font-size:13px">Fanienne · Dakar<br/>contact@fanienne.sn</p>
+        <p style="color:#5c718c;font-size:13px">Fabienne · Dakar<br/>contact@fabienne.sn</p>
       </div>
     `,
   };

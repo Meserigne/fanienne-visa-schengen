@@ -208,11 +208,11 @@
   .text-balance {
     text-wrap: balance;
   }
-  .fanienne-link {
+  .fabienne-link {
     color: var(--c-cobalt-600);
     text-underline-offset: 0.2em;
   }
-  .fanienne-link:hover {
+  .fabienne-link:hover {
     color: var(--c-cobalt-700);
   }
 }

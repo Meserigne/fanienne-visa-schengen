@@ -125,7 +125,7 @@ export default function EntreprisesPage() {
   const t = {
     fr: {
       title: "Visa d'affaires Schengen pour PME et PMI.",
-      body: "Depuis Dakar, Fanienne prépare le visa Schengen affaires de vos dirigeants et équipes : salons, négociations, partenariats. Pour que vos opportunités ne dépendent plus d'un refus de visa.",
+      body: "Depuis Dakar, Fabienne prépare le visa Schengen affaires de vos dirigeants et équipes : salons, négociations, partenariats. Pour que vos opportunités ne dépendent plus d'un refus de visa.",
       whyTitle: "Un refus de visa d'affaires coûte plus cher qu'un dossier bien préparé.",
       servicesTitle: "Du visa dirigeant à la délégation complète.",
       promiseTitle: "Vous décrivez la mission. Nous vous disons comment avancer.",
@@ -133,12 +133,12 @@ export default function EntreprisesPage() {
         "Pas de liste de pièces à l'avance. Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa d'affaires, selon la destination et l'objet du voyage.",
       ctaTitle: "Parlez-nous de votre prochain déplacement d'affaires.",
       ctaBody:
-        "Chaque mission professionnelle est étudiée sur devis. Décrivez votre projet : un conseiller Fanienne vous répond sous 48 heures.",
+        "Chaque mission professionnelle est étudiée sur devis. Décrivez votre projet : un conseiller Fabienne vous répond sous 48 heures.",
       ctaButton: "Demander un devis gratuit",
     },
     en: {
       title: "Schengen business visa for SMEs.",
-      body: "From Dakar, Fanienne prepares Schengen business visas for your executives and teams: trade fairs, negotiations, partnerships. So your opportunities no longer depend on a visa refusal.",
+      body: "From Dakar, Fabienne prepares Schengen business visas for your executives and teams: trade fairs, negotiations, partnerships. So your opportunities no longer depend on a visa refusal.",
       whyTitle: "A business visa refusal costs more than a well-prepared file.",
       servicesTitle: "From an executive visa to a full delegation.",
       promiseTitle: "You describe the mission. We tell you how to move forward.",
@@ -146,7 +146,7 @@ export default function EntreprisesPage() {
         "No document list upfront. After your request, we tell you exactly what is needed for your business visa, for your destination and travel purpose.",
       ctaTitle: "Tell us about your next business trip.",
       ctaBody:
-        "Every professional mission is quoted individually. Describe your project: a Fanienne advisor replies within 48 hours.",
+        "Every professional mission is quoted individually. Describe your project: a Fabienne advisor replies within 48 hours.",
       ctaButton: "Request a free quote",
     },
   }[lang];
@@ -176,7 +176,7 @@ export default function EntreprisesPage() {
                 color: "var(--c-cobalt-300)",
               }}
             >
-              Fanienne
+              Fabienne
             </p>
             <h1
               className="mb-6 max-w-[18ch] text-[clamp(2.1rem,4.5vw,3.75rem)] leading-[1.05] font-semibold tracking-tight text-balance"

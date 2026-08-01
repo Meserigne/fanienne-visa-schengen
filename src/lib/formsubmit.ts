@@ -14,7 +14,7 @@ export function buildClientAutoresponse(data: {
     return [
       `Hello ${data.name},`,
       "",
-      "Thank you for your Schengen visa eligibility request on Fanienne.",
+      "Thank you for your Schengen visa eligibility request on Fabienne.",
       "We have received your information and will get back to you shortly.",
       "",
       "Summary:",
@@ -22,15 +22,15 @@ export function buildClientAutoresponse(data: {
       `- Destination: ${data.destination}`,
       "",
       "Best regards,",
-      "The Fanienne team",
-      "Dakar · contact@fanienne.sn",
+      "The Fabienne team",
+      "Dakar · contact@fabienne.sn",
     ].join("\n");
   }
 
   return [
     `Bonjour ${data.name},`,
     "",
-    "Merci pour votre demande d'éligibilité visa Schengen sur Fanienne.",
+    "Merci pour votre demande d'éligibilité visa Schengen sur Fabienne.",
     "Nous avons bien reçu vos informations et nous vous reviendrons sous peu.",
     "",
     "Récapitulatif :",
@@ -38,7 +38,7 @@ export function buildClientAutoresponse(data: {
     `- Destination : ${data.destination}`,
     "",
     "Cordialement,",
-    "L'équipe Fanienne",
-    "Dakar · contact@fanienne.sn",
+    "L'équipe Fabienne",
+    "Dakar · contact@fabienne.sn",
   ].join("\n");
 }

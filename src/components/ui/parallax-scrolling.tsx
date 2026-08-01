@@ -15,13 +15,13 @@ export function ParallaxHero() {
 
   const t = {
     fr: {
-      brand: "Fanienne",
+      brand: "Fabienne",
       title: "Accompagnement visa Schengen depuis Dakar.",
       body: "Cabinet au Sénégal pour étudiants et PME : dossier visa Schengen solide, de la candidature à la décision consulaire.",
       ctaSecondary: "Voir le parcours",
     },
     en: {
-      brand: "Fanienne",
+      brand: "Fabienne",
       title: "Schengen visa support from Dakar.",
       body: "A Senegal-based consultancy for students and SMEs: a solid Schengen visa file, from application to the consular decision.",
       ctaSecondary: "See the journey",
@@ -82,7 +82,7 @@ export function ParallaxHero() {
         <div data-parallax-media className="absolute inset-0 will-change-transform">
           <Image
             src={SITE_IMAGES.hero}
-            alt="Accompagnement visa Schengen Fanienne - Europe depuis Dakar"
+            alt="Accompagnement visa Schengen Fabienne - Europe depuis Dakar"
             fill
             priority
             sizes="100vw"

@@ -125,7 +125,7 @@ export default function EtudiantsPage() {
   const t = {
     fr: {
       title: "Visa étudiant Schengen : de la candidature à la rentrée.",
-      body: "Depuis Dakar, Fanienne accompagne votre visa étudiant Schengen : admission, Campus France, dossier consulaire et logement, pour un projet d'études qui n'est pas bloqué par un dossier incomplet.",
+      body: "Depuis Dakar, Fabienne accompagne votre visa étudiant Schengen : admission, Campus France, dossier consulaire et logement, pour un projet d'études qui n'est pas bloqué par un dossier incomplet.",
       whyTitle: "Un dossier visa étudiant solide vaut mieux qu'un rêve reporté.",
       servicesTitle: "Accompagnement visa étudiant, de A à Z.",
       promiseTitle: "Vous décrivez le projet. Nous vous disons comment avancer.",
@@ -138,7 +138,7 @@ export default function EtudiantsPage() {
     },
     en: {
       title: "Schengen student visa: from application to day one.",
-      body: "From Dakar, Fanienne supports your Schengen student visa: admission, Campus France, consular file and housing, so your study plans are never blocked by an incomplete file.",
+      body: "From Dakar, Fabienne supports your Schengen student visa: admission, Campus France, consular file and housing, so your study plans are never blocked by an incomplete file.",
       whyTitle: "A solid student visa file beats a postponed dream.",
       servicesTitle: "End-to-end student visa support.",
       promiseTitle: "You describe the project. We tell you how to move forward.",
@@ -176,7 +176,7 @@ export default function EtudiantsPage() {
                 color: "var(--c-cobalt-300)",
               }}
             >
-              Fanienne
+              Fabienne
             </p>
             <h1
               className="mb-6 max-w-[18ch] text-[clamp(2.1rem,4.5vw,3.75rem)] leading-[1.05] font-semibold tracking-tight text-balance"

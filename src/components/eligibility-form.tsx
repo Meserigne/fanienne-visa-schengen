@@ -16,7 +16,7 @@ import {
 const fieldClass =
   "h-auto rounded-xl border px-3.5 py-3.5 text-[17px] focus-visible:ring-2";
 
-const IFRAME_NAME = "fanienne_formsubmit_frame";
+const IFRAME_NAME = "fabienne_formsubmit_frame";
 
 export function EligibilityForm() {
   const { lang } = useLanguage();
@@ -27,7 +27,7 @@ export function EligibilityForm() {
   const t = {
     fr: {
       title: "Testez votre éligibilité au visa Schengen",
-      body: "Répondez en deux minutes. Un conseiller Fanienne analyse votre profil et vous répond sous 48 heures avec un avis honnête et un devis personnalisé.",
+      body: "Répondez en deux minutes. Un conseiller Fabienne analyse votre profil et vous répond sous 48 heures avec un avis honnête et un devis personnalisé.",
       points: [
         "Évaluation gratuite et sans engagement",
         "Réponse personnalisée sous 48 h",
@@ -53,7 +53,7 @@ export function EligibilityForm() {
     },
     en: {
       title: "Check your Schengen visa eligibility",
-      body: "Answer in two minutes. A Fanienne advisor reviews your profile and replies within 48 hours with an honest assessment and a personalised quote.",
+      body: "Answer in two minutes. A Fabienne advisor reviews your profile and replies within 48 hours with an honest assessment and a personalised quote.",
       points: [
         "Free, no-obligation assessment",
         "Personalised reply within 48 hours",
@@ -113,7 +113,7 @@ export function EligibilityForm() {
     const next = form.elements.namedItem("_next") as HTMLInputElement | null;
 
     if (subject) {
-      subject.value = `[Fanienne] Nouvelle demande d'éligibilité - ${name}`;
+      subject.value = `[Fabienne] Nouvelle demande d'éligibilité - ${name}`;
     }
     if (autoresponse) {
       autoresponse.value = buildClientAutoresponse({
@@ -215,7 +215,7 @@ export function EligibilityForm() {
                 <input
                   type="hidden"
                   name="_subject"
-                  defaultValue="[Fanienne] Nouvelle demande d'éligibilité"
+                  defaultValue="[Fabienne] Nouvelle demande d'éligibilité"
                 />
                 <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_captcha" value="false" />
@@ -224,7 +224,7 @@ export function EligibilityForm() {
                 <input
                   type="hidden"
                   name="_autoresponse"
-                  defaultValue="Bonjour, merci pour votre demande. Nous avons bien reçu vos informations et nous vous reviendrons sous peu. Cordialement, L'équipe Fanienne"
+                  defaultValue="Bonjour, merci pour votre demande. Nous avons bien reçu vos informations et nous vous reviendrons sous peu. Cordialement, L'équipe Fabienne"
                 />
                 <input
                   type="text"

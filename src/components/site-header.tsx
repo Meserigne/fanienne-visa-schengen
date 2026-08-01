@@ -56,7 +56,7 @@ export function SiteHeader() {
             className="text-[26px] font-semibold tracking-tight sm:text-[28px]"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Fanienne
+            Fabienne
           </span>
           <span
             className="hidden h-1.5 w-1.5 self-center rounded-full sm:block"

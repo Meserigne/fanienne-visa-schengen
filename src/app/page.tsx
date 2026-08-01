@@ -159,13 +159,13 @@ export default function Home() {
       track1Cta: "Parcours étudiant",
       track2Title: "Visa d'affaires PME & PMI",
       track2Body:
-        "Votre entreprise ne doit plus perdre un salon, une négociation ou un partenariat à cause d'un visa. Fanienne prépare le visa Schengen affaires de vos dirigeants et équipes, de façon concrète et calendrier en tête.",
+        "Votre entreprise ne doit plus perdre un salon, une négociation ou un partenariat à cause d'un visa. Fabienne prépare le visa Schengen affaires de vos dirigeants et équipes, de façon concrète et calendrier en tête.",
       track2Cta: "Parcours entreprise",
       servicesTitle: "Nos services d'accompagnement visa Schengen.",
       needTitle: "Un besoin particulier ?",
       needBody: "Chaque demande de visa est étudiée sur devis, sans engagement.",
       needCta: "Demander un devis",
-      howTitle: "Comment obtenir votre visa Schengen avec Fanienne.",
+      howTitle: "Comment obtenir votre visa Schengen avec Fabienne.",
       partnersLabel: "Sablux, Mega et THETA nous font confiance",
     },
     en: {
@@ -175,13 +175,13 @@ export default function Home() {
       track1Cta: "Student track",
       track2Title: "Business visa for SMEs",
       track2Body:
-        "Your company should not lose a trade fair, negotiation or partnership because of a visa. Fanienne prepares Schengen business visas for your executives and teams, with a clear plan and calendar.",
+        "Your company should not lose a trade fair, negotiation or partnership because of a visa. Fabienne prepares Schengen business visas for your executives and teams, with a clear plan and calendar.",
       track2Cta: "Business track",
       servicesTitle: "Our Schengen visa support services.",
       needTitle: "A specific need?",
       needBody: "Every visa request is assessed with a free, no-obligation quote.",
       needCta: "Request a quote",
-      howTitle: "How to get your Schengen visa with Fanienne.",
+      howTitle: "How to get your Schengen visa with Fabienne.",
       partnersLabel: "Trusted by Sablux, Mega and THETA",
     },
   }[lang];

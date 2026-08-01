@@ -125,7 +125,7 @@ export default function ArtistesPage() {
   const t = {
     fr: {
       title: "Visa Schengen pour artistes et projets culturels.",
-      body: "Festivals, résidences, tournées, expositions : depuis Dakar, Fanienne prépare le visa Schengen des artistes sénégalais pour que la scène européenne ne soit plus bloquée par un dossier incomplet.",
+      body: "Festivals, résidences, tournées, expositions : depuis Dakar, Fabienne prépare le visa Schengen des artistes sénégalais pour que la scène européenne ne soit plus bloquée par un dossier incomplet.",
       whyTitle: "Un projet culturel mérite un dossier à la hauteur.",
       servicesTitle: "De la scène solo à la tournée complète.",
       promiseTitle: "Vous décrivez le projet. Nous vous disons comment avancer.",
@@ -138,7 +138,7 @@ export default function ArtistesPage() {
     },
     en: {
       title: "Schengen visa for artists and cultural projects.",
-      body: "Festivals, residencies, tours, exhibitions: from Dakar, Fanienne prepares Schengen visas for Senegalese artists so the European stage is no longer blocked by an incomplete file.",
+      body: "Festivals, residencies, tours, exhibitions: from Dakar, Fabienne prepares Schengen visas for Senegalese artists so the European stage is no longer blocked by an incomplete file.",
       whyTitle: "A cultural project deserves a file that matches it.",
       servicesTitle: "From a solo stage to a full tour.",
       promiseTitle: "You describe the project. We tell you how to move forward.",
@@ -176,7 +176,7 @@ export default function ArtistesPage() {
                 color: "var(--c-cobalt-300)",
               }}
             >
-              Fanienne
+              Fabienne
             </p>
             <h1
               className="mb-6 max-w-[18ch] text-[clamp(2.1rem,4.5vw,3.75rem)] leading-[1.05] font-semibold tracking-tight text-balance"

@@ -10,7 +10,7 @@ import {
 
 export type Lang = "fr" | "en";
 
-const STORAGE_KEY = "fanienne-lang";
+const STORAGE_KEY = "fabienne-lang";
 
 type LanguageContextValue = {
   lang: Lang;
