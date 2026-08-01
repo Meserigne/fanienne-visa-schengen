@@ -1,13 +1,16 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { useLanguage } from "@/lib/language-context";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Reveal } from "@/components/reveal";
 import { DESTINATIONS } from "@/lib/destinations";
-import { sendEligibilityViaFormSubmit } from "@/lib/formsubmit";
+import {
+  buildClientAutoresponse,
+  getFormSubmitAction,
+} from "@/lib/formsubmit";
 
 const fieldClass =
   "h-auto rounded-xl border px-3.5 py-3.5 text-[17px] focus-visible:ring-2";
@@ -16,7 +19,6 @@ export function EligibilityForm() {
   const { lang } = useLanguage();
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
 
   const t = {
     fr: {
@@ -44,7 +46,6 @@ export function EligibilityForm() {
       sentTitle: "Demande bien reçue",
       sentBody:
         "Merci ! Un e-mail de confirmation vous a été envoyé. Un conseiller Fanienne vous contacte sous 48 heures.",
-      errorFallback: "Une erreur est survenue. Réessayez ou écrivez à contact@fanienne.sn.",
     },
     en: {
       title: "Check your Schengen visa eligibility",
@@ -71,42 +72,55 @@ export function EligibilityForm() {
       sentTitle: "Request received",
       sentBody:
         "Thank you! A confirmation email has been sent. A Fanienne advisor will contact you within 48 hours.",
-      errorFallback: "Something went wrong. Please try again or email contact@fanienne.sn.",
     },
   }[lang];
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setError("");
-    setLoading(true);
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("sent") === "1") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setSent(true);
+      const url = new URL(window.location.href);
+      url.searchParams.delete("sent");
+      window.history.replaceState({}, "", `${url.pathname}${url.search}#eligibilite`);
+    }
+  }, []);
 
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     const form = e.currentTarget;
     const formData = new FormData(form);
-    const destinationCode = String(formData.get("destination") || "");
-    const destination = DESTINATIONS.find((d) => d.code === destinationCode);
-    const destinationLabel = destination
-      ? lang === "fr"
-        ? destination.fr
-        : destination.en
-      : destinationCode;
+    const name = String(formData.get("name") || "").trim();
+    const profile = String(formData.get("Profil") || "").trim();
+    const destination = String(formData.get("Destination") || "").trim();
 
-    try {
-      await sendEligibilityViaFormSubmit({
-        profile: String(formData.get("profile") || ""),
-        destination: destinationLabel,
-        name: String(formData.get("name") || ""),
-        email: String(formData.get("email") || ""),
-        phone: String(formData.get("phone") || ""),
-        project: String(formData.get("project") || ""),
+    const next = form.elements.namedItem("_next") as HTMLInputElement | null;
+    const subject = form.elements.namedItem("_subject") as HTMLInputElement | null;
+    const autoresponse = form.elements.namedItem(
+      "_autoresponse"
+    ) as HTMLInputElement | null;
+    const replyto = form.elements.namedItem("_replyto") as HTMLInputElement | null;
+    const email = String(formData.get("email") || "").trim();
+
+    if (next) {
+      next.value = `${window.location.origin}/?sent=1#eligibilite`;
+    }
+    if (subject) {
+      subject.value = `[Fanienne] Nouvelle demande d'éligibilité - ${name}`;
+    }
+    if (autoresponse) {
+      autoresponse.value = buildClientAutoresponse({
+        name,
+        profile,
+        destination,
         lang,
       });
-
-      setSent(true);
-    } catch {
-      setError(t.errorFallback);
-    } finally {
-      setLoading(false);
     }
+    if (replyto) {
+      replyto.value = email;
+    }
+
+    setLoading(true);
+    // Native FormSubmit POST (required for admin email + client autoresponse).
   };
 
   return (
@@ -161,7 +175,20 @@ export function EligibilityForm() {
             }}
           >
             {!sent ? (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-4.5">
+              <form
+                action={getFormSubmitAction()}
+                method="POST"
+                onSubmit={handleSubmit}
+                className="flex flex-col gap-4.5"
+              >
+                {/* FormSubmit controls: admin notification + client reply */}
+                <input type="hidden" name="_subject" defaultValue="[Fanienne] Nouvelle demande d'éligibilité" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_next" defaultValue="" />
+                <input type="hidden" name="_replyto" defaultValue="" />
+                <input type="hidden" name="_autoresponse" defaultValue="" />
+                <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
+
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div className="flex flex-col gap-1.5">
                     <Label
@@ -176,7 +203,7 @@ export function EligibilityForm() {
                     </Label>
                     <select
                       id="profile"
-                      name="profile"
+                      name="Profil"
                       required
                       className={fieldClass}
                       style={{
@@ -205,7 +232,7 @@ export function EligibilityForm() {
                     </Label>
                     <select
                       id="destination"
-                      name="destination"
+                      name="Destination"
                       required
                       className={fieldClass}
                       style={{
@@ -214,11 +241,14 @@ export function EligibilityForm() {
                         background: "var(--c-white)",
                       }}
                     >
-                      {DESTINATIONS.map((dest) => (
-                        <option key={dest.code} value={dest.code}>
-                          {dest.flag} {lang === "fr" ? dest.fr : dest.en}
-                        </option>
-                      ))}
+                      {DESTINATIONS.map((dest) => {
+                        const label = lang === "fr" ? dest.fr : dest.en;
+                        return (
+                          <option key={dest.code} value={label}>
+                            {dest.flag} {label}
+                          </option>
+                        );
+                      })}
                     </select>
                   </div>
                 </div>
@@ -280,7 +310,7 @@ export function EligibilityForm() {
                     </Label>
                     <Input
                       id="phone"
-                      name="phone"
+                      name="Telephone"
                       type="tel"
                       placeholder={t.phonePlaceholder}
                       className={fieldClass}
@@ -302,7 +332,7 @@ export function EligibilityForm() {
                   </Label>
                   <Textarea
                     id="project"
-                    name="project"
+                    name="Projet"
                     rows={3}
                     placeholder={t.projectPlaceholder}
                     className={fieldClass}
@@ -313,20 +343,6 @@ export function EligibilityForm() {
                     }}
                   />
                 </div>
-
-                {error ? (
-                  <p
-                    className="rounded-xl px-3.5 py-3 text-[14px] leading-snug"
-                    style={{
-                      background: "var(--status-error-bg)",
-                      color: "var(--status-error)",
-                      fontFamily: "var(--font-ui)",
-                    }}
-                    role="alert"
-                  >
-                    {error}
-                  </p>
-                ) : null}
 
                 <button
                   type="submit"
