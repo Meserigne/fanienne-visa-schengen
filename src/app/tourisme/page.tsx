@@ -13,32 +13,32 @@ const CTA = { fr: "Tester mon éligibilité", en: "Check my eligibility" };
 const WHY = [
   {
     fr: {
-      title: "Opportunités saisies à temps",
-      body: "Un salon manqué ou une négociation reportée, c'est un marché perdu. Nous anticipons les délais consulaires pour que vous soyez présent au bon moment.",
+      title: "Un motif de voyage lisible",
+      body: "Tourisme ou visite familiale : nous clarifions l'itinéraire, les liens familiaux et le retour au Sénégal pour que le consulat comprenne immédiatement votre projet.",
     },
     en: {
-      title: "Opportunities seized on time",
-      body: "A missed trade fair or postponed negotiation is a lost market. We anticipate consular timelines so you are there at the right moment.",
+      title: "A readable travel purpose",
+      body: "Tourism or family visit: we clarify the itinerary, family ties and return to Senegal so the consulate immediately understands your plan.",
     },
   },
   {
     fr: {
-      title: "Crédibilité de l'entreprise",
-      body: "Un dossier d'entreprise structuré (registre, bilans, lettres d'invitation) présente votre PME sous son meilleur jour auprès des consulats.",
+      title: "Des pièces vraiment conformes",
+      body: "Réservations d'hôtel et de billets, assurance, preuves de ressources : nous vérifions chaque élément avant le dépôt pour éviter les refus évitables.",
     },
     en: {
-      title: "Company credibility",
-      body: "A structured company file (registration, financials, invitation letters) presents your SME at its best before consulates.",
+      title: "Documents that actually comply",
+      body: "Hotel and flight bookings, insurance, proof of funds: we check every item before submission to avoid preventable refusals.",
     },
   },
   {
     fr: {
-      title: "Historique de voyage propre",
-      body: "Des demandes bien faites construisent un historique favorable, qui facilite chaque visa suivant, jusqu'aux visas de circulation longue durée.",
+      title: "Un RDV sans improviser",
+      body: "Prise de rendez-vous, checklist personnalisée et suivi jusqu'à la décision : vous avancez avec un interlocuteur, pas une liste générique.",
     },
     en: {
-      title: "A clean travel record",
-      body: "Well-made applications build a favourable history that eases every next visa, up to long-term multiple-entry visas.",
+      title: "An appointment without improvising",
+      body: "Appointment booking, a personalised checklist and follow-up until the decision: you move forward with one contact, not a generic list.",
     },
   },
 ];
@@ -46,42 +46,42 @@ const WHY = [
 const SERVICES = [
   {
     fr: {
-      title: "Visa d'affaires dirigeant",
-      body: "Dossier complet du gérant ou dirigeant : documents d'entreprise, invitation du partenaire européen, itinéraire et justificatifs financiers.",
+      title: "Analyse du profil",
+      body: "Lecture de votre situation (historique de visas, ressources, motif) pour identifier les points faibles avant même de constituer le dossier.",
     },
     en: {
-      title: "Executive business visa",
-      body: "A complete file for the owner or executive: company documents, invitation from the European partner, itinerary and financial proof.",
+      title: "Profile review",
+      body: "A reading of your situation (visa history, funds, purpose) to spot weak points before the file is even built.",
     },
   },
   {
     fr: {
-      title: "Délégations & équipes",
-      body: "Gestion groupée des demandes pour vos équipes en déplacement : salons, foires, formations et missions techniques.",
+      title: "Préparation du dossier",
+      body: "Constitution et contrôle du dossier de court séjour : pièces personnelles, financières et justificatifs de voyage, prêts pour le dépôt.",
     },
     en: {
-      title: "Delegations & teams",
-      body: "Grouped applications for travelling teams: trade fairs, exhibitions, training and technical missions.",
+      title: "File preparation",
+      body: "Building and checking your short-stay file: personal and financial documents plus travel proofs, ready for submission.",
     },
   },
   {
     fr: {
-      title: "Voyages récurrents",
-      body: "Stratégie pour obtenir des visas à entrées multiples et de circulation, adaptée aux entreprises qui voyagent plusieurs fois par an.",
+      title: "Réservations conformes",
+      body: "Aide aux réservations d'hôtel et de billets alignées sur votre itinéraire, pour des preuves cohérentes aux yeux du consulat.",
     },
     en: {
-      title: "Frequent travel",
-      body: "A strategy to obtain multiple-entry and circulation visas, designed for companies that travel several times a year.",
+      title: "Compliant bookings",
+      body: "Help with hotel and flight bookings aligned to your itinerary, so your proofs stay coherent for the consulate.",
     },
   },
   {
     fr: {
-      title: "Logistique du déplacement",
-      body: "Assurance conforme Schengen, réservations d'hôtel et de vol, et accompagnement sur place si nécessaire.",
+      title: "Assurance & prise de RDV",
+      body: "Souscription d'une assurance voyage Schengen conforme et prise de rendez-vous auprès du centre compétent.",
     },
     en: {
-      title: "Trip logistics",
-      body: "Schengen-compliant insurance, hotel and flight bookings, and on-site support when needed.",
+      title: "Insurance & appointment",
+      body: "Arranging Schengen-compliant travel insurance and booking your appointment at the right centre.",
     },
   },
 ];
@@ -90,64 +90,64 @@ const PROMISE = [
   {
     fr: {
       title: "Réponse sous 48 heures",
-      body: "Décrivez votre mission. Un conseiller vous répond avec une lecture claire de votre situation.",
+      body: "Décrivez votre projet de voyage. Un conseiller vous répond avec une lecture claire de votre situation.",
     },
     en: {
       title: "Reply within 48 hours",
-      body: "Describe your mission. An advisor replies with a clear reading of your situation.",
+      body: "Describe your travel plan. An advisor replies with a clear reading of your situation.",
     },
   },
   {
     fr: {
-      title: "Devis adapté à votre déplacement",
-      body: "Salon, négociation ou délégation : chaque accompagnement est chiffré selon votre réel besoin.",
+      title: "Pack Classique à 150 000 FCFA",
+      body: "Un accompagnement clé en main pour le court séjour : tourisme ou famille, avec un périmètre de prestation clair dès le départ.",
     },
     en: {
-      title: "A quote fitted to your trip",
-      body: "Trade fair, negotiation or delegation: every engagement is priced to your actual need.",
+      title: "Classic Pack at 150,000 FCFA",
+      body: "End-to-end support for short stays: tourism or family, with a clear service scope from day one.",
     },
   },
   {
     fr: {
       title: "Un interlocuteur dédié",
-      body: "Vous avancez avec la même personne, de la première prise de contact jusqu'à la décision consulaire.",
+      body: "Vous avancez avec la même personne, de l'analyse du profil jusqu'à la décision consulaire.",
     },
     en: {
       title: "A dedicated contact",
-      body: "You work with the same person from first contact through to the consular decision.",
+      body: "You work with the same person from the profile review through to the consular decision.",
     },
   },
 ];
 
-export default function EntreprisesPage() {
+export default function TourismePage() {
   const { lang } = useLanguage();
 
   const t = {
     fr: {
-      title: "Pack Pro Executive : missions et affaires en Europe.",
-      body: "Depuis Dakar, Fabienne traite en priorité vos visas d'affaires (250 000 FCFA) : foires, missions, partenariats, ordres de mission et invitations d'entreprises européennes.",
-      whyTitle: "Un refus de visa d'affaires coûte plus cher qu'un dossier bien préparé.",
-      servicesTitle: "Ce que comprend le Pack Pro Executive.",
-      promiseTitle: "Vous décrivez la mission. Nous sécurisons le dossier.",
+      title: "Visa tourisme & famille : un dossier conforme, sans stress.",
+      body: "Pack Classique à 150 000 FCFA : depuis Dakar, Fabienne accompagne votre visa Schengen de court séjour pour le tourisme ou les visites familiales — analyse du profil, réservations d'hôtel et de billets, assurance et prise de RDV.",
+      whyTitle: "Un séjour en Europe commence par un dossier solide.",
+      servicesTitle: "Le Pack Classique, de l'analyse au rendez-vous.",
+      promiseTitle: "Vous décrivez le voyage. Nous vous disons comment avancer.",
       promiseBody:
-        "Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa d'affaires, avec traitement prioritaire et double vérification avant dépôt.",
-      ctaTitle: "Démarrez votre Pack Pro Executive.",
+        "Pas de liste de pièces à l'avance. Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa tourisme ou famille, selon la destination et votre situation.",
+      ctaTitle: "Démarrez votre Pack Classique dès aujourd'hui.",
       ctaBody:
-        "Décrivez votre mission professionnelle : un conseiller Fabienne vous répond sous 48 heures.",
-      ctaButton: "Demander un devis gratuit",
+        "Court séjour, tourisme ou visite familiale : plus tôt vous structurez le dossier à Dakar, plus il est cohérent le jour du dépôt.",
+      ctaButton: "Tester mon éligibilité",
     },
     en: {
-      title: "Pro Executive Pack: missions and business in Europe.",
-      body: "From Dakar, Fabienne prioritises your business visas (250,000 FCFA): trade fairs, missions, partnerships, mission orders and European company invitations.",
-      whyTitle: "A business visa refusal costs more than a well-prepared file.",
-      servicesTitle: "What the Pro Executive Pack includes.",
-      promiseTitle: "You describe the mission. We secure the file.",
+      title: "Tourism & family visa: a compliant file, without the stress.",
+      body: "Classic Pack at 150,000 FCFA: from Dakar, Fabienne supports your Schengen short-stay visa for tourism or family visits — profile review, hotel and flight bookings, insurance and appointment booking.",
+      whyTitle: "A trip to Europe starts with a solid file.",
+      servicesTitle: "The Classic Pack, from review to appointment.",
+      promiseTitle: "You describe the trip. We tell you how to move forward.",
       promiseBody:
-        "After your request, we tell you exactly what is needed for your business visa, with priority handling and double verification before submission.",
-      ctaTitle: "Start your Pro Executive Pack.",
+        "No document list upfront. After your request, we tell you exactly what is needed for your tourism or family visa, for your destination and situation.",
+      ctaTitle: "Start your Classic Pack today.",
       ctaBody:
-        "Describe your professional mission: a Fabienne advisor replies within 48 hours.",
-      ctaButton: "Request a free quote",
+        "Short stay, tourism or family visit: the earlier you structure the file in Dakar, the more coherent it is on submission day.",
+      ctaButton: "Check my eligibility",
     },
   }[lang];
 
@@ -205,8 +205,12 @@ export default function EntreprisesPage() {
           <Reveal className="relative lg:col-span-5" delay={0.1}>
             <div className="relative aspect-[5/4] overflow-hidden">
               <Image
-                src={SITE_IMAGES.business}
-                alt="Dirigeant PME accompagné pour un visa d'affaires Schengen"
+                src={SITE_IMAGES.tourism}
+                alt={
+                  lang === "fr"
+                    ? "Voyage en Europe — visa Schengen tourisme et famille depuis le Sénégal"
+                    : "Travel in Europe — Schengen tourism and family visa from Senegal"
+                }
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"
@@ -330,15 +334,15 @@ export default function EntreprisesPage() {
             </p>
           </Reveal>
           <Reveal className="relative lg:col-span-6" delay={0.08}>
-            <div
-              className="relative aspect-[5/4] overflow-hidden lg:aspect-[4/3]"
-              style={{ background: "var(--c-ink-950)" }}
-            >
+            <div className="relative aspect-[5/4] overflow-hidden lg:aspect-[4/3]">
               <Image
-                src={SITE_IMAGES.visaIllustration}
-                alt={lang === "fr" ? "Illustration visa Schengen" : "Schengen visa illustration"}
+                src={SITE_IMAGES.tourismDetail}
+                alt={
+                  lang === "fr"
+                    ? "Préparation d'un voyage — Pack Classique visa tourisme Schengen"
+                    : "Trip preparation — Classic Pack Schengen tourism visa"
+                }
                 fill
-                unoptimized
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center"
               />

@@ -13,32 +13,32 @@ const CTA = { fr: "Tester mon éligibilité", en: "Check my eligibility" };
 const WHY = [
   {
     fr: {
-      title: "Opportunités saisies à temps",
-      body: "Un salon manqué ou une négociation reportée, c'est un marché perdu. Nous anticipons les délais consulaires pour que vous soyez présent au bon moment.",
+      title: "Des délais qui comptent vraiment",
+      body: "Quand les soins ne peuvent pas attendre, un dossier mal cadré fait perdre des semaines. Nous priorisons les pièces et le calendrier consulaire.",
     },
     en: {
-      title: "Opportunities seized on time",
-      body: "A missed trade fair or postponed negotiation is a lost market. We anticipate consular timelines so you are there at the right moment.",
+      title: "Timelines that truly matter",
+      body: "When care cannot wait, a poorly framed file costs weeks. We prioritise documents and the consular calendar.",
     },
   },
   {
     fr: {
-      title: "Crédibilité de l'entreprise",
-      body: "Un dossier d'entreprise structuré (registre, bilans, lettres d'invitation) présente votre PME sous son meilleur jour auprès des consulats.",
+      title: "Un parcours médical crédible",
+      body: "Devis, lettre d'admission, C.I.A. : nous structurons les preuves hospitalières pour que le motif médical soit incontestable.",
     },
     en: {
-      title: "Company credibility",
-      body: "A structured company file (registration, financials, invitation letters) presents your SME at its best before consulates.",
+      title: "A credible medical path",
+      body: "Quotes, admission letter, evacuation paperwork: we structure hospital proofs so the medical purpose is beyond doubt.",
     },
   },
   {
     fr: {
-      title: "Historique de voyage propre",
-      body: "Des demandes bien faites construisent un historique favorable, qui facilite chaque visa suivant, jusqu'aux visas de circulation longue durée.",
+      title: "Une coordination jusqu'en Europe",
+      body: "Hôpitaux, accompagnants, dates de traitement : nous restons l'interlocuteur unique entre Dakar et l'établissement européen.",
     },
     en: {
-      title: "A clean travel record",
-      body: "Well-made applications build a favourable history that eases every next visa, up to long-term multiple-entry visas.",
+      title: "Coordination through to Europe",
+      body: "Hospitals, companions, treatment dates: we remain the single contact between Dakar and the European facility.",
     },
   },
 ];
@@ -46,42 +46,42 @@ const WHY = [
 const SERVICES = [
   {
     fr: {
-      title: "Visa d'affaires dirigeant",
-      body: "Dossier complet du gérant ou dirigeant : documents d'entreprise, invitation du partenaire européen, itinéraire et justificatifs financiers.",
+      title: "Urgence & priorisation",
+      body: "Traitement accéléré de votre demande : lecture rapide du dossier, priorisation des pièces critiques et calendrier adapté à l'urgence médicale.",
     },
     en: {
-      title: "Executive business visa",
-      body: "A complete file for the owner or executive: company documents, invitation from the European partner, itinerary and financial proof.",
+      title: "Urgency & prioritisation",
+      body: "Accelerated handling of your request: a fast file review, prioritising critical documents and a timeline fitted to medical urgency.",
     },
   },
   {
     fr: {
-      title: "Délégations & équipes",
-      body: "Gestion groupée des demandes pour vos équipes en déplacement : salons, foires, formations et missions techniques.",
+      title: "Accords hospitaliers",
+      body: "Vérification des devis, lettres d'admission et accords d'établissement en Europe, pour un motif de soins clairement documenté.",
     },
     en: {
-      title: "Delegations & teams",
-      body: "Grouped applications for travelling teams: trade fairs, exhibitions, training and technical missions.",
+      title: "Hospital agreements",
+      body: "Checking quotes, admission letters and facility agreements in Europe, so the care purpose is clearly documented.",
     },
   },
   {
     fr: {
-      title: "Voyages récurrents",
-      body: "Stratégie pour obtenir des visas à entrées multiples et de circulation, adaptée aux entreprises qui voyagent plusieurs fois par an.",
+      title: "Constitution du dossier médical",
+      body: "Assemblage du dossier visa médical Schengen : pièces médicales, financières et de voyage, contrôlées avant dépôt.",
     },
     en: {
-      title: "Frequent travel",
-      body: "A strategy to obtain multiple-entry and circulation visas, designed for companies that travel several times a year.",
+      title: "Building the medical file",
+      body: "Assembling your Schengen medical visa file: medical, financial and travel documents, reviewed before submission.",
     },
   },
   {
     fr: {
-      title: "Logistique du déplacement",
-      body: "Assurance conforme Schengen, réservations d'hôtel et de vol, et accompagnement sur place si nécessaire.",
+      title: "Coordination Europe",
+      body: "Suivi avec les hôpitaux européens, les accompagnants et le centre de visa jusqu'à la décision, pour que le parcours de soins démarre à temps.",
     },
     en: {
-      title: "Trip logistics",
-      body: "Schengen-compliant insurance, hotel and flight bookings, and on-site support when needed.",
+      title: "Europe coordination",
+      body: "Follow-up with European hospitals, companions and the visa centre until the decision, so care can start on time.",
     },
   },
 ];
@@ -90,64 +90,64 @@ const PROMISE = [
   {
     fr: {
       title: "Réponse sous 48 heures",
-      body: "Décrivez votre mission. Un conseiller vous répond avec une lecture claire de votre situation.",
+      body: "Décrivez la situation médicale. Un conseiller vous répond avec une lecture claire de votre dossier et des prochaines étapes.",
     },
     en: {
       title: "Reply within 48 hours",
-      body: "Describe your mission. An advisor replies with a clear reading of your situation.",
+      body: "Describe the medical situation. An advisor replies with a clear reading of your file and next steps.",
     },
   },
   {
     fr: {
-      title: "Devis adapté à votre déplacement",
-      body: "Salon, négociation ou délégation : chaque accompagnement est chiffré selon votre réel besoin.",
+      title: "Pack Urgence Santé à 300 000 FCFA",
+      body: "Un accompagnement accéléré pour les soins spécialisés et la C.I.A., avec un périmètre de prestation clair dès le premier échange.",
     },
     en: {
-      title: "A quote fitted to your trip",
-      body: "Trade fair, negotiation or delegation: every engagement is priced to your actual need.",
+      title: "Health Emergency Pack at 300,000 FCFA",
+      body: "Accelerated support for specialised care and medical evacuation, with a clear service scope from the first exchange.",
     },
   },
   {
     fr: {
       title: "Un interlocuteur dédié",
-      body: "Vous avancez avec la même personne, de la première prise de contact jusqu'à la décision consulaire.",
+      body: "Vous avancez avec la même personne, de la première pièce médicale jusqu'à la décision consulaire.",
     },
     en: {
       title: "A dedicated contact",
-      body: "You work with the same person from first contact through to the consular decision.",
+      body: "You work with the same person from the first medical document through to the consular decision.",
     },
   },
 ];
 
-export default function EntreprisesPage() {
+export default function SantePage() {
   const { lang } = useLanguage();
 
   const t = {
     fr: {
-      title: "Pack Pro Executive : missions et affaires en Europe.",
-      body: "Depuis Dakar, Fabienne traite en priorité vos visas d'affaires (250 000 FCFA) : foires, missions, partenariats, ordres de mission et invitations d'entreprises européennes.",
-      whyTitle: "Un refus de visa d'affaires coûte plus cher qu'un dossier bien préparé.",
-      servicesTitle: "Ce que comprend le Pack Pro Executive.",
-      promiseTitle: "Vous décrivez la mission. Nous sécurisons le dossier.",
+      title: "Visa médical Schengen : soins en Europe, dossier accéléré.",
+      body: "Pack Urgence Santé à 300 000 FCFA : depuis Dakar, Fabienne accélère votre visa Schengen pour soins spécialisés ou C.I.A. — devis et admission hospitaliers, traitement prioritaire et coordination avec les hôpitaux en Europe.",
+      whyTitle: "Quand la santé ne peut pas attendre, le dossier non plus.",
+      servicesTitle: "Le Pack Urgence Santé, de l'hôpital au visa.",
+      promiseTitle: "Vous décrivez la situation. Nous vous disons comment avancer.",
       promiseBody:
-        "Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa d'affaires, avec traitement prioritaire et double vérification avant dépôt.",
-      ctaTitle: "Démarrez votre Pack Pro Executive.",
+        "Pas de liste de pièces à l'avance. Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa médical, selon l'établissement, la destination et l'urgence.",
+      ctaTitle: "Démarrez votre Pack Urgence Santé dès aujourd'hui.",
       ctaBody:
-        "Décrivez votre mission professionnelle : un conseiller Fabienne vous répond sous 48 heures.",
-      ctaButton: "Demander un devis gratuit",
+        "Soins spécialisés et délais serrés : plus tôt le dossier est structuré à Dakar, plus vite le parcours de soins peut démarrer en Europe.",
+      ctaButton: "Tester mon éligibilité",
     },
     en: {
-      title: "Pro Executive Pack: missions and business in Europe.",
-      body: "From Dakar, Fabienne prioritises your business visas (250,000 FCFA): trade fairs, missions, partnerships, mission orders and European company invitations.",
-      whyTitle: "A business visa refusal costs more than a well-prepared file.",
-      servicesTitle: "What the Pro Executive Pack includes.",
-      promiseTitle: "You describe the mission. We secure the file.",
+      title: "Schengen medical visa: care in Europe, accelerated file.",
+      body: "Health Emergency Pack at 300,000 FCFA: from Dakar, Fabienne accelerates your Schengen visa for specialised care or medical evacuation — hospital quotes and admission, priority handling and coordination with hospitals in Europe.",
+      whyTitle: "When health cannot wait, neither can the file.",
+      servicesTitle: "The Health Emergency Pack, from hospital to visa.",
+      promiseTitle: "You describe the situation. We tell you how to move forward.",
       promiseBody:
-        "After your request, we tell you exactly what is needed for your business visa, with priority handling and double verification before submission.",
-      ctaTitle: "Start your Pro Executive Pack.",
+        "No document list upfront. After your request, we tell you exactly what is needed for your medical visa, for the facility, destination and urgency.",
+      ctaTitle: "Start your Health Emergency Pack today.",
       ctaBody:
-        "Describe your professional mission: a Fabienne advisor replies within 48 hours.",
-      ctaButton: "Request a free quote",
+        "Specialised care and tight timelines: the earlier the file is structured in Dakar, the sooner care can begin in Europe.",
+      ctaButton: "Check my eligibility",
     },
   }[lang];
 
@@ -205,8 +205,12 @@ export default function EntreprisesPage() {
           <Reveal className="relative lg:col-span-5" delay={0.1}>
             <div className="relative aspect-[5/4] overflow-hidden">
               <Image
-                src={SITE_IMAGES.business}
-                alt="Dirigeant PME accompagné pour un visa d'affaires Schengen"
+                src={SITE_IMAGES.medical}
+                alt={
+                  lang === "fr"
+                    ? "Soins médicaux en Europe — visa Schengen médical depuis le Sénégal"
+                    : "Medical care in Europe — Schengen medical visa from Senegal"
+                }
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"
@@ -330,15 +334,15 @@ export default function EntreprisesPage() {
             </p>
           </Reveal>
           <Reveal className="relative lg:col-span-6" delay={0.08}>
-            <div
-              className="relative aspect-[5/4] overflow-hidden lg:aspect-[4/3]"
-              style={{ background: "var(--c-ink-950)" }}
-            >
+            <div className="relative aspect-[5/4] overflow-hidden lg:aspect-[4/3]">
               <Image
-                src={SITE_IMAGES.visaIllustration}
-                alt={lang === "fr" ? "Illustration visa Schengen" : "Schengen visa illustration"}
+                src={SITE_IMAGES.medicalDetail}
+                alt={
+                  lang === "fr"
+                    ? "Parcours hospitalier — Pack Urgence Santé visa médical Schengen"
+                    : "Hospital pathway — Health Emergency Pack Schengen medical visa"
+                }
                 fill
-                unoptimized
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center"
               />

@@ -24,7 +24,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${SITE_URL}/artistes`,
+      url: `${SITE_URL}/tourisme`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${SITE_URL}/sante`,
       lastModified,
       changeFrequency: "weekly",
       priority: 0.9,

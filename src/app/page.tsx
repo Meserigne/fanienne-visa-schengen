@@ -9,6 +9,7 @@ import { ParallaxHero } from "@/components/ui/parallax-scrolling";
 import { Reveal } from "@/components/reveal";
 import { DreamMarquee } from "@/components/dream-marquee";
 import { TrackPanels } from "@/components/track-panels";
+import { PacksSection } from "@/components/packs-section";
 import { ServiceStack, type ServiceItem } from "@/components/service-stack";
 import { StepsPan, type StepItem } from "@/components/steps-pan";
 import { SITE_IMAGES } from "@/lib/site-images";
@@ -39,12 +40,24 @@ const SERVICES: ServiceItem[] = [
     tone: "photo",
     image: SITE_IMAGES.passportDesk,
     fr: {
-      title: "Constitution & vérification du dossier",
-      body: "Liste personnalisée des pièces, vérification ligne par ligne et mise en conformité avant dépôt au consulat.",
+      title: "Analyse & constitution du dossier",
+      body: "Étude de votre profil, liste des pièces, constitution et mise en conformité avant dépôt au consulat.",
     },
     en: {
-      title: "File preparation & review",
-      body: "A personalised document checklist, line-by-line review and full compliance before submission.",
+      title: "Profile review & file building",
+      body: "We assess your profile, list required documents, then assemble and bring your file into compliance.",
+    },
+  },
+  {
+    tone: "photo",
+    image: SITE_IMAGES.documents,
+    fr: {
+      title: "Double vérification qualité",
+      body: "Chaque dossier passe par une double lecture (assistant + consultant) pour limiter les refus évitables.",
+    },
+    en: {
+      title: "Double quality check",
+      body: "Every file gets a dual review (assistant + senior consultant) to reduce avoidable refusals.",
     },
   },
   {
@@ -52,47 +65,35 @@ const SERVICES: ServiceItem[] = [
     image: SITE_IMAGES.interview,
     fr: {
       title: "Préparation à l'entretien",
-      body: "Simulations d'entretien consulaire, questions types et conseils pour présenter votre projet avec assurance.",
+      body: "Simulations d'entretien consulaire et conseils pour présenter votre projet avec clarté.",
     },
     en: {
       title: "Interview coaching",
-      body: "Mock consular interviews, typical questions and guidance to present your project with confidence.",
-    },
-  },
-  {
-    tone: "photo",
-    image: SITE_IMAGES.documents,
-    fr: {
-      title: "Suivi de la demande",
-      body: "Suivi de votre dossier après dépôt, relances et information en temps réel jusqu'à la décision.",
-    },
-    en: {
-      title: "Application tracking",
-      body: "Follow-up after submission, reminders and real-time updates until the decision.",
+      body: "Mock consular interviews and guidance so you present your project clearly.",
     },
   },
   {
     tone: "photo",
     image: SITE_IMAGES.flight,
     fr: {
-      title: "Assurance voyage & réservations",
-      body: "Assurance conforme Schengen, réservations d'hébergement et de vol acceptées par les consulats.",
+      title: "Assurance, réservations & RDV",
+      body: "Assurance Schengen, réservations conformes et prise de rendez-vous au centre de visas.",
     },
     en: {
-      title: "Travel insurance & bookings",
-      body: "Schengen-compliant insurance, accommodation and flight bookings accepted by consulates.",
+      title: "Insurance, bookings & appointments",
+      body: "Schengen insurance, compliant bookings and visa-centre appointment booking.",
     },
   },
   {
     tone: "dusk",
     image: SITE_IMAGES.luggage,
     fr: {
-      title: "Accompagnement post-visa",
-      body: "Logement, installation et premières démarches sur place, pour un séjour serein dès l'arrivée.",
+      title: "Suivi jusqu'à la décision",
+      body: "Relances, suivi après dépôt et information jusqu'à la réponse consulaire.",
     },
     en: {
-      title: "Post-visa support",
-      body: "Housing, settling in and first administrative steps on arrival, for a smooth start.",
+      title: "Follow-up until the decision",
+      body: "Reminders, post-submission tracking and updates until the consular decision.",
     },
   },
 ];
@@ -102,48 +103,48 @@ const STEPS: StepItem[] = [
     fr: {
       label: "01",
       title: "Évaluation gratuite",
-      body: "Vous remplissez le formulaire d'éligibilité ; nous analysons votre profil sous 48 h.",
+      body: "Vous décrivez votre projet ; nous analysons votre profil sous 48 h et vous indiquons le pack adapté.",
     },
     en: {
       label: "01",
       title: "Free assessment",
-      body: "Fill in the eligibility form; we review your profile within 48 hours.",
+      body: "You describe your project; we review your profile within 48 hours and recommend the right pack.",
     },
   },
   {
     fr: {
       label: "02",
-      title: "Préparation du dossier",
-      body: "Constitution, vérification et mise en conformité de chaque pièce de votre demande.",
+      title: "Préparation clé en main",
+      body: "Constitution du dossier, réservations, assurance et pièces : tout est préparé pour le dépôt.",
     },
     en: {
       label: "02",
-      title: "File preparation",
-      body: "We assemble, review and bring every document of your application into compliance.",
+      title: "Turnkey preparation",
+      body: "File building, bookings, insurance and documents: everything ready for submission.",
     },
   },
   {
     fr: {
       label: "03",
-      title: "Dépôt & entretien",
-      body: "Rendez-vous au consulat, entretien préparé, dépôt accompagné de votre demande.",
+      title: "Contrôle & dépôt",
+      body: "Double vérification, prise de RDV, préparation à l'entretien puis dépôt accompagné.",
     },
     en: {
       label: "03",
-      title: "Submission & interview",
-      body: "Consulate appointment, prepared interview, supported submission of your application.",
+      title: "Review & submission",
+      body: "Double check, appointment booking, interview prep, then supported submission.",
     },
   },
   {
     fr: {
       label: "04",
-      title: "Décision & départ",
-      body: "Suivi jusqu'à la décision, puis accompagnement pour votre installation en Europe.",
+      title: "Décision & suite",
+      body: "Suivi jusqu'à la décision. Pour les études ou les soins, accompagnement aussi après le visa.",
     },
     en: {
       label: "04",
-      title: "Decision & departure",
-      body: "Follow-up until the decision, then support for settling in Europe.",
+      title: "Decision & next steps",
+      body: "Follow-up until the decision. For studies or medical travel, support continues after the visa.",
     },
   },
 ];
@@ -153,35 +154,97 @@ export default function Home() {
 
   const t = {
     fr: {
-      track1Title: "Visa étudiant Schengen",
-      track1Body:
-        "Admission, visa d'études, entretien Campus France et installation. De Dakar à votre rentrée en Europe.",
-      track1Cta: "Parcours étudiant",
-      track2Title: "Visa d'affaires PME & PMI",
-      track2Body:
-        "Votre entreprise ne doit plus perdre un salon, une négociation ou un partenariat à cause d'un visa. Fabienne prépare le visa Schengen affaires de vos dirigeants et équipes, de façon concrète et calendrier en tête.",
-      track2Cta: "Parcours entreprise",
-      servicesTitle: "Nos services d'accompagnement visa Schengen.",
+      tracksTitle: "Choisissez votre motif de voyage.",
+      tracks: [
+        {
+          href: "/etudiants",
+          image: SITE_IMAGES.trackStudents,
+          imagePosition: "center 20%",
+          number: "01",
+          title: "Étudiants",
+          body: "Études, stages, mobilité académique. Campus France, ressources, hébergement et entretien.",
+          cta: "Pack Student Care",
+        },
+        {
+          href: "/entreprises",
+          image: SITE_IMAGES.trackBusiness,
+          imagePosition: "center 18%",
+          number: "02",
+          title: "Professionnels",
+          body: "Missions, foires, partenariats. Traitement prioritaire et vérification des invitations.",
+          cta: "Pack Pro Executive",
+        },
+        {
+          href: "/tourisme",
+          image: SITE_IMAGES.tourism,
+          imagePosition: "center 40%",
+          number: "03",
+          title: "Tourisme & famille",
+          body: "Court séjour, visites familiales, événements. Réservations conformes et dossier complet.",
+          cta: "Pack Classique",
+        },
+        {
+          href: "/sante",
+          image: SITE_IMAGES.medical,
+          imagePosition: "center 35%",
+          number: "04",
+          title: "Santé & soins",
+          body: "Soins spécialisés et évacuation. Coordination hospitalière et traitement accéléré.",
+          cta: "Pack Urgence Santé",
+        },
+      ],
+      servicesTitle: "Un accompagnement rigoureux, sur mesure.",
       needTitle: "Un besoin particulier ?",
-      needBody: "Chaque demande de visa est étudiée sur devis, sans engagement.",
+      needBody: "Chaque demande est étudiée sans engagement. Nous vous orientons vers le pack le plus adapté.",
       needCta: "Demander un devis",
-      howTitle: "Comment obtenir votre visa Schengen avec Fabienne.",
+      howTitle: "Comment Fabienne maximise vos chances.",
       partnersLabel: "Sablux, Mega et THETA nous font confiance",
     },
     en: {
-      track1Title: "Schengen student visa",
-      track1Body:
-        "Admission, study visa, Campus France interview and settling in. From Dakar to your first day in Europe.",
-      track1Cta: "Student track",
-      track2Title: "Business visa for SMEs",
-      track2Body:
-        "Your company should not lose a trade fair, negotiation or partnership because of a visa. Fabienne prepares Schengen business visas for your executives and teams, with a clear plan and calendar.",
-      track2Cta: "Business track",
-      servicesTitle: "Our Schengen visa support services.",
+      tracksTitle: "Choose your travel purpose.",
+      tracks: [
+        {
+          href: "/etudiants",
+          image: SITE_IMAGES.trackStudents,
+          imagePosition: "center 20%",
+          number: "01",
+          title: "Students",
+          body: "Studies, internships, academic mobility. Campus France, funding, housing and interview.",
+          cta: "Student Care Pack",
+        },
+        {
+          href: "/entreprises",
+          image: SITE_IMAGES.trackBusiness,
+          imagePosition: "center 18%",
+          number: "02",
+          title: "Professionals",
+          body: "Missions, trade fairs, partnerships. Priority handling and invitation checks.",
+          cta: "Pro Executive Pack",
+        },
+        {
+          href: "/tourisme",
+          image: SITE_IMAGES.tourism,
+          imagePosition: "center 40%",
+          number: "03",
+          title: "Tourism & family",
+          body: "Short stays, family visits, events. Compliant bookings and a complete file.",
+          cta: "Classic Pack",
+        },
+        {
+          href: "/sante",
+          image: SITE_IMAGES.medical,
+          imagePosition: "center 35%",
+          number: "04",
+          title: "Health & care",
+          body: "Specialised care and medical evacuation. Hospital coordination and accelerated handling.",
+          cta: "Health Emergency Pack",
+        },
+      ],
+      servicesTitle: "Rigorous, tailored support.",
       needTitle: "A specific need?",
-      needBody: "Every visa request is assessed with a free, no-obligation quote.",
+      needBody: "Every request is reviewed with no obligation. We guide you to the right pack.",
       needCta: "Request a quote",
-      howTitle: "How to get your Schengen visa with Fabienne.",
+      howTitle: "How Fabienne maximises your chances.",
       partnersLabel: "Trusted by Sablux, Mega and THETA",
     },
   }[lang];
@@ -192,18 +255,20 @@ export default function Home() {
       <ParallaxHero />
       <DreamMarquee />
 
-      <TrackPanels
-        track1={{
-          title: t.track1Title,
-          body: t.track1Body,
-          cta: t.track1Cta,
-        }}
-        track2={{
-          title: t.track2Title,
-          body: t.track2Body,
-          cta: t.track2Cta,
-        }}
-      />
+      <section className="px-6 pt-6 sm:px-10 lg:px-14">
+        <Reveal>
+          <h2
+            className="mx-auto max-w-[1400px] text-[clamp(1.8rem,3.5vw,2.6rem)] font-semibold tracking-tight"
+            style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
+          >
+            {t.tracksTitle}
+          </h2>
+        </Reveal>
+      </section>
+
+      <TrackPanels tracks={t.tracks} />
+
+      <PacksSection />
 
       <ServiceStack
         services={SERVICES}

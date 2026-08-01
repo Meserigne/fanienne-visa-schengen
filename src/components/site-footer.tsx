@@ -26,8 +26,14 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
             <Link href="/etudiants" style={{ color: "var(--text-on-dark-muted)" }}>
               {lang === "fr" ? "Étudiants" : "Students"}
             </Link>
-            <Link href="/artistes" style={{ color: "var(--text-on-dark-muted)" }}>
-              {lang === "fr" ? "Artistes" : "Artists"}
+            <Link href="/entreprises" style={{ color: "var(--text-on-dark-muted)" }}>
+              {lang === "fr" ? "Professionnels" : "Business"}
+            </Link>
+            <Link href="/tourisme" style={{ color: "var(--text-on-dark-muted)" }}>
+              {lang === "fr" ? "Tourisme" : "Tourism"}
+            </Link>
+            <Link href="/sante" style={{ color: "var(--text-on-dark-muted)" }}>
+              {lang === "fr" ? "Santé" : "Health"}
             </Link>
             <Link href="/qui-nous-sommes" style={{ color: "var(--text-on-dark-muted)" }}>
               {lang === "fr" ? "Qui nous sommes" : "About us"}
@@ -65,8 +71,8 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
           </p>
           <p className="max-w-[36ch] text-[15px] leading-[1.7]">
             {lang === "fr"
-              ? "Cabinet d'accompagnement visa Schengen basé à Dakar. Étudiants, artistes, PME & PMI : voyagez librement, sans crainte du refus."
-              : "Schengen visa consultancy based in Dakar. Students, artists, SMEs: travel freely, without fearing refusal."}
+              ? "Cabinet à Dakar : simplifier, sécuriser et maximiser vos chances de visa Schengen. Accompagnement clé en main pour étudiants, professionnels, familles et soins médicaux."
+              : "A Dakar consultancy: simplify, secure and maximise your Schengen visa chances. Turnkey support for students, professionals, families and medical travel."}
           </p>
         </div>
         <div className="flex flex-col gap-2.5 text-sm" style={{ fontFamily: "var(--font-ui)" }}>
@@ -77,13 +83,16 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
             {lang === "fr" ? "Parcours" : "Tracks"}
           </p>
           <Link href="/etudiants" className="transition-colors hover:text-white">
-            {lang === "fr" ? "Étudiants" : "Students"}
+            {lang === "fr" ? "Étudiants · Student Care" : "Students · Student Care"}
           </Link>
           <Link href="/entreprises" className="transition-colors hover:text-white">
-            {lang === "fr" ? "Entreprises, PME & PMI" : "Businesses, SMEs"}
+            {lang === "fr" ? "Professionnels · Pro Executive" : "Business · Pro Executive"}
           </Link>
-          <Link href="/artistes" className="transition-colors hover:text-white">
-            {lang === "fr" ? "Artistes & culture" : "Artists & culture"}
+          <Link href="/tourisme" className="transition-colors hover:text-white">
+            {lang === "fr" ? "Tourisme & famille · Classique" : "Tourism & family · Classic"}
+          </Link>
+          <Link href="/sante" className="transition-colors hover:text-white">
+            {lang === "fr" ? "Santé · Urgence Santé" : "Health · Emergency"}
           </Link>
           <Link href="/qui-nous-sommes" className="transition-colors hover:text-white">
             {lang === "fr" ? "Qui nous sommes" : "About us"}

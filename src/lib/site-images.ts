@@ -58,6 +58,18 @@ export const SITE_IMAGES = {
   /** Artists detail: paintbrushes studio */
   artistsStudio: u("1460661419201-fd4cecdf8a8b", 1200),
 
+  /** Tourism / family: European street travel */
+  tourism: u("1488646953014-85cb44e25828", 1400),
+
+  /** Tourism detail: suitcase travel */
+  tourismDetail: u("1469854523086-cc02fe5d8800", 1200),
+
+  /** Medical / health care */
+  medical: u("1576091160399-112ba8d25d1d", 1400),
+
+  /** Medical detail: hospital corridor calm */
+  medicalDetail: u("1519494026812-a5c5a4bb7d72", 1200),
+
   /** About page: Black professional team in meeting */
   about: u("1573164574511-73c773193279", 1400),
 } as const;

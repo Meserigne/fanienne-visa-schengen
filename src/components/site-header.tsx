@@ -8,8 +8,9 @@ import { useLanguage } from "@/lib/language-context";
 const NAV = [
   { href: "/", fr: "Accueil", en: "Home" },
   { href: "/etudiants", fr: "Étudiants", en: "Students" },
-  { href: "/entreprises", fr: "Entreprises", en: "Businesses" },
-  { href: "/artistes", fr: "Artistes", en: "Artists" },
+  { href: "/entreprises", fr: "Professionnels", en: "Business" },
+  { href: "/tourisme", fr: "Tourisme & famille", en: "Tourism & family" },
+  { href: "/sante", fr: "Santé", en: "Health" },
   { href: "/qui-nous-sommes", fr: "Qui nous sommes", en: "About us" },
 ];
 

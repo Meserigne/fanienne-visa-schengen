@@ -7,7 +7,7 @@ export function JsonLd() {
     "@type": "ProfessionalService",
     name: SITE_NAME,
     description:
-      "Cabinet d'accompagnement visa Schengen à Dakar pour étudiants et PME / PMI sénégalaises.",
+      "Cabinet d'accompagnement visa Schengen à Dakar : étudiants, professionnels, tourisme & famille, soins médicaux.",
     url: SITE_URL,
     email: "contact@fabienne.sn",
     areaServed: {
@@ -22,8 +22,9 @@ export function JsonLd() {
     serviceType: [
       "Accompagnement visa Schengen",
       "Visa étudiant",
-      "Visa artiste",
       "Visa d'affaires",
+      "Visa tourisme et famille",
+      "Visa médical",
     ],
     knowsLanguage: ["fr", "en"],
   };

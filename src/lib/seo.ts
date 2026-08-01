@@ -9,63 +9,77 @@ export const DEFAULT_OG_IMAGE = `${SITE_URL}/images/passeport-france-cover.png`;
 
 export const seo = {
   home: {
-    title: "Accompagnement visa Schengen à Dakar | Étudiants, Artistes & PME",
+    title: "Accompagnement visa Schengen à Dakar | Fabienne",
     description:
-      "Fabienne, cabinet d'accompagnement visa Schengen à Dakar. Visa étudiant, visa artiste et visa d'affaires pour PME sénégalaises. Évaluation gratuite sous 48 h.",
+      "Fabienne simplifie, sécurise et maximise vos chances de visa Schengen à Dakar. Étudiants, professionnels, familles et soins médicaux : accompagnement clé en main.",
     keywords: [
       "visa Schengen Sénégal",
       "accompagnement visa Schengen Dakar",
+      "aide dossier visa Sénégal",
+      "rdv visa Schengen Dakar",
       "visa étudiant France",
-      "visa artiste Schengen",
-      "visa affaires PME Sénégal",
-      "demande visa Schengen",
-      "cabinet visa Schengen Dakar",
+      "visa affaires Sénégal",
+      "visa tourisme Schengen",
+      "visa médical Europe",
       "Fabienne visa",
     ],
   },
   etudiants: {
-    title: "Visa étudiant Schengen depuis le Sénégal | Fabienne",
+    title: "Pack Student Care · Visa étudiant Schengen | Fabienne",
     description:
-      "Accompagnement visa étudiant Schengen depuis Dakar : admission, dossier Campus France, entretien consulaire et installation en Europe. Évaluation gratuite.",
+      "Accompagnement Campus France, contrôle des ressources et hébergement, préparation à l'entretien. Pack Student Care à 200 000 FCFA depuis Dakar.",
     keywords: [
       "visa étudiant Schengen",
       "visa étudiant France Sénégal",
       "Campus France Dakar",
       "dossier visa études",
-      "étudier en Europe depuis le Sénégal",
+      "Pack Student Care",
       "accompagnement visa étudiant Dakar",
     ],
   },
   entreprises: {
-    title: "Visa d'affaires Schengen pour PME & PMI | Fabienne",
+    title: "Pack Pro Executive · Visa d'affaires Schengen | Fabienne",
     description:
-      "Visa d'affaires Schengen pour dirigeants et équipes de PME / PMI au Sénégal. Salons, missions et délégations en Europe. Devis gratuit sous 48 h.",
+      "Traitement prioritaire des visas d'affaires : missions, foires, invitations d'entreprises. Pack Pro Executive à 250 000 FCFA à Dakar.",
     keywords: [
       "visa affaires Schengen",
       "visa business Sénégal",
       "visa dirigeant PME",
-      "déplacement professionnel Europe",
+      "Pack Pro Executive",
       "visa salon professionnel",
       "accompagnement visa entreprise Dakar",
     ],
   },
-  artistes: {
-    title: "Visa Schengen artistes & culture | Fabienne Dakar",
+  tourisme: {
+    title: "Pack Classique · Visa tourisme & famille | Fabienne",
     description:
-      "Accompagnement visa Schengen pour artistes sénégalais : festivals, résidences, tournées et projets culturels en Europe. Évaluation gratuite depuis Dakar.",
+      "Court séjour, tourisme et visites familiales : analyse du profil, dossier, réservations, assurance et prise de RDV. Pack Classique à 150 000 FCFA.",
     keywords: [
-      "visa artiste Schengen",
-      "visa culturel Europe",
-      "visa festival Sénégal",
-      "résidence artistique Europe",
-      "visa tournée artiste",
-      "accompagnement visa artiste Dakar",
+      "visa tourisme Schengen",
+      "visa visite familiale Europe",
+      "visa court séjour Sénégal",
+      "Pack Classique visa",
+      "réservation hôtel visa Schengen",
+      "accompagnement visa tourisme Dakar",
+    ],
+  },
+  sante: {
+    title: "Pack Urgence Santé · Visa médical Schengen | Fabienne",
+    description:
+      "Soins spécialisés et évacuation sanitaire : traitement accéléré, devis hospitaliers et coordination avec les hôpitaux en Europe. Pack Urgence Santé à 300 000 FCFA.",
+    keywords: [
+      "visa médical Schengen",
+      "visa soins Europe Sénégal",
+      "évacuation sanitaire visa",
+      "Pack Urgence Santé",
+      "C.I.A médicale Europe",
+      "accompagnement visa médical Dakar",
     ],
   },
   about: {
     title: "Qui nous sommes | Fabienne visa Schengen Dakar",
     description:
-      "Fabienne est un cabinet d'accompagnement visa Schengen basé à Dakar. Notre mission : aider étudiants, artistes et PME sénégalaises à partir en Europe avec un dossier solide.",
+      "Fabienne accompagne les demandes de visa Schengen à Dakar : simplifier, sécuriser et maximiser le taux de réussite grâce à un accompagnement clé en main.",
     keywords: [
       "Fabienne Dakar",
       "cabinet visa Schengen Sénégal",

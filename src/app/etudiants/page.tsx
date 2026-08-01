@@ -124,27 +124,27 @@ export default function EtudiantsPage() {
 
   const t = {
     fr: {
-      title: "Visa étudiant Schengen : de la candidature à la rentrée.",
-      body: "Depuis Dakar, Fabienne accompagne votre visa étudiant Schengen : admission, Campus France, dossier consulaire et logement, pour un projet d'études qui n'est pas bloqué par un dossier incomplet.",
-      whyTitle: "Un dossier visa étudiant solide vaut mieux qu'un rêve reporté.",
-      servicesTitle: "Accompagnement visa étudiant, de A à Z.",
-      promiseTitle: "Vous décrivez le projet. Nous vous disons comment avancer.",
+      title: "Pack Student Care : études et mobilité académique.",
+      body: "Depuis Dakar, Fabienne prépare votre visa étudiant Schengen (200 000 FCFA) : accompagnement Campus France, contrôle des ressources et de l'hébergement, préparation à l'entretien.",
+      whyTitle: "Un dossier étudiant solide maximise vos chances.",
+      servicesTitle: "Ce que comprend le Pack Student Care.",
+      promiseTitle: "Vous décrivez le projet. Nous sécurisons le parcours.",
       promiseBody:
-        "Pas de liste de pièces à l'avance. Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa étudiant, selon la destination et votre situation.",
-      ctaTitle: "Démarrez votre demande de visa étudiant dès aujourd'hui.",
+        "Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa étudiant, selon la destination et votre situation, avec double vérification avant dépôt.",
+      ctaTitle: "Démarrez votre Pack Student Care.",
       ctaBody:
         "Admission et visa Schengen prennent plusieurs mois. Plus tôt vous commencez à Dakar, plus votre dossier est solide.",
       ctaButton: "Tester mon éligibilité",
     },
     en: {
-      title: "Schengen student visa: from application to day one.",
-      body: "From Dakar, Fabienne supports your Schengen student visa: admission, Campus France, consular file and housing, so your study plans are never blocked by an incomplete file.",
-      whyTitle: "A solid student visa file beats a postponed dream.",
-      servicesTitle: "End-to-end student visa support.",
-      promiseTitle: "You describe the project. We tell you how to move forward.",
+      title: "Student Care Pack: studies and academic mobility.",
+      body: "From Dakar, Fabienne prepares your Schengen student visa (200,000 FCFA): Campus France support, funding and housing checks, interview preparation.",
+      whyTitle: "A solid student file maximises your chances.",
+      servicesTitle: "What the Student Care Pack includes.",
+      promiseTitle: "You describe the project. We secure the path.",
       promiseBody:
-        "No document list upfront. After your request, we tell you exactly what is needed for your student visa, for your destination and situation.",
-      ctaTitle: "Start your student visa application today.",
+        "After your request, we tell you exactly what is needed for your student visa, for your destination and situation, with double verification before submission.",
+      ctaTitle: "Start your Student Care Pack.",
       ctaBody:
         "Admission and Schengen visa procedures take several months. The earlier you start in Dakar, the stronger your file.",
       ctaButton: "Check my eligibility",

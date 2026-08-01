@@ -32,7 +32,7 @@ const SECTIONS: Section[] = [
     fr: {
       title: "2. Quelles données collectons-nous ?",
       paragraphs: [
-        "Selon votre demande, nous pouvons collecter : identité (nom, prénom), coordonnées (e-mail, téléphone), informations sur votre projet (type de visa, destination, profil étudiant, entreprise ou artiste), et tout élément que vous nous transmettez volontairement pour l'évaluation ou le suivi de votre dossier.",
+        "Selon votre demande, nous pouvons collecter : identité (nom, prénom), coordonnées (e-mail, téléphone), informations sur votre projet (type de visa, destination, profil étudiant, professionnel, tourisme/famille ou santé), et tout élément que vous nous transmettez volontairement pour l'évaluation ou le suivi de votre dossier.",
         "Nous ne demandons pas de pièces sensibles via le formulaire public. Les documents du dossier sont collectés uniquement lorsque vous engagez un accompagnement, par des canaux sécurisés convenus avec vous.",
       ],
     },

@@ -46,18 +46,23 @@ const VALUES = [
 const AUDIENCES = [
   {
     href: "/etudiants",
-    fr: { title: "Étudiants", body: "Admission, visa d'études, Campus France et installation." },
-    en: { title: "Students", body: "Admission, study visa, Campus France and settling in." },
+    fr: { title: "Étudiants", body: "Pack Student Care · Campus France, ressources, entretien." },
+    en: { title: "Students", body: "Student Care Pack · Campus France, funding, interview." },
   },
   {
     href: "/entreprises",
-    fr: { title: "Entreprises", body: "Visa d'affaires pour dirigeants, équipes et délégations." },
-    en: { title: "Businesses", body: "Business visas for executives, teams and delegations." },
+    fr: { title: "Professionnels", body: "Pack Pro Executive · missions, foires, invitations." },
+    en: { title: "Professionals", body: "Pro Executive Pack · missions, fairs, invitations." },
   },
   {
-    href: "/artistes",
-    fr: { title: "Artistes", body: "Festivals, résidences, tournées et projets culturels." },
-    en: { title: "Artists", body: "Festivals, residencies, tours and cultural projects." },
+    href: "/tourisme",
+    fr: { title: "Tourisme & famille", body: "Pack Classique · court séjour, visites, événements." },
+    en: { title: "Tourism & family", body: "Classic Pack · short stay, visits, events." },
+  },
+  {
+    href: "/sante",
+    fr: { title: "Santé", body: "Pack Urgence Santé · soins, C.I.A., coordination hospitalière." },
+    en: { title: "Health", body: "Health Emergency Pack · care, evacuation, hospital coordination." },
   },
 ];
 
@@ -67,18 +72,18 @@ export default function AboutPage() {
   const t = {
     fr: {
       title: "Qui nous sommes.",
-      body: "Fabienne est un cabinet d'accompagnement visa Schengen basé à Dakar. Nous aidons étudiants, artistes et PME sénégalaises à préparer des dossiers solides pour l'Europe.",
+      body: "Fabienne est un cabinet d'accompagnement visa Schengen basé à Dakar. Notre mission : simplifier, sécuriser et maximiser le taux de réussite des demandes, grâce à un accompagnement clé en main.",
       missionTitle: "Notre mission.",
       missionLead:
-        "Transformer un projet de voyage, d'études, d'affaires ou de création en dossier consulaire clair, complet et crédible.",
+        "Simplifier, sécuriser et maximiser vos chances de visa Schengen à travers un accompagnement rigoureux et sur mesure.",
       missionBody:
-        "Depuis Dakar, nous accompagnons chaque étape : lecture de votre situation, préparation des pièces, préparation à l'entretien, suivi jusqu'à la décision. Vous avancez avec une méthode concrète, des délais anticipés et un interlocuteur dédié.",
+        "Depuis le centre-ville de Dakar, nous traitons chaque dossier avec une méthode claire : analyse du profil, constitution des pièces, double vérification, prise de RDV et suivi jusqu'à la décision.",
       missionNote:
         "Fabienne est un cabinet de conseil indépendant. Nous ne délivrons pas de visas : la décision appartient aux autorités consulaires. Notre rôle est de vous mettre dans les meilleures conditions pour réussir.",
       missionPoints: [
-        "Évaluer votre profil et vous dire clairement ce qui est réaliste",
-        "Structurer un dossier lisible pour le consulat, sans pièce inutile",
-        "Vous préparer à l'entretien et suivre la demande jusqu'à la réponse",
+        "Accompagnement clé en main, adapté à votre motif de voyage",
+        "Double vérification avant dépôt pour limiter les refus évitables",
+        "Packs clairs : Classique, Student Care, Pro Executive, Urgence Santé",
       ],
       valuesTitle: "Ce qui nous guide.",
       audiencesTitle: "Pour qui nous travaillons.",
@@ -89,18 +94,18 @@ export default function AboutPage() {
     },
     en: {
       title: "Who we are.",
-      body: "Fabienne is a Schengen visa consultancy based in Dakar. We help Senegalese students, artists and SMEs prepare solid files for Europe.",
+      body: "Fabienne is a Schengen visa consultancy based in Dakar. Our mission: simplify, secure and maximise approval rates through turnkey, tailored support.",
       missionTitle: "Our mission.",
       missionLead:
-        "Turn a travel, study, business or creative project into a clear, complete and credible consular file.",
+        "Simplify, secure and maximise your Schengen visa chances through rigorous, tailored support.",
       missionBody:
-        "From Dakar, we support every step: reading your situation, preparing documents, interview coaching, follow-up until the decision. You move forward with a concrete method, anticipated timelines and a dedicated contact.",
+        "From central Dakar, we handle every file with a clear method: profile review, document preparation, double verification, appointment booking and follow-up until the decision.",
       missionNote:
         "Fabienne is an independent advisory firm. We do not issue visas: decisions belong to consular authorities. Our role is to put you in the best position to succeed.",
       missionPoints: [
-        "Assess your profile and tell you clearly what is realistic",
-        "Structure a file consulates can read, without unnecessary documents",
-        "Prepare you for the interview and follow the application until the answer",
+        "Turnkey support matched to your travel purpose",
+        "Double verification before submission to reduce avoidable refusals",
+        "Clear packs: Classic, Student Care, Pro Executive, Health Emergency",
       ],
       valuesTitle: "What guides us.",
       audiencesTitle: "Who we work with.",
@@ -278,7 +283,7 @@ export default function AboutPage() {
             {t.audiencesTitle}
           </h2>
         </Reveal>
-        <div className="grid grid-cols-1 gap-0 border-t sm:grid-cols-3" style={{ borderColor: "var(--border-strong)" }}>
+        <div className="grid grid-cols-1 gap-0 border-t sm:grid-cols-2 lg:grid-cols-4" style={{ borderColor: "var(--border-strong)" }}>
           {AUDIENCES.map((item, i) => (
             <Reveal key={item.href} delay={i * 0.05}>
               <Link

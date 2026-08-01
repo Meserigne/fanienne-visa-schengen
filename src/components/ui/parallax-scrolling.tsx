@@ -16,15 +16,15 @@ export function ParallaxHero() {
   const t = {
     fr: {
       brand: "Fabienne",
-      title: "Accompagnement visa Schengen depuis Dakar.",
-      body: "Cabinet au Sénégal pour étudiants et PME : dossier visa Schengen solide, de la candidature à la décision consulaire.",
-      ctaSecondary: "Voir le parcours",
+      title: "Simplifier et sécuriser votre visa Schengen.",
+      body: "Cabinet à Dakar : accompagnement clé en main pour maximiser vos chances. Étudiants, professionnels, familles et soins médicaux.",
+      ctaSecondary: "Voir les packs",
     },
     en: {
       brand: "Fabienne",
-      title: "Schengen visa support from Dakar.",
-      body: "A Senegal-based consultancy for students and SMEs: a solid Schengen visa file, from application to the consular decision.",
-      ctaSecondary: "See the journey",
+      title: "Simplify and secure your Schengen visa.",
+      body: "A Dakar consultancy: turnkey support to maximise your chances. Students, professionals, families and medical travel.",
+      ctaSecondary: "See the packs",
     },
   }[lang];
 
@@ -137,7 +137,7 @@ export function ParallaxHero() {
                 {CTA[lang]}
               </a>
               <a
-                href="#services"
+                href="#packs"
                 className="inline-flex items-center text-[17px] font-medium transition-opacity hover:opacity-80"
                 style={{
                   fontFamily: "var(--font-ui)",
