@@ -1,10 +1,6 @@
 export const CONTACT_EMAIL =
   process.env.NEXT_PUBLIC_CONTACT_EMAIL || "meserigne.ndiaye@mega-sn.com";
 
-export function getFormSubmitAction() {
-  return `https://formsubmit.co/${CONTACT_EMAIL}`;
-}
-
 export function buildClientAutoresponse(data: {
   name: string;
   profile: string;

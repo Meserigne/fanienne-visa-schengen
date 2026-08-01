@@ -7,10 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Reveal } from "@/components/reveal";
 import { DESTINATIONS } from "@/lib/destinations";
-import {
-  buildClientAutoresponse,
-  getFormSubmitAction,
-} from "@/lib/formsubmit";
+import { buildClientAutoresponse, CONTACT_EMAIL } from "@/lib/formsubmit";
 
 const fieldClass =
   "h-auto rounded-xl border px-3.5 py-3.5 text-[17px] focus-visible:ring-2";
@@ -176,12 +173,12 @@ export function EligibilityForm() {
           >
             {!sent ? (
               <form
-                action={getFormSubmitAction()}
+                action={`https://formsubmit.co/${CONTACT_EMAIL}`}
                 method="POST"
                 onSubmit={handleSubmit}
                 className="flex flex-col gap-4.5"
               >
-                {/* FormSubmit controls: admin notification + client reply */}
+                {/* FormSubmit: https://formsubmit.co — admin mail + client autoresponse */}
                 <input type="hidden" name="_subject" defaultValue="[Fanienne] Nouvelle demande d'éligibilité" />
                 <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_next" defaultValue="" />
