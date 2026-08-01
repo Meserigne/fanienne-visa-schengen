@@ -14,6 +14,8 @@ const fieldClass =
 export function EligibilityForm() {
   const { lang } = useLanguage();
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const t = {
     fr: {
@@ -25,7 +27,7 @@ export function EligibilityForm() {
         "Confidentialité totale de vos informations",
       ],
       profile: "Profil",
-      profileOptions: ["Étudiant", "Entreprise (PME / PMI)", "Autre"],
+      profileOptions: ["Étudiant", "Entreprise (PME / PMI)", "Artiste", "Autre"],
       destination: "Destination",
       name: "Nom complet",
       namePlaceholder: "Votre nom et prénom",
@@ -36,10 +38,12 @@ export function EligibilityForm() {
       project: "Votre projet en quelques mots",
       projectPlaceholder: "Études, salon professionnel, mission d'affaires…",
       submit: "Tester mon éligibilité",
+      sending: "Envoi en cours…",
       fineprint: "Gratuit · Sans engagement · Réponse sous 48 h",
       sentTitle: "Demande bien reçue",
       sentBody:
-        "Merci ! Un conseiller Fanienne vous contacte sous 48 heures avec l'analyse de votre profil.",
+        "Merci ! Un e-mail de confirmation vous a été envoyé. Un conseiller Fanienne vous contacte sous 48 heures.",
+      errorFallback: "Une erreur est survenue. Réessayez ou écrivez à contact@fanienne.sn.",
     },
     en: {
       title: "Check your Schengen visa eligibility",
@@ -50,7 +54,7 @@ export function EligibilityForm() {
         "Your information stays fully confidential",
       ],
       profile: "Profile",
-      profileOptions: ["Student", "Business (SME)", "Other"],
+      profileOptions: ["Student", "Business (SME)", "Artist", "Other"],
       destination: "Destination",
       name: "Full name",
       namePlaceholder: "Your full name",
@@ -61,16 +65,58 @@ export function EligibilityForm() {
       project: "Your project in a few words",
       projectPlaceholder: "Studies, trade fair, business trip…",
       submit: "Check my eligibility",
+      sending: "Sending…",
       fineprint: "Free · No obligation · Reply within 48 h",
       sentTitle: "Request received",
       sentBody:
-        "Thank you! A Fanienne advisor will contact you within 48 hours with your profile assessment.",
+        "Thank you! A confirmation email has been sent. A Fanienne advisor will contact you within 48 hours.",
+      errorFallback: "Something went wrong. Please try again or email contact@fanienne.sn.",
     },
   }[lang];
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSent(true);
+    setError("");
+    setLoading(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const destinationCode = String(formData.get("destination") || "");
+    const destination = DESTINATIONS.find((d) => d.code === destinationCode);
+    const destinationLabel = destination
+      ? lang === "fr"
+        ? destination.fr
+        : destination.en
+      : destinationCode;
+
+    try {
+      const res = await fetch("/api/eligibility", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          profile: String(formData.get("profile") || ""),
+          destination: destinationLabel,
+          name: String(formData.get("name") || ""),
+          email: String(formData.get("email") || ""),
+          phone: String(formData.get("phone") || ""),
+          project: String(formData.get("project") || ""),
+          lang,
+        }),
+      });
+
+      const payload = (await res.json().catch(() => ({}))) as { error?: string };
+
+      if (!res.ok) {
+        setError(payload.error || t.errorFallback);
+        return;
+      }
+
+      setSent(true);
+    } catch {
+      setError(t.errorFallback);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -129,6 +175,7 @@ export function EligibilityForm() {
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div className="flex flex-col gap-1.5">
                     <Label
+                      htmlFor="profile"
                       className="text-[15px] font-medium"
                       style={{
                         fontFamily: "var(--font-ui)",
@@ -138,6 +185,9 @@ export function EligibilityForm() {
                       {t.profile}
                     </Label>
                     <select
+                      id="profile"
+                      name="profile"
+                      required
                       className={fieldClass}
                       style={{
                         borderColor: "var(--border-strong)",
@@ -146,12 +196,15 @@ export function EligibilityForm() {
                       }}
                     >
                       {t.profileOptions.map((opt) => (
-                        <option key={opt}>{opt}</option>
+                        <option key={opt} value={opt}>
+                          {opt}
+                        </option>
                       ))}
                     </select>
                   </div>
                   <div className="flex flex-col gap-1.5">
                     <Label
+                      htmlFor="destination"
                       className="text-[15px] font-medium"
                       style={{
                         fontFamily: "var(--font-ui)",
@@ -161,6 +214,9 @@ export function EligibilityForm() {
                       {t.destination}
                     </Label>
                     <select
+                      id="destination"
+                      name="destination"
+                      required
                       className={fieldClass}
                       style={{
                         borderColor: "var(--border-strong)",
@@ -179,12 +235,15 @@ export function EligibilityForm() {
 
                 <div className="flex flex-col gap-1.5">
                   <Label
+                    htmlFor="name"
                     className="text-[15px] font-medium"
                     style={{ fontFamily: "var(--font-ui)", color: "var(--text-secondary)" }}
                   >
                     {t.name}
                   </Label>
                   <Input
+                    id="name"
+                    name="name"
                     type="text"
                     placeholder={t.namePlaceholder}
                     required
@@ -196,6 +255,7 @@ export function EligibilityForm() {
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div className="flex flex-col gap-1.5">
                     <Label
+                      htmlFor="email"
                       className="text-[15px] font-medium"
                       style={{
                         fontFamily: "var(--font-ui)",
@@ -205,6 +265,8 @@ export function EligibilityForm() {
                       {t.email}
                     </Label>
                     <Input
+                      id="email"
+                      name="email"
                       type="email"
                       placeholder={t.emailPlaceholder}
                       required
@@ -217,6 +279,7 @@ export function EligibilityForm() {
                   </div>
                   <div className="flex flex-col gap-1.5">
                     <Label
+                      htmlFor="phone"
                       className="text-[15px] font-medium"
                       style={{
                         fontFamily: "var(--font-ui)",
@@ -226,6 +289,8 @@ export function EligibilityForm() {
                       {t.phone}
                     </Label>
                     <Input
+                      id="phone"
+                      name="phone"
                       type="tel"
                       placeholder={t.phonePlaceholder}
                       className={fieldClass}
@@ -239,12 +304,15 @@ export function EligibilityForm() {
 
                 <div className="flex flex-col gap-1.5">
                   <Label
+                    htmlFor="project"
                     className="text-[15px] font-medium"
                     style={{ fontFamily: "var(--font-ui)", color: "var(--text-secondary)" }}
                   >
                     {t.project}
                   </Label>
                   <Textarea
+                    id="project"
+                    name="project"
                     rows={3}
                     placeholder={t.projectPlaceholder}
                     className={fieldClass}
@@ -256,9 +324,24 @@ export function EligibilityForm() {
                   />
                 </div>
 
+                {error ? (
+                  <p
+                    className="rounded-xl px-3.5 py-3 text-[14px] leading-snug"
+                    style={{
+                      background: "var(--status-error-bg)",
+                      color: "var(--status-error)",
+                      fontFamily: "var(--font-ui)",
+                    }}
+                    role="alert"
+                  >
+                    {error}
+                  </p>
+                ) : null}
+
                 <button
                   type="submit"
-                  className="cursor-pointer rounded-full py-4 text-[17px] font-semibold transition-transform duration-200 hover:-translate-y-0.5"
+                  disabled={loading}
+                  className="cursor-pointer rounded-full py-4 text-[17px] font-semibold transition-transform duration-200 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
                   style={{
                     fontFamily: "var(--font-ui)",
                     background: "var(--brand)",
@@ -266,7 +349,7 @@ export function EligibilityForm() {
                     boxShadow: "0 12px 28px -12px rgba(36, 80, 232, 0.55)",
                   }}
                 >
-                  {t.submit}
+                  {loading ? t.sending : t.submit}
                 </button>
                 <p
                   className="text-center text-xs"
