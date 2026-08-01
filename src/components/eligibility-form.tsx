@@ -42,7 +42,7 @@ export function EligibilityForm() {
       fineprint: "Gratuit · Sans engagement · Réponse sous 48 h",
       sentTitle: "Demande bien reçue",
       sentBody:
-        "Merci ! Un e-mail de confirmation vous a été envoyé. Un conseiller Fanienne vous contacte sous 48 heures.",
+        "Merci ! Un e-mail de confirmation vous a été envoyé. Nous vous reviendrons sous peu.",
     },
     en: {
       title: "Check your Schengen visa eligibility",
@@ -68,7 +68,7 @@ export function EligibilityForm() {
       fineprint: "Free · No obligation · Reply within 48 h",
       sentTitle: "Request received",
       sentBody:
-        "Thank you! A confirmation email has been sent. A Fanienne advisor will contact you within 48 hours.",
+        "Thank you! A confirmation email has been sent. We will get back to you shortly.",
     },
   }[lang];
 
@@ -183,7 +183,11 @@ export function EligibilityForm() {
                 <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_next" defaultValue="" />
                 <input type="hidden" name="_replyto" defaultValue="" />
-                <input type="hidden" name="_autoresponse" defaultValue="" />
+                <input
+                  type="hidden"
+                  name="_autoresponse"
+                  defaultValue="Bonjour,\n\nMerci pour votre demande. Nous avons bien reçu vos informations et nous vous reviendrons sous peu.\n\nCordialement,\nL'équipe Fanienne"
+                />
                 <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
 
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">

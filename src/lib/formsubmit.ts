@@ -12,14 +12,15 @@ export function buildClientAutoresponse(data: {
       `Hello ${data.name},`,
       "",
       "Thank you for your Schengen visa eligibility request on Fanienne.",
-      "A Fanienne advisor will review your profile and reply within 48 hours.",
+      "We have received your information and will get back to you shortly.",
       "",
-      "Summary of your request:",
+      "Summary:",
       `- Profile: ${data.profile}`,
       `- Destination: ${data.destination}`,
       "",
-      "Fanienne - Schengen visa support in Dakar",
-      "contact@fanienne.sn",
+      "Best regards,",
+      "The Fanienne team",
+      "Dakar · contact@fanienne.sn",
     ].join("\n");
   }
 
@@ -27,13 +28,14 @@ export function buildClientAutoresponse(data: {
     `Bonjour ${data.name},`,
     "",
     "Merci pour votre demande d'éligibilité visa Schengen sur Fanienne.",
-    "Un conseiller Fanienne analyse votre profil et vous répond sous 48 heures.",
+    "Nous avons bien reçu vos informations et nous vous reviendrons sous peu.",
     "",
-    "Récapitulatif de votre demande :",
+    "Récapitulatif :",
     `- Profil : ${data.profile}`,
     `- Destination : ${data.destination}`,
     "",
-    "Fanienne - Accompagnement visa Schengen à Dakar",
-    "contact@fanienne.sn",
+    "Cordialement,",
+    "L'équipe Fanienne",
+    "Dakar · contact@fanienne.sn",
   ].join("\n");
 }
