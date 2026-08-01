@@ -1,6 +1,9 @@
 export const CONTACT_EMAIL =
   process.env.NEXT_PUBLIC_CONTACT_EMAIL || "meserigne@gmail.com";
 
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://fanienne-visa-schengen.vercel.app";
+
 export function buildClientAutoresponse(data: {
   name: string;
   profile: string;

@@ -1,21 +1,28 @@
 "use client";
 
-import { useEffect, useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useLanguage } from "@/lib/language-context";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Reveal } from "@/components/reveal";
 import { DESTINATIONS } from "@/lib/destinations";
-import { buildClientAutoresponse, CONTACT_EMAIL } from "@/lib/formsubmit";
+import {
+  buildClientAutoresponse,
+  CONTACT_EMAIL,
+  SITE_URL,
+} from "@/lib/formsubmit";
 
 const fieldClass =
   "h-auto rounded-xl border px-3.5 py-3.5 text-[17px] focus-visible:ring-2";
+
+const IFRAME_NAME = "fanienne_formsubmit_frame";
 
 export function EligibilityForm() {
   const { lang } = useLanguage();
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
+  const submittedRef = useRef(false);
 
   const t = {
     fr: {
@@ -83,24 +90,28 @@ export function EligibilityForm() {
     }
   }, []);
 
+  const handleIframeLoad = () => {
+    if (!submittedRef.current) return;
+    submittedRef.current = false;
+    setLoading(false);
+    setSent(true);
+  };
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     const form = e.currentTarget;
     const formData = new FormData(form);
     const name = String(formData.get("name") || "").trim();
     const profile = String(formData.get("Profil") || "").trim();
     const destination = String(formData.get("Destination") || "").trim();
+    const email = String(formData.get("email") || "").trim();
 
-    const next = form.elements.namedItem("_next") as HTMLInputElement | null;
     const subject = form.elements.namedItem("_subject") as HTMLInputElement | null;
     const autoresponse = form.elements.namedItem(
       "_autoresponse"
     ) as HTMLInputElement | null;
     const replyto = form.elements.namedItem("_replyto") as HTMLInputElement | null;
-    const email = String(formData.get("email") || "").trim();
+    const next = form.elements.namedItem("_next") as HTMLInputElement | null;
 
-    if (next) {
-      next.value = `${window.location.origin}/?sent=1#eligibilite`;
-    }
     if (subject) {
       subject.value = `[Fanienne] Nouvelle demande d'éligibilité - ${name}`;
     }
@@ -115,9 +126,22 @@ export function EligibilityForm() {
     if (replyto) {
       replyto.value = email;
     }
+    if (next) {
+      // Fallback redirect if the iframe path is blocked.
+      next.value = `${window.location.origin}/?sent=1`;
+    }
 
+    submittedRef.current = true;
     setLoading(true);
-    // Native FormSubmit POST (required for admin email + client autoresponse).
+
+    // Safety: if iframe never loads, still show success after a short delay.
+    window.setTimeout(() => {
+      if (submittedRef.current) {
+        submittedRef.current = false;
+        setLoading(false);
+        setSent(true);
+      }
+    }, 4000);
   };
 
   return (
@@ -126,6 +150,15 @@ export function EligibilityForm() {
       className="relative overflow-hidden px-6 py-20 sm:px-10 lg:px-14 lg:py-28"
       style={{ background: "var(--surface-inverse)" }}
     >
+      {/* FormSubmit response stays hidden — user never sees the "Thanks!" page */}
+      <iframe
+        name={IFRAME_NAME}
+        title="form-submit"
+        className="pointer-events-none absolute h-0 w-0 opacity-0"
+        tabIndex={-1}
+        onLoad={handleIframeLoad}
+      />
+
       <div
         className="pointer-events-none absolute -left-24 top-0 h-72 w-72 rounded-full opacity-40"
         style={{
@@ -175,20 +208,31 @@ export function EligibilityForm() {
               <form
                 action={`https://formsubmit.co/${CONTACT_EMAIL}`}
                 method="POST"
+                target={IFRAME_NAME}
                 onSubmit={handleSubmit}
                 className="flex flex-col gap-4.5"
               >
-                {/* FormSubmit: https://formsubmit.co — admin mail + client autoresponse */}
-                <input type="hidden" name="_subject" defaultValue="[Fanienne] Nouvelle demande d'éligibilité" />
+                <input
+                  type="hidden"
+                  name="_subject"
+                  defaultValue="[Fanienne] Nouvelle demande d'éligibilité"
+                />
                 <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_next" defaultValue="" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value={`${SITE_URL}/?sent=1`} />
                 <input type="hidden" name="_replyto" defaultValue="" />
                 <input
                   type="hidden"
                   name="_autoresponse"
-                  defaultValue="Bonjour,\n\nMerci pour votre demande. Nous avons bien reçu vos informations et nous vous reviendrons sous peu.\n\nCordialement,\nL'équipe Fanienne"
+                  defaultValue="Bonjour, merci pour votre demande. Nous avons bien reçu vos informations et nous vous reviendrons sous peu. Cordialement, L'équipe Fanienne"
                 />
-                <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
+                <input
+                  type="text"
+                  name="_honey"
+                  className="hidden"
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
 
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div className="flex flex-col gap-1.5">
