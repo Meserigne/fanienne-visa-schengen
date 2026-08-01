@@ -96,7 +96,7 @@ async function sendWithFormSubmit(data: EligibilityPayload) {
   const client = buildClientEmail(data);
   const siteUrl =
     process.env.NEXT_PUBLIC_SITE_URL ||
-    "https://fabienne-visa-schengen.vercel.app";
+    "https://tookyconsulting.com";
 
   const response = await fetch(
     `https://formsubmit.co/ajax/${encodeURIComponent(CONTACT_EMAIL)}`,

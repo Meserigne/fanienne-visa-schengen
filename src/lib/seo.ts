@@ -2,7 +2,7 @@
 
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-  "https://fabienne-visa-schengen.vercel.app";
+  "https://tookyconsulting.com";
 
 export const SITE_NAME = "Tooky Consulting";
 
