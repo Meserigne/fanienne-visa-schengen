@@ -1,12 +1,20 @@
 "use client";
 
 import Link from "next/link";
+import type { LucideIcon } from "lucide-react";
+import { BriefcaseBusiness, GraduationCap, HeartPulse, Plane } from "lucide-react";
 import { useLanguage } from "@/lib/language-context";
 import { Reveal } from "@/components/reveal";
 
-const PACKS = [
+const PACKS: {
+  href: string;
+  icon: LucideIcon;
+  fr: { name: string; audience: string; includes: string };
+  en: { name: string; audience: string; includes: string };
+}[] = [
   {
     href: "/tourisme",
+    icon: Plane,
     fr: {
       name: "Formule Essentielle",
       audience: "Court séjour · Tourisme · Famille",
@@ -22,6 +30,7 @@ const PACKS = [
   },
   {
     href: "/etudiants",
+    icon: GraduationCap,
     fr: {
       name: "Formule Student Care",
       audience: "Études · Mobilité académique",
@@ -37,6 +46,7 @@ const PACKS = [
   },
   {
     href: "/entreprises",
+    icon: BriefcaseBusiness,
     fr: {
       name: "Formule Pro Executive",
       audience: "Affaires · Business",
@@ -52,6 +62,7 @@ const PACKS = [
   },
   {
     href: "/sante",
+    icon: HeartPulse,
     fr: {
       name: "Formule Urgence Santé",
       audience: "Soins médicaux · C.I.A.",
@@ -65,7 +76,7 @@ const PACKS = [
         "Accelerated handling, hospital quotes and admission agreement checks.",
     },
   },
-] as const;
+];
 
 export function PacksSection() {
   const { lang } = useLanguage();
@@ -108,10 +119,10 @@ export function PacksSection() {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
           {PACKS.map((pack, i) => {
             const copy = pack[lang];
+            const Icon = pack.icon;
             return (
               <Reveal key={pack.href} delay={i * 0.06}>
-                <Link
-                  href={pack.href}
+                <article
                   className="group flex h-full flex-col rounded-[1.5rem] border p-6 transition-transform duration-300 hover:-translate-y-1 sm:p-7"
                   style={{
                     background: "var(--surface-card)",
@@ -119,6 +130,16 @@ export function PacksSection() {
                     boxShadow: "var(--shadow-sm)",
                   }}
                 >
+                  <span
+                    className="mb-5 inline-flex size-11 items-center justify-center rounded-2xl pointer-events-none"
+                    style={{
+                      background: "color-mix(in srgb, var(--c-cobalt-500) 12%, transparent)",
+                      color: "var(--c-cobalt-500)",
+                    }}
+                    aria-hidden
+                  >
+                    <Icon className="size-5" strokeWidth={1.75} />
+                  </span>
                   <p
                     className="mb-2 text-[12px] font-semibold uppercase"
                     style={{
@@ -141,13 +162,14 @@ export function PacksSection() {
                   >
                     {copy.includes}
                   </p>
-                  <span
-                    className="text-[14px] font-semibold transition-colors group-hover:underline"
+                  <Link
+                    href={pack.href}
+                    className="text-[14px] font-semibold transition-colors hover:underline"
                     style={{ fontFamily: "var(--font-ui)", color: "var(--c-cobalt-500)" }}
                   >
                     {t.cta} →
-                  </span>
-                </Link>
+                  </Link>
+                </article>
               </Reveal>
             );
           })}
