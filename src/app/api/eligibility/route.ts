@@ -94,6 +94,9 @@ async function sendWithResend(data: EligibilityPayload) {
 async function sendWithFormSubmit(data: EligibilityPayload) {
   const admin = buildAdminEmail(data);
   const client = buildClientEmail(data);
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    "https://fanienne-visa-schengen.vercel.app";
 
   const response = await fetch(
     `https://formsubmit.co/ajax/${encodeURIComponent(CONTACT_EMAIL)}`,
@@ -102,6 +105,9 @@ async function sendWithFormSubmit(data: EligibilityPayload) {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
+        // FormSubmit rejects server calls without a browser Origin/Referer.
+        Origin: siteUrl,
+        Referer: `${siteUrl}/`,
       },
       body: JSON.stringify({
         name: data.name,
@@ -113,6 +119,7 @@ async function sendWithFormSubmit(data: EligibilityPayload) {
         message: admin.text,
         _subject: admin.subject,
         _template: "table",
+        _captcha: "false",
         _replyto: data.email,
         _autoresponse: client.text,
       }),
@@ -123,22 +130,18 @@ async function sendWithFormSubmit(data: EligibilityPayload) {
     success?: string | boolean;
     message?: string;
   };
-
-  // FormSubmit returns success:"true" after activation; first submit may ask to activate.
-  if (!response.ok) {
-    throw new Error(result.message || "FormSubmit send failed");
-  }
-
+  const message = String(result.message || "");
+  const needsActivation = /activat/i.test(message);
   const ok =
     result.success === true ||
     result.success === "true" ||
-    String(result.message || "").toLowerCase().includes("activat");
+    needsActivation;
 
-  if (!ok && !result.message) {
-    throw new Error("FormSubmit unexpected response");
+  if (!ok) {
+    throw new Error(message || "FormSubmit send failed");
   }
 
-  return true;
+  return { needsActivation };
 }
 
 export async function POST(request: Request) {
@@ -175,24 +178,35 @@ export async function POST(request: Request) {
   }
 
   try {
+    let needsActivation = false;
+
     if (process.env.WEB3FORMS_ACCESS_KEY) {
       await sendWithWeb3Forms(data);
     } else if (process.env.RESEND_API_KEY) {
       await sendWithResend(data);
     } else {
       // Default: FormSubmit → meserigne.ndiaye@mega-sn.com (+ client autoresponse)
-      await sendWithFormSubmit(data);
+      const result = await sendWithFormSubmit(data);
+      needsActivation = result.needsActivation;
     }
 
-    return NextResponse.json({ ok: true });
+    return NextResponse.json({
+      ok: true,
+      needsActivation,
+      message: needsActivation
+        ? data.lang === "fr"
+          ? "Demande enregistrée. Activez FormSubmit via le lien reçu sur meserigne.ndiaye@mega-sn.com pour recevoir les prochaines notifications."
+          : "Request saved. Activate FormSubmit via the link sent to meserigne.ndiaye@mega-sn.com to receive further notifications."
+        : undefined,
+    });
   } catch (error) {
     console.error("Eligibility email failure:", error);
     return NextResponse.json(
       {
         error:
           data.lang === "fr"
-            ? "Impossible d'envoyer la demande pour le moment. Vérifiez votre boîte mail (activation FormSubmit) ou réessayez."
-            : "Unable to send the request right now. Check your inbox for FormSubmit activation, or try again.",
+            ? "Impossible d'envoyer la demande pour le moment. Réessayez dans quelques instants."
+            : "Unable to send the request right now. Please try again shortly.",
       },
       { status: 502 }
     );
