@@ -255,10 +255,10 @@ export default function Home() {
       <ParallaxHero />
       <DreamMarquee />
 
-      <section className="px-6 pt-6 sm:px-10 lg:px-14">
+      <section className="px-6 pt-4 sm:px-10 lg:px-14">
         <Reveal>
           <h2
-            className="mx-auto max-w-[1400px] text-[clamp(1.8rem,3.5vw,2.6rem)] font-semibold tracking-tight"
+            className="mx-auto max-w-[1100px] text-[clamp(1.45rem,2.8vw,2rem)] font-semibold tracking-tight"
             style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
           >
             {t.tracksTitle}
