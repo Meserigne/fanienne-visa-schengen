@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Tooky Consulting — Accompagnement visa Schengen à Dakar",
+        alt: "Tooky Consulting, accompagnement visa Schengen à Dakar",
       },
     ],
   },

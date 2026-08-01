@@ -66,7 +66,7 @@ export function buildClientEmail(data: EligibilityPayload) {
         `- Profile: ${data.profile}`,
         `- Destination: ${data.destination}`,
         "",
-        "Tooky Consulting — Schengen visa support in Dakar",
+        "Tooky Consulting, Schengen visa support in Dakar",
         "contact@tookyconsulting.com",
       ].join("\n"),
       html: `
@@ -94,7 +94,7 @@ export function buildClientEmail(data: EligibilityPayload) {
       `- Profil : ${data.profile}`,
       `- Destination : ${data.destination}`,
       "",
-      "Tooky Consulting — Accompagnement visa Schengen à Dakar",
+      "Tooky Consulting, accompagnement visa Schengen à Dakar",
       "contact@tookyconsulting.com",
     ].join("\n"),
     html: `

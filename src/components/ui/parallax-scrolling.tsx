@@ -17,13 +17,13 @@ export function ParallaxHero() {
     fr: {
       brand: "TOOKY CONSULTING",
       title: "Votre dossier Schengen, préparé pour convaincre.",
-      body: "Depuis Dakar, Tooky Consulting prépare, vérifie et suit votre demande — études, affaires, famille ou soins.",
+      body: "Depuis Dakar, Tooky Consulting prépare, vérifie et suit votre demande : études, affaires, famille ou soins.",
       ctaSecondary: "Découvrir nos formules",
     },
     en: {
       brand: "TOOKY CONSULTING",
       title: "Your Schengen file, built to convince.",
-      body: "From Dakar, Tooky Consulting prepares, reviews and tracks your application — studies, business, family or medical care.",
+      body: "From Dakar, Tooky Consulting prepares, reviews and tracks your application: studies, business, family or medical care.",
       ctaSecondary: "Explore our plans",
     },
   }[lang];
@@ -82,7 +82,7 @@ export function ParallaxHero() {
         <div data-parallax-media className="absolute inset-0 will-change-transform">
           <Image
             src={SITE_IMAGES.hero}
-            alt="Tooky Consulting — accompagnement visa Schengen depuis Dakar"
+            alt="Tooky Consulting, accompagnement visa Schengen depuis Dakar"
             fill
             priority
             sizes="100vw"

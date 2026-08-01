@@ -73,12 +73,12 @@ export function PacksSection() {
   const t = {
     fr: {
       title: "Quatre formules, un même niveau d'exigence.",
-      body: "Chaque parcours est adapté à votre motif de voyage. Après évaluation, nous vous indiquons la formule et le tarif adaptés — sans engagement.",
+      body: "Chaque parcours est adapté à votre motif de voyage. Après évaluation, nous vous indiquons la formule et le tarif adaptés, sans engagement.",
       cta: "En savoir plus",
     },
     en: {
       title: "Four plans, one standard of care.",
-      body: "Each path matches your travel purpose. After assessment, we recommend the right plan and fee — with no obligation.",
+      body: "Each path matches your travel purpose. After assessment, we recommend the right plan and fee, with no obligation.",
       cta: "Learn more",
     },
   }[lang];

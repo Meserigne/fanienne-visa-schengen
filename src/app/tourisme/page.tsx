@@ -208,8 +208,8 @@ export default function TourismePage() {
                 src={SITE_IMAGES.tourism}
                 alt={
                   lang === "fr"
-                    ? "Voyage en Europe — visa Schengen tourisme et famille depuis le Sénégal"
-                    : "Travel in Europe — Schengen tourism and family visa from Senegal"
+                    ? "Voyage en Europe, visa Schengen tourisme et famille depuis le Sénégal"
+                    : "Travel in Europe, Schengen tourism and family visa from Senegal"
                 }
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -339,8 +339,8 @@ export default function TourismePage() {
                 src={SITE_IMAGES.tourismDetail}
                 alt={
                   lang === "fr"
-                    ? "Préparation d'un voyage — Formule Essentielle visa tourisme Schengen"
-                    : "Trip preparation — Essential Plan Schengen tourism visa"
+                    ? "Préparation d'un voyage, Formule Essentielle visa tourisme Schengen"
+                    : "Trip preparation, Essential Plan Schengen tourism visa"
                 }
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

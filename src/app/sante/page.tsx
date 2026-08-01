@@ -208,8 +208,8 @@ export default function SantePage() {
                 src={SITE_IMAGES.medical}
                 alt={
                   lang === "fr"
-                    ? "Soins médicaux en Europe — visa Schengen médical depuis le Sénégal"
-                    : "Medical care in Europe — Schengen medical visa from Senegal"
+                    ? "Soins médicaux en Europe, visa Schengen médical depuis le Sénégal"
+                    : "Medical care in Europe, Schengen medical visa from Senegal"
                 }
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -339,8 +339,8 @@ export default function SantePage() {
                 src={SITE_IMAGES.medicalDetail}
                 alt={
                   lang === "fr"
-                    ? "Parcours hospitalier — Formule Urgence Santé visa médical Schengen"
-                    : "Hospital pathway — Health Priority Plan Schengen medical visa"
+                    ? "Parcours hospitalier, Formule Urgence Santé visa médical Schengen"
+                    : "Hospital pathway, Health Priority Plan Schengen medical visa"
                 }
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

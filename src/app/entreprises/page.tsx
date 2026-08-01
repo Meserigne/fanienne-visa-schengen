@@ -125,7 +125,7 @@ export default function EntreprisesPage() {
   const t = {
     fr: {
       title: "Vos opportunités business ne doivent pas attendre un visa.",
-      body: "Depuis Dakar, Tooky Consulting prépare vos visas d'affaires : foires, missions, partenariats, invitations et ordres de mission — avec un traitement prioritaire.",
+      body: "Depuis Dakar, Tooky Consulting prépare vos visas d'affaires : foires, missions, partenariats, invitations et ordres de mission, avec un traitement prioritaire.",
       whyTitle: "Un refus coûte plus cher qu'un dossier bien préparé.",
       servicesTitle: "Ce que comprend la formule Pro Executive.",
       promiseTitle: "Vous décrivez la mission. Nous structurons le dossier.",
@@ -138,7 +138,7 @@ export default function EntreprisesPage() {
     },
     en: {
       title: "Your business opportunities should not wait on a visa.",
-      body: "From Dakar, Tooky Consulting prepares your business visas: trade fairs, missions, partnerships, invitations and mission orders — with priority handling.",
+      body: "From Dakar, Tooky Consulting prepares your business visas: trade fairs, missions, partnerships, invitations and mission orders, with priority handling.",
       whyTitle: "A refusal costs more than a well-prepared file.",
       servicesTitle: "What the Pro Executive plan includes.",
       promiseTitle: "You describe the mission. We structure the file.",

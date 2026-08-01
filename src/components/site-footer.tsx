@@ -71,8 +71,8 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
           </p>
           <p className="max-w-[36ch] text-[15px] leading-[1.7]">
             {lang === "fr"
-              ? "Accompagnement visa Schengen à Dakar — dossiers préparés pour convaincre."
-              : "Schengen visa support in Dakar — files built to convince."}
+              ? "Accompagnement visa Schengen à Dakar. Dossiers préparés pour convaincre."
+              : "Schengen visa support in Dakar. Files built to convince."}
           </p>
         </div>
         <div className="flex flex-col gap-2.5 text-sm" style={{ fontFamily: "var(--font-ui)" }}>
