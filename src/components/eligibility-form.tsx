@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Reveal } from "@/components/reveal";
 import { DESTINATIONS } from "@/lib/destinations";
+import { sendEligibilityViaFormSubmit } from "@/lib/formsubmit";
 
 const fieldClass =
   "h-auto rounded-xl border px-3.5 py-3.5 text-[17px] focus-visible:ring-2";
@@ -90,26 +91,15 @@ export function EligibilityForm() {
       : destinationCode;
 
     try {
-      const res = await fetch("/api/eligibility", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          profile: String(formData.get("profile") || ""),
-          destination: destinationLabel,
-          name: String(formData.get("name") || ""),
-          email: String(formData.get("email") || ""),
-          phone: String(formData.get("phone") || ""),
-          project: String(formData.get("project") || ""),
-          lang,
-        }),
+      await sendEligibilityViaFormSubmit({
+        profile: String(formData.get("profile") || ""),
+        destination: destinationLabel,
+        name: String(formData.get("name") || ""),
+        email: String(formData.get("email") || ""),
+        phone: String(formData.get("phone") || ""),
+        project: String(formData.get("project") || ""),
+        lang,
       });
-
-      const payload = (await res.json().catch(() => ({}))) as { error?: string };
-
-      if (!res.ok) {
-        setError(payload.error || t.errorFallback);
-        return;
-      }
 
       setSent(true);
     } catch {
