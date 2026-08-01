@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/lib/language-context";
 
@@ -16,16 +15,13 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
         className="border-t px-6 py-10 sm:px-10 lg:px-14"
         style={{ background: "var(--c-ink-950)", borderColor: "var(--border-inverse)" }}
       >
-        <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-between gap-8">
-          <Link href="/" className="inline-flex overflow-hidden rounded-xl bg-white" aria-label="Tooky Consulting">
-            <Image
-              src="/images/tooky-logo.jpg"
-              alt="Tooky Consulting · Visa Schengen"
-              width={88}
-              height={88}
-              className="h-16 w-16 object-contain p-1"
-            />
-          </Link>
+        <div className="mx-auto flex max-w-[1400px] flex-wrap items-baseline justify-between gap-8">
+          <p
+            className="text-[24px] font-semibold"
+            style={{ fontFamily: "var(--font-display)", color: "var(--text-on-dark)" }}
+          >
+            TOOKY CONSULTING
+          </p>
           <div className="flex flex-wrap gap-7 text-sm" style={{ fontFamily: "var(--font-ui)" }}>
             <Link href="/etudiants" style={{ color: "var(--text-on-dark-muted)" }}>
               {lang === "fr" ? "Étudiants" : "Students"}
@@ -67,19 +63,12 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
         style={{ borderColor: "var(--border-inverse)" }}
       >
         <div>
-          <Link
-            href="/"
-            className="mb-4 inline-flex overflow-hidden rounded-xl bg-white"
-            aria-label="Tooky Consulting"
+          <p
+            className="mb-4 text-[32px] font-semibold tracking-tight"
+            style={{ fontFamily: "var(--font-display)", color: "var(--text-on-dark)" }}
           >
-            <Image
-              src="/images/tooky-logo.jpg"
-              alt="Tooky Consulting · Visa Schengen"
-              width={112}
-              height={112}
-              className="h-20 w-20 object-contain p-1.5"
-            />
-          </Link>
+            TOOKY CONSULTING
+          </p>
           <p className="max-w-[36ch] text-[15px] leading-[1.7]">
             {lang === "fr"
               ? "Accompagnement visa Schengen à Dakar. Dossiers préparés pour convaincre."

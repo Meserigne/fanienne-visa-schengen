@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "@/lib/language-context";
@@ -50,17 +49,29 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-6 px-6 py-4 sm:px-10 lg:px-14">
         <Link
           href="/"
-          className="relative flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white shadow-sm sm:h-16 sm:w-16"
-          aria-label="Tooky Consulting"
+          className="flex items-baseline gap-2.5"
+          style={{ color: solid ? "var(--text-primary)" : "var(--text-on-dark)" }}
         >
-          <Image
-            src="/images/tooky-logo.jpg"
-            alt="Tooky Consulting · Visa Schengen"
-            width={128}
-            height={128}
-            priority
-            className="h-full w-full object-contain p-1"
+          <span
+            className="text-[18px] font-semibold tracking-[0.06em] sm:text-[20px]"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            TOOKY CONSULTING
+          </span>
+          <span
+            className="hidden h-1.5 w-1.5 self-center rounded-full sm:block"
+            style={{ background: "var(--accent)" }}
           />
+          <span
+            className="hidden text-[11px] uppercase sm:inline"
+            style={{
+              fontFamily: "var(--font-ui)",
+              letterSpacing: "0.18em",
+              color: solid ? "var(--text-secondary)" : "var(--text-on-dark-muted)",
+            }}
+          >
+            {lang === "fr" ? "Visa Schengen" : "Schengen Visa"}
+          </span>
         </Link>
 
         <nav
