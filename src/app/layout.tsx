@@ -3,6 +3,7 @@ import { Outfit, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/lib/language-context";
 import { SmoothScroll } from "@/components/smooth-scroll";
+import { BackToTop } from "@/components/back-to-top";
 import { JsonLd } from "@/components/json-ld";
 import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL, seo } from "@/lib/seo";
 
@@ -86,6 +87,7 @@ export default function RootLayout({
         <JsonLd />
         <LanguageProvider>
           <SmoothScroll>{children}</SmoothScroll>
+          <BackToTop />
         </LanguageProvider>
       </body>
     </html>
