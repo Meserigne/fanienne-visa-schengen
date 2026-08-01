@@ -35,15 +35,15 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
             <Link href="/sante" style={{ color: "var(--text-on-dark-muted)" }}>
               {lang === "fr" ? "Santé" : "Health"}
             </Link>
-            <Link href="/qui-nous-sommes" style={{ color: "var(--text-on-dark-muted)" }}>
-              {lang === "fr" ? "Qui nous sommes" : "About us"}
-            </Link>
             <a href="mailto:contact@tookyconsulting.com" style={{ color: "var(--text-on-dark-muted)" }}>
               contact@tookyconsulting.com
             </a>
           </div>
           <div className="flex flex-wrap items-center gap-4 text-xs" style={{ fontFamily: "var(--font-ui)", color: "var(--c-ink-400)" }}>
             <span>© 2026 Tooky Consulting · {lang === "fr" ? "Dakar, Sénégal" : "Dakar, Senegal"}</span>
+            <Link href="/qui-nous-sommes" className="transition-colors hover:text-white">
+              {lang === "fr" ? "Qui nous sommes" : "About us"}
+            </Link>
             <Link href="/politique-de-confidentialite" className="transition-colors hover:text-white">
               {lang === "fr" ? "Politique de confidentialité" : "Privacy policy"}
             </Link>
@@ -94,9 +94,6 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
           <Link href="/sante" className="transition-colors hover:text-white">
             {lang === "fr" ? "Santé · Urgence Santé" : "Health · Emergency"}
           </Link>
-          <Link href="/qui-nous-sommes" className="transition-colors hover:text-white">
-            {lang === "fr" ? "Qui nous sommes" : "About us"}
-          </Link>
         </div>
         <div className="flex flex-col gap-2.5 text-sm" style={{ fontFamily: "var(--font-ui)" }}>
           <p
@@ -140,12 +137,20 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
             ? "© 2026 Tooky Consulting · Accompagnement visa Schengen. Tooky Consulting est un cabinet de conseil indépendant, sans lien avec les consulats ; la décision de visa appartient aux autorités consulaires."
             : "© 2026 Tooky Consulting · Schengen visa consultancy. Tooky Consulting is an independent advisory firm with no affiliation to consulates; visa decisions rest with consular authorities."}
         </p>
-        <Link
-          href="/politique-de-confidentialite"
-          className="shrink-0 transition-colors hover:text-white"
-        >
-          {lang === "fr" ? "Politique de confidentialité" : "Privacy policy"}
-        </Link>
+        <div className="flex shrink-0 flex-wrap gap-5">
+          <Link
+            href="/qui-nous-sommes"
+            className="transition-colors hover:text-white"
+          >
+            {lang === "fr" ? "Qui nous sommes" : "About us"}
+          </Link>
+          <Link
+            href="/politique-de-confidentialite"
+            className="transition-colors hover:text-white"
+          >
+            {lang === "fr" ? "Politique de confidentialité" : "Privacy policy"}
+          </Link>
+        </div>
       </div>
     </footer>
   );

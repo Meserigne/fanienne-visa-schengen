@@ -11,7 +11,6 @@ const NAV = [
   { href: "/entreprises", fr: "Professionnels", en: "Business" },
   { href: "/tourisme", fr: "Tourisme & famille", en: "Tourism & family" },
   { href: "/sante", fr: "Santé", en: "Health" },
-  { href: "/qui-nous-sommes", fr: "Qui nous sommes", en: "About us" },
 ];
 
 export function SiteHeader() {
