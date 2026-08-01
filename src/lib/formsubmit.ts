@@ -1,5 +1,5 @@
 export const CONTACT_EMAIL =
-  process.env.NEXT_PUBLIC_CONTACT_EMAIL || "meserigne.ndiaye@mega-sn.com";
+  process.env.NEXT_PUBLIC_CONTACT_EMAIL || "meserigne@gmail.com";
 
 export function buildClientAutoresponse(data: {
   name: string;

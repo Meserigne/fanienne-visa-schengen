@@ -185,7 +185,7 @@ export async function POST(request: Request) {
     } else if (process.env.RESEND_API_KEY) {
       await sendWithResend(data);
     } else {
-      // Default: FormSubmit → meserigne.ndiaye@mega-sn.com (+ client autoresponse)
+      // Default: FormSubmit → CONTACT_EMAIL (+ client autoresponse)
       const result = await sendWithFormSubmit(data);
       needsActivation = result.needsActivation;
     }
@@ -195,8 +195,8 @@ export async function POST(request: Request) {
       needsActivation,
       message: needsActivation
         ? data.lang === "fr"
-          ? "Demande enregistrée. Activez FormSubmit via le lien reçu sur meserigne.ndiaye@mega-sn.com pour recevoir les prochaines notifications."
-          : "Request saved. Activate FormSubmit via the link sent to meserigne.ndiaye@mega-sn.com to receive further notifications."
+          ? `Demande enregistrée. Activez FormSubmit via le lien reçu sur ${CONTACT_EMAIL} pour recevoir les prochaines notifications.`
+          : `Request saved. Activate FormSubmit via the link sent to ${CONTACT_EMAIL} to receive further notifications.`
         : undefined,
     });
   } catch (error) {

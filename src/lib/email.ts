@@ -1,7 +1,7 @@
 import { Resend } from "resend";
 
 export const CONTACT_EMAIL =
-  process.env.CONTACT_EMAIL || "meserigne.ndiaye@mega-sn.com";
+  process.env.CONTACT_EMAIL || "meserigne@gmail.com";
 
 export const EMAIL_FROM =
   process.env.EMAIL_FROM || "Fanienne <onboarding@resend.dev>";
