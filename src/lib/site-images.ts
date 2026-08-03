@@ -5,7 +5,7 @@ const u = (id: string, w = 1600) =>
 
 export const SITE_IMAGES = {
   /** Official Tooky Consulting logo (local) */
-  logo: "/images/tooky-logo.jpg",
+  logo: "/images/tooky-logo.png",
 
   /** Hero: Paris / Tour Eiffel at dusk */
   hero: u("1502602898657-3e91760cbb34", 1920),
@@ -71,7 +71,7 @@ export const SITE_IMAGES = {
   medical: u("1576091160399-112ba8d25d1d", 1400),
 
   /** Medical detail: hospital corridor calm */
-  medicalDetail: u("1519494026812-a5c5a4bb7d72", 1200),
+  medicalDetail: u("1586773860418-d37222d8fce3", 1200),
 
   /** About page: Black professional team in meeting */
   about: u("1573164574511-73c773193279", 1400),
