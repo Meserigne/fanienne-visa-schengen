@@ -17,7 +17,7 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
         style={{ background: "var(--c-ink-950)", borderColor: "var(--border-inverse)" }}
       >
         <div className="mx-auto flex max-w-[1400px] flex-wrap items-baseline justify-between gap-8">
-          <BrandLogo variant="white" className="h-16 w-auto object-contain" />
+          <BrandLogo variant="white" className="h-20 w-auto object-contain" />
           <div className="flex flex-wrap gap-7 text-sm" style={{ fontFamily: "var(--font-ui)" }}>
             <Link href="/etudiants" style={{ color: "var(--text-on-dark-muted)" }}>
               {lang === "fr" ? "Étudiants" : "Students"}
@@ -59,7 +59,7 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
         style={{ borderColor: "var(--border-inverse)" }}
       >
         <div>
-          <BrandLogo variant="white" className="mb-4 h-20 w-auto object-contain" />
+          <BrandLogo variant="white" className="mb-4 h-24 w-auto object-contain" />
           <p className="max-w-[36ch] text-[15px] leading-[1.7]">
             {lang === "fr"
               ? "Accompagnement visa Schengen à Dakar. Dossiers préparés pour convaincre."

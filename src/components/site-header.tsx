@@ -52,7 +52,7 @@ export function SiteHeader() {
           <BrandLogo
             variant={solid ? "black" : "white"}
             priority
-            className="h-12 w-auto object-contain sm:h-14"
+            className="h-16 w-auto object-contain sm:h-[4.5rem]"
           />
         </Link>
 
