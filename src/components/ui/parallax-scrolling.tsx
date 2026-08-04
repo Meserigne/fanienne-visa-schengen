@@ -94,7 +94,7 @@ export function ParallaxHero() {
             className="absolute inset-0 opacity-50"
             style={{
               background:
-                "radial-gradient(ellipse 60% 50% at 80% 20%, rgba(36,80,232,0.4), transparent 60%)",
+                "radial-gradient(ellipse 60% 50% at 80% 20%, rgba(36, 80, 232,0.4), transparent 60%)",
             }}
           />
         </div>

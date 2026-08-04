@@ -188,7 +188,7 @@ export default function PrivacyPage() {
           className="pointer-events-none absolute inset-0 opacity-40"
           style={{
             background:
-              "radial-gradient(ellipse 60% 50% at 20% 30%, rgba(36,80,232,0.35), transparent 60%)",
+              "radial-gradient(ellipse 60% 50% at 20% 30%, rgba(36, 80, 232,0.35), transparent 60%)",
           }}
         />
         <div className="relative mx-auto max-w-[1400px] px-6 pb-16 sm:px-10 lg:px-14 lg:pb-20">

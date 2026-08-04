@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Reveal } from "@/components/reveal";
-import { DESTINATIONS } from "@/lib/destinations";
+import { DestinationSelect } from "@/components/destination-select";
 import {
   buildClientAutoresponse,
   CONTACT_EMAIL,
@@ -192,7 +192,7 @@ export function EligibilityForm() {
       <div
         className="pointer-events-none absolute -left-24 top-0 h-72 w-72 rounded-full opacity-40"
         style={{
-          background: "radial-gradient(circle, rgba(36,80,232,0.35), transparent 70%)",
+          background: "radial-gradient(circle, rgba(36, 80, 232,0.35), transparent 70%)",
         }}
       />
       <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 items-start gap-14 lg:grid-cols-2 lg:gap-20">
@@ -305,26 +305,11 @@ export function EligibilityForm() {
                     >
                       {t.destination}
                     </Label>
-                    <select
+                    <DestinationSelect
                       id="destination"
                       name="Destination"
                       required
-                      className={fieldClass}
-                      style={{
-                        borderColor: "var(--border-strong)",
-                        color: "var(--text-primary)",
-                        background: "var(--c-white)",
-                      }}
-                    >
-                      {DESTINATIONS.map((dest) => {
-                        const label = lang === "fr" ? dest.fr : dest.en;
-                        return (
-                          <option key={dest.code} value={label}>
-                            {dest.flag} {label}
-                          </option>
-                        );
-                      })}
-                    </select>
+                    />
                   </div>
                 </div>
 

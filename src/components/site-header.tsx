@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { BrandLogo } from "@/components/brand-logo";
 import { useLanguage } from "@/lib/language-context";
 
 const NAV = [
@@ -47,31 +48,12 @@ export function SiteHeader() {
       }}
     >
       <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-6 px-6 py-4 sm:px-10 lg:px-14">
-        <Link
-          href="/"
-          className="flex items-baseline gap-2.5"
-          style={{ color: solid ? "var(--text-primary)" : "var(--text-on-dark)" }}
-        >
-          <span
-            className="text-[18px] font-semibold tracking-[0.06em] sm:text-[20px]"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
-            TOOKY CONSULTING
-          </span>
-          <span
-            className="hidden h-1.5 w-1.5 self-center rounded-full sm:block"
-            style={{ background: "var(--accent)" }}
+        <Link href="/" className="relative flex shrink-0 items-center" aria-label="Tooky Consulting">
+          <BrandLogo
+            variant={solid ? "black" : "white"}
+            priority
+            className="h-12 w-auto object-contain sm:h-14"
           />
-          <span
-            className="hidden text-[11px] uppercase sm:inline"
-            style={{
-              fontFamily: "var(--font-ui)",
-              letterSpacing: "0.18em",
-              color: solid ? "var(--text-secondary)" : "var(--text-on-dark-muted)",
-            }}
-          >
-            {lang === "fr" ? "Visa Schengen" : "Schengen Visa"}
-          </span>
         </Link>
 
         <nav

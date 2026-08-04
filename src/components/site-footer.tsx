@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { BrandLogo } from "@/components/brand-logo";
 import { useLanguage } from "@/lib/language-context";
 
 const WHATSAPP = "+221 77 000 00 00";
@@ -16,12 +17,7 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
         style={{ background: "var(--c-ink-950)", borderColor: "var(--border-inverse)" }}
       >
         <div className="mx-auto flex max-w-[1400px] flex-wrap items-baseline justify-between gap-8">
-          <p
-            className="text-[24px] font-semibold"
-            style={{ fontFamily: "var(--font-display)", color: "var(--text-on-dark)" }}
-          >
-            TOOKY CONSULTING
-          </p>
+          <BrandLogo variant="white" className="h-16 w-auto object-contain" />
           <div className="flex flex-wrap gap-7 text-sm" style={{ fontFamily: "var(--font-ui)" }}>
             <Link href="/etudiants" style={{ color: "var(--text-on-dark-muted)" }}>
               {lang === "fr" ? "Étudiants" : "Students"}
@@ -63,12 +59,7 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
         style={{ borderColor: "var(--border-inverse)" }}
       >
         <div>
-          <p
-            className="mb-4 text-[32px] font-semibold tracking-tight"
-            style={{ fontFamily: "var(--font-display)", color: "var(--text-on-dark)" }}
-          >
-            TOOKY CONSULTING
-          </p>
+          <BrandLogo variant="white" className="mb-4 h-20 w-auto object-contain" />
           <p className="max-w-[36ch] text-[15px] leading-[1.7]">
             {lang === "fr"
               ? "Accompagnement visa Schengen à Dakar. Dossiers préparés pour convaincre."
