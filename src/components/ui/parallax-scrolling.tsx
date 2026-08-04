@@ -15,11 +15,13 @@ export function ParallaxHero() {
 
   const t = {
     fr: {
+      brand: "TOOKY CONSULTING",
       title: "Votre dossier Schengen, préparé pour convaincre.",
       body: "Depuis Dakar, Tooky Consulting prépare, vérifie et suit votre demande : études, affaires, famille ou soins.",
       ctaSecondary: "Découvrir nos formules",
     },
     en: {
+      brand: "TOOKY CONSULTING",
       title: "Your Schengen file, built to convince.",
       body: "From Dakar, Tooky Consulting prepares, reviews and tracks your application: studies, business, family or medical care.",
       ctaSecondary: "Explore our plans",
@@ -103,6 +105,12 @@ export function ParallaxHero() {
             className="grid max-w-3xl grid-cols-1 gap-5"
             style={{ color: "var(--text-on-dark)" }}
           >
+            <p
+              className="text-[clamp(3.5rem,10vw,7.5rem)] leading-[0.92] font-semibold tracking-tight"
+              style={{ fontFamily: "var(--font-display)" }}
+            >
+              {t.brand}
+            </p>
             <h1
               className="max-w-[14ch] text-[clamp(2.1rem,4.2vw,3.75rem)] leading-[1.1] font-semibold tracking-tight text-balance"
               style={{ fontFamily: "var(--font-display)" }}
