@@ -32,6 +32,11 @@ export const metadata: Metadata = {
   authors: [{ name: SITE_NAME }],
   creator: SITE_NAME,
   publisher: SITE_NAME,
+  // Paste the code from Google Search Console (HTML tag method) into
+  // GOOGLE_SITE_VERIFICATION on Vercel, then redeploy.
+  verification: process.env.GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+    : undefined,
   alternates: {
     canonical: SITE_URL,
     languages: {
