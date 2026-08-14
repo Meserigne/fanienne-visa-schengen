@@ -125,7 +125,7 @@ export default function EtudiantsPage() {
   const t = {
     fr: {
       title: "Étudier en Europe, avec un dossier qui tient.",
-      body: "Depuis Dakar, Tooky Consulting prépare votre visa étudiant : Campus France, ressources, hébergement et entretien. Vous avancez avec une méthode claire.",
+      body: "Depuis Dakar, Tukki Consulting prépare votre visa étudiant : Campus France, ressources, hébergement et entretien. Vous avancez avec une méthode claire.",
       whyTitle: "Un dossier étudiant solide change la donne.",
       servicesTitle: "Ce que comprend la formule Student Care.",
       promiseTitle: "Vous décrivez le projet. Nous structurons le parcours.",
@@ -138,7 +138,7 @@ export default function EtudiantsPage() {
     },
     en: {
       title: "Study in Europe, with a file that holds up.",
-      body: "From Dakar, Tooky Consulting prepares your student visa: Campus France, funding, housing and interview. You move forward with a clear method.",
+      body: "From Dakar, Tukki Consulting prepares your student visa: Campus France, funding, housing and interview. You move forward with a clear method.",
       whyTitle: "A solid student file changes the odds.",
       servicesTitle: "What the Student Care plan includes.",
       promiseTitle: "You describe the project. We structure the path.",
@@ -163,7 +163,7 @@ export default function EtudiantsPage() {
           className="pointer-events-none absolute inset-0 opacity-45"
           style={{
             background:
-              "radial-gradient(ellipse 65% 55% at 15% 30%, rgba(36, 80, 232,0.4), transparent 60%)",
+              "radial-gradient(ellipse 65% 55% at 15% 30%, rgba(232, 78, 27,0.4), transparent 60%)",
           }}
         />
         <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 items-end gap-12 px-6 pb-16 sm:px-10 lg:grid-cols-12 lg:gap-10 lg:px-14 lg:pb-20">
@@ -176,7 +176,7 @@ export default function EtudiantsPage() {
                 color: "var(--c-cobalt-300)",
               }}
             >
-              TOOKY CONSULTING
+              tukki CONSULTING
             </p>
             <h1
               className="mb-6 max-w-[18ch] text-[clamp(2.1rem,4.5vw,3.75rem)] leading-[1.05] font-semibold tracking-tight text-balance"

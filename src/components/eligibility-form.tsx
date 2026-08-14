@@ -26,30 +26,35 @@ export function EligibilityForm() {
 
   const t = {
     fr: {
-      title: "Évaluez votre projet en 2 minutes",
-      body: "Décrivez votre situation. Un conseiller Tooky vous répond sous 48 heures avec une lecture honnête et la formule adaptée.",
+      title: "Formulaire de contact",
+      subtitle: "Parlez-nous de votre projet de mobilité",
+      body: "Chaque situation est unique. Complétez le formulaire ci-dessous : notre équipe analysera votre demande avec attention et vous recontactera dans les plus brefs délais pour vous proposer un accompagnement adapté.",
+      body2:
+        "Votre projet de mobilité mérite une attention particulière. Faites le premier pas, nous vous accompagnons pour la suite.",
+      formTitle: "Formulaire de demande d'accompagnement",
       points: [
         "Évaluation gratuite et sans engagement",
         "Réponse sous 48 h avec la formule adaptée",
         "Confidentialité totale de vos informations",
       ],
-      profile: "Profil",
+      profile: "Motif du voyage",
       profileOptions: [
-        "Étudiant",
-        "Professionnel / Business",
-        "Tourisme / Famille",
-        "Santé / Soins médicaux",
-        "Autre",
+        "Tourisme",
+        "Affaires",
+        "Études",
+        "Travail",
+        "Regroupement",
       ],
-      destination: "Destination",
-      name: "Nom complet",
+      destination: "Destination souhaitée",
+      name: "Nom & prénom",
       namePlaceholder: "Votre nom et prénom",
-      email: "Email",
+      email: "Adresse e-mail",
       emailPlaceholder: "vous@exemple.com",
-      phone: "Téléphone",
+      phone: "Téléphone (WhatsApp)",
       phonePlaceholder: "+221 77 000 00 00",
-      project: "Votre projet en quelques mots",
-      projectPlaceholder: "Études, salon professionnel, mission d'affaires…",
+      project: "Présentez-nous votre projet",
+      projectPlaceholder:
+        "Décrivez vos dates de voyage prévues, votre situation actuelle et vos interrogations…",
       submit: "Envoyer ma demande",
       sending: "Envoi en cours…",
       fineprint: "Gratuit · Sans engagement · Confirmation e-mail + SMS · Réponse sous 48 h",
@@ -58,30 +63,35 @@ export function EligibilityForm() {
         "Merci. Votre demande est bien reçue. Un e-mail et un SMS de confirmation vous sont envoyés. Nous vous recontactons sous peu.",
     },
     en: {
-      title: "Assess your project in 2 minutes",
-      body: "Describe your situation. A Tooky advisor replies within 48 hours with an honest reading and the right plan.",
+      title: "Contact form",
+      subtitle: "Tell us about your mobility project",
+      body: "Every situation is unique. Complete the form below: our team will review your request carefully and get back to you promptly with tailored support.",
+      body2:
+        "Your mobility project deserves careful attention. Take the first step — we support you from there.",
+      formTitle: "Support request form",
       points: [
         "Free, no-obligation assessment",
         "Reply within 48 hours with the right plan",
         "Your information stays fully confidential",
       ],
-      profile: "Profile",
+      profile: "Purpose of travel",
       profileOptions: [
-        "Student",
-        "Professional / Business",
-        "Tourism / Family",
-        "Health / Medical care",
-        "Other",
+        "Tourism",
+        "Business",
+        "Studies",
+        "Work",
+        "Family reunification",
       ],
-      destination: "Destination",
-      name: "Full name",
+      destination: "Desired destination",
+      name: "First & last name",
       namePlaceholder: "Your full name",
-      email: "Email",
+      email: "Email address",
       emailPlaceholder: "you@example.com",
-      phone: "Phone",
+      phone: "Phone (WhatsApp)",
       phonePlaceholder: "+221 77 000 00 00",
-      project: "Your project in a few words",
-      projectPlaceholder: "Studies, trade fair, business trip…",
+      project: "Tell us about your project",
+      projectPlaceholder:
+        "Describe your planned travel dates, current situation and questions…",
       submit: "Send my request",
       sending: "Sending…",
       fineprint: "Free · No obligation · Email + SMS confirmation · Reply within 48 h",
@@ -126,7 +136,7 @@ export function EligibilityForm() {
     const next = form.elements.namedItem("_next") as HTMLInputElement | null;
 
     if (subject) {
-      subject.value = `[Tooky] Nouvelle demande d'éligibilité - ${name}`;
+      subject.value = `[Tukki] Nouvelle demande d'éligibilité - ${name}`;
     }
     if (autoresponse) {
       autoresponse.value = buildClientAutoresponse({
@@ -192,22 +202,34 @@ export function EligibilityForm() {
       <div
         className="pointer-events-none absolute -left-24 top-0 h-72 w-72 rounded-full opacity-40"
         style={{
-          background: "radial-gradient(circle, rgba(36, 80, 232,0.35), transparent 70%)",
+          background: "radial-gradient(circle, rgba(232, 78, 27,0.35), transparent 70%)",
         }}
       />
       <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 items-start gap-14 lg:grid-cols-2 lg:gap-20">
         <Reveal>
           <h2
-            className="mb-5 max-w-[18ch] text-[clamp(2.15rem,4vw,3.4rem)] leading-[1.1] font-semibold tracking-tight text-balance"
+            className="mb-3 max-w-[18ch] text-[clamp(2.15rem,4vw,3.4rem)] leading-[1.1] font-semibold tracking-tight text-balance"
             style={{ fontFamily: "var(--font-display)", color: "var(--text-on-dark)" }}
           >
             {t.title}
           </h2>
           <p
-            className="mb-8 max-w-[48ch] text-[19px] leading-[1.7]"
+            className="mb-4 max-w-[40ch] text-[18px] font-medium leading-[1.5]"
+            style={{ color: "var(--c-cyan-300)" }}
+          >
+            {t.subtitle}
+          </p>
+          <p
+            className="mb-4 max-w-[48ch] text-[17px] leading-[1.7]"
             style={{ color: "var(--text-on-dark-muted)" }}
           >
             {t.body}
+          </p>
+          <p
+            className="mb-8 max-w-[48ch] text-[16px] leading-[1.7]"
+            style={{ color: "var(--text-on-dark-muted)" }}
+          >
+            {t.body2}
           </p>
           <div
             className="flex flex-col gap-3.5 text-[17px]"
@@ -242,10 +264,16 @@ export function EligibilityForm() {
                 onSubmit={handleSubmit}
                 className="flex flex-col gap-4.5"
               >
+                <p
+                  className="mb-1 text-[15px] font-semibold"
+                  style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
+                >
+                  {t.formTitle}
+                </p>
                 <input
                   type="hidden"
                   name="_subject"
-                  defaultValue="[Tooky] Nouvelle demande d'éligibilité"
+                  defaultValue="[Tukki] Nouvelle demande d'éligibilité"
                 />
                 <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_captcha" value="false" />
@@ -254,7 +282,7 @@ export function EligibilityForm() {
                 <input
                   type="hidden"
                   name="_autoresponse"
-                  defaultValue="Bonjour, merci. Votre demande est bien reçue. Un conseiller Tooky vous recontacte sous peu. Cordialement, L'équipe Tooky Consulting"
+                  defaultValue="Bonjour, merci. Votre demande est bien reçue. Un conseiller Tukki vous recontacte sous peu. Cordialement, L'équipe Tukki Consulting"
                 />
                 <input
                   type="text"
@@ -414,7 +442,7 @@ export function EligibilityForm() {
                     fontFamily: "var(--font-ui)",
                     background: "var(--brand)",
                     color: "var(--text-on-dark)",
-                    boxShadow: "0 12px 28px -12px rgba(36, 80, 232, 0.55)",
+                    boxShadow: "0 12px 28px -12px rgba(232, 78, 27, 0.55)",
                   }}
                 >
                   {loading ? t.sending : t.submit}

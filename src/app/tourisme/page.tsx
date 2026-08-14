@@ -125,7 +125,7 @@ export default function TourismePage() {
   const t = {
     fr: {
       title: "Partir en famille ou en vacances, sans dossier approximatif.",
-      body: "Depuis Dakar, Tooky Consulting prépare votre visa de court séjour : analyse du profil, réservations, assurance et prise de RDV.",
+      body: "Depuis Dakar, Tukki Consulting prépare votre visa de court séjour : analyse du profil, réservations, assurance et prise de RDV.",
       whyTitle: "Un séjour en Europe commence par un dossier solide.",
       servicesTitle: "La formule Essentielle, de l'analyse au rendez-vous.",
       promiseTitle: "Vous décrivez le voyage. Nous structurons le dossier.",
@@ -138,7 +138,7 @@ export default function TourismePage() {
     },
     en: {
       title: "Tourism & family: a clean file, without the stress.",
-      body: "From Dakar, Tooky Consulting prepares your short-stay visa: profile review, hotel and flight bookings, insurance and appointment booking.",
+      body: "From Dakar, Tukki Consulting prepares your short-stay visa: profile review, hotel and flight bookings, insurance and appointment booking.",
       whyTitle: "A trip to Europe starts with a solid file.",
       servicesTitle: "The Essential plan, from review to appointment.",
       promiseTitle: "You describe the trip. We structure the file.",
@@ -163,7 +163,7 @@ export default function TourismePage() {
           className="pointer-events-none absolute inset-0 opacity-45"
           style={{
             background:
-              "radial-gradient(ellipse 65% 55% at 15% 30%, rgba(36, 80, 232,0.4), transparent 60%)",
+              "radial-gradient(ellipse 65% 55% at 15% 30%, rgba(232, 78, 27,0.4), transparent 60%)",
           }}
         />
         <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 items-end gap-12 px-6 pb-16 sm:px-10 lg:grid-cols-12 lg:gap-10 lg:px-14 lg:pb-20">
@@ -176,7 +176,7 @@ export default function TourismePage() {
                 color: "var(--c-cobalt-300)",
               }}
             >
-              TOOKY CONSULTING
+              tukki CONSULTING
             </p>
             <h1
               className="mb-6 max-w-[18ch] text-[clamp(2.1rem,4.5vw,3.75rem)] leading-[1.05] font-semibold tracking-tight text-balance"

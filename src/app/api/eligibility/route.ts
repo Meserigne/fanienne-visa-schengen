@@ -38,7 +38,7 @@ async function sendWithWeb3Forms(data: EligibilityPayload) {
     body: JSON.stringify({
       access_key: accessKey,
       subject: admin.subject,
-      from_name: "Tooky Consulting",
+      from_name: "Tukki Consulting",
       name: data.name,
       email: data.email,
       phone: data.phone || "",

@@ -11,6 +11,8 @@ import { TrackPanels } from "@/components/track-panels";
 import { PacksSection } from "@/components/packs-section";
 import { ServiceStack, type ServiceItem } from "@/components/service-stack";
 import { StepsPan, type StepItem } from "@/components/steps-pan";
+import { WhyChooseSection } from "@/components/why-choose-section";
+import { ResponsibilityNote } from "@/components/responsibility-note";
 import { SITE_IMAGES } from "@/lib/site-images";
 
 const SERVICES: ServiceItem[] = [
@@ -256,7 +258,12 @@ export default function Home() {
 
       <StepsPan steps={STEPS} title={t.howTitle} />
 
+      <WhyChooseSection />
+
       <EligibilityForm />
+
+      <ResponsibilityNote />
+
       <SiteFooter variant="full" />
     </>
   );

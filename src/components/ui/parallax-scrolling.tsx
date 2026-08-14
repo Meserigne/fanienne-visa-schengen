@@ -15,15 +15,15 @@ export function ParallaxHero() {
 
   const t = {
     fr: {
-      brand: "TOOKY CONSULTING",
+      brand: "tukki CONSULTING",
       title: "Votre dossier Schengen, préparé pour convaincre.",
-      body: "Depuis Dakar, Tooky Consulting prépare, vérifie et suit votre demande : études, affaires, famille ou soins.",
+      body: "Depuis Dakar, Tukki Consulting prépare, vérifie et suit votre demande : études, affaires, famille ou soins.",
       ctaSecondary: "Découvrir nos formules",
     },
     en: {
-      brand: "TOOKY CONSULTING",
+      brand: "tukki CONSULTING",
       title: "Your Schengen file, built to convince.",
-      body: "From Dakar, Tooky Consulting prepares, reviews and tracks your application: studies, business, family or medical care.",
+      body: "From Dakar, Tukki Consulting prepares, reviews and tracks your application: studies, business, family or medical care.",
       ctaSecondary: "Explore our plans",
     },
   }[lang];
@@ -82,7 +82,7 @@ export function ParallaxHero() {
         <div data-parallax-media className="absolute inset-0 will-change-transform">
           <Image
             src={SITE_IMAGES.hero}
-            alt="Tooky Consulting, accompagnement visa Schengen depuis Dakar"
+            alt="Tukki Consulting, accompagnement visa Schengen depuis Dakar"
             fill
             priority
             sizes="100vw"
@@ -94,7 +94,7 @@ export function ParallaxHero() {
             className="absolute inset-0 opacity-50"
             style={{
               background:
-                "radial-gradient(ellipse 60% 50% at 80% 20%, rgba(36, 80, 232,0.4), transparent 60%)",
+                "radial-gradient(ellipse 60% 50% at 80% 20%, rgba(232, 78, 27,0.35), transparent 60%)",
             }}
           />
         </div>
@@ -131,7 +131,7 @@ export function ParallaxHero() {
                   fontFamily: "var(--font-ui)",
                   background: "var(--brand)",
                   color: "var(--text-on-dark)",
-                  boxShadow: "0 12px 32px -12px rgba(36, 80, 232, 0.65)",
+                  boxShadow: "0 12px 32px -12px rgba(232, 78, 27, 0.65)",
                 }}
               >
                 {CTA[lang]}

@@ -13,22 +13,22 @@ const CTA = { fr: "Envoyer ma demande", en: "Send my request" };
 const VALUES = [
   {
     fr: {
-      title: "Clarté",
-      body: "Pas de jargon inutile. Nous vous disons ce qui est réaliste, ce qui manque, et la prochaine étape concrète.",
+      title: "100% de rigueur",
+      body: "Dans le traitement de votre dossier, chaque pièce et chaque étape sont vérifiées avec exigence.",
     },
     en: {
-      title: "Clarity",
-      body: "No useless jargon. We tell you what is realistic, what is missing, and the next concrete step.",
+      title: "100% rigour",
+      body: "In processing your file, every document and every step is checked with high standards.",
     },
   },
   {
     fr: {
-      title: "Rigueur",
-      body: "Chaque pièce est vérifiée. Un dossier soigné réduit les refus évitables et renforce votre historique de voyage.",
+      title: "< 48h",
+      body: "Pour prendre en compte votre demande et vous répondre avec une première lecture claire.",
     },
     en: {
-      title: "Rigour",
-      body: "Every document is checked. A careful file reduces avoidable refusals and strengthens your travel record.",
+      title: "< 48h",
+      body: "To acknowledge your request and reply with a clear first reading.",
     },
   },
   {
@@ -71,47 +71,49 @@ export default function AboutPage() {
 
   const t = {
     fr: {
-      title: "Le cabinet qui structure votre départ.",
-      body: "Tooky Consulting accompagne les demandes de visa Schengen depuis Dakar. Notre rôle : rendre chaque dossier lisible, complet et crédible.",
-      missionTitle: "Notre mission.",
+      title: "Qui sommes-nous ?",
+      subtitle: "Vos démarches de visa, guidées par des experts du domaine",
+      body: "La préparation d'un dossier Schengen demande de la précision et une excellente connaissance des exigences consulaires. Grâce à notre expérience terrain, nous simplifions chaque étape de vos démarches administratives.",
+      missionTitle: "Notre engagement.",
       missionLead:
-        "Rendre chaque dossier lisible, complet et crédible aux yeux du consulat.",
+        "Transformer une procédure souvent perçue comme complexe en un parcours serein, fluide et parfaitement maîtrisé.",
       missionBody:
-        "Depuis Dakar, nous analysons votre profil, constituons les pièces, contrôlons deux fois, prenons le RDV et suivons jusqu'à la décision.",
+        "Ensemble, nous créons un dossier solide et maximisons vos chances d'obtenir votre visa.",
       missionNote:
-        "Tooky Consulting est un cabinet de conseil indépendant. Nous ne délivrons pas de visas : la décision appartient aux autorités consulaires. Notre rôle est de vous mettre dans les meilleures conditions pour réussir.",
+        "tukki CONSULTING est un cabinet de conseil indépendant. Nous ne délivrons pas de visas : la décision appartient aux autorités consulaires. Notre rôle est de vous mettre dans les meilleures conditions pour réussir.",
       missionPoints: [
         "Une méthode claire, adaptée à votre motif de voyage",
         "Double vérification avant dépôt pour limiter les refus évitables",
         "Quatre formules : Essentielle, Student Care, Pro Executive, Urgence Santé",
       ],
-      valuesTitle: "Ce qui nous guide.",
+      valuesTitle: "tukki CONSULTING en chiffres",
       audiencesTitle: "Pour qui nous travaillons.",
       ctaTitle: "Parlez-nous de votre projet.",
       ctaBody:
-        "Évaluation gratuite sous 48 heures. Décrivez votre situation : un conseiller Tooky vous répond.",
+        "Évaluation gratuite sous 48 heures. Décrivez votre situation : un conseiller Tukki vous répond.",
       ctaButton: "Envoyer ma demande",
     },
     en: {
-      title: "The firm that structures your departure.",
-      body: "Tooky Consulting supports Schengen visa applications from Dakar. Our role: make every file clear, complete and credible.",
-      missionTitle: "Our mission.",
+      title: "Who we are",
+      subtitle: "Your visa steps, guided by field experts",
+      body: "Preparing a Schengen file demands precision and strong knowledge of consular requirements. With our field experience, we simplify every step of your administrative process.",
+      missionTitle: "Our commitment.",
       missionLead:
-        "Make every file clear, complete and credible in the eyes of the consulate.",
+        "Turn a procedure often seen as complex into a calm, smooth and fully controlled path.",
       missionBody:
-        "From Dakar, we review your profile, assemble documents, double-check, book the appointment and follow through to the decision.",
+        "Together, we build a solid file and maximise your chances of obtaining your visa.",
       missionNote:
-        "Tooky Consulting is an independent advisory firm. We do not issue visas: decisions belong to consular authorities. Our role is to put you in the best position to succeed.",
+        "tukki CONSULTING is an independent advisory firm. We do not issue visas: decisions belong to consular authorities. Our role is to put you in the best position to succeed.",
       missionPoints: [
         "A clear method matched to your travel purpose",
         "Double verification before submission to reduce avoidable refusals",
         "Four plans: Essential, Student Care, Pro Executive, Health Priority",
       ],
-      valuesTitle: "What guides us.",
+      valuesTitle: "tukki CONSULTING in figures",
       audiencesTitle: "Who we work with.",
       ctaTitle: "Tell us about your project.",
       ctaBody:
-        "Free assessment within 48 hours. Describe your situation: a Tooky advisor replies.",
+        "Free assessment within 48 hours. Describe your situation: a Tukki advisor replies.",
       ctaButton: "Send my request",
     },
   }[lang];
@@ -128,7 +130,7 @@ export default function AboutPage() {
           className="pointer-events-none absolute inset-0 opacity-45"
           style={{
             background:
-              "radial-gradient(ellipse 65% 55% at 20% 30%, rgba(36, 80, 232,0.4), transparent 60%)",
+              "radial-gradient(ellipse 65% 55% at 20% 30%, rgba(232, 78, 27,0.4), transparent 60%)",
           }}
         />
         <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 items-end gap-12 px-6 pb-16 sm:px-10 lg:grid-cols-12 lg:gap-10 lg:px-14 lg:pb-20">
@@ -141,16 +143,22 @@ export default function AboutPage() {
                 color: "var(--c-cobalt-300)",
               }}
             >
-              TOOKY CONSULTING
+              tukki CONSULTING
             </p>
             <h1
-              className="mb-6 max-w-[14ch] text-[clamp(2.1rem,4.5vw,3.75rem)] leading-[1.05] font-semibold tracking-tight text-balance"
+              className="mb-4 max-w-[16ch] text-[clamp(2.1rem,4.5vw,3.75rem)] leading-[1.05] font-semibold tracking-tight text-balance"
               style={{ fontFamily: "var(--font-display)", color: "var(--text-on-dark)" }}
             >
               {t.title}
             </h1>
             <p
-              className="mb-8 max-w-[50ch] text-[19px] leading-[1.7]"
+              className="mb-5 max-w-[36ch] text-[18px] font-medium leading-[1.5]"
+              style={{ color: "var(--c-cyan-300)" }}
+            >
+              {t.subtitle}
+            </p>
+            <p
+              className="mb-8 max-w-[50ch] text-[18px] leading-[1.7]"
               style={{ color: "var(--text-on-dark-muted)" }}
             >
               {t.body}
@@ -173,8 +181,8 @@ export default function AboutPage() {
                 src={SITE_IMAGES.about}
                 alt={
                   lang === "fr"
-                    ? "Équipe Tooky Consulting - cabinet d'accompagnement visa Schengen à Dakar"
-                    : "Tooky Consulting team - Schengen visa consultancy in Dakar"
+                    ? "Équipe Tukki Consulting - cabinet d'accompagnement visa Schengen à Dakar"
+                    : "Tukki Consulting team - Schengen visa consultancy in Dakar"
                 }
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"

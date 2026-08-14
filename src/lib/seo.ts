@@ -4,15 +4,15 @@ export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
   "https://tookyconsulting.com";
 
-export const SITE_NAME = "Tooky Consulting";
+export const SITE_NAME = "Tukki Consulting";
 
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/images/passeport-france-cover.png`;
 
 export const seo = {
   home: {
-    title: "Accompagnement visa Schengen à Dakar | Tooky Consulting",
+    title: "Accompagnement visa Schengen à Dakar | Tukki Consulting",
     description:
-      "Tooky Consulting prépare, vérifie et suit votre dossier visa Schengen depuis Dakar. Études, affaires, famille ou soins. Évaluation gratuite sous 48 h.",
+      "Tukki Consulting prépare, vérifie et suit votre dossier visa Schengen depuis Dakar. Études, affaires, famille ou soins. Évaluation gratuite sous 48 h.",
     keywords: [
       "visa Schengen Sénégal",
       "accompagnement visa Schengen Dakar",
@@ -22,13 +22,13 @@ export const seo = {
       "visa affaires Sénégal",
       "visa tourisme Schengen",
       "visa médical Europe",
-      "Tooky Consulting visa",
+      "Tukki Consulting visa",
     ],
   },
   etudiants: {
-    title: "Visa étudiant Schengen · Formule Student Care | Tooky Consulting",
+    title: "Visa étudiant Schengen · Formule Student Care | Tukki Consulting",
     description:
-      "Étudier en Europe avec un dossier qui tient. Campus France, ressources, hébergement et entretien. Tooky Consulting à Dakar.",
+      "Étudier en Europe avec un dossier qui tient. Campus France, ressources, hébergement et entretien. Tukki Consulting à Dakar.",
     keywords: [
       "visa étudiant Schengen",
       "visa étudiant France Sénégal",
@@ -39,9 +39,9 @@ export const seo = {
     ],
   },
   entreprises: {
-    title: "Visa d'affaires Schengen · Formule Pro Executive | Tooky Consulting",
+    title: "Visa d'affaires Schengen · Formule Pro Executive | Tukki Consulting",
     description:
-      "Vos opportunités business ne doivent pas attendre un visa. Missions, foires, invitations. Tooky Consulting à Dakar.",
+      "Vos opportunités business ne doivent pas attendre un visa. Missions, foires, invitations. Tukki Consulting à Dakar.",
     keywords: [
       "visa affaires Schengen",
       "visa business Sénégal",
@@ -52,7 +52,7 @@ export const seo = {
     ],
   },
   tourisme: {
-    title: "Visa tourisme & famille · Formule Essentielle | Tooky Consulting",
+    title: "Visa tourisme & famille · Formule Essentielle | Tukki Consulting",
     description:
       "Partir en famille ou en vacances sans dossier approximatif. Court séjour Schengen préparé depuis Dakar.",
     keywords: [
@@ -65,7 +65,7 @@ export const seo = {
     ],
   },
   sante: {
-    title: "Visa médical Schengen · Formule Urgence Santé | Tooky Consulting",
+    title: "Visa médical Schengen · Formule Urgence Santé | Tukki Consulting",
     description:
       "Quand les soins ne peuvent pas attendre, le dossier non plus. Visa médical accéléré depuis Dakar.",
     keywords: [
@@ -78,24 +78,24 @@ export const seo = {
     ],
   },
   about: {
-    title: "Qui nous sommes | Tooky Consulting Dakar",
+    title: "Qui nous sommes | Tukki Consulting Dakar",
     description:
-      "Tooky Consulting : le cabinet qui structure votre départ. Dossiers Schengen lisibles, complets et crédibles depuis Dakar.",
+      "Tukki Consulting : le cabinet qui structure votre départ. Dossiers Schengen lisibles, complets et crédibles depuis Dakar.",
     keywords: [
-      "Tooky Consulting Dakar",
+      "Tukki Consulting Dakar",
       "cabinet visa Schengen Sénégal",
-      "qui sommes nous Tooky Consulting",
+      "qui sommes nous Tukki Consulting",
       "accompagnement visa Dakar",
       "conseil visa Schengen",
     ],
   },
   privacy: {
-    title: "Politique de confidentialité | Tooky Consulting",
+    title: "Politique de confidentialité | Tukki Consulting",
     description:
-      "Politique de confidentialité de Tooky Consulting : collecte, usage et protection de vos données personnelles.",
+      "Politique de confidentialité de Tukki Consulting : collecte, usage et protection de vos données personnelles.",
     keywords: [
-      "politique de confidentialité Tooky Consulting",
-      "protection des données Tooky Consulting",
+      "politique de confidentialité Tukki Consulting",
+      "protection des données Tukki Consulting",
       "données personnelles visa Schengen",
     ],
   },

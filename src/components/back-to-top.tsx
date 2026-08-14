@@ -29,7 +29,7 @@ export function BackToTop() {
       style={{
         background: "var(--c-cobalt-500)",
         color: "var(--c-white)",
-        boxShadow: "0 10px 28px rgba(36, 80, 232, 0.35)",
+        boxShadow: "0 10px 28px rgba(232, 78, 27, 0.35)",
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0)" : "translateY(12px)",
         pointerEvents: visible ? "auto" : "none",

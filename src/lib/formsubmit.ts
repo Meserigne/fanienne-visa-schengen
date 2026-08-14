@@ -15,14 +15,14 @@ export function buildClientAutoresponse(data: {
       `Hello ${data.name},`,
       "",
       "Thank you. Your request has been received.",
-      "A Tooky advisor will review your profile and get back to you shortly.",
+      "A Tukki advisor will review your profile and get back to you shortly.",
       "",
       "Summary:",
       `- Profile: ${data.profile}`,
       `- Destination: ${data.destination}`,
       "",
       "Best regards,",
-      "The Tooky Consulting team",
+      "The Tukki Consulting team",
       "Dakar · contact@tookyconsulting.com",
     ].join("\n");
   }
@@ -31,14 +31,14 @@ export function buildClientAutoresponse(data: {
     `Bonjour ${data.name},`,
     "",
     "Merci. Votre demande est bien reçue.",
-    "Un conseiller Tooky analyse votre profil et vous recontacte sous peu.",
+    "Un conseiller Tukki analyse votre profil et vous recontacte sous peu.",
     "",
     "Récapitulatif :",
     `- Profil : ${data.profile}`,
     `- Destination : ${data.destination}`,
     "",
     "Cordialement,",
-    "L'équipe Tooky Consulting",
+    "L'équipe Tukki Consulting",
     "Dakar · contact@tookyconsulting.com",
   ].join("\n");
 }

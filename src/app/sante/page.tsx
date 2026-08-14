@@ -125,7 +125,7 @@ export default function SantePage() {
   const t = {
     fr: {
       title: "Quand les soins ne peuvent pas attendre, le dossier non plus.",
-      body: "Depuis Dakar, Tooky Consulting accélère votre visa pour soins spécialisés ou C.I.A. : devis hospitaliers, admission et coordination avec les établissements en Europe.",
+      body: "Depuis Dakar, Tukki Consulting accélère votre visa pour soins spécialisés ou C.I.A. : devis hospitaliers, admission et coordination avec les établissements en Europe.",
       whyTitle: "La santé impose le rythme. Le dossier doit suivre.",
       servicesTitle: "La formule Urgence Santé, de l'hôpital au visa.",
       promiseTitle: "Vous décrivez la situation. Nous structurons le dossier.",
@@ -138,7 +138,7 @@ export default function SantePage() {
     },
     en: {
       title: "When care cannot wait, neither can the file.",
-      body: "From Dakar, Tooky Consulting accelerates your visa for specialised care or medical evacuation: hospital quotes, admission and coordination with facilities in Europe.",
+      body: "From Dakar, Tukki Consulting accelerates your visa for specialised care or medical evacuation: hospital quotes, admission and coordination with facilities in Europe.",
       whyTitle: "Health sets the pace. The file must keep up.",
       servicesTitle: "The Health Priority plan, from hospital to visa.",
       promiseTitle: "You describe the situation. We structure the file.",
@@ -163,7 +163,7 @@ export default function SantePage() {
           className="pointer-events-none absolute inset-0 opacity-45"
           style={{
             background:
-              "radial-gradient(ellipse 65% 55% at 15% 30%, rgba(36, 80, 232,0.4), transparent 60%)",
+              "radial-gradient(ellipse 65% 55% at 15% 30%, rgba(232, 78, 27,0.4), transparent 60%)",
           }}
         />
         <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 items-end gap-12 px-6 pb-16 sm:px-10 lg:grid-cols-12 lg:gap-10 lg:px-14 lg:pb-20">
@@ -176,7 +176,7 @@ export default function SantePage() {
                 color: "var(--c-cobalt-300)",
               }}
             >
-              TOOKY CONSULTING
+              tukki CONSULTING
             </p>
             <h1
               className="mb-6 max-w-[18ch] text-[clamp(2.1rem,4.5vw,3.75rem)] leading-[1.05] font-semibold tracking-tight text-balance"

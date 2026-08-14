@@ -4,7 +4,7 @@ export const CONTACT_EMAIL =
   process.env.CONTACT_EMAIL || "meserigne@gmail.com";
 
 export const EMAIL_FROM =
-  process.env.EMAIL_FROM || "Tooky Consulting <onboarding@resend.dev>";
+  process.env.EMAIL_FROM || "Tukki Consulting <onboarding@resend.dev>";
 
 export type EligibilityPayload = {
   profile: string;
@@ -23,7 +23,7 @@ export function getResend() {
 }
 
 export function buildAdminEmail(data: EligibilityPayload) {
-  const subject = `[Tooky] Nouvelle demande d'éligibilité - ${data.name}`;
+  const subject = `[Tukki] Nouvelle demande d'éligibilité - ${data.name}`;
   const text = [
     "Nouvelle demande d'éligibilité visa Schengen",
     "",
@@ -55,56 +55,56 @@ export function buildAdminEmail(data: EligibilityPayload) {
 export function buildClientEmail(data: EligibilityPayload) {
   if (data.lang === "en") {
     return {
-      subject: "We received your Tooky request",
+      subject: "We received your Tukki request",
       text: [
         `Hello ${data.name},`,
         "",
         "Thank you. Your request has been received.",
-        "A Tooky advisor will review your profile and get back to you shortly.",
+        "A Tukki advisor will review your profile and get back to you shortly.",
         "",
         "Summary:",
         `- Profile: ${data.profile}`,
         `- Destination: ${data.destination}`,
         "",
-        "Tooky Consulting, Schengen visa support in Dakar",
+        "Tukki Consulting, Schengen visa support in Dakar",
         "contact@tookyconsulting.com",
       ].join("\n"),
       html: `
         <div style="font-family:Arial,sans-serif;line-height:1.7;color:#0c1a2e">
           <h2 style="color:#2450e8;margin:0 0 12px">Request received</h2>
           <p>Hello ${escapeHtml(data.name)},</p>
-          <p>Thank you. Your request has been received. A Tooky advisor will review your profile and get back to you shortly.</p>
+          <p>Thank you. Your request has been received. A Tukki advisor will review your profile and get back to you shortly.</p>
           <p><strong>Profile:</strong> ${escapeHtml(data.profile)}<br/>
           <strong>Destination:</strong> ${escapeHtml(data.destination)}</p>
-          <p style="color:#5c718c;font-size:13px">Tooky Consulting · Dakar<br/>contact@tookyconsulting.com</p>
+          <p style="color:#5c718c;font-size:13px">Tukki Consulting · Dakar<br/>contact@tookyconsulting.com</p>
         </div>
       `,
     };
   }
 
   return {
-    subject: "Nous avons bien reçu votre demande Tooky",
+    subject: "Nous avons bien reçu votre demande Tukki",
     text: [
       `Bonjour ${data.name},`,
       "",
       "Merci. Votre demande est bien reçue.",
-      "Un conseiller Tooky analyse votre profil et vous recontacte sous peu.",
+      "Un conseiller Tukki analyse votre profil et vous recontacte sous peu.",
       "",
       "Récapitulatif :",
       `- Profil : ${data.profile}`,
       `- Destination : ${data.destination}`,
       "",
-      "Tooky Consulting, accompagnement visa Schengen à Dakar",
+      "Tukki Consulting, accompagnement visa Schengen à Dakar",
       "contact@tookyconsulting.com",
     ].join("\n"),
     html: `
       <div style="font-family:Arial,sans-serif;line-height:1.7;color:#0c1a2e">
         <h2 style="color:#2450e8;margin:0 0 12px">Demande bien reçue</h2>
         <p>Bonjour ${escapeHtml(data.name)},</p>
-        <p>Merci. Votre demande est bien reçue. Un conseiller Tooky analyse votre profil et vous recontacte sous peu.</p>
+        <p>Merci. Votre demande est bien reçue. Un conseiller Tukki analyse votre profil et vous recontacte sous peu.</p>
         <p><strong>Profil :</strong> ${escapeHtml(data.profile)}<br/>
         <strong>Destination :</strong> ${escapeHtml(data.destination)}</p>
-        <p style="color:#5c718c;font-size:13px">Tooky Consulting · Dakar<br/>contact@tookyconsulting.com</p>
+        <p style="color:#5c718c;font-size:13px">Tukki Consulting · Dakar<br/>contact@tookyconsulting.com</p>
       </div>
     `,
   };

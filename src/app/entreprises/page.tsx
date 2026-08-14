@@ -125,7 +125,7 @@ export default function EntreprisesPage() {
   const t = {
     fr: {
       title: "Vos opportunités business ne doivent pas attendre un visa.",
-      body: "Depuis Dakar, Tooky Consulting prépare vos visas d'affaires : foires, missions, partenariats, invitations et ordres de mission, avec un traitement prioritaire.",
+      body: "Depuis Dakar, Tukki Consulting prépare vos visas d'affaires : foires, missions, partenariats, invitations et ordres de mission, avec un traitement prioritaire.",
       whyTitle: "Un refus coûte plus cher qu'un dossier bien préparé.",
       servicesTitle: "Ce que comprend la formule Pro Executive.",
       promiseTitle: "Vous décrivez la mission. Nous structurons le dossier.",
@@ -133,12 +133,12 @@ export default function EntreprisesPage() {
         "Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa d'affaires, avec traitement prioritaire et double vérification avant dépôt.",
       ctaTitle: "Parlez-nous de votre prochain déplacement.",
       ctaBody:
-        "Décrivez votre mission : un conseiller Tooky vous répond sous 48 heures. Le tarif est communiqué après évaluation.",
+        "Décrivez votre mission : un conseiller Tukki vous répond sous 48 heures. Le tarif est communiqué après évaluation.",
       ctaButton: "Demander un devis",
     },
     en: {
       title: "Your business opportunities should not wait on a visa.",
-      body: "From Dakar, Tooky Consulting prepares your business visas: trade fairs, missions, partnerships, invitations and mission orders, with priority handling.",
+      body: "From Dakar, Tukki Consulting prepares your business visas: trade fairs, missions, partnerships, invitations and mission orders, with priority handling.",
       whyTitle: "A refusal costs more than a well-prepared file.",
       servicesTitle: "What the Pro Executive plan includes.",
       promiseTitle: "You describe the mission. We structure the file.",
@@ -146,7 +146,7 @@ export default function EntreprisesPage() {
         "After your request, we tell you exactly what is needed for your business visa, with priority handling and double verification before submission.",
       ctaTitle: "Tell us about your next trip.",
       ctaBody:
-        "Describe your mission: a Tooky advisor replies within 48 hours. Pricing is shared after assessment.",
+        "Describe your mission: a Tukki advisor replies within 48 hours. Pricing is shared after assessment.",
       ctaButton: "Request a quote",
     },
   }[lang];
@@ -163,7 +163,7 @@ export default function EntreprisesPage() {
           className="pointer-events-none absolute inset-0 opacity-45"
           style={{
             background:
-              "radial-gradient(ellipse 65% 55% at 15% 30%, rgba(36, 80, 232,0.4), transparent 60%)",
+              "radial-gradient(ellipse 65% 55% at 15% 30%, rgba(232, 78, 27,0.4), transparent 60%)",
           }}
         />
         <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 items-end gap-12 px-6 pb-16 sm:px-10 lg:grid-cols-12 lg:gap-10 lg:px-14 lg:pb-20">
@@ -176,7 +176,7 @@ export default function EntreprisesPage() {
                 color: "var(--c-cobalt-300)",
               }}
             >
-              TOOKY CONSULTING
+              tukki CONSULTING
             </p>
             <h1
               className="mb-6 max-w-[18ch] text-[clamp(2.1rem,4.5vw,3.75rem)] leading-[1.05] font-semibold tracking-tight text-balance"

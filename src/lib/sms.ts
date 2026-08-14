@@ -30,19 +30,19 @@ export function normalizePhone(raw: string): string | null {
 export function buildClientSms(data: SmsConfirmPayload): string {
   if (data.lang === "en") {
     return [
-      `Tooky Consulting: hello ${data.name}, we received your request (${data.profile} · ${data.destination}).`,
+      `Tukki Consulting: hello ${data.name}, we received your request (${data.profile} · ${data.destination}).`,
       "A counsellor will reply within 48h. Do not send documents by SMS.",
     ].join(" ");
   }
 
   return [
-    `Tooky Consulting: bonjour ${data.name}, nous avons bien reçu votre demande (${data.profile} · ${data.destination}).`,
+    `Tukki Consulting: bonjour ${data.name}, nous avons bien reçu votre demande (${data.profile} · ${data.destination}).`,
     "Un conseiller vous répond sous 48 h. N'envoyez pas de pièces par SMS.",
   ].join(" ");
 }
 
 export function buildAdminSms(data: SmsConfirmPayload): string {
-  return `[Tooky] Nouvelle demande: ${data.name} · ${data.profile} · ${data.destination} · ${data.phone}`;
+  return `[Tukki] Nouvelle demande: ${data.name} · ${data.profile} · ${data.destination} · ${data.phone}`;
 }
 
 export async function sendSms(to: string, body: string): Promise<boolean> {

@@ -49,29 +49,34 @@
 }
 
 :root {
-  /* ---- Atlantic neutrals (cool silver / deep navy) ---- */
-  --c-ink-950: #07111f;
-  --c-ink-900: #0c1a2e;
-  --c-ink-800: #15243a;
-  --c-ink-700: #243652;
-  --c-ink-600: #3d526e;
-  --c-ink-500: #5c718c;
-  --c-ink-400: #8a9bb0;
-  --c-ink-300: #b5c1d0;
-  --c-ink-200: #d5dde7;
-  --c-ink-100: #e8edf3;
-  --c-ink-50: #f2f5f9;
+  /* ---- Atlantic neutrals aligned to tukki navy ---- */
+  --c-ink-950: #0a2b3e;
+  --c-ink-900: #0f3549;
+  --c-ink-800: #17455c;
+  --c-ink-700: #245a73;
+  --c-ink-600: #3d738c;
+  --c-ink-500: #5c8ca3;
+  --c-ink-400: #8aadc0;
+  --c-ink-300: #b5cdd9;
+  --c-ink-200: #d5e4eb;
+  --c-ink-100: #e8f1f5;
+  --c-ink-50: #f3f8fa;
   --c-white: #ffffff;
 
-  /* ---- Cobalt accent (preserved brand) ---- */
-  --c-cobalt-100: #d6e0ff;
-  --c-cobalt-200: #adc1ff;
-  --c-cobalt-300: #7a99ff;
-  --c-cobalt-400: #4a70f5;
-  --c-cobalt-500: #2450e8;
-  --c-cobalt-600: #1a3cc4;
-  --c-cobalt-700: #152f96;
-  --c-cobalt-800: #112470;
+  /* ---- Brand accent scale (orange CTA + cyan highlight) ---- */
+  --c-cobalt-100: #ffe4d9;
+  --c-cobalt-200: #ffc4ad;
+  --c-cobalt-300: #98e1f8;
+  --c-cobalt-400: #f06a3d;
+  --c-cobalt-500: #e84e1b;
+  --c-cobalt-600: #c43d12;
+  --c-cobalt-700: #9a2f0e;
+  --c-cobalt-800: #6f2109;
+
+  /* ---- tukki cyan ---- */
+  --c-cyan-300: #98e1f8;
+  --c-cyan-400: #6fd0f2;
+  --c-cyan-500: #3db8e0;
 
   /* ---- Semantic hues ---- */
   --c-sage-100: #dceee4;
@@ -124,7 +129,7 @@
   --shadow-sm: 0 2px 8px rgba(7, 17, 31, 0.07);
   --shadow-md: 0 12px 28px -10px rgba(7, 17, 31, 0.16);
   --shadow-lg: 0 28px 56px -18px rgba(7, 17, 31, 0.22);
-  --shadow-focus: 0 0 0 3px rgba(74, 112, 245, 0.35);
+  --shadow-focus: 0 0 0 3px rgba(232, 78, 27, 0.35);
 
   --background: var(--c-ink-50);
   --foreground: var(--c-ink-950);
@@ -133,7 +138,7 @@
   --popover: var(--c-white);
   --popover-foreground: var(--c-ink-950);
   --primary: var(--c-cobalt-500);
-  --primary-foreground: var(--c-ink-50);
+  --primary-foreground: var(--c-white);
   --secondary: var(--c-ink-100);
   --secondary-foreground: var(--c-ink-950);
   --muted: var(--c-ink-100);
@@ -148,13 +153,13 @@
 
   --hero-veil: linear-gradient(
     115deg,
-    rgba(7, 17, 31, 0.82) 0%,
-    rgba(7, 17, 31, 0.55) 48%,
-    rgba(7, 17, 31, 0.28) 100%
+    rgba(10, 43, 62, 0.88) 0%,
+    rgba(10, 43, 62, 0.58) 48%,
+    rgba(10, 43, 62, 0.3) 100%
   );
   --page-glow: radial-gradient(
     ellipse 80% 50% at 10% 0%,
-    rgba(36, 80, 232, 0.08),
+    rgba(232, 78, 27, 0.08),
     transparent 55%
   );
 }

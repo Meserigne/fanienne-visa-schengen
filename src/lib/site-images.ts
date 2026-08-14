@@ -4,9 +4,9 @@ const u = (id: string, w = 1600) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
 
 export const SITE_IMAGES = {
-  /** Official Tooky Consulting logos (transparent PNGs) */
-  logoWhite: "/images/tooky-logo-white.png",
-  logoBlack: "/images/tooky-logo-black.png",
+  /** Official Tukki Consulting logos (transparent PNGs) */
+  logoWhite: "/images/tukki-logo-on-dark.png",
+  logoBlack: "/images/tukki-logo-on-light.png",
 
   /** Hero: Paris / Tour Eiffel at dusk */
   hero: u("1502602898657-3e91760cbb34", 1920),

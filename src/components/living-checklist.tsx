@@ -45,7 +45,7 @@ export function LivingChecklist({ title, body, items }: Props) {
                       ? "var(--surface-card)"
                       : "var(--c-ink-100)",
                   boxShadow: featured
-                    ? "0 20px 40px -24px rgba(36,80,232,0.55)"
+                    ? "0 20px 40px -24px rgba(232, 78, 27,0.55)"
                     : "var(--shadow-xs)",
                   color: featured ? "var(--text-on-dark)" : "var(--text-primary)",
                 }}

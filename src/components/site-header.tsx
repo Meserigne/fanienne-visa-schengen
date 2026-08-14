@@ -48,7 +48,7 @@ export function SiteHeader() {
       }}
     >
       <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-6 px-6 py-4 sm:px-10 lg:px-14">
-        <Link href="/" className="relative flex shrink-0 items-center" aria-label="Tooky Consulting">
+        <Link href="/" className="relative flex shrink-0 items-center" aria-label="Tukki Consulting">
           <BrandLogo
             variant={solid ? "black" : "white"}
             priority

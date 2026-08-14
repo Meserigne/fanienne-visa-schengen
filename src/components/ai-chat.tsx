@@ -24,8 +24,8 @@ export function AiChat() {
 
   const t = {
     fr: {
-      open: "Assistant Tooky",
-      title: "Assistant Tooky",
+      open: "Assistant Tukki",
+      title: "Assistant Tukki",
       subtitle: "Questions visa & formules, avant un conseiller.",
       disclaimer:
         "Assistant IA. Ne remplace pas un conseiller. La décision visa appartient au consulat.",
@@ -37,7 +37,7 @@ export function AiChat() {
       error:
         "Je n'ai pas pu répondre. Utilisez le formulaire pour joindre un conseiller.",
       welcome:
-        "Bonjour. Je peux vous orienter sur nos formules, le parcours Tooky et le cadre général du visa Schengen. Pour un devis ou un cas personnel, un conseiller vous répond sous 48 h via le formulaire.",
+        "Bonjour. Je peux vous orienter sur nos formules, le parcours Tukki et le cadre général du visa Schengen. Pour un devis ou un cas personnel, un conseiller vous répond sous 48 h via le formulaire.",
       suggestions: [
         "Quelle formule pour étudier en Europe ?",
         "Comment se déroule l'accompagnement ?",
@@ -45,8 +45,8 @@ export function AiChat() {
       ],
     },
     en: {
-      open: "Tooky assistant",
-      title: "Tooky assistant",
+      open: "Tukki assistant",
+      title: "Tukki assistant",
       subtitle: "Visa & plan questions, before a counsellor.",
       disclaimer:
         "AI assistant. Does not replace a counsellor. Visa decisions rest with the consulate.",
@@ -57,7 +57,7 @@ export function AiChat() {
       thinking: "Thinking…",
       error: "I could not reply. Please use the form to reach a counsellor.",
       welcome:
-        "Hello. I can guide you on our plans, the Tooky process and general Schengen visa framing. For a quote or a personal case, a counsellor replies within 48 hours via the form.",
+        "Hello. I can guide you on our plans, the Tukki process and general Schengen visa framing. For a quote or a personal case, a counsellor replies within 48 hours via the form.",
       suggestions: [
         "Which plan for studying in Europe?",
         "How does the support process work?",
@@ -319,7 +319,7 @@ export function AiChat() {
         style={{
           background: "var(--c-cobalt-500)",
           color: "var(--c-white)",
-          boxShadow: "0 10px 28px rgba(36, 80, 232, 0.35)",
+          boxShadow: "0 10px 28px rgba(232, 78, 27, 0.35)",
           fontFamily: "var(--font-ui)",
         }}
       >

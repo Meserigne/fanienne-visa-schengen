@@ -91,7 +91,7 @@ export function DestinationSelect({ id, name, required, className }: Props) {
                   type="button"
                   className="flex w-full items-center gap-3 px-3.5 py-2.5 text-left text-[16px] transition-colors"
                   style={{
-                    background: active ? "rgba(36, 80, 232, 0.08)" : "transparent",
+                    background: active ? "rgba(232, 78, 27, 0.08)" : "transparent",
                     color: "var(--text-primary)",
                   }}
                   onClick={() => {

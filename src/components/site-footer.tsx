@@ -36,7 +36,7 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
             </a>
           </div>
           <div className="flex flex-wrap items-center gap-4 text-xs" style={{ fontFamily: "var(--font-ui)", color: "var(--c-ink-400)" }}>
-            <span>© 2026 Tooky Consulting · {lang === "fr" ? "Dakar, Sénégal" : "Dakar, Senegal"}</span>
+            <span>© 2026 Tukki Consulting · {lang === "fr" ? "Dakar, Sénégal" : "Dakar, Senegal"}</span>
             <Link href="/qui-nous-sommes" className="transition-colors hover:text-white">
               {lang === "fr" ? "Qui nous sommes" : "About us"}
             </Link>
@@ -125,8 +125,8 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
       >
         <p className="max-w-[90ch]">
           {lang === "fr"
-            ? "© 2026 Tooky Consulting · Accompagnement visa Schengen. Tooky Consulting est un cabinet de conseil indépendant, sans lien avec les consulats ; la décision de visa appartient aux autorités consulaires."
-            : "© 2026 Tooky Consulting · Schengen visa consultancy. Tooky Consulting is an independent advisory firm with no affiliation to consulates; visa decisions rest with consular authorities."}
+            ? "© 2026 Tukki Consulting · Accompagnement visa Schengen. Tukki Consulting est un cabinet de conseil indépendant, sans lien avec les consulats ; la décision de visa appartient aux autorités consulaires."
+            : "© 2026 Tukki Consulting · Schengen visa consultancy. Tukki Consulting is an independent advisory firm with no affiliation to consulates; visa decisions rest with consular authorities."}
         </p>
         <div className="flex shrink-0 flex-wrap gap-5">
           <Link
