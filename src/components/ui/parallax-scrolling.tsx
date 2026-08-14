@@ -76,7 +76,7 @@ export function ParallaxHero() {
     <div className="parallax relative" ref={rootRef}>
       <section
         data-parallax-layers
-        className="relative flex min-h-[100dvh] items-end overflow-hidden"
+        className="relative flex min-h-[100dvh] items-center overflow-hidden"
         style={{ background: "var(--c-ink-950)" }}
       >
         <div data-parallax-media className="absolute inset-0 will-change-transform">
@@ -94,19 +94,19 @@ export function ParallaxHero() {
             className="absolute inset-0 opacity-50"
             style={{
               background:
-                "radial-gradient(ellipse 60% 50% at 80% 20%, rgba(232, 78, 27,0.35), transparent 60%)",
+                "radial-gradient(ellipse 60% 50% at 50% 40%, rgba(232, 78, 27,0.35), transparent 60%)",
             }}
           />
         </div>
 
-        <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 pb-16 pt-24 sm:px-10 sm:pb-20 lg:px-14 lg:pb-24">
+        <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 py-28 sm:px-10 lg:px-14">
           <div
             data-parallax-content
-            className="grid max-w-3xl grid-cols-1 gap-5"
+            className="mx-auto grid max-w-3xl grid-cols-1 place-items-center gap-5 text-center"
             style={{ color: "var(--text-on-dark)" }}
           >
             <p
-              className="flex flex-col gap-1"
+              className="flex flex-col items-center gap-1"
               style={{ fontFamily: "var(--font-display)" }}
             >
               <span
@@ -123,7 +123,7 @@ export function ParallaxHero() {
               </span>
             </p>
             <h1
-              className="max-w-[14ch] text-[clamp(2.1rem,4.2vw,3.75rem)] leading-[1.1] font-semibold tracking-tight text-balance"
+              className="max-w-[16ch] text-[clamp(2.1rem,4.2vw,3.75rem)] leading-[1.1] font-semibold tracking-tight text-balance"
               style={{ fontFamily: "var(--font-display)" }}
             >
               {t.title}
@@ -134,7 +134,7 @@ export function ParallaxHero() {
             >
               {t.body}
             </p>
-            <div className="flex flex-wrap items-center gap-4 pt-1">
+            <div className="flex flex-wrap items-center justify-center gap-4 pt-1">
               <a
                 href="#eligibilite"
                 className="inline-flex items-center rounded-full px-8 py-4 text-[17px] font-semibold transition-transform duration-200 hover:-translate-y-0.5"
