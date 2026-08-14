@@ -2,11 +2,11 @@
 
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-  "https://tookyconsulting.com";
+  "https://www.tukkiconsulting.com";
 
 export const SITE_NAME = "Tukki Consulting";
 
-export const DEFAULT_OG_IMAGE = `${SITE_URL}/images/passeport-france-cover.png`;
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/images/og-tukki.png`;
 
 export const seo = {
   home: {
