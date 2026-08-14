@@ -106,12 +106,21 @@ export function ParallaxHero() {
             style={{ color: "var(--text-on-dark)" }}
           >
             <p
-              className="text-[clamp(3.5rem,10vw,7.5rem)] leading-[0.92] font-semibold tracking-tight"
+              className="flex flex-col gap-1"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              <span style={{ color: "var(--c-cyan-300)" }}>tukki</span>
-              {" "}
-              <span style={{ color: "var(--c-white)" }}>CONSULTING</span>
+              <span
+                className="text-[clamp(2.75rem,8vw,5.75rem)] leading-[0.95] font-semibold tracking-tight"
+                style={{ color: "var(--c-cyan-300)" }}
+              >
+                tukki
+              </span>
+              <span
+                className="text-[clamp(2.75rem,8vw,5.75rem)] leading-[0.95] font-semibold tracking-tight"
+                style={{ color: "var(--c-white)" }}
+              >
+                CONSULTING
+              </span>
             </p>
             <h1
               className="max-w-[14ch] text-[clamp(2.1rem,4.2vw,3.75rem)] leading-[1.1] font-semibold tracking-tight text-balance"
