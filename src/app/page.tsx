@@ -148,7 +148,7 @@ export default function Home() {
         {
           href: "/entreprises",
           image: SITE_IMAGES.trackBusiness,
-          imagePosition: "center 18%",
+          imagePosition: "center 22%",
           number: "02",
           title: "Professionnels",
           body: "Missions et foires : invitations, ordres de mission, traitement prioritaire.",
@@ -194,7 +194,7 @@ export default function Home() {
         {
           href: "/entreprises",
           image: SITE_IMAGES.trackBusiness,
-          imagePosition: "center 18%",
+          imagePosition: "center 22%",
           number: "02",
           title: "Professionals",
           body: "Missions and trade fairs: invitations, mission orders, priority handling.",

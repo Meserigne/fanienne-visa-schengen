@@ -14,8 +14,8 @@ export const SITE_IMAGES = {
   /** Track students: young Black man */
   trackStudents: u("1522529599102-193c0d76b5b6", 1200),
 
-  /** Track business: Black woman in suit */
-  trackBusiness: u("1636144896336-b056be4a8dfe", 1200),
+  /** Track business: Black woman, natural look */
+  trackBusiness: u("1765607476292-886bc1e648a1", 1200),
 
   /** French biometric passport cover */
   passports: "/images/passeport-france-cover.png",
@@ -47,8 +47,8 @@ export const SITE_IMAGES = {
   /** European city (no people) */
   europeCity: u("1552832230-c0197dd311b5", 1400),
 
-  /** Black woman in suit */
-  professionalWoman: u("1636144896336-b056be4a8dfe", 1200),
+  /** Black woman, natural look */
+  professionalWoman: u("1765607476292-886bc1e648a1", 1200),
 
   /** Madrid skyline (no people) */
   teamWomen: u("1539037116277-4db20889f2d4", 1400),
