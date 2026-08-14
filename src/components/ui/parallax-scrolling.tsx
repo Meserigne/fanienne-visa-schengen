@@ -99,7 +99,7 @@ export function ParallaxHero() {
           />
         </div>
 
-        <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 pb-16 pt-24 sm:px-10 sm:pb-20 lg:px-14 lg:pb-24">
+        <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 pb-28 pt-24 sm:px-10 sm:pb-36 lg:px-14 lg:pb-40">
           <div
             data-parallax-content
             className="grid max-w-3xl grid-cols-1 gap-5 text-left"
