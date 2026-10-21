@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
+import { IMAGE_CATALOG } from "../src/lib/admin/image-catalog";
 
 const prisma = new PrismaClient();
 
@@ -157,9 +158,27 @@ async function main() {
     });
   }
 
+  for (const image of IMAGE_CATALOG) {
+    await prisma.siteImage.upsert({
+      where: { key: image.key },
+      create: {
+        key: image.key,
+        label: image.label,
+        category: image.category,
+        url: image.defaultUrl,
+      },
+      update: {
+        label: image.label,
+        category: image.category,
+        // Ne pas écraser une URL déjà personnalisée au re-seed
+      },
+    });
+  }
+
   console.log("Seed OK");
   console.log(`Admin: ${email}`);
   console.log(`Password: ${password}`);
+  console.log(`Images: ${IMAGE_CATALOG.length}`);
 }
 
 main()

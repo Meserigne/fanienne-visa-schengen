@@ -36,6 +36,7 @@ export default async function AdminEditPackPage({
           includesEn: pack.includesEn,
           priceFr: pack.priceFr,
           priceEn: pack.priceEn,
+          imageUrl: pack.imageUrl,
           sortOrder: pack.sortOrder,
           published: pack.published,
         }}

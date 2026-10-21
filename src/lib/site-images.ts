@@ -1,79 +1,37 @@
-/** Curated photos: mix of people (kept light) + places / documents / travel. */
+/** Default photos — overridable via back-office Médias. */
 
-const u = (id: string, w = 1600) =>
-  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+import { DEFAULT_IMAGE_MAP } from "@/lib/admin/image-catalog";
 
-export const SITE_IMAGES = {
-  /** Official Tukki Consulting logos (transparent PNGs) */
-  logoWhite: "/images/tukki-logo-on-dark.png",
-  logoBlack: "/images/tukki-logo-on-light.png",
-
-  /** Hero: Paris / Tour Eiffel at dusk */
-  hero: u("1502602898657-3e91760cbb34", 1920),
-
-  /** Track students: young Black man */
-  trackStudents: u("1522529599102-193c0d76b5b6", 1200),
-
-  /** Track business: Black woman, natural look */
-  trackBusiness: u("1765607476292-886bc1e648a1", 1200),
-
-  /** French biometric passport cover */
+export const DEFAULT_SITE_IMAGES = {
+  logoWhite: DEFAULT_IMAGE_MAP.logoWhite,
+  logoBlack: DEFAULT_IMAGE_MAP.logoBlack,
+  hero: DEFAULT_IMAGE_MAP.hero,
+  trackStudents: DEFAULT_IMAGE_MAP.trackStudents,
+  trackBusiness: DEFAULT_IMAGE_MAP.trackBusiness,
   passports: "/images/passeport-france-cover.png",
-
-  /** French passport (desk / document view) */
-  passportDesk: "/images/passeport-france.jpg",
-
-  /** French passport open pages */
+  passportDesk: DEFAULT_IMAGE_MAP.passportDesk,
   passportOpen: "/images/passeport-france-open.png",
-
-  /** Documents flat lay (no people) */
-  documents: u("1586281380349-632531db7ed4", 1400),
-
-  /** Black professionals in a meeting */
-  interview: u("1573164574511-73c773193279", 1400),
-
-  /** Airplane window (no people) */
-  flight: u("1436491865332-7a61a109cc05", 1400),
-
-  /** Keys + home (no people) */
-  luggage: u("1560518883-ce09059eeffa", 1400),
-
-  /** Students page: Black woman portrait */
-  students: u("1531123897727-8f129e1688ce", 1000),
-
-  /** Business page: Black man in suit with phone */
-  business: u("1589114207353-1fc98a11070b", 1200),
-
-  /** European city (no people) */
-  europeCity: u("1552832230-c0197dd311b5", 1400),
-
-  /** Black woman, natural look */
-  professionalWoman: u("1765607476292-886bc1e648a1", 1200),
-
-  /** Madrid skyline (no people) */
-  teamWomen: u("1539037116277-4db20889f2d4", 1400),
-
-  /** Stylized Schengen visa sticker illustration */
-  visaIllustration: "/images/visa-schengen.svg",
-
-  /** Artists page: West African masked dance / ceremony */
-  artists: u("1722481746744-c6c95b900003", 1400),
-
-  /** Artists detail: paintbrushes studio */
-  artistsStudio: u("1460661419201-fd4cecdf8a8b", 1200),
-
-  /** Tourism / family: European street travel */
-  tourism: u("1488646953014-85cb44e25828", 1400),
-
-  /** Tourism detail: suitcase travel */
-  tourismDetail: u("1469854523086-cc02fe5d8800", 1200),
-
-  /** Medical / health care */
-  medical: u("1576091160399-112ba8d25d1d", 1400),
-
-  /** Medical detail: hospital corridor calm */
-  medicalDetail: u("1586773860418-d37222d8fce3", 1200),
-
-  /** About page: Black professional team in meeting */
-  about: u("1573164574511-73c773193279", 1400),
+  documents: DEFAULT_IMAGE_MAP.documents,
+  interview: DEFAULT_IMAGE_MAP.interview,
+  flight: DEFAULT_IMAGE_MAP.flight,
+  luggage: DEFAULT_IMAGE_MAP.luggage,
+  students: DEFAULT_IMAGE_MAP.students,
+  business: DEFAULT_IMAGE_MAP.business,
+  europeCity: DEFAULT_IMAGE_MAP.europeCity,
+  professionalWoman: DEFAULT_IMAGE_MAP.trackBusiness,
+  teamWomen: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=1400&q=80",
+  visaIllustration: DEFAULT_IMAGE_MAP.visaIllustration,
+  artists: DEFAULT_IMAGE_MAP.artists,
+  artistsStudio: DEFAULT_IMAGE_MAP.artistsStudio,
+  tourism: DEFAULT_IMAGE_MAP.tourism,
+  tourismDetail: DEFAULT_IMAGE_MAP.tourismDetail,
+  medical: DEFAULT_IMAGE_MAP.medical,
+  medicalDetail: DEFAULT_IMAGE_MAP.medicalDetail,
+  about: DEFAULT_IMAGE_MAP.about,
+  og: DEFAULT_IMAGE_MAP.og,
 } as const;
+
+export type SiteImageKey = keyof typeof DEFAULT_SITE_IMAGES;
+
+/** @deprecated Prefer useSiteImages() so back-office overrides apply. */
+export const SITE_IMAGES = DEFAULT_SITE_IMAGES;

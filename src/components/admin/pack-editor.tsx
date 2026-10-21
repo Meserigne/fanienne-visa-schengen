@@ -16,6 +16,7 @@ export type PackFormData = {
   includesEn: string;
   priceFr: string;
   priceEn: string;
+  imageUrl: string;
   sortOrder: number;
   published: boolean;
 };
@@ -34,6 +35,7 @@ const empty: PackFormData = {
   includesEn: "",
   priceFr: "",
   priceEn: "",
+  imageUrl: "",
   sortOrder: 0,
   published: true,
 };
@@ -98,6 +100,13 @@ export function PackEditor({ initial }: { initial?: PackFormData }) {
         />
         <Field label="Tarif FR (optionnel)" value={form.priceFr} onChange={(v) => set("priceFr", v)} />
         <Field label="Tarif EN (optionnel)" value={form.priceEn} onChange={(v) => set("priceEn", v)} />
+        <div className="sm:col-span-2">
+          <Field
+            label="URL image formule (optionnel)"
+            value={form.imageUrl}
+            onChange={(v) => set("imageUrl", v)}
+          />
+        </div>
         <label className="block text-sm font-medium">
           Icône
           <select

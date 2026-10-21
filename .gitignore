@@ -39,6 +39,10 @@ yarn-error.log*
 /prisma/*.db-journal
 /prisma/dev.db*
 
+# local media uploads
+/public/uploads
+!/public/uploads/.gitkeep
+
 # vercel
 .vercel
 

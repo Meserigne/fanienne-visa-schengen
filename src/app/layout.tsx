@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/lib/language-context";
+import { SiteImagesProvider } from "@/lib/site-images-context";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { BackToTop } from "@/components/back-to-top";
 import { AiChat } from "@/components/ai-chat";
@@ -92,9 +93,11 @@ export default function RootLayout({
       <body className="flex min-h-full flex-col" style={{ background: "var(--color-bg)" }}>
         <JsonLd />
         <LanguageProvider>
-          <SmoothScroll>{children}</SmoothScroll>
-          <BackToTop />
-          <AiChat />
+          <SiteImagesProvider>
+            <SmoothScroll>{children}</SmoothScroll>
+            <BackToTop />
+            <AiChat />
+          </SiteImagesProvider>
         </LanguageProvider>
       </body>
     </html>

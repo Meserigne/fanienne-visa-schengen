@@ -41,6 +41,7 @@ export async function PATCH(request: Request, ctx: Ctx) {
         : {}),
       ...(body.priceFr !== undefined ? { priceFr: String(body.priceFr) } : {}),
       ...(body.priceEn !== undefined ? { priceEn: String(body.priceEn) } : {}),
+      ...(body.imageUrl !== undefined ? { imageUrl: String(body.imageUrl) } : {}),
       ...(body.sortOrder !== undefined
         ? { sortOrder: Number(body.sortOrder) }
         : {}),

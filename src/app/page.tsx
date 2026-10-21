@@ -13,70 +13,7 @@ import { ServiceStack, type ServiceItem } from "@/components/service-stack";
 import { StepsPan, type StepItem } from "@/components/steps-pan";
 import { WhyChooseSection } from "@/components/why-choose-section";
 import { ResponsibilityNote } from "@/components/responsibility-note";
-import { SITE_IMAGES } from "@/lib/site-images";
-
-const SERVICES: ServiceItem[] = [
-  {
-    tone: "photo",
-    image: SITE_IMAGES.passportDesk,
-    fr: {
-      title: "Analyse du profil",
-      body: "Nous lisons votre situation, listons les pièces utiles et construisons un dossier cohérent.",
-    },
-    en: {
-      title: "Profile review",
-      body: "We read your situation, list the right documents and build a coherent file.",
-    },
-  },
-  {
-    tone: "photo",
-    image: SITE_IMAGES.documents,
-    fr: {
-      title: "Double contrôle",
-      body: "Assistant + consultant relisent chaque dossier avant dépôt pour limiter les erreurs évitables.",
-    },
-    en: {
-      title: "Double check",
-      body: "An assistant and a consultant review every file before submission to cut avoidable errors.",
-    },
-  },
-  {
-    tone: "photo",
-    image: SITE_IMAGES.interview,
-    fr: {
-      title: "Préparation à l'entretien",
-      body: "Vous répétez les questions clés pour présenter votre projet avec clarté.",
-    },
-    en: {
-      title: "Interview prep",
-      body: "You rehearse the key questions so you present your project with clarity.",
-    },
-  },
-  {
-    tone: "photo",
-    image: SITE_IMAGES.flight,
-    fr: {
-      title: "Assurance, réservations & RDV",
-      body: "Assurance Schengen, réservations conformes et prise de rendez-vous.",
-    },
-    en: {
-      title: "Insurance, bookings & appointments",
-      body: "Schengen insurance, compliant bookings and appointment booking.",
-    },
-  },
-  {
-    tone: "dusk",
-    image: SITE_IMAGES.luggage,
-    fr: {
-      title: "Suivi jusqu'à la décision",
-      body: "Nous restons avec vous après le dépôt, jusqu'à la réponse du consulat.",
-    },
-    en: {
-      title: "Follow-up until the decision",
-      body: "We stay with you after submission, until the consulate replies.",
-    },
-  },
-];
+import { useSiteImages } from "@/lib/site-images-context";
 
 const STEPS: StepItem[] = [
   {
@@ -131,6 +68,70 @@ const STEPS: StepItem[] = [
 
 export default function Home() {
   const { lang } = useLanguage();
+  const images = useSiteImages();
+
+  const SERVICES: ServiceItem[] = [
+    {
+      tone: "photo",
+      image: images.passportDesk,
+      fr: {
+        title: "Analyse du profil",
+        body: "Nous lisons votre situation, listons les pièces utiles et construisons un dossier cohérent.",
+      },
+      en: {
+        title: "Profile review",
+        body: "We read your situation, list the right documents and build a coherent file.",
+      },
+    },
+    {
+      tone: "photo",
+      image: images.documents,
+      fr: {
+        title: "Double contrôle",
+        body: "Assistant + consultant relisent chaque dossier avant dépôt pour limiter les erreurs évitables.",
+      },
+      en: {
+        title: "Double check",
+        body: "An assistant and a consultant review every file before submission to cut avoidable errors.",
+      },
+    },
+    {
+      tone: "photo",
+      image: images.interview,
+      fr: {
+        title: "Préparation à l'entretien",
+        body: "Vous répétez les questions clés pour présenter votre projet avec clarté.",
+      },
+      en: {
+        title: "Interview prep",
+        body: "You rehearse the key questions so you present your project with clarity.",
+      },
+    },
+    {
+      tone: "photo",
+      image: images.flight,
+      fr: {
+        title: "Assurance, réservations & RDV",
+        body: "Assurance Schengen, réservations conformes et prise de rendez-vous.",
+      },
+      en: {
+        title: "Insurance, bookings & appointments",
+        body: "Schengen insurance, compliant bookings and appointment booking.",
+      },
+    },
+    {
+      tone: "dusk",
+      image: images.luggage,
+      fr: {
+        title: "Suivi jusqu'à la décision",
+        body: "Nous restons avec vous après le dépôt, jusqu'à la réponse du consulat.",
+      },
+      en: {
+        title: "Follow-up until the decision",
+        body: "We stay with you after submission, until the consulate replies.",
+      },
+    },
+  ];
 
   const t = {
     fr: {
@@ -138,7 +139,7 @@ export default function Home() {
       tracks: [
         {
           href: "/etudiants",
-          image: SITE_IMAGES.trackStudents,
+          image: images.trackStudents,
           imagePosition: "center 20%",
           number: "01",
           title: "Étudiants",
@@ -147,7 +148,7 @@ export default function Home() {
         },
         {
           href: "/entreprises",
-          image: SITE_IMAGES.trackBusiness,
+          image: images.trackBusiness,
           imagePosition: "center 22%",
           number: "02",
           title: "Professionnels",
@@ -156,7 +157,7 @@ export default function Home() {
         },
         {
           href: "/tourisme",
-          image: SITE_IMAGES.tourism,
+          image: images.tourism,
           imagePosition: "center 40%",
           number: "03",
           title: "Tourisme & famille",
@@ -165,7 +166,7 @@ export default function Home() {
         },
         {
           href: "/sante",
-          image: SITE_IMAGES.medical,
+          image: images.medical,
           imagePosition: "center 35%",
           number: "04",
           title: "Santé & soins",
@@ -184,7 +185,7 @@ export default function Home() {
       tracks: [
         {
           href: "/etudiants",
-          image: SITE_IMAGES.trackStudents,
+          image: images.trackStudents,
           imagePosition: "center 20%",
           number: "01",
           title: "Students",
@@ -193,7 +194,7 @@ export default function Home() {
         },
         {
           href: "/entreprises",
-          image: SITE_IMAGES.trackBusiness,
+          image: images.trackBusiness,
           imagePosition: "center 22%",
           number: "02",
           title: "Professionals",
@@ -202,7 +203,7 @@ export default function Home() {
         },
         {
           href: "/tourisme",
-          image: SITE_IMAGES.tourism,
+          image: images.tourism,
           imagePosition: "center 40%",
           number: "03",
           title: "Tourism & family",
@@ -211,7 +212,7 @@ export default function Home() {
         },
         {
           href: "/sante",
-          image: SITE_IMAGES.medical,
+          image: images.medical,
           imagePosition: "center 35%",
           number: "04",
           title: "Health & care",

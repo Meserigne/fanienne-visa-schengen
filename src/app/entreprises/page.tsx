@@ -6,7 +6,7 @@ import { useLanguage } from "@/lib/language-context";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Reveal } from "@/components/reveal";
-import { SITE_IMAGES } from "@/lib/site-images";
+import { useSiteImages } from "@/lib/site-images-context";
 
 const CTA = { fr: "Envoyer ma demande", en: "Send my request" };
 
@@ -121,6 +121,7 @@ const PROMISE = [
 
 export default function EntreprisesPage() {
   const { lang } = useLanguage();
+  const SITE_IMAGES = useSiteImages();
 
   const t = {
     fr: {

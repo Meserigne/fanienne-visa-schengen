@@ -42,6 +42,7 @@ export async function POST(request: Request) {
       includesEn: String(body.includesEn || ""),
       priceFr: String(body.priceFr || ""),
       priceEn: String(body.priceEn || ""),
+      imageUrl: String(body.imageUrl || ""),
       sortOrder: Number(body.sortOrder || 0),
       published: body.published !== false,
     },

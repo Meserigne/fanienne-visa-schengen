@@ -5,13 +5,14 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLanguage } from "@/lib/language-context";
-import { SITE_IMAGES } from "@/lib/site-images";
+import { useSiteImage } from "@/lib/site-images-context";
 
 const CTA = { fr: "Envoyer ma demande", en: "Send my request" };
 
 export function ParallaxHero() {
   const rootRef = useRef<HTMLDivElement>(null);
   const { lang } = useLanguage();
+  const heroImage = useSiteImage("hero");
 
   const t = {
     fr: {
@@ -81,7 +82,7 @@ export function ParallaxHero() {
       >
         <div data-parallax-media className="absolute inset-0 will-change-transform">
           <Image
-            src={SITE_IMAGES.hero}
+            src={heroImage}
             alt="Tukki Consulting, accompagnement visa Schengen depuis Dakar"
             fill
             priority

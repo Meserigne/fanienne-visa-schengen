@@ -27,11 +27,22 @@ Changez-les immédiatement en production.
 |--------|---------|
 | **Tableau de bord** | Compteurs + dernières demandes |
 | **Demandes** | Leads du formulaire (statut, notes, suppression) |
+| **Photos** | Remplacer toutes les images du site (URL ou upload) |
 | **Formules** | CRUD des packs affichés sur l’accueil |
 | **Contenus** | Blocs de texte FR/EN éditables |
-| **Paramètres** | Email, WhatsApp, adresse, etc. |
+| **Paramètres** | Email, WhatsApp, adresse + changement de mot de passe |
 
 Les demandes du formulaire public sont enregistrées automatiquement dans **Demandes**.
+
+### Photos
+
+Dans **Photos**, chaque emplacement a un libellé clair (Hero, Professionnels, Étudiants…).  
+Vous pouvez :
+
+1. Coller une URL (Unsplash, CDN…) puis **Enregistrer**
+2. Ou **Upload** un fichier JPG/PNG/WebP
+
+Sur Vercel, les fichiers uploadés localement ne persistent pas : préférez une URL externe ou Vercel Blob.
 
 ## Production (Vercel)
 

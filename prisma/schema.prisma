@@ -45,6 +45,7 @@ model Pack {
   includesEn  String
   priceFr     String   @default("")
   priceEn     String   @default("")
+  imageUrl    String   @default("")
   sortOrder   Int      @default(0)
   published   Boolean  @default(true)
   createdAt   DateTime @default(now())
@@ -65,5 +66,14 @@ model ContentBlock {
   titleEn   String   @default("")
   bodyFr    String   @default("")
   bodyEn    String   @default("")
+  updatedAt DateTime @updatedAt
+}
+
+model SiteImage {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  label     String
+  category  String   @default("general")
+  url       String
   updatedAt DateTime @updatedAt
 }

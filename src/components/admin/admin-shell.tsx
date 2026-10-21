@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import {
   FileText,
+  ImageIcon,
   LayoutDashboard,
   LogOut,
   Package,
@@ -14,6 +15,7 @@ import {
 const NAV = [
   { href: "/admin", label: "Tableau de bord", icon: LayoutDashboard },
   { href: "/admin/leads", label: "Demandes", icon: Users },
+  { href: "/admin/media", label: "Photos", icon: ImageIcon },
   { href: "/admin/packs", label: "Formules", icon: Package },
   { href: "/admin/content", label: "Contenus", icon: FileText },
   { href: "/admin/settings", label: "Paramètres", icon: Settings },
