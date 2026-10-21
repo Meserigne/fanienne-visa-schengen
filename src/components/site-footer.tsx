@@ -1,14 +1,55 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { BrandLogo } from "@/components/brand-logo";
 import { useLanguage } from "@/lib/language-context";
 
-const WHATSAPP = "+221 77 000 00 00";
-const waLink = "https://wa.me/" + WHATSAPP.replace(/[^0-9]/g, "");
+type FooterSettings = {
+  contactEmail: string;
+  whatsapp: string;
+  address: string;
+};
 
-export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compact" }) {
+const DEFAULTS: FooterSettings = {
+  contactEmail: "contact@tookyconsulting.com",
+  whatsapp: "+221 77 000 00 00",
+  address: "Dakar, Sénégal",
+};
+
+export function SiteFooter({
+  variant = "compact",
+  settings,
+}: {
+  variant?: "full" | "compact";
+  settings?: Partial<FooterSettings>;
+}) {
   const { lang } = useLanguage();
+  const [live, setLive] = useState<FooterSettings>({ ...DEFAULTS, ...settings });
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/api/public/settings")
+      .then((res) => (res.ok ? res.json() : null))
+      .then((json) => {
+        if (!cancelled && json?.settings) {
+          setLive({
+            contactEmail: json.settings.contactEmail || DEFAULTS.contactEmail,
+            whatsapp: json.settings.whatsapp || DEFAULTS.whatsapp,
+            address: json.settings.address || DEFAULTS.address,
+          });
+        }
+      })
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const cfg = live;
+  const waLink = "https://wa.me/" + cfg.whatsapp.replace(/[^0-9]/g, "");
+  const addressLabel =
+    lang === "fr" ? cfg.address : cfg.address.replace("Sénégal", "Senegal");
 
   if (variant === "compact") {
     return (
@@ -31,16 +72,24 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
             <Link href="/sante" style={{ color: "var(--text-on-dark-muted)" }}>
               {lang === "fr" ? "Santé" : "Health"}
             </Link>
-            <a href="mailto:contact@tookyconsulting.com" style={{ color: "var(--text-on-dark-muted)" }}>
-              contact@tookyconsulting.com
+            <a href={`mailto:${cfg.contactEmail}`} style={{ color: "var(--text-on-dark-muted)" }}>
+              {cfg.contactEmail}
             </a>
           </div>
-          <div className="flex flex-wrap items-center gap-4 text-xs" style={{ fontFamily: "var(--font-ui)", color: "var(--c-ink-400)" }}>
-            <span>© 2026 Tukki Consulting · {lang === "fr" ? "Dakar, Sénégal" : "Dakar, Senegal"}</span>
+          <div
+            className="flex flex-wrap items-center gap-4 text-xs"
+            style={{ fontFamily: "var(--font-ui)", color: "var(--c-ink-400)" }}
+          >
+            <span>
+              © 2026 Tukki Consulting · {addressLabel}
+            </span>
             <Link href="/qui-nous-sommes" className="transition-colors hover:text-white">
               {lang === "fr" ? "Qui nous sommes" : "About us"}
             </Link>
-            <Link href="/politique-de-confidentialite" className="transition-colors hover:text-white">
+            <Link
+              href="/politique-de-confidentialite"
+              className="transition-colors hover:text-white"
+            >
               {lang === "fr" ? "Politique de confidentialité" : "Privacy policy"}
             </Link>
           </div>
@@ -110,12 +159,15 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
           >
             {lang === "fr" ? "Contact" : "Contact"}
           </p>
-          <span>{lang === "fr" ? "Dakar, Sénégal" : "Dakar, Senegal"}</span>
+          <span>{addressLabel}</span>
           <a href={waLink} className="transition-colors hover:text-white">
-            WhatsApp · {WHATSAPP}
+            WhatsApp · {cfg.whatsapp}
           </a>
-          <a href="mailto:contact@tookyconsulting.com" className="transition-colors hover:text-white">
-            contact@tookyconsulting.com
+          <a
+            href={`mailto:${cfg.contactEmail}`}
+            className="transition-colors hover:text-white"
+          >
+            {cfg.contactEmail}
           </a>
         </div>
       </div>
@@ -129,10 +181,7 @@ export function SiteFooter({ variant = "compact" }: { variant?: "full" | "compac
             : "© 2026 Tukki Consulting · Schengen visa consultancy. Tukki Consulting is an independent advisory firm with no affiliation to consulates; visa decisions rest with consular authorities."}
         </p>
         <div className="flex shrink-0 flex-wrap gap-5">
-          <Link
-            href="/qui-nous-sommes"
-            className="transition-colors hover:text-white"
-          >
+          <Link href="/qui-nous-sommes" className="transition-colors hover:text-white">
             {lang === "fr" ? "Qui nous sommes" : "About us"}
           </Link>
           <Link

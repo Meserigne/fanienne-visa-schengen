@@ -1,0 +1,69 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  // Local: SQLite. Pour Vercel/prod: passez en "postgresql" + DATABASE_URL Neon/Prisma Postgres.
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model AdminUser {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String
+  passwordHash String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Lead {
+  id          String   @id @default(cuid())
+  name        String
+  email       String
+  phone       String   @default("")
+  profile     String
+  destination String
+  project     String   @default("")
+  lang        String   @default("fr")
+  status      String   @default("new") // new | contacted | in_progress | won | lost
+  notes       String   @default("")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Pack {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  href        String
+  icon        String   @default("Plane")
+  nameFr      String
+  nameEn      String
+  audienceFr  String
+  audienceEn  String
+  includesFr  String
+  includesEn  String
+  priceFr     String   @default("")
+  priceEn     String   @default("")
+  sortOrder   Int      @default(0)
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model SiteSetting {
+  key       String   @id
+  value     String
+  updatedAt DateTime @updatedAt
+}
+
+model ContentBlock {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  label     String
+  titleFr   String   @default("")
+  titleEn   String   @default("")
+  bodyFr    String   @default("")
+  bodyEn    String   @default("")
+  updatedAt DateTime @updatedAt
+}

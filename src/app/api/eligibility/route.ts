@@ -13,6 +13,7 @@ import {
   normalizePhone,
   sendSms,
 } from "@/lib/sms";
+import { prisma } from "@/lib/db";
 
 export const runtime = "nodejs";
 
@@ -184,6 +185,24 @@ export async function POST(request: Request) {
   }
 
   try {
+    // Persist lead in back-office (non-blocking if DB is unavailable).
+    try {
+      await prisma.lead.create({
+        data: {
+          name: data.name,
+          email: data.email,
+          phone: data.phone || "",
+          profile: data.profile,
+          destination: data.destination,
+          project: data.project || "",
+          lang: data.lang,
+          status: "new",
+        },
+      });
+    } catch (dbError) {
+      console.error("Eligibility lead save failure:", dbError);
+    }
+
     let needsActivation = false;
 
     if (process.env.WEB3FORMS_ACCESS_KEY) {
