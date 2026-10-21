@@ -49,3 +49,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+.neon
+
+.env.neon
+.neon
+.neon-claim-info.txt
+.env.local

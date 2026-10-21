@@ -3,8 +3,7 @@ generator client {
 }
 
 datasource db {
-  // Local: SQLite. Pour Vercel/prod: passez en "postgresql" + DATABASE_URL Neon/Prisma Postgres.
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
