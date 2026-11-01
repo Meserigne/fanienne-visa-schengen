@@ -70,6 +70,23 @@ const FALLBACK_PACKS = [
     sortOrder: 4,
     published: true,
   },
+  {
+    slug: "long-sejour",
+    href: "/#eligibilite",
+    icon: "CalendarDays",
+    nameFr: "Formule Long séjour",
+    nameEn: "Long-Stay Plan",
+    audienceFr: "Long séjour · VLS · Installation",
+    audienceEn: "Long stay · National visa · Settling in",
+    includesFr:
+      "Analyse du projet de long séjour, constitution du dossier VLS, justificatifs de ressources et d'hébergement, préparation au dépôt.",
+    includesEn:
+      "Long-stay project review, national visa file preparation, proof of funds and housing, filing preparation.",
+    priceFr: "",
+    priceEn: "",
+    sortOrder: 5,
+    published: true,
+  },
 ];
 
 export async function getPublishedPacks() {

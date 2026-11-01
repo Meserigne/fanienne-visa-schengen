@@ -70,14 +70,30 @@ const packs = [
     priceEn: "",
     sortOrder: 4,
   },
+  {
+    slug: "long-sejour",
+    href: "/#eligibilite",
+    icon: "CalendarDays",
+    nameFr: "Formule Long séjour",
+    nameEn: "Long-Stay Plan",
+    audienceFr: "Long séjour · VLS · Installation",
+    audienceEn: "Long stay · National visa · Settling in",
+    includesFr:
+      "Analyse du projet de long séjour, constitution du dossier VLS, justificatifs de ressources et d'hébergement, préparation au dépôt.",
+    includesEn:
+      "Long-stay project review, national visa file preparation, proof of funds and housing, filing preparation.",
+    priceFr: "",
+    priceEn: "",
+    sortOrder: 5,
+  },
 ];
 
 const contentBlocks = [
   {
     key: "home.packs",
     label: "Accueil · Formules (titre)",
-    titleFr: "Quatre formules, un même niveau d'exigence.",
-    titleEn: "Four plans, one standard of care.",
+    titleFr: "Des formules, un même niveau d'exigence.",
+    titleEn: "Several plans, one standard of care.",
     bodyFr:
       "Chaque parcours est adapté à votre motif de voyage. Après évaluation, nous vous indiquons la formule et le tarif adaptés, sans engagement.",
     bodyEn:

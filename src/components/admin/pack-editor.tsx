@@ -21,12 +21,23 @@ export type PackFormData = {
   published: boolean;
 };
 
-const ICONS = ["Plane", "GraduationCap", "BriefcaseBusiness", "HeartPulse", "Users"];
+const ICONS = [
+  "Plane",
+  "GraduationCap",
+  "BriefcaseBusiness",
+  "HeartPulse",
+  "Users",
+  "CalendarDays",
+  "Home",
+  "Globe",
+  "FileText",
+  "Clock",
+];
 
 const empty: PackFormData = {
   slug: "",
-  href: "",
-  icon: "Plane",
+  href: "/#eligibilite",
+  icon: "CalendarDays",
   nameFr: "",
   nameEn: "",
   audienceFr: "",
@@ -40,9 +51,21 @@ const empty: PackFormData = {
   published: true,
 };
 
+function slugify(value: string) {
+  return value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 export function PackEditor({ initial }: { initial?: PackFormData }) {
   const router = useRouter();
+  const isNew = !initial?.id;
   const [form, setForm] = useState<PackFormData>(initial || empty);
+  const [slugTouched, setSlugTouched] = useState(!isNew);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
 
@@ -50,17 +73,30 @@ export function PackEditor({ initial }: { initial?: PackFormData }) {
     setForm((prev) => ({ ...prev, [key]: value }));
   }
 
+  function onNameFrChange(value: string) {
+    set("nameFr", value);
+    if (!slugTouched) {
+      set("slug", slugify(value.replace(/^formule\s+/i, "")));
+    }
+  }
+
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
     setSaving(true);
     setError("");
+
+    const payload = {
+      ...form,
+      slug: form.slug || slugify(form.nameFr),
+      href: form.href.trim() || "/#eligibilite",
+    };
 
     const url = form.id ? `/api/admin/packs/${form.id}` : "/api/admin/packs";
     const method = form.id ? "PATCH" : "POST";
     const res = await fetch(url, {
       method,
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
+      body: JSON.stringify(payload),
     });
     const data = (await res.json()) as { error?: string };
     setSaving(false);
@@ -82,12 +118,44 @@ export function PackEditor({ initial }: { initial?: PackFormData }) {
   }
 
   return (
-    <form onSubmit={onSubmit} className="space-y-4 rounded-2xl border border-[#d5e4eb] bg-white p-5">
+    <form
+      onSubmit={onSubmit}
+      className="space-y-4 rounded-2xl border border-[#d5e4eb] bg-white p-5"
+    >
+      {isNew ? (
+        <p className="rounded-xl bg-[#e8f1f5] px-3 py-2 text-sm text-[#17455c]">
+          Créez autant de formules que vous voulez. Elles s’affichent
+          automatiquement sur la page d’accueil dès qu’elles sont publiées.
+        </p>
+      ) : null}
+
       <div className="grid gap-4 sm:grid-cols-2">
-        <Field label="Nom FR" value={form.nameFr} onChange={(v) => set("nameFr", v)} required />
-        <Field label="Nom EN" value={form.nameEn} onChange={(v) => set("nameEn", v)} required />
-        <Field label="Slug" value={form.slug} onChange={(v) => set("slug", v)} required />
-        <Field label="Lien (href)" value={form.href} onChange={(v) => set("href", v)} />
+        <Field
+          label="Nom FR"
+          value={form.nameFr}
+          onChange={onNameFrChange}
+          required
+        />
+        <Field
+          label="Nom EN"
+          value={form.nameEn}
+          onChange={(v) => set("nameEn", v)}
+          required
+        />
+        <Field
+          label="Slug (URL technique)"
+          value={form.slug}
+          onChange={(v) => {
+            setSlugTouched(true);
+            set("slug", slugify(v));
+          }}
+          required
+        />
+        <Field
+          label="Lien (page ou #eligibilite)"
+          value={form.href}
+          onChange={(v) => set("href", v)}
+        />
         <Field
           label="Audience FR"
           value={form.audienceFr}
@@ -98,8 +166,16 @@ export function PackEditor({ initial }: { initial?: PackFormData }) {
           value={form.audienceEn}
           onChange={(v) => set("audienceEn", v)}
         />
-        <Field label="Tarif FR (optionnel)" value={form.priceFr} onChange={(v) => set("priceFr", v)} />
-        <Field label="Tarif EN (optionnel)" value={form.priceEn} onChange={(v) => set("priceEn", v)} />
+        <Field
+          label="Tarif FR (optionnel)"
+          value={form.priceFr}
+          onChange={(v) => set("priceFr", v)}
+        />
+        <Field
+          label="Tarif EN (optionnel)"
+          value={form.priceEn}
+          onChange={(v) => set("priceEn", v)}
+        />
         <div className="sm:col-span-2">
           <Field
             label="URL image formule (optionnel)"

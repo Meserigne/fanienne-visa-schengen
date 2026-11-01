@@ -603,6 +603,7 @@ export const CMS_CATALOG: CmsDocDefinition[] = [
         { text: pair("Affaires", "Business") },
         { text: pair("Études", "Studies") },
         { text: pair("Travail", "Work") },
+        { text: pair("Long séjour", "Long stay") },
         { text: pair("Regroupement", "Family reunification") },
       ],
       destination: pair("Destination souhaitée", "Desired destination"),

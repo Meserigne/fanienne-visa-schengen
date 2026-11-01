@@ -28,8 +28,8 @@ export async function GET() {
         price: pack.priceEn,
       },
     })),
-    titleFr: block?.titleFr || "Quatre formules, un même niveau d'exigence.",
-    titleEn: block?.titleEn || "Four plans, one standard of care.",
+    titleFr: block?.titleFr || "Des formules, un même niveau d'exigence.",
+    titleEn: block?.titleEn || "Several plans, one standard of care.",
     bodyFr:
       block?.bodyFr ||
       "Chaque parcours est adapté à votre motif de voyage. Après évaluation, nous vous indiquons la formule et le tarif adaptés, sans engagement.",

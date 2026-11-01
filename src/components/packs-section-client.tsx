@@ -4,8 +4,13 @@ import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 import {
   BriefcaseBusiness,
+  CalendarDays,
+  Clock,
+  FileText,
+  Globe,
   GraduationCap,
   HeartPulse,
+  Home,
   Plane,
   Users,
 } from "lucide-react";
@@ -18,6 +23,11 @@ const ICONS: Record<string, LucideIcon> = {
   BriefcaseBusiness,
   HeartPulse,
   Users,
+  CalendarDays,
+  Home,
+  Globe,
+  FileText,
+  Clock,
 };
 
 type PackCopy = {
@@ -84,7 +94,7 @@ export function PacksSectionClient({
           </p>
         </Reveal>
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
           {packs.map((pack, i) => {
             const copy = pack[lang];
             const Icon = ICONS[pack.icon] || Plane;

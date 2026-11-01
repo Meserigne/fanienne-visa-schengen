@@ -12,14 +12,15 @@ export default async function AdminPacksPage() {
         <div>
           <h2 className="text-2xl font-semibold tracking-tight">Formules</h2>
           <p className="mt-1 text-sm text-[#5c8ca3]">
-            Ajoutez, modifiez ou masquez les formules affichées sur le site.
+            Ajoutez autant de formules que vous voulez : elles s’affichent
+            automatiquement sur le site dès qu’elles sont publiées.
           </p>
         </div>
         <Link
           href="/admin/packs/new"
           className="rounded-xl bg-[#e84e1b] px-4 py-2.5 text-sm font-semibold text-white"
         >
-          + Nouvelle formule
+          + Ajouter une formule
         </Link>
       </div>
 
