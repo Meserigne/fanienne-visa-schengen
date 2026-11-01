@@ -72,7 +72,7 @@ const FALLBACK_PACKS = [
   },
   {
     slug: "long-sejour",
-    href: "/#eligibilite",
+    href: "/long-sejour",
     icon: "CalendarDays",
     nameFr: "Formule Long séjour",
     nameEn: "Long-Stay Plan",

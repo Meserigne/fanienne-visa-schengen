@@ -108,6 +108,18 @@ export const IMAGE_CATALOG: ImageCatalogItem[] = [
     defaultUrl: u("1586773860418-d37222d8fce3", 1200),
   },
   {
+    key: "longStay",
+    label: "Page Long séjour · Hero",
+    category: "pages",
+    defaultUrl: u("1529156069898-49953e39b3ac", 1200),
+  },
+  {
+    key: "longStayDetail",
+    label: "Page Long séjour · Photo secondaire",
+    category: "pages",
+    defaultUrl: u("1486406146926-c627a92ad1ab", 1400),
+  },
+  {
     key: "about",
     label: "Page Qui sommes-nous",
     category: "pages",

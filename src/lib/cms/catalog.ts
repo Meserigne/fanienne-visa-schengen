@@ -89,6 +89,7 @@ export const CMS_CATALOG: CmsDocDefinition[] = [
           label: pair("Tourisme & famille", "Tourism & family"),
         },
         { href: "/sante", label: pair("Santé", "Health") },
+        { href: "/long-sejour", label: pair("Long séjour", "Long stay") },
       ],
       cta: pair("Envoyer ma demande", "Send my request"),
       menuOpen: pair("Menu", "Menu"),
@@ -132,6 +133,7 @@ export const CMS_CATALOG: CmsDocDefinition[] = [
         { href: "/entreprises", label: pair("Professionnels", "Business") },
         { href: "/tourisme", label: pair("Tourisme", "Tourism") },
         { href: "/sante", label: pair("Santé", "Health") },
+        { href: "/long-sejour", label: pair("Long séjour", "Long stay") },
       ],
     },
   },
@@ -283,6 +285,21 @@ export const CMS_CATALOG: CmsDocDefinition[] = [
           cta: pair(
             "Voir la formule Urgence Santé",
             "See the Health Priority plan",
+          ),
+        },
+        {
+          href: "/long-sejour",
+          imageKey: "longStay",
+          imagePosition: "center 30%",
+          number: "05",
+          title: pair("Long séjour", "Long stay"),
+          body: pair(
+            "Visa long séjour et installation : projet, ressources, hébergement, dépôt VLS.",
+            "Long-stay visa and settling in: project, funding, housing, national visa filing.",
+          ),
+          cta: pair(
+            "Voir la formule Long séjour",
+            "See the Long-Stay plan",
           ),
         },
       ],
@@ -691,6 +708,7 @@ export const CMS_CATALOG: CmsDocDefinition[] = [
   parcoursDoc("page.entreprises", "Page Professionnels", "entreprises"),
   parcoursDoc("page.tourisme", "Page Tourisme & famille", "tourisme"),
   parcoursDoc("page.sante", "Page Santé", "sante"),
+  parcoursDoc("page.long-sejour", "Page Long séjour", "long-sejour"),
   {
     key: "page.about",
     label: "Page Qui sommes-nous",
@@ -833,6 +851,14 @@ export const CMS_CATALOG: CmsDocDefinition[] = [
           body: pair(
             "Formule Urgence Santé · soins, C.I.A., coordination hospitalière.",
             "Health Priority Plan · care, evacuation, hospital coordination.",
+          ),
+        },
+        {
+          href: "/long-sejour",
+          title: pair("Long séjour", "Long stay"),
+          body: pair(
+            "Formule Long séjour · VLS, ressources, hébergement, installation.",
+            "Long-Stay Plan · national visa, funding, housing, settling in.",
           ),
         },
       ],

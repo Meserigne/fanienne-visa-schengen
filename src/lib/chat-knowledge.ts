@@ -34,7 +34,7 @@ Après évaluation gratuite, Tukki indique la formule et le tarif adaptés, sans
 
 5. **Formule Long séjour** — Long séjour · VLS · Installation
    - Analyse du projet, constitution du dossier de visa long séjour, ressources, hébergement, préparation au dépôt.
-   - Demande via le formulaire d'éligibilité
+   - Page : /long-sejour
 
 ## Motifs de voyage (accueil)
 - Étudiants : Campus France, ressources, hébergement, entretien.

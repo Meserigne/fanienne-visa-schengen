@@ -590,5 +590,153 @@
       "fr": "Envoyer ma demande",
       "en": "Send my request"
     }
+  },
+  "long-sejour": {
+    "brand": {
+      "fr": "tukki CONSULTING",
+      "en": "tukki CONSULTING"
+    },
+    "title": {
+      "fr": "S'installer en Europe, avec un dossier de long séjour solide.",
+      "en": "Settle in Europe, with a solid long-stay file."
+    },
+    "body": {
+      "fr": "Depuis Dakar, Tukki Consulting prépare votre visa long séjour (VLS) : projet, ressources, hébergement et pièces consulaires. Une méthode claire jusqu'au dépôt.",
+      "en": "From Dakar, Tukki Consulting prepares your long-stay (national) visa: project, funding, housing and consular documents. A clear method through to filing."
+    },
+    "whyTitle": {
+      "fr": "Un long séjour se joue sur la crédibilité du dossier.",
+      "en": "A long stay hinges on how credible the file is."
+    },
+    "why": [
+      {
+        "title": {
+          "fr": "Un projet d'installation clair",
+          "en": "A clear settling-in project"
+        },
+        "body": {
+          "fr": "Motif, durée, destination et cohérence du parcours : nous structurons un récit que le consulat peut lire sans ambiguïté.",
+          "en": "Purpose, duration, destination and a coherent path: we structure a narrative the consulate can read without ambiguity."
+        }
+      },
+      {
+        "title": {
+          "fr": "Ressources et hébergement justifiés",
+          "en": "Funding and housing properly evidenced"
+        },
+        "body": {
+          "fr": "Garant, comptes, attestation d'hébergement : chaque pièce est vérifiée pour coller aux exigences du long séjour.",
+          "en": "Sponsor, bank statements, housing proof: every document is checked against long-stay requirements."
+        }
+      },
+      {
+        "title": {
+          "fr": "Moins d'allers-retours inutiles",
+          "en": "Fewer avoidable back-and-forths"
+        },
+        "body": {
+          "fr": "Pièces manquantes ou mal rédigées : nous anticipons avant le dépôt pour limiter les refus et les demandes de complément.",
+          "en": "Missing or poorly drafted documents: we anticipate before filing to limit refusals and follow-up requests."
+        }
+      }
+    ],
+    "servicesTitle": {
+      "fr": "Ce que comprend la formule Long séjour.",
+      "en": "What the Long-Stay plan includes."
+    },
+    "services": [
+      {
+        "title": {
+          "fr": "Analyse du projet VLS",
+          "en": "Long-stay project review"
+        },
+        "body": {
+          "fr": "Lecture de votre situation (travail, famille, études, installation) et cadrage du type de visa long séjour adapté.",
+          "en": "Review of your situation (work, family, studies, settling in) and framing of the right long-stay visa type."
+        }
+      },
+      {
+        "title": {
+          "fr": "Constitution du dossier",
+          "en": "File assembly"
+        },
+        "body": {
+          "fr": "Liste des pièces, contrôle des justificatifs de ressources, d'hébergement et d'état civil avant dépôt.",
+          "en": "Document checklist, review of funding, housing and civil-status proof before filing."
+        }
+      },
+      {
+        "title": {
+          "fr": "Préparation au dépôt",
+          "en": "Filing preparation"
+        },
+        "body": {
+          "fr": "Organisation du rendez-vous, relecture finale et conseils pour présenter un dossier cohérent.",
+          "en": "Appointment organisation, final review and guidance so you present a coherent file."
+        }
+      },
+      {
+        "title": {
+          "fr": "Suivi jusqu'à la décision",
+          "en": "Follow-up until the decision"
+        },
+        "body": {
+          "fr": "Nous restons disponibles après le dépôt pour les questions et la suite du parcours.",
+          "en": "We stay available after filing for questions and next steps."
+        }
+      }
+    ],
+    "promiseTitle": {
+      "fr": "Vous décrivez le projet. Nous structurons le long séjour.",
+      "en": "You describe the project. We structure the long stay."
+    },
+    "promiseBody": {
+      "fr": "Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa long séjour, selon la destination et votre situation, avec double vérification avant dépôt.",
+      "en": "After your request, we tell you exactly what is needed for your long-stay visa, for your destination and situation, with double verification before filing."
+    },
+    "promise": [
+      {
+        "title": {
+          "fr": "Réponse sous 48 heures",
+          "en": "Reply within 48 hours"
+        },
+        "body": {
+          "fr": "Décrivez votre projet d'installation ou de long séjour. Un conseiller vous répond avec une lecture claire.",
+          "en": "Describe your settling-in or long-stay project. An advisor replies with a clear reading."
+        }
+      },
+      {
+        "title": {
+          "fr": "Parcours adapté à votre motif",
+          "en": "A path fitted to your purpose"
+        },
+        "body": {
+          "fr": "Travail, famille, études ou autre motif : l'accompagnement est calé sur votre profil et vos délais.",
+          "en": "Work, family, studies or another purpose: support is set to your profile and timeline."
+        }
+      },
+      {
+        "title": {
+          "fr": "Un interlocuteur dédié",
+          "en": "A dedicated contact"
+        },
+        "body": {
+          "fr": "Vous avancez avec la même personne, de la première analyse jusqu'à la décision consulaire.",
+          "en": "You work with the same person from the first review through to the consular decision."
+        }
+      }
+    ],
+    "ctaTitle": {
+      "fr": "Parlez-nous de votre projet de long séjour.",
+      "en": "Tell us about your long-stay project."
+    },
+    "ctaBody": {
+      "fr": "Un VLS demande de la précision. Plus tôt le dossier est structuré à Dakar, plus il est solide. Le tarif est communiqué après évaluation.",
+      "en": "A long-stay visa needs precision. The earlier the file is structured in Dakar, the stronger it is. Pricing is shared after assessment."
+    },
+    "ctaButton": {
+      "fr": "Envoyer ma demande",
+      "en": "Send my request"
+    }
   }
 }

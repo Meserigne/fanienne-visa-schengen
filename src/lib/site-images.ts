@@ -27,6 +27,8 @@ export const DEFAULT_SITE_IMAGES = {
   tourismDetail: DEFAULT_IMAGE_MAP.tourismDetail,
   medical: DEFAULT_IMAGE_MAP.medical,
   medicalDetail: DEFAULT_IMAGE_MAP.medicalDetail,
+  longStay: DEFAULT_IMAGE_MAP.longStay,
+  longStayDetail: DEFAULT_IMAGE_MAP.longStayDetail,
   about: DEFAULT_IMAGE_MAP.about,
   og: DEFAULT_IMAGE_MAP.og,
 } as const;

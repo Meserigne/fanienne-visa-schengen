@@ -85,7 +85,7 @@ const FALLBACK = {
       },
     },
     {
-      href: "/#eligibilite",
+      href: "/long-sejour",
       icon: "CalendarDays",
       fr: {
         name: "Formule Long séjour",
