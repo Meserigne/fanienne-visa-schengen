@@ -81,7 +81,7 @@ export function PacksSectionClient({
       <div className="mx-auto max-w-[1400px]">
         <Reveal>
           <h2
-            className="mb-4 max-w-[18ch] text-[clamp(2.1rem,4vw,3.4rem)] leading-[1.1] font-semibold tracking-tight text-balance"
+            className="mb-4 max-w-none text-[clamp(1.55rem,2.6vw,2.45rem)] leading-[1.15] font-semibold tracking-tight lg:whitespace-nowrap"
             style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
           >
             {t.title}

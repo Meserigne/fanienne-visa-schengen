@@ -163,7 +163,7 @@ export function EligibilityForm() {
       <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 items-start gap-14 lg:grid-cols-2 lg:gap-20">
         <Reveal>
           <h2
-            className="mb-3 max-w-[18ch] text-[clamp(2.15rem,4vw,3.4rem)] leading-[1.1] font-semibold tracking-tight text-balance"
+            className="mb-3 max-w-none text-[clamp(1.55rem,2.6vw,2.45rem)] leading-[1.15] font-semibold tracking-tight lg:whitespace-nowrap"
             style={{ fontFamily: "var(--font-display)", color: "var(--text-on-dark)" }}
           >
             {t.title}

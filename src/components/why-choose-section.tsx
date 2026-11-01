@@ -53,7 +53,7 @@ export function WhyChooseSection() {
             tukki
           </p>
           <h2
-            className="mb-4 max-w-[22ch] text-[clamp(1.85rem,3.5vw,2.85rem)] font-semibold tracking-tight text-balance"
+            className="mb-4 max-w-none text-[clamp(1.55rem,2.6vw,2.45rem)] font-semibold tracking-tight lg:whitespace-nowrap"
             style={{
               fontFamily: "var(--font-display)",
               color: "var(--text-on-dark)",

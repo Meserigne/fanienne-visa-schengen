@@ -75,7 +75,7 @@ export function ServiceStack({
       <div className="mx-auto max-w-[1400px]">
         <Reveal>
           <h2
-            className="mb-12 max-w-[18ch] text-[clamp(2.15rem,4vw,3.5rem)] font-semibold tracking-tight text-balance"
+            className="mb-12 max-w-none text-[clamp(1.55rem,2.6vw,2.45rem)] font-semibold tracking-tight lg:whitespace-nowrap"
             style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
           >
             {title}

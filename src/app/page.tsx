@@ -83,7 +83,7 @@ export default function Home() {
       <section className="px-6 pt-4 sm:px-10 lg:px-14">
         <Reveal>
           <h2
-            className="mx-auto max-w-[1100px] text-[clamp(1.45rem,2.8vw,2rem)] font-semibold tracking-tight"
+            className="max-w-none text-[clamp(1.45rem,2.4vw,2rem)] font-semibold tracking-tight lg:whitespace-nowrap"
             style={{
               fontFamily: "var(--font-display)",
               color: "var(--text-primary)",
