@@ -34,6 +34,7 @@ export function ParcoursPage({
   heroAlt,
   servicesEyebrow,
   showHeroCta = true,
+  showBottomCta = true,
 }: {
   cmsKey: string;
   heroImageKey: string;
@@ -41,6 +42,7 @@ export function ParcoursPage({
   heroAlt: { fr: string; en: string };
   servicesEyebrow?: { fr: string; en: string };
   showHeroCta?: boolean;
+  showBottomCta?: boolean;
 }) {
   const { lang } = useLanguage();
   const images = useSiteImages();
@@ -299,39 +301,41 @@ export function ParcoursPage({
         </div>
       </section>
 
-      <section
-        className="px-6 py-20 text-center sm:px-10 lg:px-14"
-        style={{ background: "var(--surface-inverse)" }}
-      >
-        <Reveal>
-          <h2
-            className="mx-auto mb-5 max-w-[22ch] text-[clamp(1.85rem,3.5vw,3rem)] font-semibold tracking-tight text-balance"
-            style={{
-              fontFamily: "var(--font-display)",
-              color: "var(--text-on-dark)",
-            }}
-          >
-            {t.ctaTitle}
-          </h2>
-          <p
-            className="mx-auto mb-8 max-w-[52ch] text-[17px] leading-[1.7]"
-            style={{ color: "var(--text-on-dark-muted)" }}
-          >
-            {t.ctaBody}
-          </p>
-          <Link
-            href="/#eligibilite"
-            className="inline-flex rounded-full px-8 py-3.5 text-[15px] font-semibold"
-            style={{
-              fontFamily: "var(--font-ui)",
-              background: "var(--brand)",
-              color: "var(--text-on-dark)",
-            }}
-          >
-            {t.ctaButton}
-          </Link>
-        </Reveal>
-      </section>
+      {showBottomCta ? (
+        <section
+          className="px-6 py-20 text-center sm:px-10 lg:px-14"
+          style={{ background: "var(--surface-inverse)" }}
+        >
+          <Reveal>
+            <h2
+              className="mx-auto mb-5 max-w-[22ch] text-[clamp(1.85rem,3.5vw,3rem)] font-semibold tracking-tight text-balance"
+              style={{
+                fontFamily: "var(--font-display)",
+                color: "var(--text-on-dark)",
+              }}
+            >
+              {t.ctaTitle}
+            </h2>
+            <p
+              className="mx-auto mb-8 max-w-[52ch] text-[17px] leading-[1.7]"
+              style={{ color: "var(--text-on-dark-muted)" }}
+            >
+              {t.ctaBody}
+            </p>
+            <Link
+              href="/#eligibilite"
+              className="inline-flex rounded-full px-8 py-3.5 text-[15px] font-semibold"
+              style={{
+                fontFamily: "var(--font-ui)",
+                background: "var(--brand)",
+                color: "var(--text-on-dark)",
+              }}
+            >
+              {t.ctaButton}
+            </Link>
+          </Reveal>
+        </section>
+      ) : null}
 
       <SiteFooter variant="compact" />
     </>

@@ -38,6 +38,7 @@ export function SiteHeader() {
 
   const solid = scrolled || !onHome || open;
   const links = nav.links || [];
+  const hideHeaderCta = pathname === "/etudiants";
 
   return (
     <header
@@ -127,17 +128,19 @@ export function SiteHeader() {
             ))}
           </div>
 
-          <Link
-            href={eligibilityHref}
-            className="hidden rounded-full px-5 py-2.5 text-sm font-semibold sm:inline-flex"
-            style={{
-              fontFamily: "var(--font-ui)",
-              background: "var(--brand)",
-              color: "var(--text-on-dark)",
-            }}
-          >
-            {nav.cta}
-          </Link>
+          {!hideHeaderCta ? (
+            <Link
+              href={eligibilityHref}
+              className="hidden rounded-full px-5 py-2.5 text-sm font-semibold sm:inline-flex"
+              style={{
+                fontFamily: "var(--font-ui)",
+                background: "var(--brand)",
+                color: "var(--text-on-dark)",
+              }}
+            >
+              {nav.cta}
+            </Link>
+          ) : null}
 
           <button
             type="button"
@@ -206,16 +209,18 @@ export function SiteHeader() {
                 {item.label}
               </Link>
             ))}
-            <Link
-              href={eligibilityHref}
-              className="mt-1 inline-flex w-fit rounded-full px-5 py-3 text-sm font-semibold"
-              style={{
-                background: "var(--brand)",
-                color: "var(--text-on-dark)",
-              }}
-            >
-              {nav.cta}
-            </Link>
+            {!hideHeaderCta ? (
+              <Link
+                href={eligibilityHref}
+                className="mt-1 inline-flex w-fit rounded-full px-5 py-3 text-sm font-semibold"
+                style={{
+                  background: "var(--brand)",
+                  color: "var(--text-on-dark)",
+                }}
+              >
+                {nav.cta}
+              </Link>
+            ) : null}
           </nav>
         </div>
       )}
