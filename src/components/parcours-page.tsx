@@ -33,8 +33,8 @@ export function ParcoursPage({
   promiseImageKey,
   heroAlt,
   servicesEyebrow,
-  showHeroCta = true,
-  showBottomCta = true,
+  showHeroCta = false,
+  showBottomCta = false,
 }: {
   cmsKey: string;
   heroImageKey: string;

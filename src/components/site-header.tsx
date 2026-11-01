@@ -38,7 +38,13 @@ export function SiteHeader() {
 
   const solid = scrolled || !onHome || open;
   const links = nav.links || [];
-  const hideHeaderCta = pathname === "/etudiants";
+  const hideHeaderCta = [
+    "/etudiants",
+    "/entreprises",
+    "/tourisme",
+    "/sante",
+    "/long-sejour",
+  ].includes(pathname);
 
   return (
     <header
