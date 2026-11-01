@@ -33,12 +33,14 @@ export function ParcoursPage({
   promiseImageKey,
   heroAlt,
   servicesEyebrow,
+  showHeroCta = true,
 }: {
   cmsKey: string;
   heroImageKey: string;
   promiseImageKey: string;
   heroAlt: { fr: string; en: string };
   servicesEyebrow?: { fr: string; en: string };
+  showHeroCta?: boolean;
 }) {
   const { lang } = useLanguage();
   const images = useSiteImages();
@@ -85,22 +87,24 @@ export function ParcoursPage({
               {t.title}
             </h1>
             <p
-              className="mb-8 max-w-[50ch] text-[19px] leading-[1.7]"
+              className={`max-w-[50ch] text-[19px] leading-[1.7] ${showHeroCta ? "mb-8" : ""}`}
               style={{ color: "var(--text-on-dark-muted)" }}
             >
               {t.body}
             </p>
-            <Link
-              href="/#eligibilite"
-              className="inline-flex rounded-full px-7 py-3.5 text-[15px] font-semibold transition-transform duration-200 hover:-translate-y-0.5"
-              style={{
-                fontFamily: "var(--font-ui)",
-                background: "var(--brand)",
-                color: "var(--text-on-dark)",
-              }}
-            >
-              {t.ctaButton}
-            </Link>
+            {showHeroCta ? (
+              <Link
+                href="/#eligibilite"
+                className="inline-flex rounded-full px-7 py-3.5 text-[15px] font-semibold transition-transform duration-200 hover:-translate-y-0.5"
+                style={{
+                  fontFamily: "var(--font-ui)",
+                  background: "var(--brand)",
+                  color: "var(--text-on-dark)",
+                }}
+              >
+                {t.ctaButton}
+              </Link>
+            ) : null}
           </Reveal>
           <Reveal className="relative lg:col-span-5" delay={0.1}>
             <div className="relative aspect-[5/4] overflow-hidden">

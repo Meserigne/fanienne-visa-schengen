@@ -8,6 +8,7 @@ export default function EtudiantsPage() {
       cmsKey="page.etudiants"
       heroImageKey="students"
       promiseImageKey="europeCity"
+      showHeroCta={false}
       heroAlt={{
         fr: "Étudiante accompagnée pour un visa Schengen études depuis le Sénégal",
         en: "Student supported for a Schengen study visa from Senegal",
