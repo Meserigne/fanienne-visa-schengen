@@ -146,13 +146,23 @@ export function PacksSectionClient({
                   </p>
                   {copy.price ? (
                     <p
-                      className="mb-6 text-[15px] font-semibold"
-                      style={{ color: "var(--text-primary)" }}
+                      className="mb-6 text-[18px] font-semibold tracking-tight"
+                      style={{
+                        fontFamily: "var(--font-display)",
+                        color: "var(--brand)",
+                      }}
                     >
                       {copy.price}
                     </p>
                   ) : (
-                    <div className="mb-6" />
+                    <p
+                      className="mb-6 text-[14px] font-medium"
+                      style={{ color: "var(--text-muted)" }}
+                    >
+                      {lang === "fr"
+                        ? "Tarif communiqué après évaluation"
+                        : "Pricing shared after assessment"}
+                    </p>
                   )}
                   <Link
                     href={pack.href}

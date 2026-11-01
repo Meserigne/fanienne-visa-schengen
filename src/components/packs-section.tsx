@@ -20,14 +20,14 @@ const FALLBACK = {
         audience: "Court séjour · Tourisme · Famille",
         includes:
           "Analyse du profil, préparation du dossier, réservations d'hôtel/billets, assurance, prise de RDV.",
-        price: "",
+        price: "150 000 FCFA",
       },
       en: {
         name: "Essential Plan",
         audience: "Short stay · Tourism · Family",
         includes:
           "Profile review, file preparation, hotel/flight bookings, insurance, appointment booking.",
-        price: "",
+        price: "150,000 FCFA",
       },
     },
     {
@@ -38,14 +38,14 @@ const FALLBACK = {
         audience: "Études · Mobilité académique",
         includes:
           "Accompagnement Campus France, contrôle des ressources et hébergement, préparation à l'entretien.",
-        price: "",
+        price: "200 000 FCFA",
       },
       en: {
         name: "Student Care Plan",
         audience: "Studies · Academic mobility",
         includes:
           "Campus France support, funding and housing checks, interview preparation.",
-        price: "",
+        price: "200,000 FCFA",
       },
     },
     {
@@ -56,14 +56,14 @@ const FALLBACK = {
         audience: "Affaires · Business",
         includes:
           "Traitement prioritaire, vérification des ordres de mission et invitations d'entreprises européennes.",
-        price: "",
+        price: "250 000 FCFA",
       },
       en: {
         name: "Pro Executive Plan",
         audience: "Business · Professional travel",
         includes:
           "Priority handling, mission orders and European company invitation checks.",
-        price: "",
+        price: "250,000 FCFA",
       },
     },
     {
@@ -74,14 +74,14 @@ const FALLBACK = {
         audience: "Soins médicaux · C.I.A.",
         includes:
           "Traitement accéléré, vérification des devis et accords d'admission hospitaliers.",
-        price: "",
+        price: "300 000 FCFA",
       },
       en: {
         name: "Health Priority Plan",
         audience: "Medical care · Evacuation",
         includes:
           "Accelerated handling, hospital quotes and admission agreement checks.",
-        price: "",
+        price: "300,000 FCFA",
       },
     },
     {
@@ -92,14 +92,14 @@ const FALLBACK = {
         audience: "Long séjour · VLS · Installation",
         includes:
           "Analyse du projet de long séjour, constitution du dossier VLS, justificatifs de ressources et d'hébergement, préparation au dépôt.",
-        price: "",
+        price: "Sur devis",
       },
       en: {
         name: "Long-Stay Plan",
         audience: "Long stay · National visa · Settling in",
         includes:
           "Long-stay project review, national visa file preparation, proof of funds and housing, filing preparation.",
-        price: "",
+        price: "On quote",
       },
     },
   ] as PackItem[],

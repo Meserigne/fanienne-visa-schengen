@@ -18,8 +18,8 @@ const packs = [
       "Analyse du profil, préparation du dossier, réservations d'hôtel/billets, assurance, prise de RDV.",
     includesEn:
       "Profile review, file preparation, hotel/flight bookings, insurance, appointment booking.",
-    priceFr: "",
-    priceEn: "",
+    priceFr: "150 000 FCFA",
+    priceEn: "150,000 FCFA",
     sortOrder: 1,
   },
   {
@@ -34,8 +34,8 @@ const packs = [
       "Accompagnement Campus France, contrôle des ressources et hébergement, préparation à l'entretien.",
     includesEn:
       "Campus France support, funding and housing checks, interview preparation.",
-    priceFr: "",
-    priceEn: "",
+    priceFr: "200 000 FCFA",
+    priceEn: "200,000 FCFA",
     sortOrder: 2,
   },
   {
@@ -50,8 +50,8 @@ const packs = [
       "Traitement prioritaire, vérification des ordres de mission et invitations d'entreprises européennes.",
     includesEn:
       "Priority handling, mission orders and European company invitation checks.",
-    priceFr: "",
-    priceEn: "",
+    priceFr: "250 000 FCFA",
+    priceEn: "250,000 FCFA",
     sortOrder: 3,
   },
   {
@@ -66,8 +66,8 @@ const packs = [
       "Traitement accéléré, vérification des devis et accords d'admission hospitaliers.",
     includesEn:
       "Accelerated handling, hospital quotes and admission agreement checks.",
-    priceFr: "",
-    priceEn: "",
+    priceFr: "300 000 FCFA",
+    priceEn: "300,000 FCFA",
     sortOrder: 4,
   },
   {
@@ -82,8 +82,8 @@ const packs = [
       "Analyse du projet de long séjour, constitution du dossier VLS, justificatifs de ressources et d'hébergement, préparation au dépôt.",
     includesEn:
       "Long-stay project review, national visa file preparation, proof of funds and housing, filing preparation.",
-    priceFr: "",
-    priceEn: "",
+    priceFr: "Sur devis",
+    priceEn: "On quote",
     sortOrder: 5,
   },
 ];
@@ -149,7 +149,18 @@ async function main() {
     await prisma.pack.upsert({
       where: { slug: pack.slug },
       create: pack,
-      update: pack,
+      // Ne pas écraser tarifs / textes déjà saisis dans l'admin
+      update: {
+        href: pack.href,
+        icon: pack.icon,
+        nameFr: pack.nameFr,
+        nameEn: pack.nameEn,
+        audienceFr: pack.audienceFr,
+        audienceEn: pack.audienceEn,
+        includesFr: pack.includesFr,
+        includesEn: pack.includesEn,
+        sortOrder: pack.sortOrder,
+      },
     });
   }
 
