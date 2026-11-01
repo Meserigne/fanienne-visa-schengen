@@ -81,17 +81,19 @@ export default function Home() {
       <DreamMarquee />
 
       <section className="px-6 pt-4 sm:px-10 lg:px-14">
-        <Reveal>
-          <h2
-            className="max-w-none text-[clamp(1.45rem,2.4vw,2rem)] font-semibold tracking-tight lg:whitespace-nowrap"
-            style={{
-              fontFamily: "var(--font-display)",
-              color: "var(--text-primary)",
-            }}
-          >
-            {tracks.title}
-          </h2>
-        </Reveal>
+        <div className="mx-auto max-w-[1100px]">
+          <Reveal>
+            <h2
+              className="whitespace-nowrap text-[clamp(1.05rem,3.6vw,2rem)] font-semibold tracking-tight"
+              style={{
+                fontFamily: "var(--font-display)",
+                color: "var(--text-primary)",
+              }}
+            >
+              {tracks.title}
+            </h2>
+          </Reveal>
+        </div>
       </section>
 
       <TrackPanels tracks={trackCards} />
