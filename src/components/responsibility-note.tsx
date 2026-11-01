@@ -23,7 +23,7 @@ export function ResponsibilityNote() {
       <div className="mx-auto max-w-[900px]">
         <Reveal>
           <h2
-            className="mb-2 text-[clamp(1.35rem,2.4vw,1.85rem)] font-semibold tracking-tight"
+            className="mb-2 max-w-none text-[clamp(1.35rem,2.2vw,1.85rem)] font-semibold tracking-tight lg:whitespace-nowrap"
             style={{
               fontFamily: "var(--font-display)",
               color: "var(--text-primary)",
