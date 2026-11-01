@@ -9,92 +9,22 @@ import {
   Lightbulb,
   type LucideIcon,
 } from "lucide-react";
-import { useLanguage } from "@/lib/language-context";
 import { Reveal } from "@/components/reveal";
+import { useCmsDoc } from "@/lib/cms-context";
 
-const ITEMS: {
-  icon: LucideIcon;
-  fr: { title: string; body: string };
-  en: { title: string; body: string };
-}[] = [
-  {
-    icon: Target,
-    fr: {
-      title: "Accompagnement personnalisé",
-      body: "Chaque parcours est unique. Nous analysons votre profil en détail pour vous proposer une stratégie sur mesure.",
-    },
-    en: {
-      title: "Personalised support",
-      body: "Every path is unique. We analyse your profile in detail to propose a tailored strategy.",
-    },
-  },
-  {
-    icon: Search,
-    fr: {
-      title: "Transparence totale",
-      body: "Pas de mauvaises surprises. Nous vous donnons un avis clair et honnête sur la faisabilité de votre dossier dès le départ.",
-    },
-    en: {
-      title: "Full transparency",
-      body: "No unpleasant surprises. We give a clear, honest view of your file’s feasibility from the start.",
-    },
-  },
-  {
-    icon: Zap,
-    fr: {
-      title: "Gain de temps précieux",
-      body: "Fini le stress des formulaires complexes. Nous gérons la constitution et l'optimisation de votre dossier de A à Z.",
-    },
-    en: {
-      title: "Valuable time saved",
-      body: "No more stress over complex forms. We handle building and optimising your file from A to Z.",
-    },
-  },
-  {
-    icon: TrendingUp,
-    fr: {
-      title: "Suivi rigoureux et réactif",
-      body: "Restez informé à chaque étape. Notre équipe est à vos côtés pour répondre à vos questions jusqu'au dépôt de votre demande.",
-    },
-    en: {
-      title: "Rigorous, responsive follow-up",
-      body: "Stay informed at every step. Our team stays with you until your application is filed.",
-    },
-  },
-  {
-    icon: Lightbulb,
-    fr: {
-      title: "Conseils d'experts adaptés",
-      body: "Bénéficiez de recommandations ciblées et conformes aux dernières exigences des services consulaires.",
-    },
-    en: {
-      title: "Expert, tailored advice",
-      body: "Get targeted recommendations aligned with the latest consular requirements.",
-    },
-  },
-];
+const ICONS: LucideIcon[] = [Target, Search, Zap, TrendingUp, Lightbulb];
+
+type WhyDoc = {
+  title: string;
+  subtitle: string;
+  intro: string;
+  listTitle: string;
+  cta: string;
+  items: { title: string; body: string }[];
+};
 
 export function WhyChooseSection() {
-  const { lang } = useLanguage();
-
-  const t = {
-    fr: {
-      title: "Pourquoi choisir tukki CONSULTING ?",
-      subtitle: "La confiance, l'écoute et l'expertise au service de votre projet",
-      intro:
-        "Nous transformons la complexité des démarches administratives en un parcours simple, fluide et sécurisé.",
-      listTitle: "Nos engagements pour votre réussite",
-      cta: "Démarrer mon accompagnement",
-    },
-    en: {
-      title: "Why choose tukki CONSULTING?",
-      subtitle: "Trust, listening and expertise for your project",
-      intro:
-        "We turn complex administrative steps into a simple, smooth and secure path.",
-      listTitle: "Our commitments to your success",
-      cta: "Start my support",
-    },
-  }[lang];
+  const t = useCmsDoc<WhyDoc>("home.why");
 
   return (
     <section
@@ -120,69 +50,74 @@ export function WhyChooseSection() {
               color: "var(--c-cyan-300)",
             }}
           >
-            tukki CONSULTING
+            tukki
           </p>
           <h2
-            className="mb-4 max-w-[20ch] text-[clamp(2.1rem,4vw,3.4rem)] leading-[1.1] font-semibold tracking-tight text-balance"
-            style={{ fontFamily: "var(--font-display)", color: "var(--c-white)" }}
+            className="mb-4 max-w-[22ch] text-[clamp(1.85rem,3.5vw,2.85rem)] font-semibold tracking-tight text-balance"
+            style={{
+              fontFamily: "var(--font-display)",
+              color: "var(--text-on-dark)",
+            }}
           >
             {t.title}
           </h2>
           <p
-            className="mb-3 max-w-[42ch] text-[18px] font-medium leading-[1.5]"
-            style={{ color: "var(--c-cyan-300)" }}
+            className="mb-3 max-w-[48ch] text-[18px] font-medium"
+            style={{ color: "var(--c-cyan-200)" }}
           >
             {t.subtitle}
           </p>
           <p
-            className="mb-12 max-w-[52ch] text-[17px] leading-[1.7]"
+            className="mb-10 max-w-[54ch] text-[16px] leading-[1.7]"
             style={{ color: "var(--text-on-dark-muted)" }}
           >
             {t.intro}
           </p>
         </Reveal>
 
-        <p
-          className="mb-6 text-[13px] font-semibold uppercase"
-          style={{
-            fontFamily: "var(--font-ui)",
-            letterSpacing: "0.14em",
-            color: "var(--c-cobalt-400)",
-          }}
-        >
-          {t.listTitle}
-        </p>
+        <Reveal delay={0.05}>
+          <h3
+            className="mb-8 text-[15px] font-semibold uppercase"
+            style={{
+              fontFamily: "var(--font-ui)",
+              letterSpacing: "0.12em",
+              color: "var(--c-cobalt-300)",
+            }}
+          >
+            {t.listTitle}
+          </h3>
+        </Reveal>
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-5">
-          {ITEMS.map((item) => {
-            const Icon = item.icon;
-            const copy = item[lang];
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {(t.items || []).map((item, i) => {
+            const Icon = ICONS[i % ICONS.length];
             return (
-              <Reveal key={copy.title}>
+              <Reveal key={`${item.title}-${i}`} delay={i * 0.05}>
                 <article
-                  className="flex h-full flex-col gap-3 rounded-[1.25rem] border p-5"
+                  className="h-full rounded-2xl border p-6"
                   style={{
-                    background: "rgba(255,255,255,0.04)",
-                    borderColor: "var(--border-inverse)",
+                    borderColor: "rgba(255,255,255,0.1)",
+                    background: "rgba(255,255,255,0.03)",
                   }}
                 >
-                  <span
-                    className="inline-flex size-10 items-center justify-center rounded-xl"
+                  <Icon
+                    className="mb-4 size-6"
+                    style={{ color: "var(--c-cyan-300)" }}
+                  />
+                  <h4
+                    className="mb-2 text-[19px] font-semibold tracking-tight"
                     style={{
-                      background: "rgba(232, 78, 27, 0.15)",
-                      color: "var(--c-cobalt-400)",
+                      fontFamily: "var(--font-display)",
+                      color: "var(--text-on-dark)",
                     }}
                   >
-                    <Icon className="size-5" aria-hidden />
-                  </span>
-                  <h3
-                    className="text-[17px] font-semibold tracking-tight"
-                    style={{ fontFamily: "var(--font-display)", color: "var(--c-white)" }}
+                    {item.title}
+                  </h4>
+                  <p
+                    className="text-[15px] leading-[1.65]"
+                    style={{ color: "var(--text-on-dark-muted)" }}
                   >
-                    {copy.title}
-                  </h3>
-                  <p className="text-[14px] leading-[1.65]" style={{ color: "var(--text-on-dark-muted)" }}>
-                    {copy.body}
+                    {item.body}
                   </p>
                 </article>
               </Reveal>
@@ -190,16 +125,15 @@ export function WhyChooseSection() {
           })}
         </div>
 
-        <Reveal>
+        <Reveal delay={0.1}>
           <div className="mt-12">
             <Link
               href="/#eligibilite"
-              className="inline-flex items-center rounded-full px-8 py-4 text-[16px] font-semibold transition-transform duration-200 hover:-translate-y-0.5"
+              className="inline-flex rounded-full px-7 py-3.5 text-[15px] font-semibold"
               style={{
                 fontFamily: "var(--font-ui)",
                 background: "var(--brand)",
-                color: "var(--c-white)",
-                boxShadow: "0 12px 32px -12px rgba(232, 78, 27, 0.65)",
+                color: "var(--text-on-dark)",
               }}
             >
               {t.cta}

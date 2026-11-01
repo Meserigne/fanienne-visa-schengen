@@ -1,6 +1,5 @@
 "use client";
 
-import { useLanguage } from "@/lib/language-context";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { EligibilityForm } from "@/components/eligibility-form";
@@ -14,219 +13,66 @@ import { StepsPan, type StepItem } from "@/components/steps-pan";
 import { WhyChooseSection } from "@/components/why-choose-section";
 import { ResponsibilityNote } from "@/components/responsibility-note";
 import { useSiteImages } from "@/lib/site-images-context";
+import { useCmsDoc } from "@/lib/cms-context";
 
-const STEPS: StepItem[] = [
-  {
-    fr: {
-      label: "01",
-      title: "Vous nous écrivez",
-      body: "Décrivez votre projet. Nous vous répondons sous 48 heures.",
-    },
-    en: {
-      label: "01",
-      title: "You write to us",
-      body: "Describe your project. We reply within 48 hours.",
-    },
-  },
-  {
-    fr: {
-      label: "02",
-      title: "Nous construisons le dossier",
-      body: "Pièces, réservations, assurance : tout est préparé pour le dépôt.",
-    },
-    en: {
-      label: "02",
-      title: "We build the file",
-      body: "Documents, bookings, insurance: everything prepared for submission.",
-    },
-  },
-  {
-    fr: {
-      label: "03",
-      title: "Nous contrôlons, puis vous déposez",
-      body: "Double vérification, RDV, entretien préparé, puis dépôt.",
-    },
-    en: {
-      label: "03",
-      title: "We check, then you submit",
-      body: "Double check, appointment, prepared interview, then submission.",
-    },
-  },
-  {
-    fr: {
-      label: "04",
-      title: "Nous suivons jusqu'à la décision",
-      body: "Suivi après dépôt. Pour les études ou les soins, accompagnement aussi après.",
-    },
-    en: {
-      label: "04",
-      title: "We follow until the decision",
-      body: "Post-submission tracking. For studies or medical care, support continues after.",
-    },
-  },
-];
+type TracksDoc = {
+  title: string;
+  items: {
+    href: string;
+    imageKey: string;
+    imagePosition?: string;
+    number: string;
+    title: string;
+    body: string;
+    cta: string;
+  }[];
+};
+
+type ServicesDoc = {
+  title: string;
+  needTitle: string;
+  needBody: string;
+  needCta: string;
+  items: {
+    tone: "photo" | "dusk" | string;
+    imageKey: string;
+    title: string;
+    body: string;
+  }[];
+};
+
+type StepsDoc = {
+  title: string;
+  items: { label: string; title: string; body: string }[];
+};
 
 export default function Home() {
-  const { lang } = useLanguage();
   const images = useSiteImages();
+  const tracks = useCmsDoc<TracksDoc>("home.tracks");
+  const services = useCmsDoc<ServicesDoc>("home.services");
+  const steps = useCmsDoc<StepsDoc>("home.steps");
 
-  const SERVICES: ServiceItem[] = [
-    {
-      tone: "photo",
-      image: images.passportDesk,
-      fr: {
-        title: "Analyse du profil",
-        body: "Nous lisons votre situation, listons les pièces utiles et construisons un dossier cohérent.",
-      },
-      en: {
-        title: "Profile review",
-        body: "We read your situation, list the right documents and build a coherent file.",
-      },
-    },
-    {
-      tone: "photo",
-      image: images.documents,
-      fr: {
-        title: "Double contrôle",
-        body: "Assistant + consultant relisent chaque dossier avant dépôt pour limiter les erreurs évitables.",
-      },
-      en: {
-        title: "Double check",
-        body: "An assistant and a consultant review every file before submission to cut avoidable errors.",
-      },
-    },
-    {
-      tone: "photo",
-      image: images.interview,
-      fr: {
-        title: "Préparation à l'entretien",
-        body: "Vous répétez les questions clés pour présenter votre projet avec clarté.",
-      },
-      en: {
-        title: "Interview prep",
-        body: "You rehearse the key questions so you present your project with clarity.",
-      },
-    },
-    {
-      tone: "photo",
-      image: images.flight,
-      fr: {
-        title: "Assurance, réservations & RDV",
-        body: "Assurance Schengen, réservations conformes et prise de rendez-vous.",
-      },
-      en: {
-        title: "Insurance, bookings & appointments",
-        body: "Schengen insurance, compliant bookings and appointment booking.",
-      },
-    },
-    {
-      tone: "dusk",
-      image: images.luggage,
-      fr: {
-        title: "Suivi jusqu'à la décision",
-        body: "Nous restons avec vous après le dépôt, jusqu'à la réponse du consulat.",
-      },
-      en: {
-        title: "Follow-up until the decision",
-        body: "We stay with you after submission, until the consulate replies.",
-      },
-    },
-  ];
+  const trackCards = (tracks.items || []).map((item) => ({
+    href: item.href,
+    image: images[item.imageKey] || "",
+    imagePosition: item.imagePosition,
+    number: item.number,
+    title: item.title,
+    body: item.body,
+    cta: item.cta,
+  }));
 
-  const t = {
-    fr: {
-      tracksTitle: "Pour quel voyage préparez-vous votre visa ?",
-      tracks: [
-        {
-          href: "/etudiants",
-          image: images.trackStudents,
-          imagePosition: "center 20%",
-          number: "01",
-          title: "Étudiants",
-          body: "Études et mobilité : Campus France, ressources, hébergement, entretien.",
-          cta: "Voir la formule Student Care",
-        },
-        {
-          href: "/entreprises",
-          image: images.trackBusiness,
-          imagePosition: "center 22%",
-          number: "02",
-          title: "Professionnels",
-          body: "Missions et foires : invitations, ordres de mission, traitement prioritaire.",
-          cta: "Voir la formule Pro Executive",
-        },
-        {
-          href: "/tourisme",
-          image: images.tourism,
-          imagePosition: "center 40%",
-          number: "03",
-          title: "Tourisme & famille",
-          body: "Court séjour : dossier conforme, réservations et RDV.",
-          cta: "Voir la formule Essentielle",
-        },
-        {
-          href: "/sante",
-          image: images.medical,
-          imagePosition: "center 35%",
-          number: "04",
-          title: "Santé & soins",
-          body: "Soins et urgences médicales : coordination hospitalière, dossier accéléré.",
-          cta: "Voir la formule Urgence Santé",
-        },
-      ],
-      servicesTitle: "Ce que nous faisons, concrètement.",
-      needTitle: "Un besoin particulier ?",
-      needBody: "Chaque demande est étudiée sans engagement. Nous vous orientons vers la formule adaptée.",
-      needCta: "Demander un devis",
-      howTitle: "Un parcours simple, du premier message à la décision.",
-    },
-    en: {
-      tracksTitle: "What kind of trip are you preparing for?",
-      tracks: [
-        {
-          href: "/etudiants",
-          image: images.trackStudents,
-          imagePosition: "center 20%",
-          number: "01",
-          title: "Students",
-          body: "Studies and mobility: Campus France, funding, housing, interview.",
-          cta: "See the Student Care plan",
-        },
-        {
-          href: "/entreprises",
-          image: images.trackBusiness,
-          imagePosition: "center 22%",
-          number: "02",
-          title: "Professionals",
-          body: "Missions and trade fairs: invitations, mission orders, priority handling.",
-          cta: "See the Pro Executive plan",
-        },
-        {
-          href: "/tourisme",
-          image: images.tourism,
-          imagePosition: "center 40%",
-          number: "03",
-          title: "Tourism & family",
-          body: "Short stay: a compliant file, bookings and appointment.",
-          cta: "See the Essential plan",
-        },
-        {
-          href: "/sante",
-          image: images.medical,
-          imagePosition: "center 35%",
-          number: "04",
-          title: "Health & care",
-          body: "Medical care and emergencies: hospital coordination, accelerated file.",
-          cta: "See the Health Priority plan",
-        },
-      ],
-      servicesTitle: "What we do, concretely.",
-      needTitle: "A specific need?",
-      needBody: "Every request is reviewed with no obligation. We guide you to the right plan.",
-      needCta: "Request a quote",
-      howTitle: "A simple path, from first message to decision.",
-    },
-  }[lang];
+  const serviceItems: ServiceItem[] = (services.items || []).map((item) => ({
+    tone: item.tone === "dusk" ? "dusk" : "photo",
+    image: images[item.imageKey] || "",
+    fr: { title: item.title, body: item.body },
+    en: { title: item.title, body: item.body },
+  }));
+
+  const stepItems: StepItem[] = (steps.items || []).map((item) => ({
+    fr: { label: item.label, title: item.title, body: item.body },
+    en: { label: item.label, title: item.title, body: item.body },
+  }));
 
   return (
     <>
@@ -238,26 +84,29 @@ export default function Home() {
         <Reveal>
           <h2
             className="mx-auto max-w-[1100px] text-[clamp(1.45rem,2.8vw,2rem)] font-semibold tracking-tight"
-            style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
+            style={{
+              fontFamily: "var(--font-display)",
+              color: "var(--text-primary)",
+            }}
           >
-            {t.tracksTitle}
+            {tracks.title}
           </h2>
         </Reveal>
       </section>
 
-      <TrackPanels tracks={t.tracks} />
+      <TrackPanels tracks={trackCards} />
 
       <PacksSection />
 
       <ServiceStack
-        services={SERVICES}
-        title={t.servicesTitle}
-        needTitle={t.needTitle}
-        needBody={t.needBody}
-        needCta={t.needCta}
+        services={serviceItems}
+        title={services.title}
+        needTitle={services.needTitle}
+        needBody={services.needBody}
+        needCta={services.needCta}
       />
 
-      <StepsPan steps={STEPS} title={t.howTitle} />
+      <StepsPan steps={stepItems} title={steps.title} />
 
       <WhyChooseSection />
 

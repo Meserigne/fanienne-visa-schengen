@@ -6,28 +6,21 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLanguage } from "@/lib/language-context";
 import { useSiteImage } from "@/lib/site-images-context";
-
-const CTA = { fr: "Envoyer ma demande", en: "Send my request" };
+import { useCmsDoc } from "@/lib/cms-context";
 
 export function ParallaxHero() {
   const rootRef = useRef<HTMLDivElement>(null);
   const { lang } = useLanguage();
   const heroImage = useSiteImage("hero");
-
-  const t = {
-    fr: {
-      brand: "tukki CONSULTING",
-      title: "Votre dossier Schengen, préparé pour convaincre.",
-      body: "Depuis Dakar, Tukki Consulting prépare, vérifie et suit votre demande : études, affaires, famille ou soins.",
-      ctaSecondary: "Découvrir nos formules",
-    },
-    en: {
-      brand: "tukki CONSULTING",
-      title: "Your Schengen file, built to convince.",
-      body: "From Dakar, Tukki Consulting prepares, reviews and tracks your application: studies, business, family or medical care.",
-      ctaSecondary: "Explore our plans",
-    },
-  }[lang];
+  const t = useCmsDoc<{
+    brandLine1: string;
+    brandLine2: string;
+    title: string;
+    body: string;
+    ctaPrimary: string;
+    ctaSecondary: string;
+    imageAlt: string;
+  }>("home.hero");
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -83,7 +76,7 @@ export function ParallaxHero() {
         <div data-parallax-media className="absolute inset-0 will-change-transform">
           <Image
             src={heroImage}
-            alt="Tukki Consulting, accompagnement visa Schengen depuis Dakar"
+            alt={t.imageAlt}
             fill
             priority
             sizes="100vw"
@@ -114,13 +107,13 @@ export function ParallaxHero() {
                 className="text-[clamp(2.75rem,8vw,5.75rem)] leading-[0.95] font-semibold tracking-tight"
                 style={{ color: "var(--c-cyan-300)" }}
               >
-                tukki
+                {t.brandLine1}
               </span>
               <span
                 className="text-[clamp(2.75rem,8vw,5.75rem)] leading-[0.95] font-semibold tracking-tight"
                 style={{ color: "var(--c-white)" }}
               >
-                CONSULTING
+                {t.brandLine2}
               </span>
             </p>
             <h1
@@ -146,7 +139,7 @@ export function ParallaxHero() {
                   boxShadow: "0 12px 32px -12px rgba(232, 78, 27, 0.65)",
                 }}
               >
-                {CTA[lang]}
+                {t.ctaPrimary}
               </a>
               <a
                 href="#formules"

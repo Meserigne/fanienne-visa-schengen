@@ -5,18 +5,19 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { BrandLogo } from "@/components/brand-logo";
 import { useLanguage } from "@/lib/language-context";
+import { useCmsDoc } from "@/lib/cms-context";
 
-const NAV = [
-  { href: "/", fr: "Accueil", en: "Home" },
-  { href: "/etudiants", fr: "Étudiants", en: "Students" },
-  { href: "/entreprises", fr: "Professionnels", en: "Business" },
-  { href: "/tourisme", fr: "Tourisme & famille", en: "Tourism & family" },
-  { href: "/sante", fr: "Santé", en: "Health" },
-];
+type NavDoc = {
+  links: { href: string; label: string }[];
+  cta: string;
+  menuOpen: string;
+  menuClose: string;
+};
 
 export function SiteHeader() {
   const { lang, setLang } = useLanguage();
   const pathname = usePathname();
+  const nav = useCmsDoc<NavDoc>("nav");
   const eligibilityHref = pathname === "/" ? "#eligibilite" : "/#eligibilite";
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -36,19 +37,26 @@ export function SiteHeader() {
   }, [pathname]);
 
   const solid = scrolled || !onHome || open;
+  const links = nav.links || [];
 
   return (
     <header
       className="fixed inset-x-0 top-0 z-40 transition-[background,border-color,backdrop-filter] duration-300"
       style={{
-        borderBottom: solid ? "1px solid var(--border-default)" : "1px solid transparent",
+        borderBottom: solid
+          ? "1px solid var(--border-default)"
+          : "1px solid transparent",
         background: solid ? "var(--surface-glass)" : "transparent",
         backdropFilter: solid ? "blur(16px)" : "none",
         WebkitBackdropFilter: solid ? "blur(16px)" : "none",
       }}
     >
       <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-6 px-6 py-4 sm:px-10 lg:px-14">
-        <Link href="/" className="relative flex shrink-0 items-center" aria-label="Tukki Consulting">
+        <Link
+          href="/"
+          className="relative flex shrink-0 items-center"
+          aria-label="Tukki Consulting"
+        >
           <BrandLogo
             variant={solid ? "black" : "white"}
             priority
@@ -63,7 +71,7 @@ export function SiteHeader() {
             color: solid ? "var(--text-secondary)" : "var(--text-on-dark-muted)",
           }}
         >
-          {NAV.map((item) => {
+          {links.map((item) => {
             const active = pathname === item.href;
             return (
               <Link
@@ -81,7 +89,7 @@ export function SiteHeader() {
                     : "2px solid transparent",
                 }}
               >
-                {lang === "fr" ? item.fr : item.en}
+                {item.label}
               </Link>
             );
           })}
@@ -91,7 +99,9 @@ export function SiteHeader() {
           <div
             className="flex rounded-full border p-[3px]"
             style={{
-              borderColor: solid ? "var(--border-strong)" : "var(--border-inverse)",
+              borderColor: solid
+                ? "var(--border-strong)"
+                : "var(--border-inverse)",
             }}
           >
             {(["fr", "en"] as const).map((code) => (
@@ -126,17 +136,19 @@ export function SiteHeader() {
               color: "var(--text-on-dark)",
             }}
           >
-            {lang === "fr" ? "Éligibilité" : "Eligibility"}
+            {nav.cta}
           </Link>
 
           <button
             type="button"
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border md:hidden"
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label={open ? nav.menuClose : nav.menuOpen}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
             style={{
-              borderColor: solid ? "var(--border-strong)" : "var(--border-inverse)",
+              borderColor: solid
+                ? "var(--border-strong)"
+                : "var(--border-inverse)",
               color: solid ? "var(--text-primary)" : "var(--text-on-dark)",
             }}
           >
@@ -180,23 +192,29 @@ export function SiteHeader() {
             background: "var(--surface-card)",
           }}
         >
-          <nav className="flex flex-col gap-4" style={{ fontFamily: "var(--font-ui)" }}>
-            {NAV.map((item) => (
+          <nav
+            className="flex flex-col gap-4"
+            style={{ fontFamily: "var(--font-ui)" }}
+          >
+            {links.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 className="text-[17px] font-medium"
                 style={{ color: "var(--text-primary)" }}
               >
-                {lang === "fr" ? item.fr : item.en}
+                {item.label}
               </Link>
             ))}
             <Link
               href={eligibilityHref}
               className="mt-1 inline-flex w-fit rounded-full px-5 py-3 text-sm font-semibold"
-              style={{ background: "var(--brand)", color: "var(--text-on-dark)" }}
+              style={{
+                background: "var(--brand)",
+                color: "var(--text-on-dark)",
+              }}
             >
-              {lang === "fr" ? "Envoyer ma demande" : "Send my request"}
+              {nav.cta}
             </Link>
           </nav>
         </div>

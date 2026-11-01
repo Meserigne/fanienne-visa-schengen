@@ -3,6 +3,7 @@ import { Outfit, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/lib/language-context";
 import { SiteImagesProvider } from "@/lib/site-images-context";
+import { SiteCmsProvider } from "@/lib/cms-context";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { BackToTop } from "@/components/back-to-top";
 import { AiChat } from "@/components/ai-chat";
@@ -94,9 +95,11 @@ export default function RootLayout({
         <JsonLd />
         <LanguageProvider>
           <SiteImagesProvider>
-            <SmoothScroll>{children}</SmoothScroll>
-            <BackToTop />
-            <AiChat />
+            <SiteCmsProvider>
+              <SmoothScroll>{children}</SmoothScroll>
+              <BackToTop />
+              <AiChat />
+            </SiteCmsProvider>
           </SiteImagesProvider>
         </LanguageProvider>
       </body>

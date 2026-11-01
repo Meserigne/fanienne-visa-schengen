@@ -1,0 +1,594 @@
+{
+  "etudiants": {
+    "brand": {
+      "fr": "tukki CONSULTING",
+      "en": "tukki CONSULTING"
+    },
+    "title": {
+      "fr": "Étudier en Europe, avec un dossier qui tient.",
+      "en": "Study in Europe, with a file that holds up."
+    },
+    "body": {
+      "fr": "Depuis Dakar, Tukki Consulting prépare votre visa étudiant : Campus France, ressources, hébergement et entretien. Vous avancez avec une méthode claire.",
+      "en": "From Dakar, Tukki Consulting prepares your student visa: Campus France, funding, housing and interview. You move forward with a clear method."
+    },
+    "whyTitle": {
+      "fr": "Un dossier étudiant solide change la donne.",
+      "en": "A solid student file changes the odds."
+    },
+    "why": [
+      {
+        "title": {
+          "fr": "Un projet d'études crédible",
+          "en": "A credible study project"
+        },
+        "body": {
+          "fr": "Choix d'école, lettre de motivation et parcours cohérent : nous construisons un dossier qui défend clairement votre projet auprès de Campus France et du consulat.",
+          "en": "School choice, motivation letter and a coherent path: we build a file that clearly defends your project before Campus France and the consulate."
+        }
+      },
+      {
+        "title": {
+          "fr": "Moins de refus évitables",
+          "en": "Fewer avoidable refusals"
+        },
+        "body": {
+          "fr": "Pièces incomplètes, entretien mal préparé, ressources mal justifiées : autant d'erreurs que nous anticipons avant le dépôt.",
+          "en": "Incomplete documents, a poorly prepared interview, unclear funding: mistakes we anticipate before submission."
+        }
+      },
+      {
+        "title": {
+          "fr": "Une arrivée plus sereine",
+          "en": "A calmer arrival"
+        },
+        "body": {
+          "fr": "Visa obtenu, il reste le logement, le compte bancaire et les premières démarches. Nous restons avec vous jusqu'à la rentrée.",
+          "en": "Once the visa is granted, housing, a bank account and first admin steps remain. We stay with you through to day one."
+        }
+      }
+    ],
+    "servicesTitle": {
+      "fr": "Ce que comprend la formule Student Care.",
+      "en": "What the Student Care plan includes."
+    },
+    "services": [
+      {
+        "title": {
+          "fr": "Choix & admission",
+          "en": "School choice & admission"
+        },
+        "body": {
+          "fr": "Sélection des écoles et universités adaptées à votre profil, candidatures et obtention de l'attestation d'admission.",
+          "en": "Selecting schools and universities that fit your profile, handling applications and securing your admission letter."
+        }
+      },
+      {
+        "title": {
+          "fr": "Dossier visa étudiant",
+          "en": "Student visa file"
+        },
+        "body": {
+          "fr": "Constitution du dossier de visa long séjour études : garant financier, hébergement, assurance ; le tout vérifié avant dépôt.",
+          "en": "Building your long-stay study visa file: financial sponsor, housing proof, insurance; everything reviewed before submission."
+        }
+      },
+      {
+        "title": {
+          "fr": "Préparation à l'entretien",
+          "en": "Interview coaching"
+        },
+        "body": {
+          "fr": "Simulations d'entretien (Campus France, consulat) pour défendre votre projet d'études avec clarté et conviction.",
+          "en": "Mock interviews (Campus France, consulate) so you can defend your study project with clarity and confidence."
+        }
+      },
+      {
+        "title": {
+          "fr": "Installation sur place",
+          "en": "Settling in"
+        },
+        "body": {
+          "fr": "Recherche de logement, ouverture de compte, premières démarches administratives : une arrivée sereine en Europe.",
+          "en": "Housing search, bank account, first administrative steps: a smooth arrival in Europe."
+        }
+      }
+    ],
+    "promiseTitle": {
+      "fr": "Vous décrivez le projet. Nous structurons le parcours.",
+      "en": "You describe the project. We structure the path."
+    },
+    "promiseBody": {
+      "fr": "Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa étudiant, selon la destination et votre situation, avec double vérification avant dépôt.",
+      "en": "After your request, we tell you exactly what is needed for your student visa, for your destination and situation, with double verification before submission."
+    },
+    "promise": [
+      {
+        "title": {
+          "fr": "Réponse sous 48 heures",
+          "en": "Reply within 48 hours"
+        },
+        "body": {
+          "fr": "Décrivez votre projet d'études. Un conseiller vous répond avec une lecture claire de votre situation.",
+          "en": "Describe your study project. An advisor replies with a clear reading of your situation."
+        }
+      },
+      {
+        "title": {
+          "fr": "Parcours adapté à votre profil",
+          "en": "A path fitted to your profile"
+        },
+        "body": {
+          "fr": "Licence, master ou formation professionnelle : l'accompagnement est calé sur votre niveau, votre destination et vos délais.",
+          "en": "Bachelor, master's or vocational training: support is set to your level, destination and timeline."
+        }
+      },
+      {
+        "title": {
+          "fr": "Un interlocuteur dédié",
+          "en": "A dedicated contact"
+        },
+        "body": {
+          "fr": "Vous avancez avec la même personne, de la candidature jusqu'à votre installation en Europe.",
+          "en": "You work with the same person from application through to settling in Europe."
+        }
+      }
+    ],
+    "ctaTitle": {
+      "fr": "Parlez-nous de votre projet d'études.",
+      "en": "Tell us about your study plans."
+    },
+    "ctaBody": {
+      "fr": "Admission et visa prennent du temps. Plus tôt vous commencez à Dakar, plus le dossier est solide. Le tarif est communiqué après évaluation.",
+      "en": "Admission and visa take time. The earlier you start in Dakar, the stronger the file. Pricing is shared after assessment."
+    },
+    "ctaButton": {
+      "fr": "Envoyer ma demande",
+      "en": "Send my request"
+    }
+  },
+  "entreprises": {
+    "brand": {
+      "fr": "tukki CONSULTING",
+      "en": "tukki CONSULTING"
+    },
+    "title": {
+      "fr": "Vos opportunités business ne doivent pas attendre un visa.",
+      "en": "Your business opportunities should not wait on a visa."
+    },
+    "body": {
+      "fr": "Depuis Dakar, Tukki Consulting prépare vos visas d'affaires : foires, missions, partenariats, invitations et ordres de mission, avec un traitement prioritaire.",
+      "en": "From Dakar, Tukki Consulting prepares your business visas: trade fairs, missions, partnerships, invitations and mission orders, with priority handling."
+    },
+    "whyTitle": {
+      "fr": "Un refus coûte plus cher qu'un dossier bien préparé.",
+      "en": "A refusal costs more than a well-prepared file."
+    },
+    "why": [
+      {
+        "title": {
+          "fr": "Opportunités saisies à temps",
+          "en": "Opportunities seized on time"
+        },
+        "body": {
+          "fr": "Un salon manqué ou une négociation reportée, c'est un marché perdu. Nous anticipons les délais consulaires pour que vous soyez présent au bon moment.",
+          "en": "A missed trade fair or postponed negotiation is a lost market. We anticipate consular timelines so you are there at the right moment."
+        }
+      },
+      {
+        "title": {
+          "fr": "Crédibilité de l'entreprise",
+          "en": "Company credibility"
+        },
+        "body": {
+          "fr": "Un dossier d'entreprise structuré (registre, bilans, lettres d'invitation) présente votre PME sous son meilleur jour auprès des consulats.",
+          "en": "A structured company file (registration, financials, invitation letters) presents your SME at its best before consulates."
+        }
+      },
+      {
+        "title": {
+          "fr": "Historique de voyage propre",
+          "en": "A clean travel record"
+        },
+        "body": {
+          "fr": "Des demandes bien faites construisent un historique favorable, qui facilite chaque visa suivant, jusqu'aux visas de circulation longue durée.",
+          "en": "Well-made applications build a favourable history that eases every next visa, up to long-term multiple-entry visas."
+        }
+      }
+    ],
+    "servicesTitle": {
+      "fr": "Ce que comprend la formule Pro Executive.",
+      "en": "What the Pro Executive plan includes."
+    },
+    "services": [
+      {
+        "title": {
+          "fr": "Visa d'affaires dirigeant",
+          "en": "Executive business visa"
+        },
+        "body": {
+          "fr": "Dossier complet du gérant ou dirigeant : documents d'entreprise, invitation du partenaire européen, itinéraire et justificatifs financiers.",
+          "en": "A complete file for the owner or executive: company documents, invitation from the European partner, itinerary and financial proof."
+        }
+      },
+      {
+        "title": {
+          "fr": "Délégations & équipes",
+          "en": "Delegations & teams"
+        },
+        "body": {
+          "fr": "Gestion groupée des demandes pour vos équipes en déplacement : salons, foires, formations et missions techniques.",
+          "en": "Grouped applications for travelling teams: trade fairs, exhibitions, training and technical missions."
+        }
+      },
+      {
+        "title": {
+          "fr": "Voyages récurrents",
+          "en": "Frequent travel"
+        },
+        "body": {
+          "fr": "Stratégie pour obtenir des visas à entrées multiples et de circulation, adaptée aux entreprises qui voyagent plusieurs fois par an.",
+          "en": "A strategy to obtain multiple-entry and circulation visas, designed for companies that travel several times a year."
+        }
+      },
+      {
+        "title": {
+          "fr": "Logistique du déplacement",
+          "en": "Trip logistics"
+        },
+        "body": {
+          "fr": "Assurance conforme Schengen, réservations d'hôtel et de vol, et accompagnement sur place si nécessaire.",
+          "en": "Schengen-compliant insurance, hotel and flight bookings, and on-site support when needed."
+        }
+      }
+    ],
+    "promiseTitle": {
+      "fr": "Vous décrivez la mission. Nous structurons le dossier.",
+      "en": "You describe the mission. We structure the file."
+    },
+    "promiseBody": {
+      "fr": "Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa d'affaires, avec traitement prioritaire et double vérification avant dépôt.",
+      "en": "After your request, we tell you exactly what is needed for your business visa, with priority handling and double verification before submission."
+    },
+    "promise": [
+      {
+        "title": {
+          "fr": "Réponse sous 48 heures",
+          "en": "Reply within 48 hours"
+        },
+        "body": {
+          "fr": "Décrivez votre mission. Un conseiller vous répond avec une lecture claire de votre situation.",
+          "en": "Describe your mission. An advisor replies with a clear reading of your situation."
+        }
+      },
+      {
+        "title": {
+          "fr": "Devis adapté à votre déplacement",
+          "en": "A quote fitted to your trip"
+        },
+        "body": {
+          "fr": "Salon, négociation ou délégation : chaque accompagnement est chiffré selon votre réel besoin.",
+          "en": "Trade fair, negotiation or delegation: every engagement is priced to your actual need."
+        }
+      },
+      {
+        "title": {
+          "fr": "Un interlocuteur dédié",
+          "en": "A dedicated contact"
+        },
+        "body": {
+          "fr": "Vous avancez avec la même personne, de la première prise de contact jusqu'à la décision consulaire.",
+          "en": "You work with the same person from first contact through to the consular decision."
+        }
+      }
+    ],
+    "ctaTitle": {
+      "fr": "Parlez-nous de votre prochain déplacement.",
+      "en": "Tell us about your next trip."
+    },
+    "ctaBody": {
+      "fr": "Décrivez votre mission : un conseiller Tukki vous répond sous 48 heures. Le tarif est communiqué après évaluation.",
+      "en": "Describe your mission: a Tukki advisor replies within 48 hours. Pricing is shared after assessment."
+    },
+    "ctaButton": {
+      "fr": "Demander un devis",
+      "en": "Request a quote"
+    }
+  },
+  "tourisme": {
+    "brand": {
+      "fr": "tukki CONSULTING",
+      "en": "tukki CONSULTING"
+    },
+    "title": {
+      "fr": "Partir en famille ou en vacances, sans dossier approximatif.",
+      "en": "Tourism & family: a clean file, without the stress."
+    },
+    "body": {
+      "fr": "Depuis Dakar, Tukki Consulting prépare votre visa de court séjour : analyse du profil, réservations, assurance et prise de RDV.",
+      "en": "From Dakar, Tukki Consulting prepares your short-stay visa: profile review, hotel and flight bookings, insurance and appointment booking."
+    },
+    "whyTitle": {
+      "fr": "Un séjour en Europe commence par un dossier solide.",
+      "en": "A trip to Europe starts with a solid file."
+    },
+    "why": [
+      {
+        "title": {
+          "fr": "Un motif de voyage lisible",
+          "en": "A readable travel purpose"
+        },
+        "body": {
+          "fr": "Tourisme ou visite familiale : nous clarifions l'itinéraire, les liens familiaux et le retour au Sénégal pour que le consulat comprenne immédiatement votre projet.",
+          "en": "Tourism or family visit: we clarify the itinerary, family ties and return to Senegal so the consulate immediately understands your plan."
+        }
+      },
+      {
+        "title": {
+          "fr": "Des pièces vraiment conformes",
+          "en": "Documents that actually comply"
+        },
+        "body": {
+          "fr": "Réservations d'hôtel et de billets, assurance, preuves de ressources : nous vérifions chaque élément avant le dépôt pour éviter les refus évitables.",
+          "en": "Hotel and flight bookings, insurance, proof of funds: we check every item before submission to avoid preventable refusals."
+        }
+      },
+      {
+        "title": {
+          "fr": "Un RDV sans improviser",
+          "en": "An appointment without improvising"
+        },
+        "body": {
+          "fr": "Prise de rendez-vous, checklist personnalisée et suivi jusqu'à la décision : vous avancez avec un interlocuteur, pas une liste générique.",
+          "en": "Appointment booking, a personalised checklist and follow-up until the decision: you move forward with one contact, not a generic list."
+        }
+      }
+    ],
+    "servicesTitle": {
+      "fr": "La formule Essentielle, de l'analyse au rendez-vous.",
+      "en": "The Essential plan, from review to appointment."
+    },
+    "services": [
+      {
+        "title": {
+          "fr": "Analyse du profil",
+          "en": "Profile review"
+        },
+        "body": {
+          "fr": "Lecture de votre situation (historique de visas, ressources, motif) pour identifier les points faibles avant même de constituer le dossier.",
+          "en": "A reading of your situation (visa history, funds, purpose) to spot weak points before the file is even built."
+        }
+      },
+      {
+        "title": {
+          "fr": "Préparation du dossier",
+          "en": "File preparation"
+        },
+        "body": {
+          "fr": "Constitution et contrôle du dossier de court séjour : pièces personnelles, financières et justificatifs de voyage, prêts pour le dépôt.",
+          "en": "Building and checking your short-stay file: personal and financial documents plus travel proofs, ready for submission."
+        }
+      },
+      {
+        "title": {
+          "fr": "Réservations conformes",
+          "en": "Compliant bookings"
+        },
+        "body": {
+          "fr": "Aide aux réservations d'hôtel et de billets alignées sur votre itinéraire, pour des preuves cohérentes aux yeux du consulat.",
+          "en": "Help with hotel and flight bookings aligned to your itinerary, so your proofs stay coherent for the consulate."
+        }
+      },
+      {
+        "title": {
+          "fr": "Assurance & prise de RDV",
+          "en": "Insurance & appointment"
+        },
+        "body": {
+          "fr": "Souscription d'une assurance voyage Schengen conforme et prise de rendez-vous auprès du centre compétent.",
+          "en": "Arranging Schengen-compliant travel insurance and booking your appointment at the right centre."
+        }
+      }
+    ],
+    "promiseTitle": {
+      "fr": "Vous décrivez le voyage. Nous structurons le dossier.",
+      "en": "You describe the trip. We structure the file."
+    },
+    "promiseBody": {
+      "fr": "Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa tourisme ou famille, selon la destination et votre situation.",
+      "en": "After your request, we tell you exactly what is needed for your tourism or family visa, for your destination and situation."
+    },
+    "promise": [
+      {
+        "title": {
+          "fr": "Réponse sous 48 heures",
+          "en": "Reply within 48 hours"
+        },
+        "body": {
+          "fr": "Décrivez votre projet de voyage. Un conseiller vous répond avec une lecture claire de votre situation.",
+          "en": "Describe your travel plan. An advisor replies with a clear reading of your situation."
+        }
+      },
+      {
+        "title": {
+          "fr": "Formule Essentielle",
+          "en": "Essential Plan"
+        },
+        "body": {
+          "fr": "Un parcours clair pour le court séjour : tourisme ou famille, avec un périmètre de prestation défini dès le départ.",
+          "en": "End-to-end support for short stays: tourism or family, with a clear service scope from day one."
+        }
+      },
+      {
+        "title": {
+          "fr": "Un interlocuteur dédié",
+          "en": "A dedicated contact"
+        },
+        "body": {
+          "fr": "Vous avancez avec la même personne, de l'analyse du profil jusqu'à la décision consulaire.",
+          "en": "You work with the same person from the profile review through to the consular decision."
+        }
+      }
+    ],
+    "ctaTitle": {
+      "fr": "Parlez-nous de votre séjour.",
+      "en": "Tell us about your trip."
+    },
+    "ctaBody": {
+      "fr": "Tourisme ou visite familiale : plus tôt le dossier est structuré à Dakar, plus il est cohérent le jour du dépôt. Tarif communiqué après évaluation.",
+      "en": "Tourism or family visit: the earlier the file is structured in Dakar, the more coherent it is on submission day. Pricing shared after assessment."
+    },
+    "ctaButton": {
+      "fr": "Envoyer ma demande",
+      "en": "Send my request"
+    }
+  },
+  "sante": {
+    "brand": {
+      "fr": "tukki CONSULTING",
+      "en": "tukki CONSULTING"
+    },
+    "title": {
+      "fr": "Quand les soins ne peuvent pas attendre, le dossier non plus.",
+      "en": "When care cannot wait, neither can the file."
+    },
+    "body": {
+      "fr": "Depuis Dakar, Tukki Consulting accélère votre visa pour soins spécialisés ou C.I.A. : devis hospitaliers, admission et coordination avec les établissements en Europe.",
+      "en": "From Dakar, Tukki Consulting accelerates your visa for specialised care or medical evacuation: hospital quotes, admission and coordination with facilities in Europe."
+    },
+    "whyTitle": {
+      "fr": "La santé impose le rythme. Le dossier doit suivre.",
+      "en": "Health sets the pace. The file must keep up."
+    },
+    "why": [
+      {
+        "title": {
+          "fr": "Des délais qui comptent vraiment",
+          "en": "Timelines that truly matter"
+        },
+        "body": {
+          "fr": "Quand les soins ne peuvent pas attendre, un dossier mal cadré fait perdre des semaines. Nous priorisons les pièces et le calendrier consulaire.",
+          "en": "When care cannot wait, a poorly framed file costs weeks. We prioritise documents and the consular calendar."
+        }
+      },
+      {
+        "title": {
+          "fr": "Un parcours médical crédible",
+          "en": "A credible medical path"
+        },
+        "body": {
+          "fr": "Devis, lettre d'admission, C.I.A. : nous structurons les preuves hospitalières pour que le motif médical soit incontestable.",
+          "en": "Quotes, admission letter, evacuation paperwork: we structure hospital proofs so the medical purpose is beyond doubt."
+        }
+      },
+      {
+        "title": {
+          "fr": "Une coordination jusqu'en Europe",
+          "en": "Coordination through to Europe"
+        },
+        "body": {
+          "fr": "Hôpitaux, accompagnants, dates de traitement : nous restons l'interlocuteur unique entre Dakar et l'établissement européen.",
+          "en": "Hospitals, companions, treatment dates: we remain the single contact between Dakar and the European facility."
+        }
+      }
+    ],
+    "servicesTitle": {
+      "fr": "La formule Urgence Santé, de l'hôpital au visa.",
+      "en": "The Health Priority plan, from hospital to visa."
+    },
+    "services": [
+      {
+        "title": {
+          "fr": "Urgence & priorisation",
+          "en": "Urgency & prioritisation"
+        },
+        "body": {
+          "fr": "Traitement accéléré de votre demande : lecture rapide du dossier, priorisation des pièces critiques et calendrier adapté à l'urgence médicale.",
+          "en": "Accelerated handling of your request: a fast file review, prioritising critical documents and a timeline fitted to medical urgency."
+        }
+      },
+      {
+        "title": {
+          "fr": "Accords hospitaliers",
+          "en": "Hospital agreements"
+        },
+        "body": {
+          "fr": "Vérification des devis, lettres d'admission et accords d'établissement en Europe, pour un motif de soins clairement documenté.",
+          "en": "Checking quotes, admission letters and facility agreements in Europe, so the care purpose is clearly documented."
+        }
+      },
+      {
+        "title": {
+          "fr": "Constitution du dossier médical",
+          "en": "Building the medical file"
+        },
+        "body": {
+          "fr": "Assemblage du dossier visa médical Schengen : pièces médicales, financières et de voyage, contrôlées avant dépôt.",
+          "en": "Assembling your Schengen medical visa file: medical, financial and travel documents, reviewed before submission."
+        }
+      },
+      {
+        "title": {
+          "fr": "Coordination Europe",
+          "en": "Europe coordination"
+        },
+        "body": {
+          "fr": "Suivi avec les hôpitaux européens, les accompagnants et le centre de visa jusqu'à la décision, pour que le parcours de soins démarre à temps.",
+          "en": "Follow-up with European hospitals, companions and the visa centre until the decision, so care can start on time."
+        }
+      }
+    ],
+    "promiseTitle": {
+      "fr": "Vous décrivez la situation. Nous structurons le dossier.",
+      "en": "You describe the situation. We structure the file."
+    },
+    "promiseBody": {
+      "fr": "Après votre demande, nous indiquons exactement ce qu'il faut pour votre visa médical, selon l'établissement, la destination et l'urgence.",
+      "en": "After your request, we tell you exactly what is needed for your medical visa, for the facility, destination and urgency."
+    },
+    "promise": [
+      {
+        "title": {
+          "fr": "Réponse sous 48 heures",
+          "en": "Reply within 48 hours"
+        },
+        "body": {
+          "fr": "Décrivez la situation médicale. Un conseiller vous répond avec une lecture claire de votre dossier et des prochaines étapes.",
+          "en": "Describe the medical situation. An advisor replies with a clear reading of your file and next steps."
+        }
+      },
+      {
+        "title": {
+          "fr": "Formule Urgence Santé",
+          "en": "Health Priority Plan"
+        },
+        "body": {
+          "fr": "Un accompagnement accéléré pour les soins spécialisés et la C.I.A., avec un périmètre de prestation clair dès le premier échange.",
+          "en": "Accelerated support for specialised care and medical evacuation, with a clear service scope from the first exchange."
+        }
+      },
+      {
+        "title": {
+          "fr": "Un interlocuteur dédié",
+          "en": "A dedicated contact"
+        },
+        "body": {
+          "fr": "Vous avancez avec la même personne, de la première pièce médicale jusqu'à la décision consulaire.",
+          "en": "You work with the same person from the first medical document through to the consular decision."
+        }
+      }
+    ],
+    "ctaTitle": {
+      "fr": "Parlez-nous de la situation médicale.",
+      "en": "Tell us about the medical situation."
+    },
+    "ctaBody": {
+      "fr": "Délais serrés : plus tôt le dossier est structuré à Dakar, plus vite le parcours de soins peut démarrer. Tarif communiqué après évaluation.",
+      "en": "Tight timelines: the earlier the file is structured in Dakar, the sooner care can begin. Pricing shared after assessment."
+    },
+    "ctaButton": {
+      "fr": "Envoyer ma demande",
+      "en": "Send my request"
+    }
+  }
+}

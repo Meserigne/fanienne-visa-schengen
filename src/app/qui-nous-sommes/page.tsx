@@ -7,117 +7,33 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Reveal } from "@/components/reveal";
 import { useSiteImages } from "@/lib/site-images-context";
+import { useCmsDoc } from "@/lib/cms-context";
 
-const CTA = { fr: "Envoyer ma demande", en: "Send my request" };
-
-const VALUES = [
-  {
-    fr: {
-      title: "100% de rigueur",
-      body: "Dans le traitement de votre dossier, chaque pièce et chaque étape sont vérifiées avec exigence.",
-    },
-    en: {
-      title: "100% rigour",
-      body: "In processing your file, every document and every step is checked with high standards.",
-    },
-  },
-  {
-    fr: {
-      title: "< 48h",
-      body: "Pour prendre en compte votre demande et vous répondre avec une première lecture claire.",
-    },
-    en: {
-      title: "< 48h",
-      body: "To acknowledge your request and reply with a clear first reading.",
-    },
-  },
-  {
-    fr: {
-      title: "Proximité",
-      body: "Basés à Dakar, nous connaissons le terrain sénégalais, les délais locaux et les attentes des consulats européens.",
-    },
-    en: {
-      title: "Proximity",
-      body: "Based in Dakar, we know the Senegalese context, local timelines and what European consulates expect.",
-    },
-  },
-];
-
-const AUDIENCES = [
-  {
-    href: "/etudiants",
-    fr: { title: "Étudiants", body: "Formule Student Care · Campus France, ressources, entretien." },
-    en: { title: "Students", body: "Student Care Plan · Campus France, funding, interview." },
-  },
-  {
-    href: "/entreprises",
-    fr: { title: "Professionnels", body: "Formule Pro Executive · missions, foires, invitations." },
-    en: { title: "Professionals", body: "Pro Executive Plan · missions, fairs, invitations." },
-  },
-  {
-    href: "/tourisme",
-    fr: { title: "Tourisme & famille", body: "Formule Essentielle · court séjour, visites, événements." },
-    en: { title: "Tourism & family", body: "Essential Plan · short stay, visits, events." },
-  },
-  {
-    href: "/sante",
-    fr: { title: "Santé", body: "Formule Urgence Santé · soins, C.I.A., coordination hospitalière." },
-    en: { title: "Health", body: "Health Priority Plan · care, evacuation, hospital coordination." },
-  },
-];
+type AboutDoc = {
+  title: string;
+  subtitle: string;
+  body: string;
+  missionTitle: string;
+  missionLead: string;
+  missionBody: string;
+  missionNote: string;
+  missionPoints: { text: string }[];
+  valuesTitle: string;
+  values: { title: string; body: string }[];
+  audiencesTitle: string;
+  audiences: { href: string; title: string; body: string }[];
+  ctaTitle: string;
+  ctaBody: string;
+  ctaButton: string;
+};
 
 export default function AboutPage() {
   const { lang } = useLanguage();
   const SITE_IMAGES = useSiteImages();
-
-  const t = {
-    fr: {
-      title: "Qui sommes-nous ?",
-      subtitle: "Vos démarches de visa, guidées par des experts du domaine",
-      body: "La préparation d'un dossier Schengen demande de la précision et une excellente connaissance des exigences consulaires. Grâce à notre expérience terrain, nous simplifions chaque étape de vos démarches administratives.",
-      missionTitle: "Notre engagement.",
-      missionLead:
-        "Transformer une procédure souvent perçue comme complexe en un parcours serein, fluide et parfaitement maîtrisé.",
-      missionBody:
-        "Ensemble, nous créons un dossier solide et maximisons vos chances d'obtenir votre visa.",
-      missionNote:
-        "tukki CONSULTING est un cabinet de conseil indépendant. Nous ne délivrons pas de visas : la décision appartient aux autorités consulaires. Notre rôle est de vous mettre dans les meilleures conditions pour réussir.",
-      missionPoints: [
-        "Une méthode claire, adaptée à votre motif de voyage",
-        "Double vérification avant dépôt pour limiter les refus évitables",
-        "Quatre formules : Essentielle, Student Care, Pro Executive, Urgence Santé",
-      ],
-      valuesTitle: "tukki CONSULTING en chiffres",
-      audiencesTitle: "Pour qui nous travaillons.",
-      ctaTitle: "Parlez-nous de votre projet.",
-      ctaBody:
-        "Évaluation gratuite sous 48 heures. Décrivez votre situation : un conseiller Tukki vous répond.",
-      ctaButton: "Envoyer ma demande",
-    },
-    en: {
-      title: "Who we are",
-      subtitle: "Your visa steps, guided by field experts",
-      body: "Preparing a Schengen file demands precision and strong knowledge of consular requirements. With our field experience, we simplify every step of your administrative process.",
-      missionTitle: "Our commitment.",
-      missionLead:
-        "Turn a procedure often seen as complex into a calm, smooth and fully controlled path.",
-      missionBody:
-        "Together, we build a solid file and maximise your chances of obtaining your visa.",
-      missionNote:
-        "tukki CONSULTING is an independent advisory firm. We do not issue visas: decisions belong to consular authorities. Our role is to put you in the best position to succeed.",
-      missionPoints: [
-        "A clear method matched to your travel purpose",
-        "Double verification before submission to reduce avoidable refusals",
-        "Four plans: Essential, Student Care, Pro Executive, Health Priority",
-      ],
-      valuesTitle: "tukki CONSULTING in figures",
-      audiencesTitle: "Who we work with.",
-      ctaTitle: "Tell us about your project.",
-      ctaBody:
-        "Free assessment within 48 hours. Describe your situation: a Tukki advisor replies.",
-      ctaButton: "Send my request",
-    },
-  }[lang];
+  const t = useCmsDoc<AboutDoc>("page.about");
+  const missionPoints = (t.missionPoints || []).map((p) => p.text);
+  const values = t.values || [];
+  const audiences = t.audiences || [];
 
   return (
     <>
@@ -148,7 +64,10 @@ export default function AboutPage() {
             </p>
             <h1
               className="mb-4 max-w-[16ch] text-[clamp(2.1rem,4.5vw,3.75rem)] leading-[1.05] font-semibold tracking-tight text-balance"
-              style={{ fontFamily: "var(--font-display)", color: "var(--text-on-dark)" }}
+              style={{
+                fontFamily: "var(--font-display)",
+                color: "var(--text-on-dark)",
+              }}
             >
               {t.title}
             </h1>
@@ -173,7 +92,7 @@ export default function AboutPage() {
                 color: "var(--text-on-dark)",
               }}
             >
-              {CTA[lang]}
+              {t.ctaButton}
             </Link>
           </Reveal>
           <Reveal className="relative lg:col-span-5" delay={0.1}>
@@ -200,7 +119,10 @@ export default function AboutPage() {
           <Reveal className="lg:col-span-4 lg:sticky lg:top-28 lg:self-start">
             <h2
               className="max-w-[10ch] text-[clamp(2.25rem,4.5vw,3.5rem)] font-semibold tracking-tight"
-              style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
+              style={{
+                fontFamily: "var(--font-display)",
+                color: "var(--text-primary)",
+              }}
             >
               {t.missionTitle}
             </h2>
@@ -208,7 +130,10 @@ export default function AboutPage() {
           <Reveal className="lg:col-span-8" delay={0.06}>
             <p
               className="mb-7 max-w-[28ch] text-[clamp(1.65rem,3vw,2.35rem)] leading-[1.25] font-semibold tracking-tight text-balance"
-              style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
+              style={{
+                fontFamily: "var(--font-display)",
+                color: "var(--text-primary)",
+              }}
             >
               {t.missionLead}
             </p>
@@ -219,7 +144,7 @@ export default function AboutPage() {
               {t.missionBody}
             </p>
             <ul className="mb-10 flex max-w-[52ch] flex-col gap-4">
-              {t.missionPoints.map((point) => (
+              {missionPoints.map((point) => (
                 <li
                   key={point}
                   className="flex gap-4 text-[18px] leading-[1.6] sm:text-[19px]"
@@ -236,7 +161,10 @@ export default function AboutPage() {
             </ul>
             <p
               className="max-w-[52ch] border-t pt-7 text-[16px] leading-[1.75] sm:text-[17px]"
-              style={{ borderColor: "var(--border-default)", color: "var(--text-muted)" }}
+              style={{
+                borderColor: "var(--border-default)",
+                color: "var(--text-muted)",
+              }}
             >
               {t.missionNote}
             </p>
@@ -246,13 +174,19 @@ export default function AboutPage() {
 
       <section
         className="border-y px-6 py-20 sm:px-10 lg:px-14 lg:py-28"
-        style={{ background: "var(--color-bg-sunken)", borderColor: "var(--border-default)" }}
+        style={{
+          background: "var(--color-bg-sunken)",
+          borderColor: "var(--border-default)",
+        }}
       >
         <div className="mx-auto max-w-[1400px]">
           <Reveal>
             <h2
               className="mb-12 max-w-[18ch] text-[clamp(1.85rem,3.5vw,2.75rem)] font-semibold tracking-tight"
-              style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
+              style={{
+                fontFamily: "var(--font-display)",
+                color: "var(--text-primary)",
+              }}
             >
               {t.valuesTitle}
             </h2>
@@ -261,20 +195,26 @@ export default function AboutPage() {
             className="grid grid-cols-1 border-t md:grid-cols-3"
             style={{ borderColor: "var(--border-strong)" }}
           >
-            {VALUES.map((item, i) => (
-              <Reveal key={item.fr.title} delay={i * 0.06}>
+            {values.map((item, i) => (
+              <Reveal key={`${item.title}-${i}`} delay={i * 0.06}>
                 <div
                   className="border-b px-0 py-9 last:border-b-0 md:border-b-0 md:border-r md:px-8 md:last:border-r-0"
                   style={{ borderColor: "var(--border-default)" }}
                 >
                   <h3
                     className="mb-3 text-[22px] font-semibold tracking-tight"
-                    style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
+                    style={{
+                      fontFamily: "var(--font-display)",
+                      color: "var(--text-primary)",
+                    }}
                   >
-                    {item[lang].title}
+                    {item.title}
                   </h3>
-                  <p className="text-[17px] leading-[1.7]" style={{ color: "var(--text-secondary)" }}>
-                    {item[lang].body}
+                  <p
+                    className="text-[17px] leading-[1.7]"
+                    style={{ color: "var(--text-secondary)" }}
+                  >
+                    {item.body}
                   </p>
                 </div>
               </Reveal>
@@ -287,39 +227,57 @@ export default function AboutPage() {
         <Reveal>
           <h2
             className="mb-12 max-w-[18ch] text-[clamp(1.85rem,3.5vw,2.75rem)] font-semibold tracking-tight"
-            style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
+            style={{
+              fontFamily: "var(--font-display)",
+              color: "var(--text-primary)",
+            }}
           >
             {t.audiencesTitle}
           </h2>
         </Reveal>
-        <div className="grid grid-cols-1 gap-0 border-t sm:grid-cols-2 lg:grid-cols-4" style={{ borderColor: "var(--border-strong)" }}>
-          {AUDIENCES.map((item, i) => (
+        <div
+          className="grid grid-cols-1 gap-0 border-t sm:grid-cols-2 lg:grid-cols-4"
+          style={{ borderColor: "var(--border-strong)" }}
+        >
+          {audiences.map((item, i) => (
             <Reveal key={item.href} delay={i * 0.05}>
               <Link
                 href={item.href}
                 className={`group block border-b px-0 py-9 transition-opacity hover:opacity-80 sm:border-b-0 sm:border-r sm:px-8 sm:last:border-r-0 sm:first:pl-0 sm:last:pr-0 ${
-                  i === AUDIENCES.length - 1 ? "border-b-0" : ""
+                  i === audiences.length - 1 ? "border-b-0" : ""
                 }`}
                 style={{ borderColor: "var(--border-default)" }}
               >
                 <p
                   className="mb-3 text-[14px] font-semibold tabular-nums"
-                  style={{ fontFamily: "var(--font-display)", color: "var(--c-cobalt-500)" }}
+                  style={{
+                    fontFamily: "var(--font-display)",
+                    color: "var(--c-cobalt-500)",
+                  }}
                 >
                   {String(i + 1).padStart(2, "0")}
                 </p>
                 <h3
                   className="mb-3 text-[24px] font-semibold tracking-tight"
-                  style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
+                  style={{
+                    fontFamily: "var(--font-display)",
+                    color: "var(--text-primary)",
+                  }}
                 >
-                  {item[lang].title}
+                  {item.title}
                 </h3>
-                <p className="mb-4 text-[17px] leading-[1.7]" style={{ color: "var(--text-secondary)" }}>
-                  {item[lang].body}
+                <p
+                  className="mb-4 text-[17px] leading-[1.7]"
+                  style={{ color: "var(--text-secondary)" }}
+                >
+                  {item.body}
                 </p>
                 <span
                   className="text-[15px] font-semibold"
-                  style={{ fontFamily: "var(--font-ui)", color: "var(--c-cobalt-600)" }}
+                  style={{
+                    fontFamily: "var(--font-ui)",
+                    color: "var(--c-cobalt-600)",
+                  }}
                 >
                   {lang === "fr" ? "Découvrir" : "Explore"} →
                 </span>
@@ -336,7 +294,10 @@ export default function AboutPage() {
         <Reveal>
           <h2
             className="mx-auto mb-5 max-w-[20ch] text-[clamp(1.85rem,3.5vw,3rem)] font-semibold tracking-tight text-balance"
-            style={{ fontFamily: "var(--font-display)", color: "var(--text-on-dark)" }}
+            style={{
+              fontFamily: "var(--font-display)",
+              color: "var(--text-on-dark)",
+            }}
           >
             {t.ctaTitle}
           </h2>

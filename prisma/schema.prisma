@@ -76,3 +76,13 @@ model SiteImage {
   url       String
   updatedAt DateTime @updatedAt
 }
+
+/// Contenu éditable du site (JSON FR/EN par document).
+model CmsDocument {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  label     String
+  group     String   @default("general")
+  data      String   @default("{}")
+  updatedAt DateTime @updatedAt
+}

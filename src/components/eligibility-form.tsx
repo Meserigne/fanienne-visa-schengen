@@ -12,94 +12,49 @@ import {
   CONTACT_EMAIL,
   SITE_URL,
 } from "@/lib/formsubmit";
+import { useCmsDoc } from "@/lib/cms-context";
 
 const fieldClass =
   "h-auto rounded-xl border px-3.5 py-3.5 text-[17px] focus-visible:ring-2";
 
 const IFRAME_NAME = "fabienne_formsubmit_frame";
 
+type FormDoc = {
+  title: string;
+  subtitle: string;
+  body: string;
+  body2: string;
+  formTitle: string;
+  points: { text: string }[];
+  profile: string;
+  profileOptions: { text: string }[];
+  destination: string;
+  name: string;
+  namePlaceholder: string;
+  email: string;
+  emailPlaceholder: string;
+  phone: string;
+  phonePlaceholder: string;
+  project: string;
+  projectPlaceholder: string;
+  submit: string;
+  sending: string;
+  fineprint: string;
+  sentTitle: string;
+  sentBody: string;
+};
+
 export function EligibilityForm() {
   const { lang } = useLanguage();
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const submittedRef = useRef(false);
-
+  const raw = useCmsDoc<FormDoc>("home.form");
   const t = {
-    fr: {
-      title: "Formulaire de contact",
-      subtitle: "Parlez-nous de votre projet de mobilité",
-      body: "Chaque situation est unique. Complétez le formulaire ci-dessous : notre équipe analysera votre demande avec attention et vous recontactera dans les plus brefs délais pour vous proposer un accompagnement adapté.",
-      body2:
-        "Votre projet de mobilité mérite une attention particulière. Faites le premier pas, nous vous accompagnons pour la suite.",
-      formTitle: "Formulaire de demande d'accompagnement",
-      points: [
-        "Évaluation gratuite et sans engagement",
-        "Réponse sous 48 h avec la formule adaptée",
-        "Confidentialité totale de vos informations",
-      ],
-      profile: "Motif du voyage",
-      profileOptions: [
-        "Tourisme",
-        "Affaires",
-        "Études",
-        "Travail",
-        "Regroupement",
-      ],
-      destination: "Destination souhaitée",
-      name: "Nom & prénom",
-      namePlaceholder: "Votre nom et prénom",
-      email: "Adresse e-mail",
-      emailPlaceholder: "vous@exemple.com",
-      phone: "Téléphone (WhatsApp)",
-      phonePlaceholder: "+221 77 000 00 00",
-      project: "Présentez-nous votre projet",
-      projectPlaceholder:
-        "Décrivez vos dates de voyage prévues, votre situation actuelle et vos interrogations…",
-      submit: "Envoyer ma demande",
-      sending: "Envoi en cours…",
-      fineprint: "Gratuit · Sans engagement · Confirmation e-mail + SMS · Réponse sous 48 h",
-      sentTitle: "Demande bien reçue",
-      sentBody:
-        "Merci. Votre demande est bien reçue. Un e-mail et un SMS de confirmation vous sont envoyés. Nous vous recontactons sous peu.",
-    },
-    en: {
-      title: "Contact form",
-      subtitle: "Tell us about your mobility project",
-      body: "Every situation is unique. Complete the form below: our team will review your request carefully and get back to you promptly with tailored support.",
-      body2:
-        "Your mobility project deserves careful attention. Take the first step — we support you from there.",
-      formTitle: "Support request form",
-      points: [
-        "Free, no-obligation assessment",
-        "Reply within 48 hours with the right plan",
-        "Your information stays fully confidential",
-      ],
-      profile: "Purpose of travel",
-      profileOptions: [
-        "Tourism",
-        "Business",
-        "Studies",
-        "Work",
-        "Family reunification",
-      ],
-      destination: "Desired destination",
-      name: "First & last name",
-      namePlaceholder: "Your full name",
-      email: "Email address",
-      emailPlaceholder: "you@example.com",
-      phone: "Phone (WhatsApp)",
-      phonePlaceholder: "+221 77 000 00 00",
-      project: "Tell us about your project",
-      projectPlaceholder:
-        "Describe your planned travel dates, current situation and questions…",
-      submit: "Send my request",
-      sending: "Sending…",
-      fineprint: "Free · No obligation · Email + SMS confirmation · Reply within 48 h",
-      sentTitle: "Request received",
-      sentBody:
-        "Thank you. Your request has been received. A confirmation email and SMS are on the way. We will get back to you shortly.",
-    },
-  }[lang];
+    ...raw,
+    points: (raw.points || []).map((p) => p.text),
+    profileOptions: (raw.profileOptions || []).map((p) => p.text),
+  };
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);

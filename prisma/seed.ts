@@ -1,6 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
 import { IMAGE_CATALOG } from "../src/lib/admin/image-catalog";
+import { CMS_CATALOG } from "../src/lib/cms/catalog";
 
 const prisma = new PrismaClient();
 
@@ -175,10 +176,28 @@ async function main() {
     });
   }
 
+  for (const doc of CMS_CATALOG) {
+    await prisma.cmsDocument.upsert({
+      where: { key: doc.key },
+      create: {
+        key: doc.key,
+        label: doc.label,
+        group: doc.group,
+        data: JSON.stringify(doc.defaults),
+      },
+      update: {
+        label: doc.label,
+        group: doc.group,
+        // Ne pas écraser le contenu déjà personnalisé au re-seed
+      },
+    });
+  }
+
   console.log("Seed OK");
   console.log(`Admin: ${email}`);
   console.log(`Password: ${password}`);
   console.log(`Images: ${IMAGE_CATALOG.length}`);
+  console.log(`CMS docs: ${CMS_CATALOG.length}`);
 }
 
 main()
