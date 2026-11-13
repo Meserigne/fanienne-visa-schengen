@@ -4,20 +4,62 @@ import { jwtVerify } from "jose";
 
 const COOKIE_NAME = "tukki_admin_session";
 
+/** Public routes that must resolve regardless of URL casing. */
+const CANONICAL_PATHS = new Map(
+  [
+    "/",
+    "/etudiants",
+    "/entreprises",
+    "/tourisme",
+    "/sante",
+    "/long-sejour",
+    "/artistes",
+    "/qui-nous-sommes",
+    "/politique-de-confidentialite",
+    "/admin",
+    "/admin/login",
+  ].map((path) => [path.toLowerCase(), path]),
+);
+
 function getSecret() {
   const secret = process.env.AUTH_SECRET || process.env.ADMIN_PASSWORD;
   if (!secret) return null;
   return new TextEncoder().encode(secret);
 }
 
+function normalizePublicPath(pathname: string): string | null {
+  if (pathname === "/") return null;
+
+  const lowered = pathname.toLowerCase();
+  const canonical = CANONICAL_PATHS.get(lowered);
+  if (canonical && canonical !== pathname) {
+    return canonical;
+  }
+
+  // Any /Admin/... casing → keep admin path structure but normalize known prefixes
+  if (lowered.startsWith("/admin/") && pathname !== lowered) {
+    return lowered;
+  }
+
+  return null;
+}
+
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  if (!pathname.startsWith("/admin")) {
+  const normalized = normalizePublicPath(pathname);
+  if (normalized) {
+    const url = request.nextUrl.clone();
+    url.pathname = normalized;
+    return NextResponse.redirect(url, 308);
+  }
+
+  if (!pathname.toLowerCase().startsWith("/admin")) {
     return NextResponse.next();
   }
 
-  if (pathname === "/admin/login") {
+  const adminPath = pathname.toLowerCase();
+  if (adminPath === "/admin/login") {
     return NextResponse.next();
   }
 
@@ -45,5 +87,7 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/admin", "/admin/:path*"],
+  matcher: [
+    "/((?!_next/static|_next/image|favicon.ico|icon.png|apple-icon.png|images|robots.txt|sitemap.xml|api).*)",
+  ],
 };
